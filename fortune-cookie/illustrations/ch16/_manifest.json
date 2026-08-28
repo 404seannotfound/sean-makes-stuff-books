@@ -1,0 +1,65 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Drawer Egg",
+    "name_slug": "drawer_egg",
+    "file": "beat_01_drawer_egg.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Hesitant"
+  },
+  {
+    "index": 2,
+    "scene_name": "Orbiting Pen",
+    "name_slug": "orbiting_pen",
+    "file": "beat_02_orbiting_pen.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Exhausted"
+  },
+  {
+    "index": 3,
+    "scene_name": "Cookie Offered",
+    "name_slug": "cookie_offered",
+    "file": "beat_03_cookie_offered.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Brave"
+  },
+  {
+    "index": 4,
+    "scene_name": "Fortune Read",
+    "name_slug": "fortune_read",
+    "file": "beat_04_fortune_read.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Shattered"
+  },
+  {
+    "index": 5,
+    "scene_name": "Card Torn",
+    "name_slug": "card_torn",
+    "file": "beat_05_card_torn.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Released"
+  },
+  {
+    "index": 6,
+    "scene_name": "Hands Held",
+    "name_slug": "hands_held",
+    "file": "beat_06_hands_held.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Tender"
+  },
+  {
+    "index": 7,
+    "scene_name": "Pearl Waiting",
+    "name_slug": "pearl_waiting",
+    "file": "beat_07_pearl_waiting.jpeg",
+    "position": "closing",
+    "weight": "medium",
+    "mood": "Expectant"
+  }
+]

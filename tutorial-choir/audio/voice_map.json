@@ -1,0 +1,23 @@
+{
+  "narrator": {
+    "provider": "elevenlabs",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "name": "George",
+    "labels": "middle-aged British male · warm storyteller",
+    "why": "Tutorial-choir is paced and atmospheric — domestic-kitchen-with-alien-horizon. The narrator wants a warm unhurried storyteller who can sell sensory description (vines bioluminescing, cursor blinking, copper pans) without slipping into clinical mode. George reads cozy. Same voice that worked for Maillard."
+  },
+  "lor": {
+    "provider": "elevenlabs",
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "name": "Matilda",
+    "labels": "middle-aged American female · knowledgeable upbeat",
+    "why": "Lor's lines are dry-funny and didactic — she's the docs-reader. Matilda's 'knowledgeable upbeat American female' lands the technical precision without performing severity. The dryness reads in the prose; the voice should be warm-confident, not arch."
+  },
+  "vex": {
+    "provider": "elevenlabs",
+    "voice_id": "iP95p4xoKVk53GoZ742B",
+    "name": "Chris",
+    "labels": "middle-aged American male · charming down-to-earth",
+    "why": "Vex is the chaotic enthusiast — animated grin, talks with his hands, half-formed declarations. Chris's 'charming down-to-earth American male' captures the easy warmth and the ready laugh. Same voice that worked for Theo in Maillard."
+  }
+}

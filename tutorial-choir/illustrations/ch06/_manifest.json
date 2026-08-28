@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Twenty Lines Of Shell",
+    "position": "opening",
+    "mood": "elegant-minimal"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Reading Over Shoulder",
+    "position": "early",
+    "mood": "studious"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Asking Claude To Draw",
+    "position": "midchapter",
+    "mood": "excited-experimental"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Approval Dialog",
+    "position": "midchapter",
+    "mood": "small-permissions"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Frog Detective Revealed",
+    "position": "turning",
+    "mood": "delighted-wonder"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Claude Orchestrated",
+    "position": "climax",
+    "mood": "epiphany-large"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Cricket On Closed Lid",
+    "position": "closing",
+    "mood": "rest-warm"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Bioluminescent Vines",
+    "position": "closing",
+    "mood": "wonder-quiet"
+  }
+]

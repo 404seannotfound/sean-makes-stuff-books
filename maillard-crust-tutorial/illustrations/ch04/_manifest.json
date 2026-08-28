@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Iron Heating",
+    "position": "opening",
+    "mood": "anticipatory"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Skittering Drop",
+    "position": "early",
+    "mood": "wonder"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Oil Lineup",
+    "position": "midchapter",
+    "mood": "instructional"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Set Apart Butter",
+    "position": "midchapter",
+    "mood": "instructional"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Oven Dial",
+    "position": "turning",
+    "mood": "deliberate"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Tucked In",
+    "position": "turning",
+    "mood": "tender"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Screaming Pan",
+    "position": "climax",
+    "mood": "intense"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Two Roads",
+    "position": "closing",
+    "mood": "set"
+  }
+]

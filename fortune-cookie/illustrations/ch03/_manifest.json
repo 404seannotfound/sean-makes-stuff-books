@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Cookie Liturgy",
+    "name_slug": "cookie_liturgy",
+    "file": "beat_01_cookie_liturgy.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Ceremonial"
+  },
+  {
+    "index": 2,
+    "scene_name": "Friday Flood",
+    "name_slug": "friday_flood",
+    "file": "beat_02_friday_flood.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Bustling"
+  },
+  {
+    "index": 3,
+    "scene_name": "Four Seconds",
+    "name_slug": "four_seconds",
+    "file": "beat_03_four_seconds.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Reverent"
+  },
+  {
+    "index": 4,
+    "scene_name": "No Cookie",
+    "name_slug": "no_cookie",
+    "file": "beat_04_no_cookie.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Austere"
+  },
+  {
+    "index": 5,
+    "scene_name": "Private Reading",
+    "name_slug": "private_reading",
+    "file": "beat_05_private_reading.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Tender"
+  },
+  {
+    "index": 6,
+    "scene_name": "Stolen Cookie",
+    "name_slug": "stolen_cookie",
+    "file": "beat_06_stolen_cookie.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Tense"
+  },
+  {
+    "index": 7,
+    "scene_name": "Fortune Read",
+    "name_slug": "fortune_read",
+    "file": "beat_07_fortune_read.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Aching"
+  },
+  {
+    "index": 8,
+    "scene_name": "Glass Between",
+    "name_slug": "glass_between",
+    "file": "beat_08_glass_between.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Lonely"
+  }
+]

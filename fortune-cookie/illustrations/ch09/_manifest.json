@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Tear-Blurred Fortune",
+    "name_slug": "tear_blurred_fortune",
+    "file": "beat_01_tear_blurred_fortune.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Reverent"
+  },
+  {
+    "index": 2,
+    "scene_name": "Rainy Reorganizing",
+    "name_slug": "rainy_reorganizing",
+    "file": "beat_02_rainy_reorganizing.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Restless"
+  },
+  {
+    "index": 3,
+    "scene_name": "Cheese Bread Confession",
+    "name_slug": "cheese_bread_confession",
+    "file": "beat_03_cheese_bread_confession.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Tender"
+  },
+  {
+    "index": 4,
+    "scene_name": "Numbers and Grief",
+    "name_slug": "numbers_and_grief",
+    "file": "beat_04_numbers_and_grief.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Exhausted"
+  },
+  {
+    "index": 5,
+    "scene_name": "The Pause",
+    "name_slug": "the_pause",
+    "file": "beat_05_the_pause.jpeg",
+    "position": "turning",
+    "weight": "medium",
+    "mood": "Ceremonial"
+  },
+  {
+    "index": 6,
+    "scene_name": "Mythology Assembles",
+    "name_slug": "mythology_assembles",
+    "file": "beat_06_mythology_assembles.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Fractured"
+  },
+  {
+    "index": 7,
+    "scene_name": "Building Under Sky",
+    "name_slug": "building_under_sky",
+    "file": "beat_07_building_under_sky.jpeg",
+    "position": "turning",
+    "weight": "medium",
+    "mood": "Hopeful"
+  },
+  {
+    "index": 8,
+    "scene_name": "Pocketed Cookie",
+    "name_slug": "pocketed_cookie",
+    "file": "beat_08_pocketed_cookie.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Resolute"
+  }
+]

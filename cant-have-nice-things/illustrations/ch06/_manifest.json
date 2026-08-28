@@ -1,0 +1,136 @@
+{
+  "chapter": 6,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "The Thank You",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "tender",
+      "annotations": [
+        "'thank you' \u2014 said without thinking",
+        "OH. YOU'RE VERY WELCOME.",
+        "the quietest skip"
+      ],
+      "why_this_beat": "The opening frame \u2014 Cal's unconscious thank-you cracks open the whole chapter and pulls Old Pip back to the hill."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Twelve Has Elbows",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "swaggering",
+      "annotations": [
+        "TWELVE HAS OPINIONS.",
+        "twelve walks a little straighter",
+        "(little ones watching)"
+      ],
+      "why_this_beat": "Establishes the older Pip's stance and the audience she's secretly performing for \u2014 the setup of the whole skip."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Six Of Seven",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "ritualistic",
+      "annotations": [
+        "1 \u00b7 tap   2 \u00b7 oil   3 \u00b7 hum",
+        "4 \u00b7 count   5 \u00b7 breathe   6 \u00b7 tie",
+        "7 \u00b7 ______",
+        "ONE TO GO."
+      ],
+      "why_this_beat": "The visual ledger of the ritual mid-performance \u2014 six done, the seventh hanging empty over the page like a held breath."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "The Fence",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "expectant",
+      "annotations": [
+        "HE IS WATCHING.",
+        "(she watches like a comet)",
+        "Lin. Ros. Tully."
+      ],
+      "why_this_beat": "The audience beat \u2014 the three small mirrors at the fence, the reason Pip is about to fail."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "The Quietest Skip",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "wrong",
+      "annotations": [
+        "she did not speak.",
+        "(thinking it is not the same thing)",
+        "ONE SHADE DULLER.",
+        "thank \u2014 "
+      ],
+      "why_this_beat": "The keynote \u2014 the exact frame where the seventh ritual is skipped and three small ones learn the wrong thing."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Three Tuckings",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "ominous-gentle",
+      "annotations": [
+        "tuck.",
+        "tuck.",
+        "tuck.",
+        "THREE SMALL ONES, LEARNING THE WRONG THING."
+      ],
+      "why_this_beat": "The cost beat \u2014 the moment the omission becomes inheritance, rendered as three identical small thefts."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Duller Flowers",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "quiet",
+      "annotations": [
+        "nothing you could prove.",
+        "nothing anyone would notice",
+        "\u2014 for years."
+      ],
+      "why_this_beat": "The invisible damage \u2014 the visual proof of the cost, given a frame of its own so the reader registers what no one in the story does."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "Especially Silly",
+      "page_position": "closing",
+      "weight": "medium",
+      "mood": "gentle",
+      "annotations": [
+        "'do you want some?'",
+        "KEEP SAYING IT.",
+        "especially when you feel silly",
+        "\u2014 the ones being watched."
+      ],
+      "why_this_beat": "The frame's lesson spoken aloud \u2014 Old Pip closing the loop with the porch children."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.png",
+      "scene_name": "Wren Listens",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "reverent",
+      "annotations": [
+        "thank you.",
+        "(silently)",
+        "BO DID NOT SEE HER.",
+        "but I did."
+      ],
+      "why_this_beat": "The closing image \u2014 the right kind of imitator, getting the seventh thing right where Pip once got it wrong."
+    }
+  ]
+}

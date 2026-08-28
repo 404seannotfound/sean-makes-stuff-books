@@ -1,0 +1,2190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>April and the Dragon Staff (v2) — Sean Makes Stuff</title>
+<meta name="description" content="A natural-prose retelling of April and the Dragon Staff, in 10 chapters with 98 Pixar-storybook illustrations and a ~40-minute audiobook narrated with 7 voices. Same story as v1, told in tighter prose with the inspirer&#x27;s actual flow-arts safety ritual and Cypher — an older tiger — as April&#x27;s first teacher.">
+<style>
+:root {
+  --paper: #fbf6ec;
+  --paper-soft: #fefaf2;
+  --paper-edge: #efe4ce;
+  --ink: #2b2520;
+  --ink-soft: #8a7e72;
+  --accent-coral: #e57a5b;
+  --accent-gold: #e0a44a;
+  --accent-sky: #6fb0c8;
+  --accent-leaf: #6fa775;
+  --accent-violet: #a472b0;
+  --rainbow: linear-gradient(90deg, #e57a5b, #e0a44a, #d6cc56, #6fa775, #6fb0c8, #6e80c4, #a472b0);
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--paper);
+  margin: 0;
+  color: var(--ink);
+  font-family: "Comic Sans MS", "Marker Felt", "Chalkboard SE", "Trebuchet MS", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+main.book {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 24px 96px;
+}
+.pdf-bar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(251, 246, 236, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid var(--paper-edge);
+  margin: -24px -24px 32px;
+  padding: 12px 24px;
+  display: flex; align-items: center; gap: 16px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.pdf-bar .label { flex: 1; font-style: italic; }
+.pdf-bar a { color: var(--accent-coral); text-decoration: none; border-bottom: 1px dashed transparent; }
+.pdf-bar a:hover { border-bottom-color: var(--accent-coral); }
+
+/* COVER */
+.cover { margin: 16px 0 64px; }
+.cover__art {
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 16px 60px -28px rgba(0,0,0,0.35), 0 2px 10px -4px rgba(0,0,0,0.15);
+  border: 1px solid var(--paper-edge);
+}
+.cover__art img { width: 100%; height: auto; display: block; }
+.cover__title {
+  font-family: "Marker Felt", "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 3.4rem;
+  line-height: 1.05;
+  margin: 36px 0 10px;
+  text-align: center;
+  background: var(--rainbow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.5px;
+}
+.cover__subtitle { font-size: 1.1rem; color: var(--ink-soft); text-align: center; font-style: italic; margin-bottom: 10px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cover__author { font-size: 1.05rem; color: var(--ink-soft); text-align: center; margin-top: 12px; }
+
+/* TOC */
+.toc {
+  margin: 32px 0 56px;
+  padding: 28px 32px;
+  background: var(--paper-soft);
+  border: 1.5px solid var(--paper-edge);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px -10px rgba(0,0,0,0.12);
+}
+.toc h2 {
+  font-family: "Marker Felt", "Comic Sans MS", cursive;
+  font-size: 1.5rem;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+.toc ol { padding: 0; margin: 0; list-style: none; }
+.toc li { padding: 8px 0; border-bottom: 1.5px dotted var(--paper-edge); }
+.toc li:last-child { border-bottom: 0; }
+.toc a { color: var(--ink); text-decoration: none; display: block; font-size: 1.05rem; }
+.toc a:hover { color: var(--accent-coral); }
+.toc__num { display: inline-block; width: 36px; color: var(--ink-soft); font-weight: 600; }
+
+/* CAST */
+.cast { margin: 56px 0; padding: 32px; background: var(--paper-soft); border: 1.5px solid var(--paper-edge); border-radius: 18px; }
+.cast h2 { font-family: "Marker Felt", "Comic Sans MS", cursive; font-size: 1.7rem; text-align: center; margin: 0 0 24px; color: var(--ink); }
+.cast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; }
+.cast-card { text-align: center; background: white; border-radius: 14px; padding: 14px; border: 1px solid var(--paper-edge); }
+.cast-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 10px; display: block; }
+.cast-card__name { font-family: "Marker Felt", "Comic Sans MS", cursive; font-size: 1.2rem; color: var(--ink); margin-top: 10px; }
+.cast-card__role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-coral); margin: 4px 0 6px; }
+.cast-card__line { font-size: 0.9rem; color: var(--ink-soft); font-style: italic; line-height: 1.4; }
+
+/* CHAPTERS */
+.chapter { margin-top: 72px; }
+.chapter--first { margin-top: 24px; }
+.ch-head { text-align: center; margin-bottom: 36px; }
+.ch-num { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.25em; color: var(--accent-coral); margin-bottom: 10px; font-weight: 600; }
+.ch-title { font-family: "Marker Felt", "Comic Sans MS", cursive; font-size: 2.4rem; color: var(--ink); margin: 0; line-height: 1.15; }
+.narrative { font-size: 1.18rem; line-height: 1.7; color: var(--ink); max-width: 720px; margin: 0 auto; }
+.stanza { margin: 0 0 1.6em; padding: 0; }
+.stanza--first { margin-top: 0.4em; }
+.stanza .line { padding: 0; min-height: 1.7em; }
+.line--blank { color: transparent; }
+
+/* SCENE BREAKS */
+.scene-break { border: 0; text-align: center; margin: 36px 0; }
+.scene-break::before { content: "✦ ✦ ✦"; color: var(--ink-soft); letter-spacing: 0.4em; }
+
+/* BEAT FIGURES */
+.beat-figure { margin: 40px -28px; }
+.beat-figure__wrap { position: relative; }
+.beat-figure img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1.5px solid var(--paper-edge);
+  background: var(--paper-soft);
+  display: block;
+  box-shadow: 0 10px 40px -22px rgba(0,0,0,0.3), 0 2px 8px -3px rgba(0,0,0,0.08);
+}
+.beat-figure figcaption {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.beat-figure--high img { border-color: var(--accent-coral); border-width: 2px; }
+
+/* HAND-LETTERED ANNOTATIONS — overlaid on illustrations, drifting */
+.beat-annotations { position: absolute; inset: 0; pointer-events: none; }
+.annotation {
+  position: absolute;
+  font-family: "Marker Felt", "Comic Sans MS", "Chalkboard SE", cursive;
+  font-size: 0.9rem;
+  color: rgba(43, 37, 32, 0.85);
+  background: rgba(255, 250, 240, 0.85);
+  border: 1.5px solid var(--paper-edge);
+  border-radius: 999px;
+  padding: 4px 12px;
+  transform: rotate(-3deg);
+  box-shadow: 0 4px 12px -6px rgba(0,0,0,0.25);
+  max-width: 40%;
+  white-space: normal;
+}
+.annotation--0 { top: 6%; left: 4%; }
+.annotation--1 { top: 8%; right: 4%; transform: rotate(4deg); background: rgba(255, 240, 230, 0.9); }
+.annotation--2 { bottom: 8%; left: 5%; transform: rotate(-2deg); background: rgba(250, 245, 230, 0.9); }
+.annotation--3 { bottom: 6%; right: 5%; transform: rotate(2deg); background: rgba(245, 250, 255, 0.9); }
+
+/* BACK MATTER */
+.back-matter { margin-top: 96px; padding-top: 32px; border-top: 2px solid var(--paper-edge); text-align: center; color: var(--ink-soft); font-style: italic; font-size: 0.95rem; }
+
+/* SAFETY-RITUAL CHEAT SHEET (back matter for parents) */
+.safety-card {
+  margin: 48px 0;
+  padding: 32px;
+  background: white;
+  border: 2px solid var(--accent-coral);
+  border-radius: 18px;
+}
+.safety-card h2 { font-family: "Marker Felt", cursive; font-size: 1.6rem; text-align: center; margin: 0 0 8px; color: var(--accent-coral); }
+.safety-card__lede { text-align: center; color: var(--ink-soft); font-style: italic; margin-bottom: 24px; }
+.safety-card ol { padding-left: 28px; line-height: 1.7; font-size: 1rem; color: var(--ink); }
+.safety-card li { margin: 8px 0; }
+.safety-card li strong { color: var(--accent-coral); }
+
+/* PRINT */
+@media print {
+  .pdf-bar { display: none !important; }
+  body { background: white; }
+  main.book { padding: 0; max-width: none; }
+  .cover { page-break-after: always; padding: 18mm 0; }
+  .toc { page-break-after: always; }
+  .cast { page-break-after: always; }
+  .chapter { page-break-before: always; }
+  .beat-figure { page-break-inside: avoid; margin-left: 0; margin-right: 0; }
+  .beat-figure img { max-height: 14cm; object-fit: contain; }
+  .safety-card { page-break-before: always; }
+}
+@page { size: A4; margin: 18mm 16mm; }
+
+
+/* AUDIO PLAYERS */
+.audio-hero {
+  margin: 16px 0 40px; padding: 18px 22px;
+  background: linear-gradient(135deg, #fefaf2 0%, #fff5e6 100%);
+  border: 2px solid var(--accent-coral); border-radius: 16px;
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  box-shadow: 0 6px 20px -10px rgba(229, 122, 91, 0.4);
+}
+.audio-hero__icon { font-size: 1.6rem; }
+.audio-hero__label {
+  font-family: "Marker Felt", "Comic Sans MS", cursive;
+  font-size: 1.1rem; color: var(--accent-coral); font-weight: 600;
+}
+.audio-hero audio { flex: 1; min-width: 280px; }
+
+.audio-chapter {
+  margin: 24px auto 16px; padding: 12px 18px; max-width: 720px;
+  background: var(--paper-soft);
+  border: 1.5px solid var(--paper-edge); border-radius: 12px;
+  display: flex; align-items: center; gap: 14px;
+}
+.audio-chapter__icon { font-size: 1.3rem; }
+.audio-chapter__label {
+  font-family: "Marker Felt", cursive;
+  font-style: italic; color: var(--ink-soft); font-size: 0.95rem; min-width: 140px;
+}
+.audio-chapter audio { flex: 1; min-width: 200px; }
+
+@media print {
+  .audio-hero, .audio-chapter { display: none !important; }
+}
+
+.book-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(251, 246, 236, 0.95); backdrop-filter: blur(6px);
+  border-bottom: 1.5px solid var(--paper-edge, #efe4ce);
+  padding: 12px 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-size: 0.9rem; color: #6e6e73;
+  text-align: center;
+}
+.book-nav a { color: #e57a5b; text-decoration: none; border-bottom: 1px dashed transparent; }
+.book-nav a:hover { border-bottom-color: #e57a5b; }
+@media print { .book-nav { display: none !important; } }
+</style>
+</head>
+<body>
+<div class="book-nav"><a href="https://sean-makes-stuff.com/">&larr; Sean Makes Stuff</a> · <a href="../">Books</a> · <span style="opacity:0.7;font-style:italic;">April and the Dragon Staff (v2)</span></div>
+<main class="book">
+
+  <div class="pdf-bar" style="display:none;">
+    <span class="label">A story about knowing, remembering, and the seven steps that keep us whole (v2)</span>
+    <a href="novel.pdf">Download PDF</a>
+  </div>
+
+  <section class="cover">
+    <div class="cover__art">
+      <img src="storyboard/cover.jpg" alt="Cover — April and the Dragon Staff" />
+    </div>
+    <h1 class="cover__title">April and the Dragon Staff</h1>
+    <div class="cover__subtitle">A story about knowing, remembering, and the seven steps that keep us whole (v2)</div>
+    <div class="cover__author">by Sean Spratt · 2026</div>
+  
+  <div class="audio-hero">
+    <div class="audio-hero__icon">🎧</div>
+    <div class="audio-hero__label">Listen to the full audiobook</div>
+    <audio controls preload="none" src="audio/audiobook.mp3"></audio>
+  </div>
+
+  </section>
+
+  <nav class="toc">
+    <h2>Chapters</h2>
+    <ol>
+      <li><a href="#ch-01"><span class="toc__num">1.</span> The Dragon Wakes</a></li>
+      <li><a href="#ch-02"><span class="toc__num">2.</span> The Frame Takes Shape</a></li>
+      <li><a href="#ch-03"><span class="toc__num">3.</span> Cypher&#x27;s River</a></li>
+      <li><a href="#ch-04"><span class="toc__num">4.</span> Fern Finds Her Feet</a></li>
+      <li><a href="#ch-05"><span class="toc__num">5.</span> Riddle Counts the Why</a></li>
+      <li><a href="#ch-06"><span class="toc__num">6.</span> Dusty Holds Close</a></li>
+      <li><a href="#ch-07"><span class="toc__num">7.</span> Mango&#x27;s Bright Bow</a></li>
+      <li><a href="#ch-08"><span class="toc__num">8.</span> The Silent Echo</a></li>
+      <li><a href="#ch-09"><span class="toc__num">9.</span> The Patch Unsewn</a></li>
+      <li><a href="#ch-10"><span class="toc__num">10.</span> The Reversed Chorus</a></li>
+    </ol>
+  </nav>
+
+<section class="cast">
+  <h2>The Cast</h2>
+  <div class="cast-grid">
+    <div class="cast-card">
+      <img src="characters/April.jpg" alt="April" />
+      <div class="cast-card__name">April</div>
+      <div class="cast-card__role">Protagonist</div>
+      <div class="cast-card__line">A rainbow-colored koala who teaches fire-spinning safety with patient, musical precision — and who built the seven-step ritual from the scar of her own forgotten step.</div>
+    </div>
+    <div class="cast-card">
+      <img src="characters/Mango.jpg" alt="Mango" />
+      <div class="cast-card__name">Mango</div>
+      <div class="cast-card__role">Foil</div>
+      <div class="cast-card__line">A sunset-orange fruit bat whose dazzling speed and confidence make her the fastest learner in the troupe — and the one whose mouth knows the words before her hands hold the weight.</div>
+    </div>
+    <div class="cast-card">
+      <img src="characters/Fern.jpg" alt="Fern" />
+      <div class="cast-card__name">Fern</div>
+      <div class="cast-card__role">Ally</div>
+      <div class="cast-card__line">A moss-green tree frog whose careful nature makes her the most observant spotter in the troupe — once she learns that watching means moving, not freezing.</div>
+    </div>
+    <div class="cast-card">
+      <img src="characters/Riddle.jpg" alt="Riddle" />
+      <div class="cast-card__name">Riddle</div>
+      <div class="cast-card__role">Ally</div>
+      <div class="cast-card__line">A violet-streaked parrot who asks &#x27;why&#x27; after every call and delays her response by questioning it — until she discovers that the count itself is the answer.</div>
+    </div>
+    <div class="cast-card">
+      <img src="characters/Dusty.jpg" alt="Dusty" />
+      <div class="cast-card__name">Dusty</div>
+      <div class="cast-card__role">Ally</div>
+      <div class="cast-card__line">A tawny wombat whose rocklike reliability makes him the troupe&#x27;s anchor — and whose quiet fear of fire is the hidden cost of his steadiness.</div>
+    </div>
+    <div class="cast-card">
+      <img src="characters/Cypher.jpg" alt="Cypher" />
+      <div class="cast-card__name">Cypher</div>
+      <div class="cast-card__role">Mentor</div>
+      <div class="cast-card__line">April&#x27;s first teacher — a koala who spins everything on strings, the one who taught her that the ritual lives in the body, not the head.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 1</div>
+    <audio controls preload="none" src="audio/chapter_01.mp3"></audio>
+  </div>
+<section id="ch-01" class="chapter chapter--first">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 1</div>
+    <h2 class="ch-title">The Dragon Wakes</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">The last light of the day turned the fire-town square to gold, and April stepped into it carrying the dragon staff across both paws.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Six dark wicks — three at each end — sat quiet on the polished wood. They looked like sleeping things.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_01.jpg" alt="Golden Arrival" />
+        <div class="beat-annotations"><span class="annotation annotation--0">THE DRAGON WAKES</span><span class="annotation annotation--1">three unlit wicks waiting</span><span class="annotation annotation--2">She paused. (Not for applause.)</span></div>
+      </div>
+      <figcaption>Golden Arrival · Anticipation</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Four friends waited.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango the fruit bat hung upside-down from a lantern post, wings half-spread, already leaning in. Fern the tree frog crouched low on a mossy barrel, golden eyes wide, fingers pressed flat against the wood. Riddle the parrot perched on the signpost with her head tilted left — curiosity tilt — beak open before the question had arrived. And Dusty the wombat sat square on the cobblestones, paws on his knees, solid as the ground beneath him.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;You asked to learn,&quot; April said. Her voice carried across the square without effort — bright in the vowels, every consonant placed like a foot on purpose. &quot;So. I&#x27;ll teach you the fire AND the frame.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;The fire and the frame!&quot; the friends called back, fast and bright, the way you sing a thing before you know what it weighs.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_02.jpg" alt="Mango Drops" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;m here! I&#x27;m the MOST ready!</span><span class="annotation annotation--1">wings before words</span><span class="annotation annotation--2">MANGO</span></div>
+      </div>
+      <figcaption>Mango Drops · Electric</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April set the staff on two low rests. From her apron pocket she drew a stick of chalk — white, fat, well-used — and knelt on the cobblestones.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_03.jpg" alt="Fern Watches" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;ll watch. I&#x27;ll be still. I&#x27;ll be near.</span><span class="annotation annotation--1">FERN</span><span class="annotation annotation--2">toe pads gripped tight</span></div>
+      </div>
+      <figcaption>Fern Watches · Watchful</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">She drew a circle.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_04.jpg" alt="Riddle Asks" />
+        <div class="beat-annotations"><span class="annotation annotation--0">But WHY does it burn?</span><span class="annotation annotation--1">And how HOT? And how HIGH?</span><span class="annotation annotation--2">RIDDLE</span></div>
+      </div>
+      <figcaption>Riddle Asks · Inquisitive</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">It was wide enough for one spinner and the arc of a staff. She stood inside it, brushed the chalk dust from her paws, and looked at them.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">*Step inside the perimeter line —</div>
+      <div class="line">the circle is yours, and yours alone.*</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;The circle is yours, and yours alone!&quot; four voices rang back.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;No one enters once spinning starts,&quot; April said. &quot;The perimeter holds the space. You hold the fire. Understood?&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_05.jpg" alt="April Calls" />
+        <div class="beat-annotations"><span class="annotation annotation--0">The fire AND the frame</span><span class="annotation annotation--1">You learn both together or don&#x27;t learn at all</span><span class="annotation annotation--2">three dark little heads at the edge of the night</span></div>
+      </div>
+      <figcaption>April Calls · Declarative</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Four nods.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_06.jpg" alt="Chorus Roars" />
+        <div class="beat-annotations"><span class="annotation annotation--0">We will learn them! We&#x27;ll SOAR!</span><span class="annotation annotation--1">They sang it like sunlight.</span><span class="annotation annotation--2">They heard the word FIRE. The FRAME blew away.</span></div>
+      </div>
+      <figcaption>Chorus Roars · Exuberant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">She stepped out of the circle and faced them again. &quot;Now — who is your safety?&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Silence. Riddle&#x27;s head tilted right. Skepticism tilt.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Your safety is a person,&quot; April said. &quot;Not a rule. Not a word. A person with eyes.&quot; She looked at Dusty. Dusty looked back. &quot;Before you light a single wick, you find your safety&#x27;s eyes. They nod. You nod. That&#x27;s where it starts.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">*Find your safety, eye to eye —</div>
+      <div class="line">no nod, no flame, no spin, no sky.*</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_07.jpg" alt="Circle Drawn" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Step ONE</span><span class="annotation annotation--1">The safety circle — you step IN to begin</span><span class="annotation annotation--2">draw it with chalk, draw it with feet</span></div>
+      </div>
+      <figcaption>Circle Drawn · Reverent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;No nod, no flame, no spin, no sky!&quot; Mango shouted it first, a half-beat ahead of the others, her wings snapping open with the joy of it.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_08.jpg" alt="Stepping In" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Five bodies inside it</span><span class="annotation annotation--1">The circle drawn wide</span><span class="annotation annotation--2">step inside — start to sing</span></div>
+      </div>
+      <figcaption>Stepping In · Gathering</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Why the eyes?&quot; Riddle asked. &quot;Why not just — say you&#x27;re ready?&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April&#x27;s mouth curved. &quot;Because your mouth can say ready when your hands aren&#x27;t. Your eyes don&#x27;t lie as fast.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle tapped her thinking-stone with her beak. Twice. Then she nodded.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango dropped from the lantern post, caught herself mid-air, and landed on the barrel beside Fern. &quot;April — why does the towel always go on the left side of the safety?&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_09.jpg" alt="Spotter Named" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Step TWO — the spotter</span><span class="annotation annotation--1">the friend who stands watching</span><span class="annotation annotation--2">But why on the LEFT?</span></div>
+      </div>
+      <figcaption>Spotter Named · Intimate</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April&#x27;s paw went to the left pocket of her teaching apron. Two fingers, pressing the faded scorch mark there — small, tea-brown, shaped like a curling leaf. She held the touch for one breath.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Because that&#x27;s where the dragon looks first,&quot; she said.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango opened her mouth to ask more, but April had already lifted the staff from its rests. She raised it overhead with both paws, and the six dark wicks caught the last copper light of the sun.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">For a moment they looked almost alive.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">*Tomorrow we learn what the safety knows,</div>
+      <div class="line">and why every dragon needs friends on its toes.*</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch01/beat_10.jpg" alt="Dragon Sleeps" />
+        <div class="beat-annotations"><span class="annotation annotation--0">three little dragons asleep in the air</span><span class="annotation annotation--1">Tomorrow we learn what the wet towel knows</span><span class="annotation annotation--2">just starting to wake from its sleep</span></div>
+      </div>
+      <figcaption>Dragon Sleeps · Wonder</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Friends on its toes!&quot; the four voices called — Mango loud, Fern soft, Riddle precise, Dusty steady — and the sound rose into the warm air above the chalked circle where no fire burned yet, but would.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 2</div>
+    <audio controls preload="none" src="audio/chapter_02.mp3"></audio>
+  </div>
+<section id="ch-02" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 2</div>
+    <h2 class="ch-title">The Frame Takes Shape</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">The practice yard smelled of wet chalk and morning.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April knelt beside a low table, the unlit dragon staff stretched across it like a sleeping thing. Six dark wick-knots — three at each end — caught the early light. She had already drawn yesterday&#x27;s chalk circle fresh on the cobblestones, and now she unfolded a damp cream-colored cloth and draped it over her left paw.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_01.jpg" alt="Golden Setup" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the frame takes shape</span><span class="annotation annotation--1">two towels, damp and folded tight</span><span class="annotation annotation--2">on the left — always the left</span></div>
+      </div>
+      <figcaption>Golden Setup · Reverent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Yesterday we learned two steps,&quot; she said. &quot;Perimeter. Eye contact with your safety.&quot; She lifted the towel-wrapped paw. &quot;Today — the smother.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern crouched low on a mossy barrel, golden eyes wide. Riddle perched on the table&#x27;s edge, head already tilting. Mango hung from a beam overhead, one wing stretched toward the staff. And Dusty stood behind April, solid as the cobblestones, holding a second damp towel at full arm&#x27;s length — as far from his body as his thick arms allowed.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April noticed. She didn&#x27;t say anything yet.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Instead she pressed the cloth against the staff&#x27;s nearest wick-knot and held it there. &quot;Fire needs air,&quot; she said. &quot;Take away the air, the fire goes out. That&#x27;s what smother means. Not hitting. Not waving. Pressing close and holding still.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_02.jpg" alt="Tumbling Arrivals" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;m HERE and I&#x27;m READY!</span><span class="annotation annotation--1">four friends through morning&#x27;s warm door</span><span class="annotation annotation--2">Dusty-paced walk</span></div>
+      </div>
+      <figcaption>Tumbling Arrivals · Exuberant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">She wrapped the cloth tighter, showing the fold — one layer, two layers, snug against the wick.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_03.jpg" alt="Echo Chorus" />
+        <div class="beat-annotations"><span class="annotation annotation--0">DRAW THE CIRCLE ROUND, DRAW THE CIRCLE COMPLETE!</span><span class="annotation annotation--1">CHOOSE YOUR SPOTTER TRUE!</span><span class="annotation annotation--2">four voices like a drum and a beat</span></div>
+      </div>
+      <figcaption>Echo Chorus · Rousing</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;But WHY does the towel go on the left?&quot; Riddle&#x27;s beak was already open, one wing raised.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April touched the scorch mark on her apron pocket — two fingers, light, the way you touch something you&#x27;ve stopped seeing — and answered:</div>
+    </div>
+    <div class="stanza">
+      <div class="line">*Your safety stands where the dragon looks first —</div>
+      <div class="line">the left is the side where the bright ones have burst.*</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle&#x27;s head tilted right. Skeptical. But she tucked the answer away.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Now — before you ever pick up a lit prop, you check yourself.&quot; April&#x27;s paws left the staff and moved to her own body. Collar, sleeves, apron ties, pockets. Every seam, every loose edge, traced and tucked. &quot;Anything that can catch, you find it now. Not after.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_04.jpg" alt="Towel Lesson" />
+        <div class="beat-annotations"><span class="annotation annotation--0">it catches, it smothers, it wraps like a hug</span><span class="annotation annotation--1">on the LEFT of the spotter</span><span class="annotation annotation--2">not there — HERE</span></div>
+      </div>
+      <figcaption>Towel Lesson · Instructive</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The friends mimicked her. Fern ran her long fingers down her own arms with quiet precision. Riddle checked her wing-feathers, muttering. Mango swooped down from the beam and patted herself so fast her paws blurred — &quot;Done!&quot; — already reaching for the staff.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_05.jpg" alt="Towel Parade" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;ll CATCH every ember!</span><span class="annotation annotation--1">two arm-lengths wide</span><span class="annotation annotation--2">April watched, and said nothing, and gave him a nod</span></div>
+      </div>
+      <figcaption>Towel Parade · Comic-tender</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Slower,&quot; April said. Just the word.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango slowed. A little.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April looked at Dusty. He still held his towel at arm&#x27;s length, shoulders high, eyes wide and careful.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Dusty,&quot; she said gently. &quot;The smother only works close.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_06.jpg" alt="Riddle Asks" />
+        <div class="beat-annotations"><span class="annotation annotation--0">But WHY does it sit on the LEFT?</span><span class="annotation annotation--1">the old faded scorch on the pocket&#x27;s left breast</span><span class="annotation annotation--2">because that&#x27;s where the dragon looks first</span></div>
+      </div>
+      <figcaption>Riddle Asks · Probing</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">He looked at the cloth. He looked at April&#x27;s paw, wrapped snug against the wick. His dark eyes moved between the two. Then, slowly, he drew the towel in — not all the way to his chest, but closer. His arms bent. His breath stayed even.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Good,&quot; April said.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She stood and lifted the staff overhead. &quot;Let&#x27;s sing what we know.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">And they did — all four voices with hers, louder and faster than yesterday, the circle of their bodies loose and bright around the chalk perimeter:</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>Draw the line and step inside —</em></div>
+      <div class="line"><em>find your safety, eye to eye —</em></div>
+      <div class="line"><em>smother close and hold it tight —</em></div>
+      <div class="line"><em>check your seams before the light!</em></div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_07.jpg" alt="Pat-Down Demonstration" />
+        <div class="beat-annotations"><span class="annotation annotation--0">PAT DOWN EVERY SEAM</span><span class="annotation annotation--1">no trailing, no dangling, no loose bit of thread</span><span class="annotation annotation--2">the one that you miss is the one the dragon will find</span></div>
+      </div>
+      <figcaption>Pat-Down Demonstration · Methodical</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;The fire AND the frame!&quot; Mango shouted at the end, wings spread.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_08.jpg" alt="Full Song" />
+        <div class="beat-annotations"><span class="annotation annotation--0">DRAW THE CIRCLE ROUND!</span><span class="annotation annotation--1">LAY THE WET TOWEL LEFT!</span><span class="annotation annotation--2">PAT DOWN EVERY SEAM — LET NO THREAD GO ASTRAY!</span><span class="annotation annotation--3">the voices rang bright</span></div>
+      </div>
+      <figcaption>Full Song · Triumphant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The others echoed: &quot;The fire and the frame!&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">They heard the fire. They sang the frame. They didn&#x27;t know yet which word was heavier.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April set the staff down and brushed chalk from her knees. &quot;Tomorrow,&quot; she said, &quot;we learn to close the fuel and spin off.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She paused, and her voice dropped to the register the friends would later learn to listen for.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch02/beat_09.jpg" alt="Waiting Wicks" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the hardest to learn is the easiest one</span><span class="annotation annotation--1">tomorrow</span><span class="annotation annotation--2">the unlit wicks waited</span></div>
+      </div>
+      <figcaption>Waiting Wicks · Anticipatory</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Two more steps and the song is near done —</div>
+      <div class="line">but the hardest to learn is the easiest one.&quot;</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 3</div>
+    <audio controls preload="none" src="audio/chapter_03.mp3"></audio>
+  </div>
+<section id="ch-03" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 3</div>
+    <h2 class="ch-title">Cypher&#x27;s River</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">The fuel can was small and brass, with a cap that screwed tight.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April set it on the practice-yard table next to the unlit dragon staff and waited until all four friends were watching. Then she unscrewed the cap, tipped the can, and let a thin stream of fuel soak into one dark wick-knot at the staff&#x27;s end. The smell was sharp and bright — like lamp oil and lightning mixed together.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_01.jpg" alt="Open Arms" />
+        <div class="beat-annotations"><span class="annotation annotation--0">shade pooled like water</span><span class="annotation annotation--1">the staff lay still and unlit</span><span class="annotation annotation--2">four pairs of eyes</span><span class="annotation annotation--3">CHAPTER 3: LAUREL&#x27;S RIVER</span></div>
+      </div>
+      <figcaption>Open Arms · Tranquil</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">She screwed the cap back on.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;That&#x27;s the step,&quot; she said. &quot;You fuel your prop. Then you close the fuel. Every time.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle&#x27;s head tilted left. &quot;But why not leave it open until all six wicks are—&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Because open fuel near fire is the most common disaster you can prevent.&quot; April&#x27;s voice was quiet and even. &quot;You fuel one end. You close the can. You fuel the other end. You close the can again. The cap goes on between every pour.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She held the closed can up so they could see the seal.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_02.jpg" alt="Heartbeat Paw" />
+        <div class="beat-annotations"><span class="annotation annotation--0">breathe IN for a three-count</span><span class="annotation annotation--1">the stillness you keep</span><span class="annotation annotation--2">as easy as sleep</span></div>
+      </div>
+      <figcaption>Heartbeat Paw · Intimate</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Dusty nodded once. &quot;Close the fuel.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_03.jpg" alt="Golden Rings" />
+        <div class="beat-annotations"><span class="annotation annotation--0">rings of pale gold</span><span class="annotation annotation--1">each ring like a promise</span><span class="annotation annotation--2">OUT for a four-count</span></div>
+      </div>
+      <figcaption>Golden Rings · Magical</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Close the fuel,&quot; April confirmed.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Then she set the can down and stepped into the chalk circle. She held the staff upright, both paws wrapped around its center, and stood very still.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Before you spin — before you even think about fire — you breathe.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She inhaled. Slow, through the nose, and the friends could almost see it — a ring of warm air rising from her mouth when she exhaled, soft as lantern-glow, widening as it climbed.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Three in,&quot; she said. &quot;Four out.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She breathed again. The ring rose again.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_04.jpg" alt="Four Voices" />
+        <div class="beat-annotations"><span class="annotation annotation--0">We breathe in for three!</span><span class="annotation annotation--1">one golden rush</span><span class="annotation annotation--2">Mango&#x27;s spun upward — Dusty&#x27;s slow-burn</span></div>
+      </div>
+      <figcaption>Four Voices · Joyful</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>Three in and four out, let the count fill your chest —</em></div>
+      <div class="line"><em>the breath is the door and the stillness is rest.</em></div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_05.jpg" alt="Fuel Dip" />
+        <div class="beat-annotations"><span class="annotation annotation--0">dip and lift and wait for the line</span><span class="annotation annotation--1">not too much, not little</span><span class="annotation annotation--2">STEP SIX: THE FUEL-UP</span></div>
+      </div>
+      <figcaption>Fuel Dip · Precise</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Mango sang it back before the last word had landed — fast, bright, already bouncing on her branch. Fern murmured it a beat later, precise and soft. Riddle opened her beak to ask why four and not five, then closed it and breathed instead. Dusty just breathed.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">They ran the whole refrain. Six steps now, called and answered:</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>Perimeter drawn and the circle is clear —</em></div>
+      <div class="line"><em>eye contact found with your safety right here —</em></div>
+      <div class="line"><em>close the fuel tight, every cap every pour —</em></div>
+      <div class="line"><em>spin off the excess or start slow, nothing more —</em></div>
+      <div class="line"><em>three in and four out, let the count fill your chest —</em></div>
+      <div class="line"><em>the breath is the door and the stillness is rest.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Six voices. The yard rang with it.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Afterward they sat under the fig tree, the staff across April&#x27;s lap, and Mango asked the question she&#x27;d been holding since yesterday.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_06.jpg" alt="Riddle Asks" />
+        <div class="beat-annotations"><span class="annotation annotation--0">But WHY is it six and the breath count is five?</span><span class="annotation annotation--1">Does the order survive?</span><span class="annotation annotation--2">— tap tap tap —</span></div>
+      </div>
+      <figcaption>Riddle Asks · Curious</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Who taught you?&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_07.jpg" alt="Frame Holds" />
+        <div class="beat-annotations"><span class="annotation annotation--0">The fire AND the frame</span><span class="annotation annotation--1">the frame holds the fire</span><span class="annotation annotation--2">a plucked, ringing wire</span></div>
+      </div>
+      <figcaption>Frame Holds · Resonant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April&#x27;s paw drifted to the scorch mark on her apron pocket. Her eyes went somewhere far away.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;His name was Cypher. An old tiger. He spun poi — twin wicks on chains, not a staff. But the ritual was the same.&quot; She smiled, barely. &quot;He spun like the river, he laughed like the rain—&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She stopped.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The second line didn&#x27;t come. The air under the fig tree held its shape, waiting for a rhyme that April kept behind her teeth.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango leaned forward, wings half-spread. &quot;He laughed like the rain and he — taught you the flame?&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_08.jpg" alt="Refrain Ring" />
+        <div class="beat-annotations"><span class="annotation annotation--0">The circle is drawn and the safety&#x27;s begun!</span><span class="annotation annotation--1">Six steps and we&#x27;re steady!</span><span class="annotation annotation--2">Six steps and we&#x27;re fine!</span></div>
+      </div>
+      <figcaption>Refrain Ring · Triumphant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April looked at Mango. Something moved behind her eyes — gratitude, maybe, or a gentle sadness that the gap had been filled so quickly. She touched the scorch mark once more and let her paw fall.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_09.jpg" alt="Stopped Couplet" />
+        <div class="beat-annotations"><span class="annotation annotation--0">She taught me the dragon, she taught me the —</span><span class="annotation annotation--1">a door left ajar</span><span class="annotation annotation--2">Her name was Laurel-Jane</span></div>
+      </div>
+      <figcaption>Stopped Couplet · Aching</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Fern&#x27;s hand found her own arm and rested there, quiet.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle tilted her head right — skepticism this time — but said nothing.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Dusty was still as stone.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;One step left,&quot; April said, and her teaching voice came back, warm and steady. &quot;Tomorrow.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_10.jpg" alt="Mango Fills" />
+        <div class="beat-annotations"><span class="annotation annotation--0">She taught you the EVERYTHING!</span><span class="annotation annotation--1">the rhyme wasn&#x27;t April&#x27;s</span><span class="annotation annotation--2">the line wasn&#x27;t earned</span></div>
+      </div>
+      <figcaption>Mango Fills · Bittersweet</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">She lifted the staff so its wicks caught the last copper light slanting through the fig leaves.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch03/beat_11.jpg" alt="Amber Track" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the half-finished couplet hung there</span><span class="annotation annotation--1">she had more to learn</span><span class="annotation annotation--2">— and hung — till the last of the light slipped away</span></div>
+      </div>
+      <figcaption>Amber Track · Longing</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>The last step, the quick step, the step before flight —</em></div>
+      <div class="line"><em>the step that stands guard at the edge of the light.</em></div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 4</div>
+    <audio controls preload="none" src="audio/chapter_04.mp3"></audio>
+  </div>
+<section id="ch-04" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 4</div>
+    <h2 class="ch-title">Fern Finds Her Feet</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">Fern&#x27;s toes gripped the chalk line like it was a riverbank in a flood.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April had drawn the perimeter fresh that morning — a wide white circle on the practice-yard dust. Mango stood inside it, the unlit dragon staff balanced across her wing-hooks, swaying it in a slow arc the way April had shown her. Riddle perched on a fence post just outside the circle, head tilted. Dusty sat cross-legged on the cobblestones, steady as a stone.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_01.jpg" alt="Circle Edge" />
+        <div class="beat-annotations"><span class="annotation annotation--0">toe pads on dusty stone</span><span class="annotation annotation--1">her breath was her own</span><span class="annotation annotation--2">FERN</span></div>
+      </div>
+      <figcaption>Circle Edge · Anticipation</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">And Fern stood at the circle&#x27;s edge, assigned as safety, and did not move.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Your safety is a person,&quot; April called from two paces back, her voice bright and even. &quot;Not a place. Not a post. A person who follows the arc.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern&#x27;s golden eyes tracked the staff. Her feet stayed planted.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango swung the staff wider. The dark wick-knots at each end traced a slow figure in the air — three on one side, three on the other, six unlit mouths yawning through their arc. Fern watched. She watched perfectly. But watching from one spot is not the same as following, and when the staff swept left, Fern&#x27;s eyes went with it but her body stayed behind.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_02.jpg" alt="Refrain Ring" />
+        <div class="beat-annotations"><span class="annotation annotation--0">six steps in the frame</span><span class="annotation annotation--1">Fern&#x27;s voice arrived half a heartbeat postponed</span><span class="annotation annotation--2">THE REFRAIN</span></div>
+      </div>
+      <figcaption>Refrain Ring · Communal</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Fern,&quot; April said. Not sharp. Patient. &quot;If she were lit right now, and the staff kicked — could you reach her from where you&#x27;re standing?&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_03.jpg" alt="Spotter Arc" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the spotter must MOVE</span><span class="annotation annotation--1">not frozen, not planted, not still as a tree</span><span class="annotation annotation--2">FOLLOW</span></div>
+      </div>
+      <figcaption>Spotter Arc · Instructive</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Fern looked down at her own feet. They were pale green against the chalk, wide toe-pads pressed flat, as if the ground might move without her permission.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;No,&quot; Fern said quietly.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;So what do your feet need to do?&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">A pause. Fern touched her own forearm — her comfort gesture, fingers reading her own skin.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Follow,&quot; she said.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_05.jpg" alt="Mango Spins" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;ll go like a river</span><span class="annotation annotation--1">not fast like a spark</span><span class="annotation annotation--2">the gap opened wide</span></div>
+      </div>
+      <figcaption>Mango Spins · Encouraging</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April nodded once and sang the call:</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_07.jpg" alt="Riddle Understands" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Oh. OH.</span><span class="annotation annotation--1">the towel&#x27;s intersection</span><span class="annotation annotation--2">the catch is a team</span></div>
+      </div>
+      <figcaption>Riddle Understands · Revelation</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>Eye contact first — then follow the spin,</em></div>
+      <div class="line"><em>your feet trace the circle the fire moves in.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern&#x27;s response came late. Half a beat behind. But it came, and her right foot lifted off the chalk for the first time.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She stepped.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">It was a small step — a tree frog&#x27;s careful placement, toes spread wide, testing the ground before committing weight. Mango swung the staff again and Fern stepped again, tracking the arc, her body turning with the motion instead of against it.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_04.jpg" alt="Frozen Fern" />
+        <div class="beat-annotations"><span class="annotation annotation--0">safe for the spotter is NOT safe for me</span><span class="annotation annotation--1">the towel needs a HAND</span><span class="annotation annotation--2">a hand needs a BODY</span></div>
+      </div>
+      <figcaption>Frozen Fern · Vulnerable</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Step. Step. Step.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_09.jpg" alt="Fern Sings" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I step with the spinner, I follow the arc</span><span class="annotation annotation--1">Fern&#x27;s voice was steady</span><span class="annotation annotation--2">not late anymore</span></div>
+      </div>
+      <figcaption>Fern Sings · Triumphant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Her wet feet left prints on the dusty ground — pale crescents, evenly spaced, curving in a ring that mirrored the perimeter from the outside.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;But why outside the circle?&quot; Riddle asked from her post, one foot lifted mid-gesture.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Because the perimeter holds,&quot; April said. &quot;The safety follows from beyond it. Close enough to reach. Far enough to see.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern stepped again. And again. The prints behind her drew a perfect arc — proof her body was learning what her mind already knew. Her golden eyes never left Mango&#x27;s wrists.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_06.jpg" alt="First Steps" />
+        <div class="beat-annotations"><span class="annotation annotation--0">a small wet print bloomed</span><span class="annotation annotation--1">the gap became less</span><span class="annotation annotation--2">FIRST STEPS</span></div>
+      </div>
+      <figcaption>First Steps · Breakthrough</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">By the third pass, her response landed on the beat:</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_08.jpg" alt="Moon Prints" />
+        <div class="beat-annotations"><span class="annotation annotation--0">a circle that followed the circle</span><span class="annotation annotation--1">each one like a moon</span><span class="annotation annotation--2">the frame isn&#x27;t something you WATCH — it&#x27;s what you DO</span></div>
+      </div>
+      <figcaption>Moon Prints · Earned</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>I watch. I step. I track the arc.</em></div>
+      <div class="line"><em>My feet will find her in the dark.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">April&#x27;s smile reached her eyes.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">They ran the six-step refrain together — perimeter, eye contact, close the fuel, spin off, call the body part, smother — and this time Fern&#x27;s voice on the safety line was low, steady, and exactly on time.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango racked the staff across her wing-hooks and grinned down from inside the circle. &quot;Your footprints look like a moon,&quot; she said. Then, bouncing on her toes: &quot;Tomorrow&#x27;s the spin-off drill, right? I&#x27;ll spin so fast the stars will stare!&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch04/beat_10.jpg" alt="Mango Rising" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;ll spin it so fast that the STARS stop and stare!</span><span class="annotation annotation--1">her bell rang in the air</span><span class="annotation annotation--2">THE SEED OF FORESHADOW</span></div>
+      </div>
+      <figcaption>Mango Rising · Electric</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April touched the scorch mark on her apron pocket — two fingers, quick, unconscious — and said nothing.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 5</div>
+    <audio controls preload="none" src="audio/chapter_05.mp3"></audio>
+  </div>
+<section id="ch-05" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 5</div>
+    <h2 class="ch-title">Riddle Counts the Why</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">Before the others arrived, April stood alone in the practice yard.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Her teaching bag lay open on the low table. She reached inside, past the chalk and wicking cord, and pressed her paw against a small patch sewn into the lining. Amber felt, cut in the shape of a flame. Tiny stitched letters in a looping hand.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_01.jpg" alt="Hidden Patch" />
+        <div class="beat-annotations"><span class="annotation annotation--0">The step you skip is the step that speaks</span><span class="annotation annotation--1">before any friend had crossed the yard</span><span class="annotation annotation--2">a hand she had known now for years upon weeks</span></div>
+      </div>
+      <figcaption>Hidden Patch · Intimate</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">She held her paw there for three breaths. Then she closed the bag and turned to greet her friends.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle was already perched on the unlit dragon staff where it rested between its two Y-shaped posts, her head tilted left.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;But WHY do we count before we spin?&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April set her paws on her hips. &quot;Good morning to you too, Riddle.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Good morning. But why?&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango dropped from the fig tree, wings flaring. &quot;Because April said so — can we start?&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_02.jpg" alt="Four Arrivals" />
+        <div class="beat-annotations"><span class="annotation annotation--0">jingle and shout — quiet footsteps — steady ground — without a sound</span><span class="annotation annotation--1">What step are we learning?</span><span class="annotation annotation--2">And why is it great?</span></div>
+      </div>
+      <figcaption>Four Arrivals · Energetic</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;That&#x27;s not a why,&quot; Riddle said. She tapped her thinking-stone against her beak. Click, click.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_03.jpg" alt="Breath Bridge" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the breath is the bridge</span><span class="annotation annotation--1">from your mind to your paw</span><span class="annotation annotation--2">STEP FIVE</span></div>
+      </div>
+      <figcaption>Breath Bridge · Instructive</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April lifted one paw.</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>Breathe in — two, three, four.</em></div>
+      <div class="line"><em>Breathe out — two, three, four.</em></div>
+      <div class="line"><em>The count comes before the fire does,</em></div>
+      <div class="line"><em>and the body learns what the mind waits for.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern breathed with her. Dusty breathed with her. Mango bounced through it, close enough.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle opened her beak — &quot;But what does counting actually—&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The response line sailed past without her.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April called again.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_04.jpg" alt="Three Responses" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;m THERE!</span><span class="annotation annotation--1">like a river&#x27;s soft sound</span><span class="annotation annotation--2">I breathe. And I hold. And I stand here. Prepared.</span></div>
+      </div>
+      <figcaption>Three Responses · Varied</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>Breathe in — two, three, four.</em></div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_06.jpg" alt="Golden Rings" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Don&#x27;t answer me yet</span><span class="annotation annotation--1">Just breathe when I breathe</span><span class="annotation annotation--2">circles of light</span></div>
+      </div>
+      <figcaption>Golden Rings · Reverent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Fern and Dusty echoed. Mango was already on five. Riddle&#x27;s beak was still open, shaping a question that had no place to land.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_08.jpg" alt="Five Voices" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Draw the circle on steady ground!</span><span class="annotation annotation--1">Breathe in-two-three-four, let it go!</span><span class="annotation annotation--2">six steps ringing, one more to know</span></div>
+      </div>
+      <figcaption>Five Voices · Triumphant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Riddle,&quot; April said quietly. &quot;Don&#x27;t think about why. Just count.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_09.jpg" alt="Frame Question" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the fire AND the frame</span><span class="annotation annotation--1">Is it something you hold?</span><span class="annotation annotation--2">You&#x27;re starting to see.</span></div>
+      </div>
+      <figcaption>Frame Question · Mysterious</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;But if I don&#x27;t know why, how do I know it matters?&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April smiled — half a smile, the kind that almost explains but doesn&#x27;t quite. &quot;The fire and the frame,&quot; she said. &quot;You keep asking about the fire. The count IS the frame.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle tilted her head right. Skepticism.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;What does &#x27;the frame&#x27; even mean?&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_05.jpg" alt="Why Pressed" />
+        <div class="beat-annotations"><span class="annotation annotation--0">But WHY is it four?</span><span class="annotation annotation--1">But what does it DO?</span><span class="annotation annotation--2">the count is the answer</span></div>
+      </div>
+      <figcaption>Why Pressed · Confrontational</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Count with me,&quot; April said, &quot;and find out.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She called the count a third time. This time she held Riddle&#x27;s copper-orange eyes and breathed — slow, deliberate, four beats in, four beats out. Pale gold rings of breath drifted upward from April&#x27;s mouth in the cool morning air, widening, fading.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle watched the rings rise. Her chest moved. In — two, three, four. Out — two, three, four.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">And on the exhale, something shifted. Her wings settled. Her lifted foot lowered to the staff. The question in her throat dissolved — not answered, but replaced. The count filled the space where the question had been.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Her response landed exactly on the beat:</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>I count — two, three, four.</em></div>
+      <div class="line"><em>I breathe — and now I&#x27;m sure.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern&#x27;s golden eyes went wide. Dusty nodded once, solid as stone.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_07.jpg" alt="Violet Rings" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Oh.</span><span class="annotation annotation--1">not like a question</span><span class="annotation annotation--2">round like a ring, with the same kind of space</span></div>
+      </div>
+      <figcaption>Violet Rings · Transcendent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Riddle blinked. &quot;Oh,&quot; she said softly. &quot;The why is IN the counting.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Yes,&quot; April said.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">They ran it again. And again. Each time, Riddle&#x27;s response arrived not because she had stopped questioning but because the rhythm of counting had become the rhythm of understanding — four beats that grounded her body before her mind could race ahead.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The practice yard filled with breath rings, pale and luminous, rising from five mouths in unison.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">When they finished, Riddle turned on her perch to face Dusty, who sat solid as a boulder at the circle&#x27;s edge, the damp towel folded on the stump to his left.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;The count is the answer, the count is the key,&quot; Riddle called, her voice bright with discovery. &quot;Now show us the towel, brave Dusty — show me!&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch05/beat_10.jpg" alt="Dusty&#x27;s Dare" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the count is the answer, the count is the key</span><span class="annotation annotation--1">show us the towel, brave Dusty</span><span class="annotation annotation--2">the spotlight shifts</span></div>
+      </div>
+      <figcaption>Dusty&#x27;s Dare · Anticipatory</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Dusty looked at the towel. He looked at the staff. His paws gripped his knees.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Tomorrow,&quot; he said.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 6</div>
+    <audio controls preload="none" src="audio/chapter_06.mp3"></audio>
+  </div>
+<section id="ch-06" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 6</div>
+    <h2 class="ch-title">Dusty Holds Close</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">Dusty&#x27;s paws were perfect. That was the problem.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">He held the towel folded in thirds, exactly the way April showed him. He stood at two-spin-widths — close enough to catch, far enough to breathe. He said every word right, every time, his low voice landing on the beat like a stone dropping into still water.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_01.jpg" alt="Arms Length" />
+        <div class="beat-annotations"><span class="annotation annotation--0">arm&#x27;s length</span><span class="annotation annotation--1">the body says NO</span><span class="annotation annotation--2">DUSTY HOLDS CLOSE</span></div>
+      </div>
+      <figcaption>Arms Length · Tense</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">But his arms were straight out. Locked. The towel hung as far from his body as his bones would allow, and his weight tilted back on his heels, shoulders pulling away from the place where the flame would be.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April watched. She didn&#x27;t say anything yet.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango swung the unlit staff in a slow overhead arc. Fern tracked from the circle&#x27;s edge, her wet footprints curving on the cobblestones. Riddle perched on the signpost, counting under her breath.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April called:</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Your safety is a person, not a place —</div>
+      <div class="line">hold close enough to see the spinner&#x27;s face.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_02.jpg" alt="Perfect Words" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;ll hold it. I&#x27;ll catch it.</span><span class="annotation annotation--1">but his feet stood past the half</span><span class="annotation annotation--2">two-spin-width mark</span></div>
+      </div>
+      <figcaption>Perfect Words · Determined</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Dusty answered, right on time:</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_03.jpg" alt="Fern Recognizes" />
+        <div class="beat-annotations"><span class="annotation annotation--0">she knew that lean backward</span><span class="annotation annotation--1">the body says NO while the mouth says the grace</span><span class="annotation annotation--2">FERN</span></div>
+      </div>
+      <figcaption>Fern Recognizes · Recognition</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;I hold. I watch. I stay.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">His voice was steady. His arms were a mile away.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Dusty,&quot; April said quietly. Not a correction. A question shaped like a name.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">He looked at her. His small dark eyes were calm, but his paws gripped the towel so hard his knuckles had gone pale beneath the tawny fur.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;You&#x27;re leaning back,&quot; April said.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_04.jpg" alt="Wet Footprints" />
+        <div class="beat-annotations"><span class="annotation annotation--0">In-two-three — and OUT</span><span class="annotation annotation--1">breath rings</span><span class="annotation annotation--2">your feet are the answer</span></div>
+      </div>
+      <figcaption>Wet Footprints · Gentle</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;I know.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_05.jpg" alt="One Tap" />
+        <div class="beat-annotations"><span class="annotation annotation--0">one tap, nothing more</span><span class="annotation annotation--1">the cautious one teaching the steady one</span></div>
+      </div>
+      <figcaption>One Tap · Tender</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">That was all. He knew. He&#x27;d known all afternoon. Knowing wasn&#x27;t the problem.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern hopped down from the barrel. She didn&#x27;t say much — she never did — but she crossed the circle and stood next to Dusty, her wide toe-pads printing damp crescents on the stone.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Watch,&quot; Fern said.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She lifted her hands to chest height, palms forward, elbows soft. Then she stepped — one small frog-step — toward the staff&#x27;s arc. Toward where the heat would be.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Closer is safer,&quot; Fern said. &quot;April taught me. If you&#x27;re far, you have to lunge. If you&#x27;re close, you just — unfold.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_06.jpg" alt="Scorch Silence" />
+        <div class="beat-annotations"><span class="annotation annotation--0">April stood quiet</span><span class="annotation annotation--1">like a river, like rain</span><span class="annotation annotation--2">the scorch mark</span></div>
+      </div>
+      <figcaption>Scorch Silence · Haunted</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">She mimed it: arms opening from the chest outward, the way you&#x27;d open a book. Not reaching. Offering.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Dusty watched her hands.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Then he pulled the towel in.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Not all the way. His shoulders were still tight, his jaw still set. But the towel came to his chest, and his elbows bent, and his weight shifted forward onto the balls of his feet.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango swung the staff again. The unlit wicks passed through the space where Dusty&#x27;s hands could reach them now — close, real, possible.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">His eyes tracked the arc. His breath was steady. His fear was still there — you could see it in the set of his heavy brow, the way his fingers pressed white into the damp cloth.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_07.jpg" alt="Towel Close" />
+        <div class="beat-annotations"><span class="annotation annotation--0">CLOSE, NOT FAR</span><span class="annotation annotation--1">two spin-widths exactly</span><span class="annotation annotation--2">his hands were awake</span></div>
+      </div>
+      <figcaption>Towel Close · Resolute</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">But his hands were close. And close was what mattered.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April nodded once.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Around the practice yard, the first lanterns were being lit. Real firelight caught Dusty&#x27;s face — warm and orange against his tawny fur — and he didn&#x27;t flinch.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">From the branch overhead, Mango hung by her feet, wings half-spread, the staff balanced across her open paws.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Tomorrow&#x27;s mine!&quot; she called down, voice bright as a bell. &quot;Spin off! The last step! The spin!&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_08.jpg" alt="Circle Steady" />
+        <div class="beat-annotations"><span class="annotation annotation--0">We draw the safe circle, we sing the safe song</span><span class="annotation annotation--1">six steps, six strong voices</span><span class="annotation annotation--2">one step still to seed</span></div>
+      </div>
+      <figcaption>Circle Steady · Unified</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Her brass ankle-bell jingled. Her eyes were electric.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch06/beat_09.jpg" alt="Copper Bell" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Tomorrow&#x27;s MY chapter!</span><span class="annotation annotation--1">the stars hold their breath</span><span class="annotation annotation--2">April said nothing</span></div>
+      </div>
+      <figcaption>Copper Bell · Foreboding</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April touched the scorch mark on her apron pocket and said nothing.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 7</div>
+    <audio controls preload="none" src="audio/chapter_07.mp3"></audio>
+  </div>
+<section id="ch-07" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 7</div>
+    <h2 class="ch-title">Mango&#x27;s Bright Bow</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">The brass bell on Mango&#x27;s ankle sang before she did.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She dropped from the crossbeam, caught the unlit dragon staff mid-fall, and landed inside the chalk circle with her wings already spreading. The six dark wicks fanned out like fingers reaching for something only she could see.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_01.jpg" alt="Swooping Entrance" />
+        <div class="beat-annotations"><span class="annotation annotation--0">IT&#x27;S MY TURN NOW!</span><span class="annotation annotation--1">the jingle before the landing</span><span class="annotation annotation--2">MANGO</span></div>
+      </div>
+      <figcaption>Swooping Entrance · Electric</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Spin off,&quot; April called from the circle&#x27;s edge.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Spin off — the step between fueling and fire. Three sharp shakes to fling the excess away, so nothing drips, nothing slings, nothing catches where it shouldn&#x27;t.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April sang it clean:</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>Spin off the excess, shake it free,</em></div>
+      <div class="line"><em>three flicks out — then the fire can be.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango&#x27;s answer came before the call had fully landed:</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_02.jpg" alt="Burn-Off Lesson" />
+        <div class="beat-annotations"><span class="annotation annotation--0">three sharp flicks — wrist, not arm</span><span class="annotation annotation--1">the drip you can&#x27;t see</span><span class="annotation annotation--2">STEP SEVEN</span></div>
+      </div>
+      <figcaption>Burn-Off Lesson · Instructive</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>Three flicks out and the fuel flies wide —</em></div>
+      <div class="line"><em>nothing drips and the dragon can ride!</em></div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_03.jpg" alt="Mango Snatches" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;ve GOT it!</span><span class="annotation annotation--1">the grab before the grip</span><span class="annotation annotation--2">already three moves ahead</span></div>
+      </div>
+      <figcaption>Mango Snatches · Impulsive</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Her paws blurred. One-two-three — the staff snapped through the air so fast the wicks whistled. Then she added something no one had taught her: a long, sweeping arc that curved the staff behind her back and over her head, tracing a shape like a dragon unfurling its wings.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern&#x27;s golden eyes went wide. Riddle&#x27;s beak dropped open. Dusty said, &quot;Huh.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Again,&quot; April said quietly.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango spun off again — one-two-three-flourish — faster, cleaner, the dragon-wing shape tighter. The unlit wicks cut the evening air in perfect symmetry.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Now all of it,&quot; April said. &quot;From the top. Everyone.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_04.jpg" alt="Dragon Wing Flourish" />
+        <div class="beat-annotations"><span class="annotation annotation--0">she made it FLY</span><span class="annotation annotation--1">the extra sweep — was that part of the step?</span><span class="annotation annotation--2">four flicks, not three</span></div>
+      </div>
+      <figcaption>Dragon Wing Flourish · Dazzling</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The full rehearsal. Every step, in order, for the first time.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_05.jpg" alt="Dusty Watches" />
+        <div class="beat-annotations"><span class="annotation annotation--0">She&#x27;s fast.</span><span class="annotation annotation--1">CLOSE, NOT FAR</span><span class="annotation annotation--2">his paws just stayed</span></div>
+      </div>
+      <figcaption>Dusty Watches · Watchful</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Mango stepped to the circle&#x27;s chalk edge. Fern took her spotter&#x27;s position, feet already moving in the slow tracking arc she&#x27;d earned. Dusty held the wet towel close against his chest — close, not far. Riddle perched on the fence post, breathing in for three and out for four, pale rings of breath drifting upward in the cooling air.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_07.jpg" alt="Spotter&#x27;s Arc" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the circle following the circle</span><span class="annotation annotation--1">each pad-print pressed</span><span class="annotation annotation--2">FERN</span></div>
+      </div>
+      <figcaption>Spotter&#x27;s Arc · Precise</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April watched from two paces back.</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>Perimeter.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango stepped inside the chalk line.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_06.jpg" alt="Full Refrain" />
+        <div class="beat-annotations"><span class="annotation annotation--0">SEVEN STEPS ALIVE</span><span class="annotation annotation--1">THE COUNT&#x27;S THE KEY THAT GUARDS THE DOOR</span><span class="annotation annotation--2">WE STEP INSIDE AND LOOK AROUND</span><span class="annotation annotation--3">breath rings in the fading light</span></div>
+      </div>
+      <figcaption>Full Refrain · Ceremonial</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>Eye contact with your safety.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">She found Dusty&#x27;s small dark eyes. He nodded.</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>Close the fuel.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern mimed capping the tin and setting it outside the circle.</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>Spin off.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">One-two-three. The dragon-wing flourish. The wicks carved silence.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_08.jpg" alt="Mango&#x27;s Full Run" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the unlit wicks looked like they could fly</span><span class="annotation annotation--1">MANGO&#x27;S BRIGHT BOW</span><span class="annotation annotation--2">proud — and watchful</span><span class="annotation annotation--3">the dragon staff singing her name</span></div>
+      </div>
+      <figcaption>Mango&#x27;s Full Run · Triumphant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Every step landed. Every response rang. The practice yard hummed with the sound of a ritual that sounded — to four bright voices under string lights — like mastery.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango swept the staff into one last dragon-wing arc and bowed, wings spread wide, the unlit wicks catching the lamplight like dark jewels. Fern clapped her small hands. Riddle whistled a two-note cheer. Dusty thumped his tail once on the cobblestones, which was the same as a standing ovation.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">At the circle&#x27;s edge, April clapped too. Her paw came to rest on the scorch mark on her left apron pocket. Her smile was proud, and warm, and did not quite reach her eyes.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango hung upside-down from the crossbeam, the staff balanced across her toes, grinning at the stars.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;The steps are all sung and the dragon is ready —</div>
+      <div class="line">tomorrow we light it. My paws will be steady!&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch07/beat_09.jpg" alt="Bright Foreshadow" />
+        <div class="beat-annotations"><span class="annotation annotation--0">tomorrow we light it</span><span class="annotation annotation--1">the wicks stayed dark</span><span class="annotation annotation--2">WHERE THE DRAGON LOOKS FIRST</span><span class="annotation annotation--3">a spark rose and vanished like a falling leaf</span></div>
+      </div>
+      <figcaption>Bright Foreshadow · Bittersweet</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The string lights swayed. The chalk circle glowed white against the darkening ground. And somewhere inside April&#x27;s teaching bag, a small flame-shaped patch held words that nobody had read yet.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Tomorrow there would be fire.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 8</div>
+    <audio controls preload="none" src="audio/chapter_08.mp3"></audio>
+  </div>
+<section id="ch-08" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 8</div>
+    <h2 class="ch-title">The Silent Echo</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">Lanterns everywhere. The festival fire-town blazed with them — strung between rooftops, floating in barrels of water, tucked into the crooks of old trees — so that the whole square seemed to breathe warm gold.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">At the center, the chalk circle waited.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_01.jpg" alt="Festival Glow" />
+        <div class="beat-annotations"><span class="annotation annotation--0">THE LANTERNS ARE LIT AND THE FIRE-TOWN GLOWS</span><span class="annotation annotation--1">the chalk circle gleams</span><span class="annotation annotation--2">three dark wicks</span></div>
+      </div>
+      <figcaption>Festival Glow · Anticipation</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The friends stood at its edge, voices ringing through the warm air, chanting the ritual they had practiced all week. April called each step and they answered, confident, bright, their words landing together like hands clapping in time.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Perimeter drawn. Mango stepped inside the circle, the dragon staff balanced across her wings, six dark wicks waiting.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April found Dusty&#x27;s eyes across the circle. He nodded. Her safety.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern tracked from the right. Riddle perched at the far edge, still as stone.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April uncapped the fuel. She tilted the can, soaking each wick until the cloth drank deep. Then she sealed the cap and set the can outside the circle.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Close the fuel,&quot; April called.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_02.jpg" alt="Scorch Touch" />
+        <div class="beat-annotations"><span class="annotation annotation--0">she touches it once</span><span class="annotation annotation--1">SCORCH MEMORY</span><span class="annotation annotation--2">her voice has no flaw</span></div>
+      </div>
+      <figcaption>Scorch Touch · Solemn</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">And here is where the silence lived.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_03.jpg" alt="Circle Call" />
+        <div class="beat-annotations"><span class="annotation annotation--0">STEP INTO THE CIRCLE AND KNOW WHERE YOU STAND</span><span class="annotation annotation--1">here is my hand!</span><span class="annotation annotation--2">the friends answer true</span></div>
+      </div>
+      <figcaption>Circle Call · Unity</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Mango&#x27;s mouth did not open. No response came. Her wings were already spreading, her body already tilting toward the spin, because the dragon-wing pattern was singing in her muscles and the fuel can was behind her and the step felt like a door she had already walked through.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She had not closed the fuel.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April struck the match. The wicks caught. Six flames opened like bright petals, and Mango swept the staff into its first arc — Loss gorgeous, trailing fire through the dark.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Then a spark jumped.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">It landed on the open fuel can.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_04.jpg" alt="Towel Ready" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I hold it. I&#x27;m close.</span><span class="annotation annotation--1">TWO SPIN-WIDTHS AWAY</span><span class="annotation annotation--2">I will track every light</span></div>
+      </div>
+      <figcaption>Towel Ready · Vigilance</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">A ribbon of flame climbed the air where it should not have been. It licked sideways, caught the grass, and kissed Mango&#x27;s wrist where her wing met her paw.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_05.jpg" alt="Breath Count" />
+        <div class="beat-annotations"><span class="annotation annotation--0">breathe in for three</span><span class="annotation annotation--1">breathe out for four</span><span class="annotation annotation--2">BREATH RINGS</span><span class="annotation annotation--3">gold through a door</span></div>
+      </div>
+      <figcaption>Breath Count · Reverent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Mango froze.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Four bodies moved.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Dusty&#x27;s voice, low and enormous: &quot;ARM!&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Three heartbeats. One. Two. Three.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango&#x27;s free wing beat at her wrist but the flame held.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_06.jpg" alt="Blank Echo" />
+        <div class="beat-annotations"><span class="annotation annotation--0">MANGO — ANSWER ME.</span><span class="annotation annotation--1">                              </span><span class="annotation annotation--2">                              </span><span class="annotation annotation--3">the refrain is broken</span></div>
+      </div>
+      <figcaption>Blank Echo · Dread</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;ARM!&quot; Dusty called again.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern was already stepping in from the right, reading the wobble in Mango&#x27;s locked shoulder. Riddle&#x27;s beak opened across the circle — not a question, not a why, just the steady count: &quot;One — two — three — four —&quot; Breath rings rose from her beak, pale silver, the only calm thing in the square.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango dropped. She lay flat on the cobblestones, wings spread, the staff clattering beside her.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Dusty was there. Close — not at arm&#x27;s length, not flinching. He pressed the wet towel over her wrist with both wide paws and held it.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The fire went out.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">It went out because Dusty took away the air.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">That is what smother means. You cover the flame. You hold close. You press the cloth against your friend&#x27;s skin and you stay until the heat has nowhere left to breathe. The fire does not lose. It simply has no air, and so it stops.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_07.jpg" alt="Flame Catch" />
+        <div class="beat-annotations"><span class="annotation annotation--0">THE CIRCLE HAS FRIENDS</span><span class="annotation annotation--1">breathe in for three — breathe out for four!</span><span class="annotation annotation--2">the count is the answer</span><span class="annotation annotation--3">a pattern her paws learned long ago</span></div>
+      </div>
+      <figcaption>Flame Catch · Urgent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April was already beside them — paws moving in a pattern the friends had never seen, low and fast, closing the fuel can with one motion, kicking the staff&#x27;s lit wicks into the dirt with the sole of her foot, her body doing what it had learned long before she ever held a dragon staff.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_08.jpg" alt="Diamond Whole" />
+        <div class="beat-annotations"><span class="annotation annotation--0">THE CIRCLE IS WHOLE</span><span class="annotation annotation--1">four bodies, drawn tight</span><span class="annotation annotation--2">a diamond of friends</span></div>
+      </div>
+      <figcaption>Diamond Whole · Relief</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The scorch mark on her apron pocket caught the lantern light.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">No one was hurt.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango lay on the cobblestones, wings folded so tight they almost disappeared. Her enormous amber eyes were open, wet, unblinking.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The square was quiet. The lanterns swayed. Somewhere a festival drum kept playing, not knowing it should stop.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch08/beat_09.jpg" alt="Folded Small" />
+        <div class="beat-annotations"><span class="annotation annotation--0">she does not sing</span><span class="annotation annotation--1">small as a stone</span><span class="annotation annotation--2">the smoke drifts alone</span></div>
+      </div>
+      <figcaption>Folded Small · Devastation</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">And where Mango&#x27;s voice should have answered — where the response should have come, bright and fast and sure — there was only the space where the words had not been.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The step she skipped was the step that spoke.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 9</div>
+    <audio controls preload="none" src="audio/chapter_09.mp3"></audio>
+  </div>
+<section id="ch-09" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 9</div>
+    <h2 class="ch-title">The Patch Unsewn</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">Smoke curled from the six wicks like question marks nobody wanted to answer.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The dragon staff lay across the center of their circle, still ticking with heat. Five bodies sat close on the cobblestones — closer than they had sat all week. No one spoke. A lantern across the square guttered and steadied.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_01.jpg" alt="Smoke Circle" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the night held its breath</span><span class="annotation annotation--1">for the very first word</span><span class="annotation annotation--2">CIRCLE BODIES</span></div>
+      </div>
+      <figcaption>Smoke Circle · Solemn</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Mango&#x27;s wings were folded so tight they almost disappeared.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She spoke first.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;I didn&#x27;t close the fuel.&quot; Her voice was low, stripped of every exclamation mark. &quot;I knew the step. I&#x27;ve sung it back a hundred times. But my hands were already reaching for the spin, and my mouth said the words and my hands — didn&#x27;t.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She looked at the staff&#x27;s smoking wicks.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;My mouth knew it. My hands forgot.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Silence. Then Fern, quiet as rain on moss:</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_02.jpg" alt="Mango Confesses" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I skipped it</span><span class="annotation annotation--1">my body forgot what my voice understands</span><span class="annotation annotation--2">BURN-OFF — the step she dropped</span></div>
+      </div>
+      <figcaption>Mango Confesses · Devastated</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;I almost froze.&quot; She touched her own forearm. &quot;When I was learning to spot, I thought standing still was enough. April had to teach me that watching isn&#x27;t following.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_03.jpg" alt="Fern Speaks" />
+        <div class="beat-annotations"><span class="annotation annotation--0">soft as a frog-print</span><span class="annotation annotation--1">a spotter who&#x27;s frozen is only a stare</span><span class="annotation annotation--2">SPOTTER — her step to learn</span></div>
+      </div>
+      <figcaption>Fern Speaks · Vulnerable</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;I delayed,&quot; Riddle said. No question in her voice for once. &quot;The breath count — I kept asking why instead of breathing. If the count had mattered that night the way the fuel mattered tonight —&quot; She tapped her thinking-stone once against her beak and stopped.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Dusty spoke last. One word at a time, like stones laid in a wall.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;I held the towel too far. For weeks. Because I was afraid of the heat.&quot; He looked at his own wide paws. &quot;Fear made the distance. Fern taught me to close it.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The circle held.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April had not moved. Her paw rested on the scorch mark on her apron pocket — the old, soft-edged burn she had never explained. Now her fingers traveled from the pocket to her teaching bag. She opened it and drew out a small shape: a thumbnail-sized patch of amber felt, cut like a teardrop flame.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She held it in her open palm so they could all see the tiny stitched letters.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_04.jpg" alt="Riddle&#x27;s Count" />
+        <div class="beat-annotations"><span class="annotation annotation--0">my why came so late</span><span class="annotation annotation--1">BREATH COUNT — her step to hold</span><span class="annotation annotation--2">I understood everything — none of it fast</span></div>
+      </div>
+      <figcaption>Riddle&#x27;s Count · Regretful</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line"><em>The step you skip is the step that speaks.</em></div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_05.jpg" alt="Dusty&#x27;s Distance" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I held it too far</span><span class="annotation annotation--1">WET TOWEL — his step to close</span><span class="annotation annotation--2">the heat was the part</span></div>
+      </div>
+      <figcaption>Dusty&#x27;s Distance · Honest</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;His name was Cypher,&quot; April said. &quot;He was a tiger. He taught me on poi — twin wicks on chains, not a staff. But the ritual was the same.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Her voice was steady the way a candle is steady in a room with no wind.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;He&#x27;d say —&quot; and here she paused, the way Cypher always paused, giving the moment its weight — &quot;&#x27;Perimeter first. Eye contact. Close the fuel.&#x27; Short sentences. Strong nouns. He never explained why on the first telling. He let the body learn before the head could ask.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She turned the patch over in her paw.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;I was good. Quick. Praised. One night I skipped closing the fuel because I knew I&#x27;d already done it — except I hadn&#x27;t. A spark found the open can. A ribbon of flame caught Cypher&#x27;s vest.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_06.jpg" alt="Patch Revealed" />
+        <div class="beat-annotations"><span class="annotation annotation--0">The step you skip is the step that speaks</span><span class="annotation annotation--1">in Laurel&#x27;s own hand</span><span class="annotation annotation--2">FLAME PATCH</span></div>
+      </div>
+      <figcaption>Patch Revealed · Reverent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Fern&#x27;s golden eyes went wide.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Nobody was hurt. The vest was only singed. Cypher smothered it himself — pressed the fabric flat with his big paw, took away the air, and the fire went out. The way fire always goes out when you take away the air.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She looked at Dusty. He looked back. Something passed between them that neither named.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;I felt the distance,&quot; April said, &quot;between knowing a thing and remembering a thing. And I built the ritual I wished I&#x27;d carried in my hands, not just my mouth.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She set the patch on the cobblestones beside the smoking staff.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;He gave me this when I became a teacher. I&#x27;ve kept it inside my bag where only I could read it.&quot; She almost smiled. &quot;That was wrong. It belongs where everyone can see.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango leaned forward. Her wing-tip touched the patch, light as breath.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_07.jpg" alt="Laurel&#x27;s Spin" />
+        <div class="beat-annotations"><span class="annotation annotation--0">she spun like the river</span><span class="annotation annotation--1">she laughed like the rain</span><span class="annotation annotation--2">LAUREL — the teacher before</span></div>
+      </div>
+      <figcaption>Laurel&#x27;s Spin · Luminous</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Can we sew it onto the towel?&quot; Her voice was new — not fast, not bright, but deliberate and warm. &quot;So it&#x27;s there. Every time.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_08.jpg" alt="Ember Kiss" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the distance between knowing and holding</span><span class="annotation annotation--1">SCORCH MEMORY</span><span class="annotation annotation--2">a trailing ember, no bigger than this</span></div>
+      </div>
+      <figcaption>Ember Kiss · Intimate</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">April nodded.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_09.jpg" alt="Wing Touch" />
+        <div class="beat-annotations"><span class="annotation annotation--0">sew it on the towel</span><span class="annotation annotation--1">where we all see it right</span><span class="annotation annotation--2">THE LEFT SIDE — where the dragon looks first</span></div>
+      </div>
+      <figcaption>Wing Touch · Tender</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Riddle tilted her head — left, then right, then still. &quot;The fire and the frame,&quot; she said slowly. &quot;You&#x27;ve been saying it all week. The fire is the dragon. The frame is —&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;The ritual,&quot; April said. &quot;The perimeter. The eye contact. Closing the fuel. The steps that hold the fire safe. The frame doesn&#x27;t burn. The frame is what you build so the fire has a place to live.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The lanterns glowed soft and low around them. Smoke from the wicks had thinned to almost nothing. Mango held the flame patch in both paws now, reading the stitched words again, her enormous amber eyes wet and unblinking.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern&#x27;s hand found Dusty&#x27;s wide paw. Riddle&#x27;s wing settled on Mango&#x27;s shoulder.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_10.jpg" alt="Fire And Frame" />
+        <div class="beat-annotations"><span class="annotation annotation--0">THE FIRE AND THE FRAME</span><span class="annotation annotation--1">the frame is the reason the fire can come near</span><span class="annotation annotation--2">I built it from distance. From Laurel. From shame.</span></div>
+      </div>
+      <figcaption>Fire And Frame · Resolute</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The circle was tight. The circle was whole.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch09/beat_11.jpg" alt="Towel Held Close" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the catching-place</span><span class="annotation annotation--1">the refrain was rebuilding</span><span class="annotation annotation--2">not April&#x27;s alone</span></div>
+      </div>
+      <figcaption>Towel Held Close · Grace</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">And in the morning, they would build the frame again.</div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen — Chapter 10</div>
+    <audio controls preload="none" src="audio/chapter_10.mp3"></audio>
+  </div>
+<section id="ch-10" class="chapter">
+  <div class="ch-head">
+    <div class="ch-num">Chapter 10</div>
+    <h2 class="ch-title">The Reversed Chorus</h2>
+  </div>
+  <div class="narrative">
+    <div class="stanza stanza--first">
+      <div class="line">Morning came clean and bright, the way mornings do after hard nights.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The chalk circle was still there on the cobblestones. Fern had redrawn it at first light — her wet footprints tracing the old line, making it new. The dragon staff lay across two Y-posts, re-wicked, the six dark knots waiting.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--opening">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_01.jpg" alt="Stitched Words" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the needle in the sun</span><span class="annotation annotation--1">THE STEP YOU SKIP IS THE STEP THAT SPEAKS</span><span class="annotation annotation--2">sewn where every paw can read it</span></div>
+      </div>
+      <figcaption>Stitched Words · Reverent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">No one rushed.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Dusty held the fuel can while Mango dipped the wicks. When the last wick was soaked, Mango reached across and closed the fuel can herself. Click. She looked at Dusty. Dusty nodded. The can went into the stone box, lid down.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle spoke from her perch on the signpost. &quot;I&#x27;ll call the perimeter.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She didn&#x27;t ask why. She just called it.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Step inside the circle&#x27;s rim —</div>
+      <div class="line">no one else comes past the brim.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern answered, already moving, her toe-pads finding the chalk edge:</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_02.jpg" alt="First Call" />
+        <div class="beat-annotations"><span class="annotation annotation--0">Step INTO the circle</span><span class="annotation annotation--1">her voice was not loud but it carried the beat</span><span class="annotation annotation--2">FERN CALLS FIRST</span></div>
+      </div>
+      <figcaption>First Call · Brave</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;I stand outside. I track. I stay.</div>
+      <div class="line">My feet will follow all the way.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--early">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_03.jpg" alt="Chalk Drawn" />
+        <div class="beat-annotations"><span class="annotation annotation--0">I&#x27;ll draw it with care</span><span class="annotation annotation--1">the circle holds ALL of us</span><span class="annotation annotation--2">chalk dust on cream palms</span></div>
+      </div>
+      <figcaption>Chalk Drawn · Grounded</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Dusty called the next step himself, his low voice landing like a stone set in mortar.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Eye contact with your safety.</div>
+      <div class="line">Find my eyes before the flame.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Mango looked at him. Dusty looked back. He nodded. The nod was slow and it meant everything.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Fern called to Riddle:</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Close the fuel and shut it tight —</div>
+      <div class="line">no open mouth beside the light.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle sang back, clear as a bell with no question mark at the end:</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_04.jpg" alt="Towel Close" />
+        <div class="beat-annotations"><span class="annotation annotation--0">The WET TOWEL is folded and held to the left</span><span class="annotation annotation--1">I&#x27;ll hold it. I&#x27;ll fold it.</span><span class="annotation annotation--2">LEFT-SIDE ALWAYS</span></div>
+      </div>
+      <figcaption>Towel Close · Steady</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">&quot;Closed and boxed and put away.</div>
+      <div class="line">The fuel sleeps while the wicks play.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--midchapter">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_05.jpg" alt="Breath Rings" />
+        <div class="beat-annotations"><span class="annotation annotation--0">BREATHE IN for three, breathe OUT for four</span><span class="annotation annotation--1">the count floated upward and over the hill</span><span class="annotation annotation--2">four golden rings</span></div>
+      </div>
+      <figcaption>Breath Rings · Transcendent</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Then silence. Because the next step was Mango&#x27;s.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She stood inside the circle, the staff balanced across her open wings. She breathed — and three pale gold rings rose from her mouth, slow, widening, fading. The breath count she had learned from Riddle. The stillness she had learned from the silence.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">When she spoke, her voice was half a register lower than it had ever been. Each word placed with space around it.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;Spin off the excess, spin it slow.</div>
+      <div class="line">Let the drip fall where no flame can go.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The line landed where the blank had been. The friends heard it fill the space.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_06.jpg" alt="Mango Grounded" />
+        <div class="beat-annotations"><span class="annotation annotation--0">The BURN-OFF comes last</span><span class="annotation annotation--1">each syllable steady, each syllable low</span><span class="annotation annotation--2">not a branch, not a rail — the ground</span></div>
+      </div>
+      <figcaption>Mango Grounded · Transformed</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Mango lifted the staff. April, standing just outside the circle with her arms folded, struck the match and offered the flame to the first wick. Mango spun off — three slow rotations, excess fuel flicking away from her body, away from the circle&#x27;s edge, onto bare stone.</div>
+    </div>
+    <figure class="beat-figure beat-figure--medium beat-figure--turning">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_07.jpg" alt="Three Flicks" />
+        <div class="beat-annotations"><span class="annotation annotation--0">one, two, and then three</span><span class="annotation annotation--1">each motion deliberate, patient, and free</span><span class="annotation annotation--2">THE CIRCLE OF BODIES</span></div>
+      </div>
+      <figcaption>Three Flicks · Precise</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">Then she began.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The dragon staff traced its wing-pattern through the morning air. Six wicks, three on each end, drawing arcs of clean fire. Not wild. Not cautious. Steady. Fern&#x27;s feet moved with the staff&#x27;s rhythm, tracking. Dusty held the towel close against his chest — and sewn onto its damp fabric in small, careful stitches, Riddle&#x27;s precise work from an hour before dawn, were the words from the flame patch:</div>
+    </div>
+    <div class="stanza">
+      <div class="line"><em>The step you skip is the step that speaks.</em></div>
+    </div>
+    <div class="stanza">
+      <div class="line">Visible to everyone now.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Riddle counted the breath from her perch, copper eyes bright, no questions left that the doing couldn&#x27;t answer.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">The spin ended the way a spin should end. Mango looked at Dusty. Dusty nodded. She approached. He took the wicks in the towel and smothered them — pressed the damp cloth close, held it, felt the heat leave. The fire went out because he took away the air.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--climax">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_08.jpg" alt="Dragon Wakes" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the dragon woke gently, woke steady and slow</span><span class="annotation annotation--1">WING-SHAPES IN GOLD</span><span class="annotation annotation--2">the frame is now yours</span></div>
+      </div>
+      <figcaption>Dragon Wakes · Triumphant</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The circle held.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">Then the four friends turned to April, and together they called:</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;The dragon staff has six bright wicks,</div>
+      <div class="line">and fire is not for careless tricks.&quot;</div>
+    </div>
+    <div class="stanza">
+      <div class="line">April unfolded her arms. Her paw found the old scorch mark on her apron pocket — touched it once, gently, the way you touch a scar you&#x27;ve finally stopped hiding.</div>
+    </div>
+    <div class="stanza">
+      <div class="line">She answered:</div>
+    </div>
+    <div class="stanza">
+      <div class="line">&quot;I hear you, friends, I hear you true.</div>
+      <div class="line">The frame is yours — the fire is too.&quot;</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_09.jpg" alt="Reversed Call" />
+        <div class="beat-annotations"><span class="annotation annotation--0">fire is not for careless tricks</span><span class="annotation annotation--1">I hear you, dear friends</span><span class="annotation annotation--2">THE FRAME IS NOW YOURS — AND THE FIRE IS TOO</span></div>
+      </div>
+      <figcaption>Reversed Call · Sacred</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The morning light caught Mango&#x27;s wings, Fern&#x27;s steady feet, Riddle&#x27;s lifted crest, Dusty&#x27;s wide paws still holding the towel close. And April, just outside the circle, her eyes full, her voice no longer the only one carrying the song.</div>
+    </div>
+    <figure class="beat-figure beat-figure--high beat-figure--closing">
+      <div class="beat-figure__wrap">
+        <img src="illustrations/ch10/beat_10.jpg" alt="Dragon Rests" />
+        <div class="beat-annotations"><span class="annotation annotation--0">the dragon breathed softly</span><span class="annotation annotation--1">and found its own place</span><span class="annotation annotation--2">— together —</span></div>
+      </div>
+      <figcaption>Dragon Rests · Peace</figcaption>
+    </figure>
+    <div class="stanza">
+      <div class="line">The ritual had always been a circle. Now it was drawn by their bodies — visible and whole.</div>
+    </div>
+  </div>
+</section>
+
+  <section class="safety-card">
+    <h2>The Safety Ritual — for parents</h2>
+    <p class="safety-card__lede">This is the actual seven-step ritual the inspirer practices when spinning fire. The book lives it through; here it is plain, in order, for parents who want to talk about it with their kids — or for kids who want to make their own ritual for any skill that matters.</p>
+    <ol>
+      <li><strong>Establish perimeter.</strong> Draw a circle. The performer steps inside. No one else inside the circle once spinning starts.</li>
+      <li><strong>Eye contact with your safety.</strong> Your safety is a person, not a procedure. Every lit prop begins with the spinner finding their safety's eyes and the safety nodding back. <em>Eye contact is the ritual.</em></li>
+      <li><strong>Close the fuel.</strong> After fueling your prop, close the fuel can. Open fuel near fire is the most common preventable disaster.</li>
+      <li><strong>Spin off — or spin slow.</strong> Shake the excess fuel free before lighting near your body. If you don't spin off, start slow so any drip doesn't sling outward.</li>
+      <li><strong>If you catch fire:</strong> the safety yells the body part. Just the body part. <strong>ARM!</strong> or <strong>LEG!</strong> — never <em>"left arm"</em>, because every spinner is dyslexic in a panic. Three seconds. If the performer hasn't put it out, the safety yells the body part again and watches. If the performer still cannot put it out, the performer lies down on the stage. <strong>The safety smothers the fire. The fire goes out because we take away the air.</strong></li>
+      <li><strong>Going out is its own step.</strong> Look at your safety. They nod. You approach. They take the wicks and extinguish the prop.</li>
+      <li><strong>Everyone who spins is also a safety.</strong> The role rotates. Today's spinner is tomorrow's safety.</li>
+    </ol>
+    <p class="safety-card__lede" style="margin-top: 28px;"><em>Knowing the steps is not the same as remembering them.</em> The ritual is a song the body learns to sing — every time, in order, even when you are tired or showing off or in a hurry. <strong>Especially then.</strong></p>
+    <p class="safety-card__lede" style="margin-top: 14px; font-size: 0.95rem;">SMOTHER. Fire goes out because we take away the air. The wet rag, the blanket, the body of the safety pressed close to the burning spot — these all work because they exclude oxygen. This is not a metaphor. It is how you save your friend.</p>
+  </section>
+
+  <div class="back-matter">
+    <p>April the rainbow koala teaches her friends the dragon staff&#x27;s seven-step safety ritual through call-and-response chanting, but when one friend&#x27;s response goes silent on the night of the lit spin, the missing echo teaches what April&#x27;s voice alone never could.</p>
+    <p style="margin-top: 18px; opacity: 0.7;">© 2026 Sean Spratt. Illustrations rendered with xAI Grok-Imagine in a locked Pixar Storybook 3D style; verse woven by Claude Opus 4.6; structural fan-out judged by Claude Opus 4.6 and Google Gemini 2.5 Pro. Made with Scriptorium.</p>
+  </div>
+
+</main>
+<script>/* sms-metrics beacon */(function(){try{if(localStorage.smsNoTrack)return;navigator.sendBeacon('https://sms-metrics.sean-firewall.workers.dev/hit',JSON.stringify({p:location.pathname,r:document.referrer,h:location.host}))}catch(e){}})();</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Burned Rice",
+    "name_slug": "burned_rice",
+    "file": "beat_01_burned_rice.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Aching"
+  },
+  {
+    "index": 2,
+    "scene_name": "Folded Away",
+    "name_slug": "folded_away",
+    "file": "beat_02_folded_away.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Guarded"
+  },
+  {
+    "index": 3,
+    "scene_name": "Stone Cookie",
+    "name_slug": "stone_cookie",
+    "file": "beat_03_stone_cookie.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Obsessive"
+  },
+  {
+    "index": 4,
+    "scene_name": "Seven Words",
+    "name_slug": "seven_words",
+    "file": "beat_04_seven_words.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Devastating"
+  },
+  {
+    "index": 5,
+    "scene_name": "Hidden Drawer",
+    "name_slug": "hidden_drawer",
+    "file": "beat_05_hidden_drawer.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Suspended"
+  },
+  {
+    "index": 6,
+    "scene_name": "Brigadeiros",
+    "name_slug": "brigadeiros",
+    "file": "beat_06_brigadeiros.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Tender"
+  },
+  {
+    "index": 7,
+    "scene_name": "Failed Fortunes",
+    "name_slug": "failed_fortunes",
+    "file": "beat_07_failed_fortunes.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Humbled"
+  },
+  {
+    "index": 8,
+    "scene_name": "Measured Kitchen",
+    "name_slug": "measured_kitchen",
+    "file": "beat_08_measured_kitchen.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Severed"
+  }
+]

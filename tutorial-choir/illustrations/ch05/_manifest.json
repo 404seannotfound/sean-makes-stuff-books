@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "The Spellbook",
+    "position": "opening",
+    "mood": "magical-grounded"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Dragging A Skill",
+    "position": "early",
+    "mood": "small-ritual"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Vex Drives",
+    "position": "midchapter",
+    "mood": "delighted-tentative"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Skill Reaches",
+    "position": "midchapter",
+    "mood": "aha-quiet"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Description Driven Dispatch",
+    "position": "turning",
+    "mood": "lecture-warm"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Vex Writes A Skill",
+    "position": "climax",
+    "mood": "creative-mischief"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Cricket On Shoulder",
+    "position": "climax",
+    "mood": "co-conspirator"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Have You Seen The Battery",
+    "position": "closing",
+    "mood": "explosive-joy"
+  }
+]

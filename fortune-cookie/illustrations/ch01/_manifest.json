@@ -1,0 +1,83 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Broken Sign",
+    "name_slug": "broken_sign",
+    "file": "beat_01_broken_sign.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_01_broken_sign.prompt",
+    "position": "opening",
+    "weight": "high"
+  },
+  {
+    "index": 2,
+    "scene_name": "Sealed Room",
+    "name_slug": "sealed_room",
+    "file": "beat_02_sealed_room.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_02_sealed_room.prompt",
+    "position": "early",
+    "weight": "medium"
+  },
+  {
+    "index": 3,
+    "scene_name": "Ghost Fish",
+    "name_slug": "ghost_fish",
+    "file": "beat_03_ghost_fish.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_03_ghost_fish.prompt",
+    "position": "early",
+    "weight": "medium"
+  },
+  {
+    "index": 4,
+    "scene_name": "Thursday Ritual",
+    "name_slug": "thursday_ritual",
+    "file": "beat_04_thursday_ritual.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_04_thursday_ritual.prompt",
+    "position": "midchapter",
+    "weight": "medium"
+  },
+  {
+    "index": 5,
+    "scene_name": "Cookie Light",
+    "name_slug": "cookie_light",
+    "file": "beat_05_cookie_light.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_05_cookie_light.prompt",
+    "position": "midchapter",
+    "weight": "high"
+  },
+  {
+    "index": 6,
+    "scene_name": "Fortune Cracked",
+    "name_slug": "fortune_cracked",
+    "file": "beat_06_fortune_cracked.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_06_fortune_cracked.prompt",
+    "position": "turning",
+    "weight": "high"
+  },
+  {
+    "index": 7,
+    "scene_name": "Closing Hour",
+    "name_slug": "closing_hour",
+    "file": "beat_07_closing_hour.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_07_closing_hour.prompt",
+    "position": "midchapter",
+    "weight": "medium"
+  },
+  {
+    "index": 8,
+    "scene_name": "Midnight Call",
+    "name_slug": "midnight_call",
+    "file": "beat_08_midnight_call.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_08_midnight_call.prompt",
+    "position": "climax",
+    "weight": "high"
+  },
+  {
+    "index": 9,
+    "scene_name": "Something With Teeth",
+    "name_slug": "something_with_teeth",
+    "file": "beat_09_something_with_teeth.jpeg",
+    "prompt": "fortune-cookie/chapters/01/images/_candidates/beat_09_something_with_teeth.prompt",
+    "position": "closing",
+    "weight": "high"
+  }
+]

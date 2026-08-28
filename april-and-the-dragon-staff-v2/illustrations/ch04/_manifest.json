@@ -1,0 +1,145 @@
+{
+  "chapter": 4,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Circle Edge",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Anticipation",
+      "annotations": [
+        "toe pads on dusty stone",
+        "her breath was her own",
+        "FERN"
+      ],
+      "why_this_beat": "The chapter's opening image establishes Fern's physical tension and her relationship to the chalk circle she has not yet entered."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Refrain Ring",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Communal",
+      "annotations": [
+        "six steps in the frame",
+        "Fern's voice arrived half a heartbeat postponed",
+        "THE REFRAIN"
+      ],
+      "why_this_beat": "The collective singing of the refrain establishes the troupe as a body and highlights Fern's delay \u2014 her voice not yet in sync with the group."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Spotter Arc",
+      "page_position": "early",
+      "weight": "high",
+      "mood": "Instructive",
+      "annotations": [
+        "the spotter must MOVE",
+        "not frozen, not planted, not still as a tree",
+        "FOLLOW"
+      ],
+      "why_this_beat": "April's physical demonstration of the spotter's arc is the chapter's core lesson \u2014 safety is active movement, not passive stillness."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Frozen Fern",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Vulnerable",
+      "annotations": [
+        "safe for the spotter is NOT safe for me",
+        "the towel needs a HAND",
+        "a hand needs a BODY"
+      ],
+      "why_this_beat": "The emotional turning point where Fern's belief that stillness equals safety is gently dismantled \u2014 the moment her understanding shifts before her feet do."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Mango Spins",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Encouraging",
+      "annotations": [
+        "I'll go like a river",
+        "not fast like a spark",
+        "the gap opened wide"
+      ],
+      "why_this_beat": "Mango's generous slow spin creates the visual proof of the lesson \u2014 when Fern freezes, the gap between spotter and spinner becomes dangerously visible."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "First Steps",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Breakthrough",
+      "annotations": [
+        "a small wet print bloomed",
+        "the gap became less",
+        "FIRST STEPS"
+      ],
+      "why_this_beat": "The intimate close-up of Fern's first footprints is the chapter's quiet climax \u2014 her body learning what her mind already understood."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Riddle Understands",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Revelation",
+      "annotations": [
+        "Oh. OH.",
+        "the towel's intersection",
+        "the catch is a team"
+      ],
+      "why_this_beat": "Riddle's sudden understanding and Dusty's steady towel-hold together illustrate that the lesson is not just for Fern \u2014 the whole troupe is learning how the circle works as a system."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Moon Prints",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Earned",
+      "annotations": [
+        "a circle that followed the circle",
+        "each one like a moon",
+        "the frame isn't something you WATCH \u2014 it's what you DO"
+      ],
+      "why_this_beat": "This is the visual keynote \u2014 the complete image of Fern's achievement, the troupe in position, and April's recognition that Fern has found her feet."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Fern Sings",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "Triumphant",
+      "annotations": [
+        "I step with the spinner, I follow the arc",
+        "Fern's voice was steady",
+        "not late anymore"
+      ],
+      "why_this_beat": "Fern singing on time \u2014 her voice arriving with the group rather than half a beat late \u2014 is the audible proof of her physical transformation."
+    },
+    {
+      "index": 10,
+      "filename": "beat_10.jpeg",
+      "scene_name": "Mango Rising",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Electric",
+      "annotations": [
+        "I'll spin it so fast that the STARS stop and stare!",
+        "her bell rang in the air",
+        "THE SEED OF FORESHADOW"
+      ],
+      "why_this_beat": "Mango's explosive eagerness to take her own turn \u2014 wings spread, bell ringing, promising speed \u2014 carries the thrill and the foreshadowed danger that will pay off in later chapters."
+    }
+  ]
+}

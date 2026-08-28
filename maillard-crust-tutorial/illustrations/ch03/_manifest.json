@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Salt Cellar",
+    "position": "opening",
+    "mood": "still"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Reaching Past",
+    "position": "early",
+    "mood": "warm"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Salt Falling",
+    "position": "midchapter",
+    "mood": "almost-reverent"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "TV Chef Theo",
+    "position": "midchapter",
+    "mood": "theatrical"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Seasoned Cat",
+    "position": "turning",
+    "mood": "outraged"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Sheepish Lower",
+    "position": "turning",
+    "mood": "sheepish"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Timer Ticks",
+    "position": "climax",
+    "mood": "patient"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Lifting Iron",
+    "position": "closing",
+    "mood": "anticipatory"
+  }
+]

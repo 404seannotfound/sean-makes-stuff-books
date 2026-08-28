@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books — Sean Makes Stuff</title>
+  <meta name="description" content="Books made end-to-end with LLMs, image models, and TTS — story, art, and audio all generated from short briefs.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .books-hero { padding: 56px 0 24px; }
+    .books-hero h1 { font-size: 2.4rem; line-height: 1.1; margin-bottom: 12px; }
+    .books-hero p { color: #6e6e73; max-width: 60ch; line-height: 1.6; }
+    .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin: 32px 0; }
+    .book-card { background: #fff; border: 1px solid #e5e5e7; border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+    .book-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .book-card__art { width: 100%; aspect-ratio: 1; background: #f3ede0; }
+    .book-card__art img { width: 100%; height: 100%; object-fit: contain; }
+    .book-card__body { padding: 18px 20px; }
+    .book-card__kicker { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6e6e73; margin-bottom: 8px; }
+    .book-card__title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.4rem; margin-bottom: 8px; }
+    .book-card__desc { color: #6e6e73; font-size: 0.92rem; line-height: 1.5; }
+    .book-card__meta { margin-top: 12px; font-size: 0.78rem; color: #6e6e73; display: flex; gap: 10px; flex-wrap: wrap; }
+    .book-card__meta span::before { content: "·"; padding-right: 10px; color: #c4b489; }
+    .book-card__meta span:first-child::before { content: ""; padding: 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="https://sean-makes-stuff.com/" class="site-nav__brand">Sean Makes Stuff</a>
+      <ul class="site-nav__links">
+        <li><a href="https://sean-makes-stuff.com/support.html">Support</a></li>
+        <li><a href="https://sean-makes-stuff.com/privacy.html">Privacy</a></li>
+        <li><a href="https://github.com/404seannotfound" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="books-hero">
+      <div class="container">
+        <h1>Books</h1>
+        <p>Illustrated books made end-to-end with LLMs, image models, and text-to-speech. Each one starts as a short brief and exits as a readable novel, a printable PDF, and a narrated audiobook — typically in under an hour of wall-clock time. Every project lists its prompts, tokens, cost, and timing so you can see the seams.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="books-grid">
+
+          <a class="book-card" href="fools-cycle/novel.html">
+            <div class="book-card__art">
+              <img src="fools-cycle/storyboard/cover.jpg" alt="Fool&#x27;s Cycle — cover" loading="lazy">
+            </div>
+            <div class="book-card__body">
+              <div class="book-card__kicker">Illustrated YA novel · 2026</div>
+              <h2 class="book-card__title">Fool&#x27;s Cycle</h2>
+            <div class="made-stamp" data-first="2026-06-08" data-last="2026-07-24">started Jun 8, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+              <p class="book-card__desc">A grieving seventeen-year-old walks the twenty-two Major Arcana three times — and each turn she understands the Tower&#x27;s fall, the Death card&#x27;s ending, and the Fool&#x27;s leap a little differently. The Tarot read as a <em>cycle</em>, and the five stages of grief revealed as what you get when you take a transition and demand it have a finish line. The road does not end; she learns to love that it doesn&#x27;t.</p>
+              <div class="book-card__meta">
+                <span>22 arcana</span>
+                <span>161 watercolor illustrations</span>
+                <span>3h 3m audiobook</span>
+                <span>9 voices</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="book-card" href="april-and-the-dragon-staff.html">
+            <div class="book-card__art">
+              <img src="april-and-the-dragon-staff-v2/storyboard/cover.jpg" alt="April and the Dragon Staff — cover" loading="lazy">
+            </div>
+            <div class="book-card__body">
+              <div class="book-card__kicker">Children&#x27;s picture book · v1 + v2 · 2026</div>
+              <h2 class="book-card__title">April and the Dragon Staff</h2>
+            <div class="made-stamp" data-first="2026-05-17" data-last="2026-07-24">started May 17, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+              <p class="book-card__desc">April the rainbow koala teaches her friends to spin the dragon staff — and when one friend forgets to close the fuel on the night of the lit spin, the silence teaches what April&#x27;s voice alone could not. Written in two versions: <strong>v2</strong> (current) is natural prose with the inspirer&#x27;s actual flow-arts safety ritual and Cypher (older tiger) as April&#x27;s teacher. <strong>v1</strong> is strict AABB rhymed verse with the original call-and-response form. Tab between them on the detail page.</p>
+              <div class="book-card__meta">
+                <span>10 chapters</span>
+                <span>98 illustrations</span>
+                <span>v2: 38 min · v1: 59 min</span>
+                <span>7 voices</span>
+              </div>
+            </div>
+          </a>
+
+
+          <a class="book-card" href="tutorial-choir/novel.html">
+            <div class="book-card__art">
+              <img src="tutorial-choir/storyboard/cover.jpg" alt="The Console Conjurers — cover" loading="lazy">
+            </div>
+            <div class="book-card__body">
+              <div class="book-card__kicker">Illustrated technical tutorial · 2026</div>
+              <h2 class="book-card__title">The Console Conjurers</h2>
+            <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
+              <p class="book-card__desc">A short illustrated tutorial that walks a brand-new user through setting up the agentic-AI workstation — Claude Code, the Choir multi-model CLI, skills, the image-gen drawing hack, and a small PROCESS.md that runs a solo D&amp;D game. Two characters, one kitchen-spaceport, eight tight chapters, painterly Mézières-style watercolor panels.</p>
+              <div class="book-card__meta">
+                <span>8 steps</span>
+                <span>64 watercolor beats</span>
+                <span>5 real screenshots</span>
+                <span>5 terminal captures</span>
+                <span>40 min audiobook</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="book-card" href="maillard-crust-tutorial/novel.html">
+            <div class="book-card__art">
+              <img src="maillard-crust-tutorial/storyboard/cover.jpg" alt="The Maillard Affair — cover" loading="lazy">
+            </div>
+            <div class="book-card__body">
+              <div class="book-card__kicker">Illustrated cooking tutorial · 2026</div>
+              <h2 class="book-card__title">The Maillard Affair</h2>
+            <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
+              <p class="book-card__desc">A short tutorial about cooking the perfect New York strip steak — Mara (the meticulous one, reverse sear) and Theo (the enthusiastic one, forward sear) bicker affectionately through every step, with the Maillard reaction explained over a screaming-hot cast iron pan.</p>
+              <div class="book-card__meta">
+                <span>8 steps</span>
+                <span>66 illustrations</span>
+                <span>33 min audiobook</span>
+                <span>3 voices</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="book-card" href="fortune-cookie/novel.html">
+            <div class="book-card__art">
+              <img src="fortune-cookie/storyboard/cover.jpg" alt="The Empty Jar — cover" loading="lazy">
+            </div>
+            <div class="book-card__body">
+              <div class="book-card__kicker">Middle-grade contemporary fantasy · 2026</div>
+              <h2 class="book-card__title">The Empty Jar</h2>
+            <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+              <p class="book-card__desc">A grieving twelve-year-old discovers that the fortune cookies at her late grandmother's Chinatown restaurant seem to predict the future — but the quieter, more devastating truth is that her grandmother spent her dying year writing hundreds of personalized fortunes for specific people she'd watched for decades.</p>
+              <div class="book-card__meta">
+                <span>18 chapters</span>
+                <span>143 illustrations</span>
+                <span>3h 22m audiobook</span>
+                <span>10 voices</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="book-card" href="cant-have-nice-things.html">
+            <div class="book-card__art">
+              <img src="cant-have-nice-things/storyboard/cover.jpg" alt="This Is Why We Can't Have Nice Things — cover" loading="lazy">
+            </div>
+            <div class="book-card__body">
+              <div class="book-card__kicker">Children's fable · 2026</div>
+              <h2 class="book-card__title">This Is Why We Can't Have Nice Things</h2>
+            <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+              <p class="book-card__desc">An old woman tells the children of her town the story of the last wagon — and the day she, as a small girl certain she'd watched enough, skipped the steps that kept it whole.</p>
+              <div class="book-card__meta">
+                <span>9 chapters</span>
+                <span>73 illustrations</span>
+                <span>38 min audiobook</span>
+                <span>11 voices</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Sean Spratt</p>
+    </div>
+  </footer>
+
+<script>/* sms-metrics beacon */(function(){try{if(localStorage.smsNoTrack)return;navigator.sendBeacon('https://sms-metrics.sean-firewall.workers.dev/hit',JSON.stringify({p:location.pathname,r:document.referrer,h:location.host}))}catch(e){}})();</script>
+<script src="js/stamps.js" defer></script>
+</body>
+</html>

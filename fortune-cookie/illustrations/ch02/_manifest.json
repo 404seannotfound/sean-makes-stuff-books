@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Cookie Lineup",
+    "name_slug": "cookie_lineup",
+    "file": "beat_01_cookie_lineup.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Obsessive"
+  },
+  {
+    "index": 2,
+    "scene_name": "Morning Theft",
+    "name_slug": "morning_theft",
+    "file": "beat_02_morning_theft.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Furtive"
+  },
+  {
+    "index": 3,
+    "scene_name": "Stone Cookie",
+    "name_slug": "stone_cookie",
+    "file": "beat_03_stone_cookie.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Frustrated"
+  },
+  {
+    "index": 4,
+    "scene_name": "Ginger Interrogation",
+    "name_slug": "ginger_interrogation",
+    "file": "beat_04_ginger_interrogation.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Deadpan"
+  },
+  {
+    "index": 5,
+    "scene_name": "Dying Pen",
+    "name_slug": "dying_pen",
+    "file": "beat_05_dying_pen.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Tense"
+  },
+  {
+    "index": 6,
+    "scene_name": "Clumsy Squeeze",
+    "name_slug": "clumsy_squeeze",
+    "file": "beat_06_clumsy_squeeze.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Tender"
+  },
+  {
+    "index": 7,
+    "scene_name": "Two Circles",
+    "name_slug": "two_circles",
+    "file": "beat_07_two_circles.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Analytical"
+  },
+  {
+    "index": 8,
+    "scene_name": "Paper Bird",
+    "name_slug": "paper_bird",
+    "file": "beat_08_paper_bird.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Haunted"
+  }
+]

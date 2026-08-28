@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Golden Hour",
+    "position": "opening",
+    "mood": "warm"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Textbook Unwrap",
+    "position": "early",
+    "mood": "focused"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Present Steak",
+    "position": "early",
+    "mood": "delighted"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Paired Atlas",
+    "position": "midchapter",
+    "mood": "still"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Brisket Inspects",
+    "position": "midchapter",
+    "mood": "indifferent"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Butter Wand",
+    "position": "turning",
+    "mood": "playful"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Top Of Head",
+    "position": "climax",
+    "mood": "tender"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Pan Lands",
+    "position": "closing",
+    "mood": "anticipatory"
+  }
+]

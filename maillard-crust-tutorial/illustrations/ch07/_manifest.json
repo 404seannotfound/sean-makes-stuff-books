@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Probe In Side",
+    "position": "opening",
+    "mood": "careful"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Digital Reading",
+    "position": "early",
+    "mood": "calibrated"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Resting Pair",
+    "position": "midchapter",
+    "mood": "still"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Foil Tent",
+    "position": "midchapter",
+    "mood": "patient"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Wine Pour",
+    "position": "turning",
+    "mood": "warming"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Clink Watching",
+    "position": "turning",
+    "mood": "tender"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Hand On Wrist",
+    "position": "climax",
+    "mood": "intimate"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Tent Lifts",
+    "position": "closing",
+    "mood": "anticipatory"
+  }
+]

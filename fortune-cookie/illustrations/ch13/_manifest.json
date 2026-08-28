@@ -1,0 +1,83 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Orange Vigil",
+    "name_slug": "orange_vigil",
+    "file": "beat_01_orange_vigil.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Tender"
+  },
+  {
+    "index": 2,
+    "scene_name": "Ceiling Days",
+    "name_slug": "ceiling_days",
+    "file": "beat_02_ceiling_days.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Numb"
+  },
+  {
+    "index": 3,
+    "scene_name": "Burnt Congee",
+    "name_slug": "burnt_congee",
+    "file": "beat_03_burnt_congee.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Quiet"
+  },
+  {
+    "index": 4,
+    "scene_name": "Towel Engineering",
+    "name_slug": "towel_engineering",
+    "file": "beat_04_towel_engineering.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Warm"
+  },
+  {
+    "index": 5,
+    "scene_name": "Alley Surgeon",
+    "name_slug": "alley_surgeon",
+    "file": "beat_05_alley_surgeon.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Solitary"
+  },
+  {
+    "index": 6,
+    "scene_name": "Holy Doorway",
+    "name_slug": "holy_doorway",
+    "file": "beat_06_holy_doorway.jpeg",
+    "position": "turning",
+    "weight": "medium",
+    "mood": "Reverent"
+  },
+  {
+    "index": 7,
+    "scene_name": "Green Eggs",
+    "name_slug": "green_eggs",
+    "file": "beat_07_green_eggs.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Luminous"
+  },
+  {
+    "index": 8,
+    "scene_name": "Forty Years",
+    "name_slug": "forty_years",
+    "file": "beat_08_forty_years.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Devastating"
+  },
+  {
+    "index": 9,
+    "scene_name": "Done Upstairs",
+    "name_slug": "done_upstairs",
+    "file": "beat_09_done_upstairs.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Resolute"
+  }
+]

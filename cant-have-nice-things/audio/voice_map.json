@@ -1,0 +1,14 @@
+{
+  "narrator":          {"provider": "elevenlabs", "voice_id": "JBFqnCBsd6RMkjVDRZzb", "name": "George",   "why": "Warm British storyteller — narrative_story tag"},
+  "old_pip":           {"provider": "elevenlabs", "voice_id": "JBFqnCBsd6RMkjVDRZzb", "name": "George",   "why": "Same as narrator — Old Pip IS the narrator"},
+  "young_pip":         {"provider": "elevenlabs", "voice_id": "cgSgspJ2msm6clMCkdW9", "name": "Jessica",  "why": "Playful, bright, warm — protagonist child"},
+  "grandfather_eamon": {"provider": "elevenlabs", "voice_id": "pqHfZKP75CvOlQylNhV4", "name": "Bill",     "why": "Wise, mature, balanced — old grandfather"},
+  "auntie_mern":       {"provider": "elevenlabs", "voice_id": "XrExE9yKIg1WjnnlVkGX", "name": "Matilda",  "why": "Knowledgeable, upbeat — middle-aged American"},
+  "granny_fenn":       {"provider": "elevenlabs", "voice_id": "pFZP5JQG7iQjIQuC4Bku", "name": "Lily",     "why": "Velvety, British — distinct from George"},
+  "wren":              {"provider": "elevenlabs", "voice_id": "EXAVITQu4vr4xnSDxMaL", "name": "Sarah",    "why": "Mature, reassuring — serious small girl"},
+  "bo":                {"provider": "elevenlabs", "voice_id": "IKne3meq5aSn9XLyUdCD", "name": "Charlie",  "why": "Deep, confident, energetic — loud Aussie young male"},
+  "liss":              {"provider": "elevenlabs", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "name": "Laura",    "why": "Quirky, sassy — eight-year-old skeptic"},
+  "cal":               {"provider": "elevenlabs", "voice_id": "bIHbv24MWmeRgasZH58o", "name": "Will",     "why": "Relaxed optimist — seven-year-old hummer"},
+  "tully_brask":       {"provider": "elevenlabs", "voice_id": "TX3LPaxmHKxFdv7VOQHJ", "name": "Liam",     "why": "Energetic — five-year-old"},
+  "village_chorus":    {"provider": "elevenlabs", "voice_id": "CwhRBWXzGAHq8TQ4Fs17", "name": "Roger",    "why": "Laid-back, resonant — anonymous adult"}
+}

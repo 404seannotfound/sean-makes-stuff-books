@@ -1,0 +1,132 @@
+{
+  "chapter": 2,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Golden Setup",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Reverent",
+      "annotations": [
+        "the frame takes shape",
+        "two towels, damp and folded tight",
+        "on the left \u2014 always the left"
+      ],
+      "why_this_beat": "The opening image establishes the sacred workspace \u2014 the table, the staff, the towels \u2014 before the students arrive, grounding the chapter's teaching in quiet preparation."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Tumbling Arrivals",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Exuberant",
+      "annotations": [
+        "I'm HERE and I'm READY!",
+        "four friends through morning's warm door",
+        "Dusty-paced walk"
+      ],
+      "why_this_beat": "The ensemble entrance establishes each character's personality through their arrival \u2014 Mango's explosive energy, Fern's watchful precision, Riddle's curious tilt, Dusty's deliberate pace."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Echo Chorus",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Rousing",
+      "annotations": [
+        "DRAW THE CIRCLE ROUND, DRAW THE CIRCLE COMPLETE!",
+        "CHOOSE YOUR SPOTTER TRUE!",
+        "four voices like a drum and a beat"
+      ],
+      "why_this_beat": "The call-and-response singing of the first two steps grounds the ritual's musical structure and shows the troupe as a vocal ensemble before the new lesson begins."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Towel Lesson",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "Instructive",
+      "annotations": [
+        "it catches, it smothers, it wraps like a hug",
+        "on the LEFT of the spotter",
+        "not there \u2014 HERE"
+      ],
+      "why_this_beat": "This is the core teaching moment of step three \u2014 the wet towel's purpose and placement \u2014 delivered through April's hands and the proximity of her old scar."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Towel Parade",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "Comic-tender",
+      "annotations": [
+        "I'll CATCH every ember!",
+        "two arm-lengths wide",
+        "April watched, and said nothing, and gave him a nod"
+      ],
+      "why_this_beat": "The towel passing down the line reveals each character's relationship to fear and readiness \u2014 Fern's precision, Mango's bravado, Dusty's hidden anxiety, Riddle's observation \u2014 in a single panoramic beat."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Riddle Asks",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Probing",
+      "annotations": [
+        "But WHY does it sit on the LEFT?",
+        "the old faded scorch on the pocket's left breast",
+        "because that's where the dragon looks first"
+      ],
+      "why_this_beat": "Riddle's question forces April to articulate the rule's logic, and April's unconscious touch of her scar reveals the personal cost embedded in her teaching \u2014 the chapter's emotional turning point."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Pat-Down Demonstration",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Methodical",
+      "annotations": [
+        "PAT DOWN EVERY SEAM",
+        "no trailing, no dangling, no loose bit of thread",
+        "the one that you miss is the one the dragon will find"
+      ],
+      "why_this_beat": "This is the visual keynote \u2014 the chapter's central teaching image showing the pat-down in action with each friend's personality reflected in how they mirror it on their own bodies."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Full Song",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Triumphant",
+      "annotations": [
+        "DRAW THE CIRCLE ROUND!",
+        "LAY THE WET TOWEL LEFT!",
+        "PAT DOWN EVERY SEAM \u2014 LET NO THREAD GO ASTRAY!",
+        "the voices rang bright"
+      ],
+      "why_this_beat": "The complete four-step song sung in unison is the chapter's culmination \u2014 the ritual expanding, the circle of bodies forming around the staff, the frame taking its shape."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Waiting Wicks",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Anticipatory",
+      "annotations": [
+        "the hardest to learn is the easiest one",
+        "tomorrow",
+        "the unlit wicks waited"
+      ],
+      "why_this_beat": "The closing image suspends the troupe and reader together in anticipation \u2014 the frame is taking shape but the fire has not yet arrived, and the waiting is the point."
+    }
+  ]
+}

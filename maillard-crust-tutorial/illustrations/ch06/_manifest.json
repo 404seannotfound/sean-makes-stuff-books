@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Butter Drop",
+    "position": "opening",
+    "mood": "satisfied"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Foam Halo",
+    "position": "early",
+    "mood": "awed"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Garlic Smash",
+    "position": "midchapter",
+    "mood": "fragrant"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Thyme Tucks",
+    "position": "midchapter",
+    "mood": "aromatic"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Tilt Pool",
+    "position": "turning",
+    "mood": "focused"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Spoon Bastes",
+    "position": "turning",
+    "mood": "ritualistic"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Both Pans Glaze",
+    "position": "climax",
+    "mood": "victorious"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Brisket Outraged",
+    "position": "closing",
+    "mood": "indignant"
+  }
+]

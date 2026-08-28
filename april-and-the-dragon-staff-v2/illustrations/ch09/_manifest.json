@@ -1,0 +1,159 @@
+{
+  "chapter": 9,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Smoke Circle",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Solemn",
+      "annotations": [
+        "the night held its breath",
+        "for the very first word",
+        "CIRCLE BODIES"
+      ],
+      "why_this_beat": "The opening tableau establishes the emotional geography of the entire chapter \u2014 five friends in confession formation around the silenced instrument of their craft."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Mango Confesses",
+      "page_position": "early",
+      "weight": "high",
+      "mood": "Devastated",
+      "annotations": [
+        "I skipped it",
+        "my body forgot what my voice understands",
+        "BURN-OFF \u2014 the step she dropped"
+      ],
+      "why_this_beat": "Mango's confession is the chapter's first crack \u2014 the fastest, brightest character reduced to stillness, naming the skip born of eagerness."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Fern Speaks",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Vulnerable",
+      "annotations": [
+        "soft as a frog-print",
+        "a spotter who's frozen is only a stare",
+        "SPOTTER \u2014 her step to learn"
+      ],
+      "why_this_beat": "Fern's quiet confession reveals that caution itself can be a failure mode \u2014 stillness mistaken for presence."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Riddle's Count",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Regretful",
+      "annotations": [
+        "my why came so late",
+        "BREATH COUNT \u2014 her step to hold",
+        "I understood everything \u2014 none of it fast"
+      ],
+      "why_this_beat": "Riddle's confession inverts her defining trait \u2014 her questions, always her strength, arrived too late when timing was everything."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Dusty's Distance",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Honest",
+      "annotations": [
+        "I held it too far",
+        "WET TOWEL \u2014 his step to close",
+        "the heat was the part"
+      ],
+      "why_this_beat": "Dusty's confession names the invisible flinch \u2014 reliability masking fear, the towel held at arm's length instead of close."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Patch Revealed",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Reverent",
+      "annotations": [
+        "The step you skip is the step that speaks",
+        "in Laurel's own hand",
+        "FLAME PATCH"
+      ],
+      "why_this_beat": "The flame patch \u2014 carried since chapter 1, hinted at since chapter 3 \u2014 is finally shown in full, the physical artifact connecting April's past mistake to her present teaching."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Laurel's Spin",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Luminous",
+      "annotations": [
+        "she spun like the river",
+        "she laughed like the rain",
+        "LAUREL \u2014 the teacher before"
+      ],
+      "why_this_beat": "Laurel appears for the first and only time \u2014 the absent mentor made visible through April's memory, the origin point of the entire ritual finally shown."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Ember Kiss",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Intimate",
+      "annotations": [
+        "the distance between knowing and holding",
+        "SCORCH MEMORY",
+        "a trailing ember, no bigger than this"
+      ],
+      "why_this_beat": "April's private ritual \u2014 touching the scorch mark \u2014 becomes public for the first time, connecting her body-memory to the confession she is making."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Wing Touch",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Tender",
+      "annotations": [
+        "sew it on the towel",
+        "where we all see it right",
+        "THE LEFT SIDE \u2014 where the dragon looks first"
+      ],
+      "why_this_beat": "The chapter's emotional climax \u2014 Mango, who skipped the step, reaches out to claim the lesson physically, transforming the patch from April's private burden to the troupe's shared symbol."
+    },
+    {
+      "index": 10,
+      "filename": "beat_10.jpeg",
+      "scene_name": "Fire And Frame",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Resolute",
+      "annotations": [
+        "THE FIRE AND THE FRAME",
+        "the frame is the reason the fire can come near",
+        "I built it from distance. From Laurel. From shame."
+      ],
+      "why_this_beat": "April names the architecture of her entire teaching \u2014 fire is the dragon, frame is the ritual \u2014 and the friends hear for the first time that the frame was built from a real failure, not from theory."
+    },
+    {
+      "index": 11,
+      "filename": "beat_11.jpeg",
+      "scene_name": "Towel Held Close",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Grace",
+      "annotations": [
+        "the catching-place",
+        "the refrain was rebuilding",
+        "not April's alone"
+      ],
+      "why_this_beat": "The closing image lands on Dusty \u2014 the quietest friend performing the simplest act of courage \u2014 holding the towel close, where it costs him something, as the refrain begins to rebuild inside every body in the circle."
+    }
+  ]
+}

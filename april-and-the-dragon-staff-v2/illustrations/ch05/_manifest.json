@@ -1,0 +1,145 @@
+{
+  "chapter": 5,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Hidden Patch",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Intimate",
+      "annotations": [
+        "The step you skip is the step that speaks",
+        "before any friend had crossed the yard",
+        "a hand she had known now for years upon weeks"
+      ],
+      "why_this_beat": "The chapter's opening image establishes April's private ritual of touching Laurel's patch, grounding the emotional stakes before the lesson begins."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Four Arrivals",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Energetic",
+      "annotations": [
+        "jingle and shout \u2014 quiet footsteps \u2014 steady ground \u2014 without a sound",
+        "What step are we learning?",
+        "And why is it great?"
+      ],
+      "why_this_beat": "Introduces the full ensemble arriving and immediately establishes Riddle's questioning nature with her head-tilt, setting up the chapter's central tension."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Breath Bridge",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Instructive",
+      "annotations": [
+        "the breath is the bridge",
+        "from your mind to your paw",
+        "STEP FIVE"
+      ],
+      "why_this_beat": "April introduces the breath count \u2014 the chapter's central lesson \u2014 with her characteristic whole-body teaching posture."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Three Responses",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Varied",
+      "annotations": [
+        "I'm THERE!",
+        "like a river's soft sound",
+        "I breathe. And I hold. And I stand here. Prepared."
+      ],
+      "why_this_beat": "Shows three friends engaging with the breath count in their characteristic modes, contrasting with Riddle's conspicuous absence from the exercise."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Why Pressed",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Confrontational",
+      "annotations": [
+        "But WHY is it four?",
+        "But what does it DO?",
+        "the count is the answer"
+      ],
+      "why_this_beat": "This is the visual keynote \u2014 the central dramatic confrontation between Riddle's need to understand and April's insistence on doing, the chapter's core tension at its peak."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Golden Rings",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Reverent",
+      "annotations": [
+        "Don't answer me yet",
+        "Just breathe when I breathe",
+        "circles of light"
+      ],
+      "why_this_beat": "April's demonstration shifts from instruction to invitation \u2014 she stops teaching with words and teaches with her body, creating the space for Riddle's breakthrough."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Violet Rings",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Transcendent",
+      "annotations": [
+        "Oh.",
+        "not like a question",
+        "round like a ring, with the same kind of space"
+      ],
+      "why_this_beat": "Riddle's breakthrough \u2014 the moment her body finds what her mind couldn't prove \u2014 is the emotional climax of the chapter and the payoff of all her questioning."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Five Voices",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Triumphant",
+      "annotations": [
+        "Draw the circle on steady ground!",
+        "Breathe in-two-three-four, let it go!",
+        "six steps ringing, one more to know"
+      ],
+      "why_this_beat": "The full ensemble chanting the refrain together shows the troupe's growing unity and marks the ritual's expansion to six steps."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Frame Question",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Mysterious",
+      "annotations": [
+        "the fire AND the frame",
+        "Is it something you hold?",
+        "You're starting to see."
+      ],
+      "why_this_beat": "Riddle's question about 'the frame' plants a seed for future chapters and shows April's characteristic half-reveal \u2014 the teacher who trusts the student to arrive at understanding."
+    },
+    {
+      "index": 10,
+      "filename": "beat_10.jpeg",
+      "scene_name": "Dusty's Dare",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Anticipatory",
+      "annotations": [
+        "the count is the answer, the count is the key",
+        "show us the towel, brave Dusty",
+        "the spotlight shifts"
+      ],
+      "why_this_beat": "The closing image shifts the spotlight from Riddle to Dusty, creating a narrative bridge to the next chapter and revealing Dusty's quiet tension as the next challenge."
+    }
+  ]
+}

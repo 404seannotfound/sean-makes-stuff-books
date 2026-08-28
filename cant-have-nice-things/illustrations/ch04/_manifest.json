@@ -1,0 +1,118 @@
+{
+  "chapter": 4,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Porch Hum",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "tender",
+      "annotations": [
+        "CAL IS HUMMING",
+        "(he doesn't know)",
+        "tap \u00b7 tap"
+      ],
+      "why_this_beat": "Opens the chapter in the present-day frame and plants the hum as a living echo before the story drops into the past."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Hilltop Ritual",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "reverent",
+      "annotations": [
+        "1. tap",
+        "2. oil",
+        "3. HUM",
+        "(the way bees think)"
+      ],
+      "why_this_beat": "Establishes the proper ritual in its full reverence \u2014 the standard Pip is about to fall short of."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Silent Lips",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "self-conscious",
+      "annotations": [
+        "(no sound)",
+        "PEOPLE ARE WATCHING",
+        "skipped: hum"
+      ],
+      "why_this_beat": "The chapter's pivot \u2014 the moment Pip skips the hum, the small omission that drives everything after."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Squeak Lane",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "uneasy",
+      "annotations": [
+        "squeak \u00b7 squeak \u00b7 squeak",
+        "DUST. A PEBBLE.",
+        "(it was not dust)"
+      ],
+      "why_this_beat": "The visual keynote \u2014 the consequence of the skipped hum made audible, Pip pretending not to hear."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "Hidden Wrench",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "secret",
+      "annotations": [
+        "PIP DIDN'T SEE HER.",
+        "three small careful turns",
+        "(and a quarter back)"
+      ],
+      "why_this_beat": "The invisible repair \u2014 the chapter's quiet climax of cost, the labor Pip will never know happened."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Quiet Return",
+      "page_position": "closing",
+      "weight": "medium",
+      "mood": "ironic-warm",
+      "annotations": [
+        "SEE? IT WORKED ITSELF OUT.",
+        "(it did not)",
+        "the wrong lesson"
+      ],
+      "why_this_beat": "Pip's false conclusion crystallized \u2014 the moment the wrong lesson is learned in apparent peace."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Borrowed Tune",
+      "page_position": "closing",
+      "weight": "medium",
+      "mood": "bittersweet",
+      "annotations": [
+        "she thought it was her own",
+        "IT WAS HIS",
+        "\u266a \u266a \u266a"
+      ],
+      "why_this_beat": "The narrator's hinge revelation \u2014 inheritance happens even when learning doesn't."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "Counting Slats",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "hushed",
+      "annotations": [
+        "ONE.",
+        "TWO \u2014",
+        "the porch is already performing the wagon"
+      ],
+      "why_this_beat": "Closes the frame by showing the porch children unconsciously enacting the very rituals the story is about \u2014 the chapter ends mid-count."
+    }
+  ]
+}

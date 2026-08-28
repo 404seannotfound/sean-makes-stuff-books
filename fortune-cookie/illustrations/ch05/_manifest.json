@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Ghost Birds",
+    "name_slug": "ghost_birds",
+    "file": "beat_01_ghost_birds.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Elegiac"
+  },
+  {
+    "index": 2,
+    "scene_name": "Window Watcher",
+    "name_slug": "window_watcher",
+    "file": "beat_02_window_watcher.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Longing"
+  },
+  {
+    "index": 3,
+    "scene_name": "Flight Math",
+    "name_slug": "flight_math",
+    "file": "beat_03_flight_math.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Tense"
+  },
+  {
+    "index": 4,
+    "scene_name": "Exact Change",
+    "name_slug": "exact_change",
+    "file": "beat_04_exact_change.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Guarded"
+  },
+  {
+    "index": 5,
+    "scene_name": "What Free Costs",
+    "name_slug": "what_free_costs",
+    "file": "beat_05_what_free_costs.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Raw"
+  },
+  {
+    "index": 6,
+    "scene_name": "Pressed or Stamped",
+    "name_slug": "pressed_or_stamped",
+    "file": "beat_06_pressed_or_stamped.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Bittersweet"
+  },
+  {
+    "index": 7,
+    "scene_name": "Old Birds New Machine",
+    "name_slug": "old_birds_new_machine",
+    "file": "beat_07_old_birds_new_machine.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Determined"
+  },
+  {
+    "index": 8,
+    "scene_name": "Right Key",
+    "name_slug": "right_key",
+    "file": "beat_08_right_key.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Ominous"
+  }
+]

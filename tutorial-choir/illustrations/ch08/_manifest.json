@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Die On Wood",
+    "position": "opening",
+    "mood": "decisive"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Blue Light From Below",
+    "position": "early",
+    "mood": "uncanny-curious"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Stone Door Ajar",
+    "position": "midchapter",
+    "mood": "anticipation"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Goblin Counting Beads",
+    "position": "midchapter",
+    "mood": "tender-strange"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Friend",
+    "position": "turning",
+    "mood": "courage-quiet"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Natural Twenty",
+    "position": "climax",
+    "mood": "perfect-moment"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Sharing The Fire",
+    "position": "climax",
+    "mood": "warmth-impossible"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Many Worlds Beyond",
+    "position": "closing",
+    "mood": "vast-promising"
+  }
+]

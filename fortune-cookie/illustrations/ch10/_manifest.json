@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Milk Crate",
+    "name_slug": "milk_crate",
+    "file": "beat_01_milk_crate.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Anticipation"
+  },
+  {
+    "index": 2,
+    "scene_name": "Apron Ritual",
+    "name_slug": "apron_ritual",
+    "file": "beat_02_apron_ritual.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Ceremonial"
+  },
+  {
+    "index": 3,
+    "scene_name": "Shed Skin",
+    "name_slug": "shed_skin",
+    "file": "beat_03_shed_skin.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Transgression"
+  },
+  {
+    "index": 4,
+    "scene_name": "Two Hands",
+    "name_slug": "two_hands",
+    "file": "beat_04_two_hands.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Revelation"
+  },
+  {
+    "index": 5,
+    "scene_name": "Henry's Entry",
+    "name_slug": "henry_s_entry",
+    "file": "beat_05_henry_s_entry.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Grief"
+  },
+  {
+    "index": 6,
+    "scene_name": "Private Vocabulary",
+    "name_slug": "private_vocabulary",
+    "file": "beat_06_private_vocabulary.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Wonder"
+  },
+  {
+    "index": 7,
+    "scene_name": "Returned Secret",
+    "name_slug": "returned_secret",
+    "file": "beat_07_returned_secret.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Stealth"
+  },
+  {
+    "index": 8,
+    "scene_name": "Thirty-Two Images",
+    "name_slug": "thirty_two_images",
+    "file": "beat_08_thirty_two_images.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Haunted"
+  }
+]

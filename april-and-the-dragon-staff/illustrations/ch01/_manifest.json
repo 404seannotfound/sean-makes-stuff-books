@@ -1,0 +1,145 @@
+{
+  "chapter": 1,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Golden Arrival",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Anticipation",
+      "annotations": [
+        "THE DRAGON WAKES",
+        "three unlit wicks waiting",
+        "She paused. (Not for applause.)"
+      ],
+      "why_this_beat": "This is the visual keynote \u2014 the full ensemble's first appearance, establishing the fire-town square, the unlit staff, and each character's signature posture and position."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Mango Drops",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Electric",
+      "annotations": [
+        "I'm here! I'm the MOST ready!",
+        "wings before words",
+        "MANGO"
+      ],
+      "why_this_beat": "Mango's entrance establishes her as the eager foil \u2014 all speed and confidence, arriving before anyone else, her physicality contrasting with the patience April will demand."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Fern Watches",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Watchful",
+      "annotations": [
+        "I'll watch. I'll be still. I'll be near.",
+        "FERN",
+        "toe pads gripped tight"
+      ],
+      "why_this_beat": "Fern's entrance beat establishes her as the observer-counterpoint to Mango's energy \u2014 stillness as its own kind of readiness, the spotter's instinct before it has a name."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Riddle Asks",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Inquisitive",
+      "annotations": [
+        "But WHY does it burn?",
+        "And how HOT? And how HIGH?",
+        "RIDDLE"
+      ],
+      "why_this_beat": "Riddle's entrance from above \u2014 elevated, questioning, angular \u2014 establishes her as the intellect of the group, the one who needs to understand before she can act."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "April Calls",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "Declarative",
+      "annotations": [
+        "The fire AND the frame",
+        "You learn both together or don't learn at all",
+        "three dark little heads at the edge of the night"
+      ],
+      "why_this_beat": "The central teaching moment \u2014 April delivers the chapter's thesis ('the fire AND the frame') and the ensemble is arranged in the call-and-response formation that will define the entire book."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Chorus Roars",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Exuberant",
+      "annotations": [
+        "We will learn them! We'll SOAR!",
+        "They sang it like sunlight.",
+        "They heard the word FIRE. The FRAME blew away."
+      ],
+      "why_this_beat": "The chorus responds with pure enthusiasm but unconsciously emphasizes FIRE over FRAME \u2014 this is the chapter's subtle dramatic irony, the seed of every mistake to come."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Circle Drawn",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Reverent",
+      "annotations": [
+        "Step ONE",
+        "The safety circle \u2014 you step IN to begin",
+        "draw it with chalk, draw it with feet"
+      ],
+      "why_this_beat": "The first concrete step of the ritual is physically demonstrated \u2014 April on her knees drawing the boundary that will protect them, grounding the abstract 'frame' in a real chalk line."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Stepping In",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "Gathering",
+      "annotations": [
+        "Five bodies inside it",
+        "The circle drawn wide",
+        "step inside \u2014 start to sing"
+      ],
+      "why_this_beat": "The ensemble physically commits to the circle \u2014 each friend's entrance style (leap, walk, swoop, drop) reflects their character, and the act of stepping in transforms them from audience to participants."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Spotter Named",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Intimate",
+      "annotations": [
+        "Step TWO \u2014 the spotter",
+        "the friend who stands watching",
+        "But why on the LEFT?"
+      ],
+      "why_this_beat": "The scorch mark gets its first close-up as April introduces the spotter role \u2014 her fingers on the old burn connect the abstract lesson to a personal cost the reader doesn't yet understand."
+    },
+    {
+      "index": 10,
+      "filename": "beat_10.jpeg",
+      "scene_name": "Dragon Sleeps",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Wonder",
+      "annotations": [
+        "three little dragons asleep in the air",
+        "Tomorrow we learn what the wet towel knows",
+        "just starting to wake from its sleep"
+      ],
+      "why_this_beat": "The closing image \u2014 the unlit wicks blazing with borrowed sunset light, the five friends held inside the circle, the promise of 'tomorrow' \u2014 leaves the reader wanting to know what comes next."
+    }
+  ]
+}

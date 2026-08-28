@@ -1,0 +1,109 @@
+{
+  "chapter": 7,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Lace Worm",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "patient",
+      "annotations": [
+        "the knot",
+        "and THE knot",
+        "(they are not the same)",
+        "again."
+      ],
+      "why_this_beat": "The framing porch moment that opens the chapter and seeds the whole ritual of knots."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Trusted Hands",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "swaggering",
+      "annotations": [
+        "I'VE GOT IT",
+        "ten years old",
+        "TRUSTED",
+        "no one else."
+      ],
+      "why_this_beat": "Establishes Pip alone with the wagon at the top of the hill \u2014 the threshold of the disaster."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Skipped Seven",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "rushed",
+      "annotations": [
+        "tap (skipped)",
+        "hum (skipped)",
+        "count (skipped)",
+        "JUST QUICK."
+      ],
+      "why_this_beat": "The catalog of omissions \u2014 the chapter's quiet hinge before the disaster."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Three Seconds",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "exhilarated",
+      "annotations": [
+        "the BEST thing",
+        "faster than swallows",
+        "faster than Grandfather",
+        "three. whole. seconds."
+      ],
+      "why_this_beat": "The brief joy that earns the crash \u2014 chapter's only moment of unguarded flight."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "Bright Bones",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "shattering",
+      "annotations": [
+        "the wagon let go of itself",
+        "BRIGHT BONES",
+        "no sound",
+        "oh \u2014"
+      ],
+      "why_this_beat": "The visual keynote \u2014 the chapter's central image and the book's defining catastrophe."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Bottle Rests",
+      "page_position": "closing",
+      "weight": "medium",
+      "mood": "hushed",
+      "annotations": [
+        "(one small mercy)",
+        "only that one.",
+        "it did not break"
+      ],
+      "why_this_beat": "The narrator's promised single mercy \u2014 the quiet aftermath beat that lets the disaster land."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Middle Of The Hill",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "stricken",
+      "annotations": [
+        "she did not move.",
+        "she did not move for a long time.",
+        "down in the village \u2014",
+        "somebody had heard."
+      ],
+      "why_this_beat": "Closing image \u2014 the silence after, and the first hint the village is about to come."
+    }
+  ]
+}

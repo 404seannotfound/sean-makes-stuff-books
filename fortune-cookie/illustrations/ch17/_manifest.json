@@ -1,0 +1,65 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Fourteen Remaining",
+    "name_slug": "fourteen_remaining",
+    "file": "beat_01_fourteen_remaining.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Solemn"
+  },
+  {
+    "index": 2,
+    "scene_name": "Soup Man's Wallet",
+    "name_slug": "soup_man_s_wallet",
+    "file": "beat_02_soup_man_s_wallet.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Tender"
+  },
+  {
+    "index": 3,
+    "scene_name": "Loud House",
+    "name_slug": "loud_house",
+    "file": "beat_03_loud_house.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Joyful"
+  },
+  {
+    "index": 4,
+    "scene_name": "Three Napkins",
+    "name_slug": "three_napkins",
+    "file": "beat_04_three_napkins.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Fierce"
+  },
+  {
+    "index": 5,
+    "scene_name": "Building Houses",
+    "name_slug": "building_houses",
+    "file": "beat_05_building_houses.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Hopeful"
+  },
+  {
+    "index": 6,
+    "scene_name": "Thursday Night",
+    "name_slug": "thursday_night",
+    "file": "beat_06_thursday_night.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Transcendent"
+  },
+  {
+    "index": 7,
+    "scene_name": "Letter Mailed",
+    "name_slug": "letter_mailed",
+    "file": "beat_07_letter_mailed.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Quiet"
+  }
+]

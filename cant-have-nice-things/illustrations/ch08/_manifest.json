@@ -1,0 +1,121 @@
+{
+  "chapter": 8,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Village Gathering",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "hushed",
+      "annotations": [
+        "the whole village came",
+        "quiet",
+        "hats in hands",
+        "Pip did not come in"
+      ],
+      "why_this_beat": "Opens the chapter with the gathered village and Pip's separation in the doorway \u2014 the spatial fact that drives the whole chapter."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Bones Laid",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "ceremonial",
+      "annotations": [
+        "a wheel \u00b7 a slat \u00b7 the pin \u00b7 the latch",
+        "the way you lay out bones",
+        "'now then'"
+      ],
+      "why_this_beat": "Establishes the ritual staging \u2014 the wagon as relic, Grandfather as officiant \u2014 before the breaking."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Slow Hands",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "tender",
+      "annotations": [
+        "one, two, three\u2026",
+        "the wagon coming together",
+        "like a story remembering itself"
+      ],
+      "why_this_beat": "The brief illusion that the wagon can be rebuilt \u2014 the chapter's last moment of hope."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Honey Piece",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "uncertain",
+      "annotations": [
+        "he turned it one way",
+        "he turned it the other",
+        "the lantern light shook"
+      ],
+      "why_this_beat": "The piece nobody recognizes \u2014 the chapter's turning hinge, where ritual meets the limit of memory."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "Mern's Silence",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "stricken",
+      "annotations": [
+        "'Mern.'",
+        "'Mm.' \u2014 which was not a yes",
+        "she did not know either",
+        "she had not known she did not know"
+      ],
+      "why_this_beat": "Mern's quiet horror \u2014 the invisible repair discovering its own gap. The cost made personal."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Granny Fenn",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "elegiac",
+      "annotations": [
+        "'Mara knew that one.'",
+        "'she passed in the winter'",
+        "'she didn't get the chance'"
+      ],
+      "why_this_beat": "The named absence \u2014 a single sentence that explains why the wagon cannot be rebuilt. The grief becomes specific."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Eyes Closed",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "broken",
+      "annotations": [
+        "'I don't remember how this part goes.'",
+        "soft. plain. not louder.",
+        "palms upward",
+        "she would see it her whole long life"
+      ],
+      "why_this_beat": "The chapter's climax and the book's pivot \u2014 the line that breaks the book, the image Pip carries forever."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "Cloths Laid",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "reverent",
+      "annotations": [
+        "green \u00b7 red \u00b7 butter-yellow \u00b7 almost-grey",
+        "mending it all along",
+        "quiet hands and quiet cloths",
+        "nobody had ever needed to say so"
+      ],
+      "why_this_beat": "The chapter's closing image and Pip's late comprehension \u2014 the village's invisible care made visible only at the end."
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "chapter": 6,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Arms Length",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Tense",
+      "annotations": [
+        "arm's length",
+        "the body says NO",
+        "DUSTY HOLDS CLOSE"
+      ],
+      "why_this_beat": "The opening image establishes Dusty's core problem \u2014 he holds the towel correctly but at maximum distance, his body betraying the fear his words won't name."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Perfect Words",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Determined",
+      "annotations": [
+        "I'll hold it. I'll catch it.",
+        "but his feet stood past the half",
+        "two-spin-width mark"
+      ],
+      "why_this_beat": "This beat captures the gap between Dusty's verbal commitment and his body's refusal \u2014 the central tension April must address."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Fern Recognizes",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Recognition",
+      "annotations": [
+        "she knew that lean backward",
+        "the body says NO while the mouth says the grace",
+        "FERN"
+      ],
+      "why_this_beat": "Fern's moment of seeing her own fear mirrored in Dusty is the emotional bridge that enables her to step down and teach him \u2014 the chapter's first turning point."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Wet Footprints",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "Gentle",
+      "annotations": [
+        "In-two-three \u2014 and OUT",
+        "breath rings",
+        "your feet are the answer"
+      ],
+      "why_this_beat": "This is the teaching moment \u2014 Fern discovers she has something to offer, Riddle provides the breath count, and Dusty begins to learn through watching rather than being told."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "One Tap",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Tender",
+      "annotations": [
+        "one tap, nothing more",
+        "the cautious one teaching the steady one"
+      ],
+      "why_this_beat": "The small tactile moment between Fern and Dusty is one of the book's quiet grace notes \u2014 two characters who recognize each other's fear without naming it, connected by a single touch."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Scorch Silence",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "Haunted",
+      "annotations": [
+        "April stood quiet",
+        "like a river, like rain",
+        "the scorch mark"
+      ],
+      "why_this_beat": "April's silent withdrawal into memory while her students teach each other reveals the cost of her vigilance and foreshadows the deeper story she carries \u2014 the scorch mark anchoring the reader's unease."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Towel Close",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Resolute",
+      "annotations": [
+        "CLOSE, NOT FAR",
+        "two spin-widths exactly",
+        "his hands were awake"
+      ],
+      "why_this_beat": "This is the chapter's climax and visual keynote \u2014 Dusty's breakthrough moment where he holds the towel close instead of at arm's length, his fear still present but his hands choosing to stay."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Circle Steady",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Unified",
+      "annotations": [
+        "We draw the safe circle, we sing the safe song",
+        "six steps, six strong voices",
+        "one step still to seed"
+      ],
+      "why_this_beat": "The ensemble chanting the refrain together is the chapter's emotional resolution \u2014 all five bodies in position, the circle complete, the ritual alive in their collective form."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Copper Bell",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Foreboding",
+      "annotations": [
+        "Tomorrow's MY chapter!",
+        "the stars hold their breath",
+        "April said nothing"
+      ],
+      "why_this_beat": "The closing image splits between Mango's eagerness and April's silent dread \u2014 the foreshadow the reader feels before they can name it, setting up the tension that will break in chapter 8."
+    }
+  ]
+}

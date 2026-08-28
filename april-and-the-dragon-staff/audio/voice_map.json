@@ -1,0 +1,10 @@
+{
+  "narrator":   {"provider": "elevenlabs", "voice_id": "JBFqnCBsd6RMkjVDRZzb", "name": "George",   "why": "Warm British storyteller — narrative_story tag. Slightly slower for verse."},
+  "april":      {"provider": "elevenlabs", "voice_id": "EXAVITQu4vr4xnSDxMaL", "name": "Sarah",    "why": "Mature, reassuring, composed — April is the teacher, not a child."},
+  "mango":      {"provider": "elevenlabs", "voice_id": "cgSgspJ2msm6clMCkdW9", "name": "Jessica",  "why": "Playful, bright, warm — Mango is the fastest learner, voice leans forward."},
+  "fern":       {"provider": "elevenlabs", "voice_id": "pFZP5JQG7iQjIQuC4Bku", "name": "Lily",     "why": "Velvety British, careful — Fern is the cautious tree frog, lines land soft and clipped."},
+  "riddle":     {"provider": "elevenlabs", "voice_id": "FGY2WhTYpPnrIDTdsKH5", "name": "Laura",    "why": "Quirky, sassy — Riddle is the parrot who asks why after every call."},
+  "dusty":      {"provider": "elevenlabs", "voice_id": "CwhRBWXzGAHq8TQ4Fs17", "name": "Roger",    "why": "Laid-back, resonant — Dusty is the steady wombat, monosyllables and strong stresses."},
+  "laurel":     {"provider": "elevenlabs", "voice_id": "XrExE9yKIg1WjnnlVkGX", "name": "Matilda",  "why": "Knowledgeable, upbeat American — Laurel appears in chapter 9 through April's retelling, warm mentor register."},
+  "chorus":     {"provider": "elevenlabs", "voice_id": "EXAVITQu4vr4xnSDxMaL", "name": "Sarah",    "why": "Same as April — for moments where all four friends respond together ('We hear you, April!'), we'll use chorus tag and render in April's voice as a neutral group voice; alternative is to render per-character and overlap in ffmpeg, but that adds complexity for limited gain in a children's book."}
+}

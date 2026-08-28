@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Is Why We Can&#x27;t Have Nice Things — Sean Makes Stuff</title>
+<meta name="description" content="A children's fable in 9 chapters with 73 hand-painted folk-art illustrations and a 38-minute audiobook with 11 distinct narrator voices.">
+<style>
+:root {
+  --paper: #f3ede0;
+  --paper-border: #c4b489;
+  --ink: #1d1d1f;
+  --ink-soft: #6e6e73;
+  --accent-rust: #8b2f1d;
+  --accent-gold: #c69b3c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--paper); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--ink); }
+.book-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(243,237,224,0.95); backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--paper-border);
+  padding: 14px 24px;
+  display: flex; align-items: center; gap: 16px;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.book-nav .label { flex: 1; font-style: italic; }
+.book-nav a { color: var(--accent-rust); text-decoration: none; border-bottom: 1px solid transparent; }
+.book-nav a:hover { border-bottom-color: var(--accent-rust); }
+main.book { max-width: 760px; margin: 0 auto; padding: 16px 24px 96px; }
+.cover { margin: 16px 0 32px; }
+.cover__art { width: 100%; aspect-ratio: 1/1; background: var(--paper); border: 1px solid var(--paper-border); border-radius: 14px; overflow: hidden; }
+.cover__art img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.cover__title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 3rem; line-height: 1.1; color: var(--ink); margin: 32px 0 8px; text-align: center; }
+.cover__subtitle { font-family: "Iowan Old Style", serif; font-size: 1.05rem; color: var(--ink-soft); text-align: center; font-style: italic; }
+.cover__author { font-family: "Iowan Old Style", serif; font-size: 1.05rem; color: var(--ink-soft); text-align: center; margin-top: 8px; }
+.audio-hero { margin: 16px 0 32px; padding: 18px 20px; background: #fff; border: 1px solid var(--paper-border); border-radius: 10px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-family: "Iowan Old Style", serif; }
+.audio-hero__label { font-style: italic; color: var(--ink-soft); font-size: 0.95rem; }
+.audio-hero audio { flex: 1; min-width: 260px; }
+.audio-hero__download { font-family: "Iowan Old Style", serif; font-size: 0.9rem; color: var(--accent-rust); text-decoration: none; padding: 8px 14px; border: 1px solid var(--paper-border); border-radius: 8px; background: var(--paper); white-space: nowrap; }
+.audio-hero__download:hover { background: var(--accent-gold); color: var(--ink); border-color: var(--accent-gold); }
+.audio-hero__download small { display: block; font-size: 0.72rem; font-style: italic; color: var(--ink-soft); margin-top: 2px; }
+.audio-hero__download:hover small { color: var(--ink); }
+.toc { margin: 32px 0 56px; padding: 24px 28px; background: #fff; border: 1px solid var(--paper-border); border-radius: 10px; }
+.toc h2 { font-family: "Iowan Old Style", serif; font-size: 1.4rem; margin-bottom: 14px; }
+.toc ol { list-style: none; font-family: "Iowan Old Style", serif; }
+.toc li { padding: 6px 0; border-bottom: 1px dotted var(--paper-border); }
+.toc li:last-child { border-bottom: 0; }
+.toc a { color: var(--ink); text-decoration: none; display: block; }
+.toc a:hover { color: var(--accent-rust); }
+.toc__num { display: inline-block; width: 32px; color: var(--ink-soft); }
+.chapter { margin-top: 64px; }
+.chapter--first { margin-top: 24px; }
+.ch-head { text-align: center; margin-bottom: 32px; }
+.ch-num { font-family: "Iowan Old Style", serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--ink-soft); margin-bottom: 12px; }
+.ch-title { font-family: "Iowan Old Style", serif; font-size: 2.2rem; color: var(--ink); }
+.audio-chapter { margin: 0 -20px 24px; padding: 12px 16px; background: #fff; border: 1px solid var(--paper-border); border-radius: 8px; display: flex; align-items: center; gap: 14px; font-family: "Iowan Old Style", serif; }
+.audio-chapter__icon { font-size: 1.3rem; }
+.audio-chapter__label { font-style: italic; color: var(--ink-soft); font-size: 0.9rem; min-width: 120px; }
+.audio-chapter audio { flex: 1; min-width: 200px; }
+.narrative { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.08rem; line-height: 1.74; }
+.narrative p { margin: 0 0 1.05em; }
+.narrative p:first-of-type::first-letter { font-family: "Iowan Old Style", serif; font-size: 3.4rem; float: left; line-height: 0.92; padding-right: 10px; padding-top: 4px; color: var(--accent-rust); }
+.beat-figure { margin: 32px -20px; }
+.beat-figure img { width: 100%; border-radius: 10px; border: 1px solid var(--paper-border); background: var(--paper); display: block; }
+.beat-figure figcaption { margin-top: 8px; font-size: 0.85rem; font-style: italic; color: var(--ink-soft); text-align: center; font-family: "Iowan Old Style", serif; }
+.scene-break { border: 0; text-align: center; margin: 32px 0; }
+.scene-break::before { content: "✦ ✦ ✦"; color: var(--ink-soft); letter-spacing: 0.4em; }
+.back-matter { margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--paper-border); text-align: center; color: var(--ink-soft); font-family: "Iowan Old Style", serif; font-style: italic; font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<nav class="book-nav">
+  <span class="label">This Is Why We Can&#x27;t Have Nice Things · 6,707 words · 73 illustrations · 38 min audio</span>
+  <a href="cant-have-nice-things.html">← about</a>
+  <a href="https://sean-makes-stuff.com/">Sean Makes Stuff</a>
+</nav>
+<main class="book">
+  <section class="cover">
+    <div class="cover__art"><img src="storyboard/cover.jpg" alt="Cover" /></div>
+    <h1 class="cover__title">This Is Why We Can&#x27;t Have Nice Things</h1>
+    <p class="cover__subtitle">a fable, painted on the side of a wagon</p>
+    <p class="cover__author">by Sean Spratt</p>
+  </section>
+
+  <div class="audio-hero">
+    <div class="audio-hero__label">🎧 Full audiobook · 38 min · 11 voices</div>
+    <audio controls preload="none" src="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/cant-have-nice-things/audio/audiobook.mp3"></audio>
+    <a class="audio-hero__download" href="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/cant-have-nice-things/audio/audiobook.mp3" download>⬇ Download MP3<small>35 MB · open in any audio app</small></a>
+  </div>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#ch-01"><span class="toc__num">1.</span> What&#x27;s a Wagon?</a></li>
+      <li><a href="#ch-02"><span class="toc__num">2.</span> The Seven Small Things</a></li>
+      <li><a href="#ch-03"><span class="toc__num">3.</span> Just One Tap</a></li>
+      <li><a href="#ch-04"><span class="toc__num">4.</span> The Squeak in the Lane</a></li>
+      <li><a href="#ch-05"><span class="toc__num">5.</span> Eleven Slats</a></li>
+      <li><a href="#ch-06"><span class="toc__num">6.</span> The Quietest Skip</a></li>
+      <li><a href="#ch-07"><span class="toc__num">7.</span> The Bright Bones</a></li>
+      <li><a href="#ch-08"><span class="toc__num">8.</span> The Quiet Workshop</a></li>
+      <li><a href="#ch-09"><span class="toc__num">9.</span> The Porch, Still</a></li>
+    </ol>
+  </nav>
+
+<section id="ch-01" class="chapter chapter--first">
+  <div class="ch-head"><div class="ch-num">Chapter 1</div><h2 class="ch-title">What&#x27;s a Wagon?</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 1</div>
+    <audio controls preload="none" src="audio/chapter_01.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>The porch boards were warm. The afternoon was the slow gold kind, the kind that makes bees forget where they were going.</p>
+    <p>Four children sat on the steps in a row, smallest to tallest, the way children do without being told.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_01.jpg" alt="Porch Steps" loading="lazy" />
+      <figcaption>Porch Steps · opening · hushed</figcaption>
+    </figure>
+    <p>The old woman in the faded blue dress did not say anything for a while. She was watching the grass.</p>
+    <p>There was a path in it. Not a path of stones, or a path of dirt. A path of bent grass — long and straight, leading from the bottom of her porch all the way out past the orchard fence and over the lip of the hill, where it disappeared.</p>
+    <p>Bo noticed it first, because Bo noticed everything first and loudly.</p>
+    <p>&quot;What&#x27;s that for?&quot; he said. He pointed with his whole arm. &quot;That line in the grass — that goes all the way — what&#x27;s that for?&quot;</p>
+    <p>The old woman took a breath in, and out, and tapped two fingers on the porch rail beside her. Tap, tap. As if she were checking it was still there.</p>
+    <p>&quot;That,&quot; she said, &quot;is for a wagon.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_02.jpg" alt="Bent Path" loading="lazy" />
+      <figcaption>Bent Path · early · curious</figcaption>
+    </figure>
+    <p>Liss tilted her head. &quot;For a what?&quot;</p>
+    <p>&quot;A wagon.&quot;</p>
+    <p>Cal hummed a small confused hum.</p>
+    <p>&quot;What&#x27;s a wagon?&quot; said Bo.</p>
+    <p>The old woman&#x27;s mouth did something then — not quite a smile, not quite the other thing. She looked at the four of them: Bo with his scabbed knees and his big question, Liss already counting the porch slats under her breath, Cal humming, and the small one at the bottom in the yellow shift with her hands folded neat in her lap.</p>
+    <p>That one — Wren — was watching her fingers on the rail.</p>
+    <p>&quot;A wagon,&quot; the old woman said, slowly, &quot;was a thing with wheels. Four wheels. And a long flat bed for carrying. And a rope at the front for pulling.&quot; She drew the shape of it in the air with one knobbled finger. &quot;Ours was red. Bright red. It lived at the top of the hill.&quot;</p>
+    <p>&quot;Whose was it?&quot; said Bo.</p>
+    <p>&quot;The village&#x27;s.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_03.jpg" alt="Drawn Wagon" loading="lazy" />
+      <figcaption>Drawn Wagon · midchapter · conjuring</figcaption>
+    </figure>
+    <p>&quot;Ours?&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_05.jpg" alt="Green Cloth" loading="lazy" />
+      <figcaption>Green Cloth · midchapter · private</figcaption>
+    </figure>
+    <p>&quot;Yours. Mine. Everybody&#x27;s.&quot;</p>
+    <p>Liss frowned. &quot;Where is it now?&quot;</p>
+    <p>The old woman did not answer that one right away. She looked out at the path again — the long flattened ghost of where wheels used to go — and her hand on the porch rail went very still.</p>
+    <p>&quot;Gone,&quot; she said.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_04.jpg" alt="Gone Where" loading="lazy" />
+      <figcaption>Gone Where · turning · stilled</figcaption>
+    </figure>
+    <p>&quot;Gone where?&quot; said Bo.</p>
+    <p>&quot;Just gone.&quot;</p>
+    <p>Cal stopped humming. Even Cal could feel that <em>gone</em> was a different kind of word than <em>lost.</em></p>
+    <p>The old woman pulled a small worn square of cloth out of her apron pocket — green, so faded it was nearly grey — and folded it once, and put it back. Nobody asked about the cloth. Nobody knew to.</p>
+    <p>&quot;Tell us,&quot; said Wren.</p>
+    <p>It was the first thing the smallest one had said. Her voice was soft and level, the way you might ask a cat to come down off a roof.</p>
+    <p>&quot;Tell us about the wagon.&quot;</p>
+    <p>The old woman looked at her for a long moment.</p>
+    <p>&quot;All right,&quot; she said.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_06.jpg" alt="Tell Us" loading="lazy" />
+      <figcaption>Tell Us · climax · tender</figcaption>
+    </figure>
+    <p>She shifted on the porch step. She straightened her back, the way you do before lifting something heavy. She set both hands flat on her knees.</p>
+    <p>&quot;Once,&quot; she said, &quot;there was a girl named Pip.&quot;</p>
+    <p>Bo opened his mouth to ask something and Liss elbowed him quiet.</p>
+    <p>&quot;And she was me,&quot; the old woman said. &quot;And she was in a terrible hurry.&quot;</p>
+    <p>The bees went on forgetting where they had been going. The path of bent grass lay there gold and empty in the late sun, leading nowhere now, leading only into the story.</p>
+    <p>Wren, at the bottom of the steps, watched the old woman&#x27;s fingers.</p>
+    <p>The old woman&#x27;s fingers tapped, very lightly, on her own knee.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_07.jpg" alt="Once There Was" loading="lazy" />
+      <figcaption>Once There Was · closing · beginning</figcaption>
+    </figure>
+    <p>Tap. Tap.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch01/beat_08.jpg" alt="Echoed Tap" loading="lazy" />
+      <figcaption>Echoed Tap · closing · luminous</figcaption>
+    </figure>
+    <p>Wren&#x27;s fingers tapped on hers.</p>
+  </div>
+</section>
+
+<section id="ch-02" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 2</div><h2 class="ch-title">The Seven Small Things</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 2</div>
+    <audio controls preload="none" src="audio/chapter_02.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>The hill smelled like apples and rope.</p>
+    <p>That is the first thing Pip remembered, every time — the way the top of the hill smelled in the morning, before anyone else was awake, when it was just her and Grandfather and the wagon.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_01.jpg" alt="Hill Dawn" loading="lazy" />
+      <figcaption>Hill Dawn · opening · reverent</figcaption>
+    </figure>
+    <p>Oh, the wagon.</p>
+    <p>It was red the way a barn is red, and yellow the way a yolk is yellow, and along its sides somebody&#x27;s great-great-grandmother had painted small white flowers that nobody had ever bothered to repaint because they had not yet faded. It had a bench at the front shiny from a hundred years of trousers. It had four tall wheels. It had eleven wooden slats along each side, and a long rope that lay coiled at the front like a sleeping cat.</p>
+    <p>It was how the apples got down to the village. It was how the medicine got up. It was how Old Sero&#x27;s letters came, and how the new babies were carried to be shown off, and how, once, a goat had ridden two miles sitting up like a king. It was, Pip thought, the most important thing in the world.</p>
+    <p>Grandfather knelt beside it.</p>
+    <p>He knelt the way he always knelt — slowly, with one hand on his knee. From the pocket of his shirt he took out a small square of cloth, faded green, soft as a moth. He set it on the grass beside him.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_02.jpg" alt="Green Cloth" loading="lazy" />
+      <figcaption>Green Cloth · early · tender</figcaption>
+    </figure>
+    <p>&quot;Morning, old friend,&quot; he said to the wagon.</p>
+    <p>Pip mouthed it along with him. <em>Morning, old friend.</em></p>
+    <p>Then Grandfather began.</p>
+    <p>*<em>One.</em><em> He made a fist and tapped the front wheel — </em>tock, tock* — twice, like knocking on a door. He listened. The wheel answered with a sound only Grandfather could hear. He nodded.</p>
+    <p>*<em>Two.</em>* He uncorked a tiny brown bottle and let one drop of oil fall on the pin that held the axle. Just one. The drop sat there a moment, fat and shining, before it sank in.</p>
+    <p>*<em>Three.</em>* He hummed. It was not a tune exactly. It was lower than a tune. He laid his hand flat on the axle and hummed into it, and the wood hummed back, and Grandfather smiled the way he only smiled at the wagon.</p>
+    <p>*<em>Four.</em>* He pointed at the slats and counted them. &quot;One, two, three, four, five, six, seven, eight, nine, ten, eleven.&quot; Then he walked around to the other side and counted those too. There were always eleven. There had always been eleven. He counted them anyway.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_03.jpg" alt="Seven Saints" loading="lazy" />
+      <figcaption>Seven Saints · midchapter · liturgical</figcaption>
+    </figure>
+    <p>*<em>Five.</em><em> He leaned close to the latch at the back and breathed on it, </em>huuuh*, the way you breathe on a cold window. Then he polished it with the green cloth until it caught the sun.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_04.jpg" alt="Counting Eleven" loading="lazy" />
+      <figcaption>Counting Eleven · midchapter · patient</figcaption>
+    </figure>
+    <p>*<em>Six.</em>* He took the rope. He looped it once, twice, and made a knot like two circles holding hands — a figure-eight. He tugged it. It held.</p>
+    <p>*<em>Seven.</em>* He stood up, slowly, with his hand on his knee. He looked at the wagon. He said, in a voice you might use for a person:</p>
+    <p>&quot;Thank you.&quot;</p>
+    <p>Pip&#x27;s lips moved. <em>Thank you.</em></p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_05.jpg" alt="Figure Eight" loading="lazy" />
+      <figcaption>Figure Eight · turning · precise</figcaption>
+    </figure>
+    <p>Grandfather folded the green cloth and tucked it back into his pocket. He turned and saw Pip watching from the long grass, and his beard did the thing it did when he was trying not to grin.</p>
+    <p>&quot;You&#x27;re up early,&quot; he said.</p>
+    <p>&quot;I&#x27;ve been up,&quot; said Pip. She had not been up. She had been up for four minutes.</p>
+    <p>&quot;Did you see?&quot;</p>
+    <p>&quot;I saw.&quot;</p>
+    <p>&quot;All of it?&quot;</p>
+    <p>&quot;All of it.&quot;</p>
+    <p>He looked at her a long moment. Down in the village a rooster was making its opinion known. Somewhere a door opened. Somewhere else, a baby.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_06.jpg" alt="Thank You" loading="lazy" />
+      <figcaption>Thank You · climax · grateful</figcaption>
+    </figure>
+    <p>&quot;It&#x27;s a lot to remember,&quot; Grandfather said.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_07.jpg" alt="Watching Grass" loading="lazy" />
+      <figcaption>Watching Grass · climax · conspiratorial</figcaption>
+    </figure>
+    <p>&quot;I remember,&quot; said Pip.</p>
+    <p>And here is the thing the old woman on the porch wanted the children to understand. Pip did remember. She remembered every single one. She could have told you the order. She could have told you the count. She could have hummed the hum.</p>
+    <p>Remembering a thing and <em>knowing</em> a thing are cousins, but they are not twins.</p>
+    <p>Pip did not know this yet. Pip was ten, and the wagon was red, and the morning smelled like apples and rope, and somewhere in her chest a small bright certainty was lighting up like a lamp.</p>
+    <p><em>I&#x27;ve got this,</em> thought Pip.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch02/beat_08.jpg" alt="Lamp Lighting" loading="lazy" />
+      <figcaption>Lamp Lighting · closing · ominous-bright</figcaption>
+    </figure>
+    <p>And somewhere down in the village, a voice was calling her name, because the apples were ready, and it was almost — almost — her turn.</p>
+  </div>
+</section>
+
+<section id="ch-03" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 3</div><h2 class="ch-title">Just One Tap</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 3</div>
+    <audio controls preload="none" src="audio/chapter_03.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>Bo bounced on his heels so hard the porch boards complained.</p>
+    <p>&quot;But did she did she did she ever get to pull it?&quot; he said. &quot;Pip. You. Did you?&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_01.jpg" alt="Porch Question" loading="lazy" />
+      <figcaption>Porch Question · opening · expectant</figcaption>
+    </figure>
+    <p>The old woman waited a breath. She always waited a breath.</p>
+    <p>&quot;I did,&quot; she said. &quot;On a Tuesday. I remember because Tuesdays were apples, and apples were the easy load.&quot;</p>
+    <p>She folded her knobbled hands in her lap and let the story come.</p>
+    <hr class="scene-break" />
+    <p>The wagon stood at the top of the hill the way it always stood — red as a poppy, patient as a cow. Pip&#x27;s hands were already on the rope before Grandfather had finished saying her name.</p>
+    <p>&quot;Steady,&quot; Grandfather said. Slow, woodgrain-rough. &quot;Steady, Piper.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_02.jpg" alt="Tuesday Wagon" loading="lazy" />
+      <figcaption>Tuesday Wagon · early · anticipatory</figcaption>
+    </figure>
+    <p>&quot;I&#x27;m steady, I&#x27;m steady.&quot;</p>
+    <p>He knelt beside the front wheel. From his shirt pocket he pulled a small square of cloth, faded green, soft at the edges from a great many Tuesdays. He laid it flat on his palm. Then, with two knuckles, he tapped the wheel — once, twice, three times — and listened.</p>
+    <p>The wagon hummed back at him the way a bell hums when you breathe on it.</p>
+    <p>&quot;There,&quot; he said. &quot;That&#x27;ll do.&quot;</p>
+    <p>He folded the green cloth and tucked it away.</p>
+    <p>Pip watched, mouthing along. She had watched a hundred Tuesdays. She knew the tap the way she knew her own name.</p>
+    <p>&quot;All right,&quot; said Grandfather. &quot;Off you go. Slow down the slope. Mind the curve.&quot;</p>
+    <p>And here is where Pip should have knelt down by the wheel herself, and tapped, and listened. She did not kneel. She did not tap. She was already three steps ahead with the rope in both fists and the wind in her smock and the village laid out below her like a small bright map.</p>
+    <p>Why would she tap? Grandfather had just tapped. The tap was <em>done</em>. The tap was a tap was a tap.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_03.jpg" alt="Green Cloth" loading="lazy" />
+      <figcaption>Green Cloth · midchapter · reverent</figcaption>
+    </figure>
+    <p>Down the hill she went.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_04.jpg" alt="Skipping Past" loading="lazy" />
+      <figcaption>Skipping Past · midchapter · heedless</figcaption>
+    </figure>
+    <p>The wagon followed her in the way wagons do when they have been loved properly — easy at first, almost cheerful. The apples shifted and settled. Pip grinned.</p>
+    <p>Then the front wheel went <em>thock</em>.</p>
+    <p>Not a loud sound. The sort of sound you would miss if you were humming. The wheel tilted, just a little — a finger&#x27;s width, no more — and the whole wagon leaned with it, like a person stepping wrong off a curb.</p>
+    <p>Pip&#x27;s grin slipped sideways.</p>
+    <p>&quot;Oh,&quot; she said. Then, faster: &quot;Oh oh oh —&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_06.jpg" alt="Warm Laugh" loading="lazy" />
+      <figcaption>Warm Laugh · turning · forgiving</figcaption>
+    </figure>
+    <p>A hand came out of nowhere.</p>
+    <p>It was a brown weathered hand with sawdust still in the cuff, and it caught the wagon&#x27;s rail the way you&#x27;d catch a child by the back of the shirt. The wagon swayed once. Settled. Stopped leaning. Grandfather had come down the slope behind her without her hearing him at all, the way he always did, on feet that had been doing this for sixty years.</p>
+    <p>He knelt. He tapped the wheel. Once. Twice. Three times. He listened.</p>
+    <p>Then he laughed.</p>
+    <p>It was a warm laugh, low in his chest, and it rolled out across the grass and met the village coming up to greet them. &quot;Forgot the tap, did we, Piper?&quot;</p>
+    <p>&quot;I —&quot; Pip&#x27;s face went hot. She laughed too, because laughing first kept the laugh on her side. &quot;I just forgot the tap. It&#x27;s just one tap.&quot;</p>
+    <p>&quot;It&#x27;s just one tap,&quot; Grandfather agreed. He stood, slow, with one hand on his knee. He ruffled her hair. &quot;Off you go. Slow down the slope.&quot;</p>
+    <p>And off she went.</p>
+    <p>The wagon rolled clean the rest of the way. The apples didn&#x27;t even shift. By the time Pip reached the village she had already decided several useful things.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_05.jpg" alt="The Thock" loading="lazy" />
+      <figcaption>The Thock · climax · lurching</figcaption>
+    </figure>
+    <p>She had decided that the tap was not really a step, more of a habit.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_07.jpg" alt="Chin Lifted" loading="lazy" />
+      <figcaption>Chin Lifted · climax · swaggering</figcaption>
+    </figure>
+    <p>She had decided that Grandfather had laughed because the tap did not matter very much.</p>
+    <p>She had decided — privately, fiercely, the way ten-year-olds decide things — that she had this. All of it. The whole bright wagon and the whole green hill and the whole long Tuesday of her life.</p>
+    <p><em>See?</em> she thought, lifting her chin against the wind. <em>I&#x27;ve got this.</em></p>
+    <p>Behind her, the front wheel made one small <em>thock</em> nobody heard, and kept turning.</p>
+    <hr class="scene-break" />
+    <p>On the porch, Cal hummed. He did it without knowing. A drifty little tune through the gap in his teeth.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch03/beat_08.jpg" alt="And Then Wednesday" loading="lazy" />
+      <figcaption>And Then Wednesday · closing · foreboding</figcaption>
+    </figure>
+    <p>The old woman heard it. She closed her eyes for just a moment, the way Grandfather used to.</p>
+    <p>&quot;Ah,&quot; she said. &quot;And then there was Wednesday.&quot;</p>
+  </div>
+</section>
+
+<section id="ch-04" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 4</div><h2 class="ch-title">The Squeak in the Lane</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 4</div>
+    <audio controls preload="none" src="audio/chapter_04.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>Cal was humming.</p>
+    <p>He didn&#x27;t know he was humming. He was picking at a splinter on the porch step and his mouth was making a small warm sound, somewhere between a bee and a kettle, and it had been going on for a while.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_01.jpg" alt="Porch Hum" loading="lazy" />
+      <figcaption>Porch Hum · opening · tender</figcaption>
+    </figure>
+    <p>&quot;Cal,&quot; said Liss. &quot;You&#x27;re humming.&quot;</p>
+    <p>Cal stopped. Then started again. Then looked up. &quot;Why?&quot;</p>
+    <p>&quot;I don&#x27;t know,&quot; said Liss. &quot;You just are.&quot;</p>
+    <p>The old woman on the porch smiled at her hands.</p>
+    <p>&quot;There&#x27;s a hum in this story too,&quot; she said. &quot;Or — there should have been.&quot;</p>
+    <p>She tapped the rail. Two fingers. Soft.</p>
+    <p>&quot;Listen.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_02.jpg" alt="Hilltop Ritual" loading="lazy" />
+      <figcaption>Hilltop Ritual · early · reverent</figcaption>
+    </figure>
+    <hr class="scene-break" />
+    <p>The second time Pip pulled the wagon, she was sure of herself. The first time had only been a wobble. A wobble was nothing. A wobble was funny.</p>
+    <p>This time was the orchard run. Apples down, empty baskets up. Grandfather walked beside her with his hand resting light on the side-rail, and Auntie Mern walked behind, the way Auntie Mern always walked — quiet, with a wrench rolling between her palms like a small silver fish.</p>
+    <p>At the top of the hill Grandfather knelt to the wheel. Tap. He looked at Pip. Pip tapped. Good. He oiled the pin. Pip watched. Good.</p>
+    <p>Then he leaned his ear to the axle and began to hum.</p>
+    <p>It was not a song. It was barely a tune. It was the kind of sound a person makes when they are thinking, low in the throat, the way bees think. He pulled a square of faded green cloth from his pocket and laid it flat on the axle wood while he hummed, the way you might lay a hand on a sleeping animal.</p>
+    <p>Pip&#x27;s turn.</p>
+    <p>And here Pip looked, very quickly, down the hill.</p>
+    <p>There were people down the hill. The baker&#x27;s boys were carrying flour. Old Mrs. Aleby was shaking out a rug. A dog she did not know was watching her with great interest.</p>
+    <p>Pip thought: I am not going to hum at a piece of wood with people watching.</p>
+    <p>She leaned down. She moved her lips. She made no sound at all.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_04.jpg" alt="Squeak Lane" loading="lazy" />
+      <figcaption>Squeak Lane · midchapter · uneasy</figcaption>
+    </figure>
+    <p>Grandfather, who was a kind man and an easy one, did not check. He stood up slow with one hand on his knee. &quot;There now,&quot; he said. &quot;That&#x27;ll do.&quot;</p>
+    <p>It did not do.</p>
+    <p>They set off down the lane and at the third step the wheel began to squeak.</p>
+    <p>It was a small squeak. The kind of squeak you could explain away. <em>Dust,</em> Pip thought. <em>A pebble.</em> She walked a little faster, as if she could leave the squeak behind, but the squeak was attached to the wagon and the wagon was attached to her, and so the squeak came too.</p>
+    <p>Squeak.</p>
+    <p>Squeak.</p>
+    <p>Squeak.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_03.jpg" alt="Silent Lips" loading="lazy" />
+      <figcaption>Silent Lips · turning · self-conscious</figcaption>
+    </figure>
+    <p>All the way past the well. All the way past the chicken yard. All the way down the dusty orchard lane where the trees made a roof of leaves and the apples hung red as lanterns.</p>
+    <p>Pip pretended she did not hear it. Grandfather hummed under his breath as he walked, which helped a little, the way a grown-up&#x27;s humming sometimes does, though Pip did not understand why.</p>
+    <p>At the orchard, while Pip was reaching up after a low apple and being very busy and very capable, Auntie Mern knelt down behind the wagon.</p>
+    <p>She was half-hidden by a stack of baskets. She slid her small wrench onto something underneath. She turned it once. Twice. Three small careful turns. She listened. She turned it back a quarter. She nodded, to no one, the way she did.</p>
+    <p>Then she stood up, brushed her apron, and was already walking away by the time Pip turned around.</p>
+    <p>From her apron pocket, just for a moment, a corner of red linen showed. Then it was tucked back in.</p>
+    <p>On the way home the wagon did not squeak.</p>
+    <p>Pip noticed this with quiet pride. <em>See,</em> she thought. <em>It worked itself out. They make a fuss about the hum and it doesn&#x27;t even matter.</em></p>
+    <p>And here is the thing the story wants you to know.</p>
+    <p>Pip did not see Auntie Mern kneel.</p>
+    <p>Pip did not see the wrench.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_05.jpg" alt="Hidden Wrench" loading="lazy" />
+      <figcaption>Hidden Wrench · climax · secret</figcaption>
+    </figure>
+    <p>Pip did not see the red cloth.</p>
+    <p>And because Pip did not see those things, Pip did not know they had happened — which is a different thing, the narrator would like to point out, from them not happening.</p>
+    <p>Pip walked home humming, finally, a little, under her breath. Not to the axle. Just to herself. She thought it was her own tune.</p>
+    <p>It was Grandfather&#x27;s.</p>
+    <hr class="scene-break" />
+    <p>On the porch, Cal had started humming again.</p>
+    <p>The old woman did not stop him.</p>
+    <p>&quot;Now,&quot; she said. &quot;The third thing Pip skipped was counting.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_06.jpg" alt="Quiet Return" loading="lazy" />
+      <figcaption>Quiet Return · closing · ironic-warm</figcaption>
+    </figure>
+    <p>Liss, without meaning to, looked down at the porch slats.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_07.jpg" alt="Borrowed Tune" loading="lazy" />
+      <figcaption>Borrowed Tune · closing · bittersweet</figcaption>
+    </figure>
+    <p>&quot;One,&quot; she said. &quot;Two —&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch04/beat_08.jpg" alt="Counting Slats" loading="lazy" />
+      <figcaption>Counting Slats · closing · hushed</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="ch-05" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 5</div><h2 class="ch-title">Eleven Slats</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 5</div>
+    <audio controls preload="none" src="audio/chapter_05.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>&quot;One,&quot; said Liss. &quot;Two. Three. Four.&quot;</p>
+    <p>She was poking the porch slats with one bare toe, counting them under her breath the way some children breathe.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_01.jpg" alt="Porch Counting" loading="lazy" />
+      <figcaption>Porch Counting · opening · Hushed</figcaption>
+    </figure>
+    <p>&quot;Five. Six. Seven— Granny, how many slats has this porch?&quot;</p>
+    <p>Old Pip didn&#x27;t look down. Her fingers were resting light on the rail, the way a bird rests before it decides.</p>
+    <p>&quot;Eleven,&quot; she said.</p>
+    <p>&quot;Eleven,&quot; said Liss, satisfied, and counted them anyway to be sure.</p>
+    <p>Old Pip smiled at that. A small, crooked smile. &quot;Pip didn&#x27;t,&quot; she said.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_02.jpg" alt="Morning Ritual" loading="lazy" />
+      <figcaption>Morning Ritual · early · Reverent</figcaption>
+    </figure>
+    <p>&quot;Didn&#x27;t what?&quot;</p>
+    <p>&quot;Count.&quot;</p>
+    <hr class="scene-break" />
+    <p>The wagon had eleven slats along its long red belly. It had always had eleven. Grandfather counted them every morning before a run, one finger tapping, his lips moving without sound. Sometimes Auntie Mern counted too, from the other side, with a faded green cloth folded in her palm. When their counts met in the middle they would nod at each other, just once, and that was that.</p>
+    <p>Pip thought this was the silliest of the seven.</p>
+    <p>Eleven was eleven. Eleven yesterday. Eleven this morning. Eleven at suppertime. Slats did not, in Pip&#x27;s experience, wander off.</p>
+    <p>&quot;Counting&#x27;s for babies,&quot; she told the wagon, very quietly, the morning of the apple run. She climbed up and ran her hand along the slats without looking. One, many, eleven. Done.</p>
+    <p>She did not see the slat near the back. The one that had been loose for a week. The one Auntie Mern would have found, if Auntie Mern had been the one to count that morning, because Auntie Mern&#x27;s hands knew things her mouth didn&#x27;t.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_03.jpg" alt="Skipped Hand" loading="lazy" />
+      <figcaption>Skipped Hand · midchapter · Cocky</figcaption>
+    </figure>
+    <p>But Auntie Mern was elbow-deep in dough at the bakery, and Grandfather was up the hill with a sick goat, and Pip had the rope in her fists and the village was waiting for apples.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_04.jpg" alt="Bright Descent" loading="lazy" />
+      <figcaption>Bright Descent · midchapter · Joyful</figcaption>
+    </figure>
+    <p>&quot;I&#x27;ve got it,&quot; Pip said. To no one. &quot;I&#x27;ve just got it.&quot;</p>
+    <p>She tapped the wheel. (She remembered the tap now. Mostly.) She did not hum. She did not count. She tied the rope — a proper figure-eight, see, she wasn&#x27;t stupid — and she breathed on the latch and she said thank you under her breath where nobody could hear it and feel pleased with her.</p>
+    <p>Down the hill the wagon went, full of apples, bright as a barn fire.</p>
+    <p>It was a beautiful morning. The road shone. The apples shone. Pip shone, because she was ten years old and trusted with a wagon and the sun was on her hair.</p>
+    <p>The slat fell out somewhere between the second bend and the bridge.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_05.jpg" alt="Tooth Falling" loading="lazy" />
+      <figcaption>Tooth Falling · turning · Quiet-dread</figcaption>
+    </figure>
+    <p>It fell out the way a tooth falls out — quietly, and then all at once. One small wooden thump on the road behind her. Pip didn&#x27;t hear it over her own humming. (She hummed when she was happy. She did not hum when she was <em>supposed</em> to hum. That was different, she would have told you.)</p>
+    <p>For a few yards the apples held. Eleven slats had been doing the work of ten. Now ten slats were doing the work of eleven.</p>
+    <p>Then the wagon went over a stone.</p>
+    <p>And the apples — oh, the apples.</p>
+    <p>They came out in a great red wave. They bounced. They rolled. They went under the legs of Mr. Aleby&#x27;s donkey and around the wheels of the cheese-cart and into Mrs. Brask&#x27;s open doorway, where her cat looked up with deep personal offense. One apple made it all the way to the well and sat down beside it like it had been invited.</p>
+    <p>The village laughed.</p>
+    <p>It was funny. I have to tell you that. It was very, very funny. A small girl with her mouth wide open, one hand on the empty rib of the wagon, apples everywhere, a single grey slat lying in the road like a dropped spoon. The baker laughed so hard he had to sit down. Old Mr. Tovey laughed without making any sound, which was how he always laughed. Even the donkey looked amused.</p>
+    <p>And Pip — Pip laughed too. Of course she did. She laughed first and loudest, because if you laugh first the laugh is on your side.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_06.jpg" alt="Apple Wave" loading="lazy" />
+      <figcaption>Apple Wave · climax · Roaring</figcaption>
+    </figure>
+    <p>&quot;Eleven slats!&quot; she called, holding up the runaway one. &quot;Who knew!&quot;</p>
+    <p>The village roared.</p>
+    <p>I did not laugh.</p>
+    <p>I mean — I did, then. Pip did. Pip laughed till her ribs hurt and helped chase apples till sundown and went home pink-cheeked and pleased.</p>
+    <p>But the I telling you now. The I on this porch. That I did not laugh.</p>
+    <p>That I was already counting.</p>
+    <p>One slat. One small wooden tooth, lying in the dust.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_07.jpg" alt="Invisible Mern" loading="lazy" />
+      <figcaption>Invisible Mern · closing · Sober</figcaption>
+    </figure>
+    <p>And four skips still to come.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch05/beat_08.jpg" alt="Counting Still" loading="lazy" />
+      <figcaption>Counting Still · closing · Aching</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="ch-06" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 6</div><h2 class="ch-title">The Quietest Skip</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 6</div>
+    <audio controls preload="none" src="audio/chapter_06.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>On the porch, Cal lifted his cup of lemonade and said, without thinking about it at all, &quot;Thank you.&quot;</p>
+    <p>Old Pip&#x27;s hands went still in her lap.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_01.jpg" alt="The Thank You" loading="lazy" />
+      <figcaption>The Thank You · opening · tender</figcaption>
+    </figure>
+    <p>She looked at him for a long breath. Then she smiled, a small crooked smile, the kind that hurts a little at the corner.</p>
+    <p>&quot;You&#x27;re welcome,&quot; she said. &quot;Oh, you&#x27;re very welcome.&quot;</p>
+    <p>Bo squinted. &quot;Why&#x27;d you go quiet?&quot;</p>
+    <p>&quot;Because,&quot; said Old Pip, &quot;that is the next part of the story. And I would rather skip it.&quot;</p>
+    <p>&quot;Then skip it,&quot; said Bo.</p>
+    <p>&quot;No,&quot; said Old Pip. &quot;That is exactly what I did before.&quot;</p>
+    <hr class="scene-break" />
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_02.jpg" alt="Twelve Has Elbows" loading="lazy" />
+      <figcaption>Twelve Has Elbows · early · swaggering</figcaption>
+    </figure>
+    <p>Pip was twelve now.</p>
+    <p>Twelve is a tall age. Twelve has elbows. Twelve has <em>opinions.</em> Twelve has small ones watching from the fence, and twelve knows they are watching, and twelve walks a little straighter because of it.</p>
+    <p>The red wagon stood at the top of the hill in the morning light. Grandfather had tapped the wheel. Auntie Mern had oiled the pin, her green cloth folded into her apron pocket. Old Henna had hummed to the axle with her hand flat on the wood, and the little square of red linen she kept tied at her wrist had brushed the rim. Pip had counted the slats. Eleven. She had breathed on the latch. She had tied the rope in a figure-eight, slow, neat, because the little ones were watching and the little ones must see it done right.</p>
+    <p>Six.</p>
+    <p>One to go.</p>
+    <p>The thank-you.</p>
+    <p>Pip opened her mouth.</p>
+    <p>And here is where Pip should have spoken. She did not speak.</p>
+    <p>Because Tully Brask was standing at the fence. Tully, all of five, sleeves shoved up to his elbows, watching her the way you watch a comet. And behind him two other small ones, Lin and baby Ros, with their faces pressed between the rails.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_03.jpg" alt="Six Of Seven" loading="lazy" />
+      <figcaption>Six Of Seven · midchapter · ritualistic</figcaption>
+    </figure>
+    <p>And Pip thought — quickly, the way twelve thinks — <em>they will hear me thank a wagon. They will hear me say thank you to a thing made of wood. And they will giggle, and Tully will tell, and tomorrow I will be the girl who talks to wagons.</em></p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_04.jpg" alt="The Fence" loading="lazy" />
+      <figcaption>The Fence · midchapter · expectant</figcaption>
+    </figure>
+    <p>So Pip pressed her lips together.</p>
+    <p>She crossed her arms. She lifted her chin the way she had seen the older boys do. She looked at the wagon, and she thought the thank-you very loudly inside her head, which she decided was the same thing.</p>
+    <p>It was not the same thing.</p>
+    <p>The wagon did not creak. The wheel did not wobble. No apple rolled. No slat fell. The morning went on being a perfectly ordinary morning, and Pip pulled the wagon down the hill, and the little ones watched her go.</p>
+    <p>This is the quietest part of the story. Listen carefully. I will only say it once.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_06.jpg" alt="Three Tuckings" loading="lazy" />
+      <figcaption>Three Tuckings · turning · ominous-gentle</figcaption>
+    </figure>
+    <p>The wagon did not need the thanks.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_07.jpg" alt="Duller Flowers" loading="lazy" />
+      <figcaption>Duller Flowers · turning · quiet</figcaption>
+    </figure>
+    <p>Pip did.</p>
+    <p>And Tully, at the fence, watched a tall girl with crossed arms not say thank you. And he tucked that away inside himself, very neat, the way small ones tuck things. <em>That is how you do it,</em> his face said, without knowing it said anything. <em>You stand tall. You cross your arms. You do not say the soft word.</em></p>
+    <p>Lin tucked it away too.</p>
+    <p>Baby Ros tucked it away, though she could not yet say <em>thank you</em> nor <em>wagon</em> nor her own full name.</p>
+    <p>Three small ones, learning.</p>
+    <p>The wrong thing.</p>
+    <p>The painted flowers on the wagon&#x27;s side were red and yellow and blue. That morning, if you had been looking — and nobody was looking — you might have said they seemed a shade duller. Just a shade. Nothing you could prove.</p>
+    <p>Nothing anyone would notice for years.</p>
+    <hr class="scene-break" />
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_05.jpg" alt="The Quietest Skip" loading="lazy" />
+      <figcaption>The Quietest Skip · climax · wrong</figcaption>
+    </figure>
+    <p>On the porch, Old Pip was quiet a long time.</p>
+    <p>Cal, worried, held out his lemonade. &quot;Do you want some?&quot;</p>
+    <p>&quot;No, sweet thing,&quot; said Old Pip. &quot;I want you to keep saying it. The thank-you. Every time. Even when you feel silly. <em>Especially</em> when you feel silly.&quot;</p>
+    <p>&quot;Why especially?&quot; asked Liss.</p>
+    <p>Old Pip looked out at the long path in the grass.</p>
+    <p>&quot;Because,&quot; she said, &quot;the ones who feel silly are usually the ones being watched.&quot;</p>
+    <p>At her feet, Wren — who had not said a word the whole chapter — pressed her small palm flat against the porch board, and mouthed, silently, <em>thank you.</em></p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_08.jpg" alt="Especially Silly" loading="lazy" />
+      <figcaption>Especially Silly · closing · gentle</figcaption>
+    </figure>
+    <p>Bo did not see her do it.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch06/beat_09.jpg" alt="Wren Listens" loading="lazy" />
+      <figcaption>Wren Listens · closing · reverent</figcaption>
+    </figure>
+    <p>But I did.</p>
+  </div>
+</section>
+
+<section id="ch-07" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 7</div><h2 class="ch-title">The Bright Bones</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 7</div>
+    <audio controls preload="none" src="audio/chapter_07.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>Liss bent over her shoe. The lace went under, around, through — and flopped open like a tired worm.</p>
+    <p>&quot;Again,&quot; she said, frowning. She tried it twice. Twice it slipped.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch07/beat_01.jpg" alt="Lace Worm" loading="lazy" />
+      <figcaption>Lace Worm · opening · patient</figcaption>
+    </figure>
+    <p>The old woman watched her small fingers fumble and her own hands went very still in her lap.</p>
+    <p>&quot;There is,&quot; she said, &quot;a knot. And there is the knot. They are not the same knot.&quot;</p>
+    <p>She closed her eyes a moment. The porch boards were warm under her heels. Somewhere a bee was busy in the honeysuckle. She let the bee finish its sentence before she started hers.</p>
+    <p>&quot;Now. Listen. Pip was alone.&quot;</p>
+    <hr class="scene-break" />
+    <p>It was the first time. Grandfather was in bed with a cough that rattled his chest like loose slats, and Auntie Mern was down-valley, and the medicine had to go <em>up</em> the hill to old Mrs. Aleby before sundown, and there was no one else.</p>
+    <p>No one else.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch07/beat_02.jpg" alt="Trusted Hands" loading="lazy" />
+      <figcaption>Trusted Hands · early · swaggering</figcaption>
+    </figure>
+    <p>Pip stood at the top of the green hill with the bright red wagon and the brown glass bottle and her own two hands. Her heart was doing a drum-thing. Her grin was doing a grin-thing. She was ten years old and she was <em>trusted</em>.</p>
+    <p>She did the tap. (She remembered the tap now. Mostly.)</p>
+    <p>She did the oil — a little crooked, but done.</p>
+    <p>She did not hum. Humming was for babies and for Grandfather and she was in a hurry.</p>
+    <p>She did not count. Eleven was eleven.</p>
+    <p>She did not breathe on the latch. She was already breathing, wasn&#x27;t she? That counted.</p>
+    <p>She picked up the rope.</p>
+    <p>Now. The rope. The rope went around the post and then around itself in a careful curving shape like a lazy number eight lying down to nap. Grandfather&#x27;s hands had made that shape a thousand times. Pip had watched them a thousand and one.</p>
+    <p>The bottle was waiting. The sun was sliding. Mrs. Aleby was coughing somewhere down the long bent path.</p>
+    <p>Pip tied a regular knot.</p>
+    <p>Just one loop. Just one tug. Just <em>quick</em>.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch07/beat_03.jpg" alt="Skipped Seven" loading="lazy" />
+      <figcaption>Skipped Seven · midchapter · rushed</figcaption>
+    </figure>
+    <p>&quot;I&#x27;ve got it,&quot; she said, to nobody, to the wagon, to herself. &quot;I&#x27;ve got it.&quot;</p>
+    <p>And here is where Pip should have stopped. She did not stop.</p>
+    <p>She did not say thank you.</p>
+    <p>She pushed off.</p>
+    <hr class="scene-break" />
+    <p>Oh, but the hill.</p>
+    <p>The hill was <em>green</em> and the wagon was <em>fast</em> and the wind got into Pip&#x27;s hair and her smock and her open laughing mouth all at once. The wheels sang. The slats hummed. The bottle in its straw nest knocked a little tune against the side. Faster than any wagon had ever gone. Faster than Grandfather. Faster than Auntie. Faster than the swallows that lifted off the fence as she flew past.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch07/beat_04.jpg" alt="Three Seconds" loading="lazy" />
+      <figcaption>Three Seconds · turning · exhilarated</figcaption>
+    </figure>
+    <p>For three whole seconds it was the best thing Pip had ever done.</p>
+    <p>Then the wheel remembered it had not been tapped.</p>
+    <p>Then the axle remembered it had not been hummed to.</p>
+    <p>Then the eleventh slat — loose for a week, loose for a month, loose since before Pip was born, maybe — remembered it had not been counted.</p>
+    <p>Then the latch remembered no breath had warmed it.</p>
+    <p>Then the pin, the brave little pin, remembered nobody had thanked anybody for anything.</p>
+    <p>And then the rope, the plain-knot rope, the lazy-eight-that-wasn&#x27;t, gave up trying to be something it was not.</p>
+    <p>The wagon let go of itself.</p>
+    <p>It scattered its bright bones into the long grass.</p>
+    <p>A wheel went up — <em>up</em>, like a coin tossed for luck — spinning against the blue. The slats fanned out in the air like a deck of cards being shuffled by no one. The pull-rope unraveled in three long lazy curls. The painted bench-back floated, almost gentle, almost shy, and laid itself down in the clover. The brown glass bottle rose, turning, catching the sun, catching the sun, catching the sun.</p>
+    <p>In the middle of all of it stood Pip, with her two empty fists and her mouth a small round O.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch07/beat_05.jpg" alt="Bright Bones" loading="lazy" />
+      <figcaption>Bright Bones · climax · shattering</figcaption>
+    </figure>
+    <p>She did not make a sound.</p>
+    <p>The wagon did not make a sound.</p>
+    <p>The grass made the only sound, and it was the soft <em>tick</em> of bright wooden pieces coming to rest one by one by one in the green.</p>
+    <p>Then the bottle came down.</p>
+    <p>It did not break. (The narrator will give you that one small mercy. Only that one.)</p>
+    <p>It rolled, slow, slow, slow, and stopped against Pip&#x27;s bare foot.</p>
+    <p>And Pip stood alone at the top — no. At the <em>middle</em>. At the middle of the hill, surrounded by every piece of a wagon that had been one wagon a minute ago and was now a hundred small pieces of wood pretending to be flowers in the grass.</p>
+    <p>She did not move.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch07/beat_06.jpg" alt="Bottle Rests" loading="lazy" />
+      <figcaption>Bottle Rests · closing · hushed</figcaption>
+    </figure>
+    <p>She did not move for a long time.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch07/beat_07.jpg" alt="Middle Of The Hill" loading="lazy" />
+      <figcaption>Middle Of The Hill · closing · stricken</figcaption>
+    </figure>
+    <p>Down in the village, somebody had heard.</p>
+  </div>
+</section>
+
+<section id="ch-08" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 8</div><h2 class="ch-title">The Quiet Workshop</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 8</div>
+    <audio controls preload="none" src="audio/chapter_08.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>The workshop smelled like sawdust and old oil and rain on cold stone.</p>
+    <p>The whole village came. They came quiet. They came with their hats in their hands and their cloths folded in their pockets — a green one, a red one, a yellow one the color of butter going soft. Pip had never noticed the cloths before. She noticed them now.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_01.jpg" alt="Village Gathering" loading="lazy" />
+      <figcaption>Village Gathering · opening · hushed</figcaption>
+    </figure>
+    <p>The pieces of the wagon were laid out on the workshop floor in a wide ring, the way you lay out bones. A wheel here. A slat there. The pin. The latch. The rope, in two soft pieces. The painted bench-back with one yellow flower still bright on it.</p>
+    <p>Grandfather knelt in the middle.</p>
+    <p>He rolled up his sleeves. He laid his hands flat on his knees. He breathed out, long and slow, the way he breathed at the wagon before he began.</p>
+    <p>&quot;Now then,&quot; he said.</p>
+    <p>The village leaned forward.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_02.jpg" alt="Bones Laid" loading="lazy" />
+      <figcaption>Bones Laid · early · ceremonial</figcaption>
+    </figure>
+    <p>He picked up the pin. He turned it in his fingers. He set it down. He picked up the axle and laid it across two blocks. He hummed, low, almost not a hum. Auntie Mern stepped close with her wrench rolling between her palms, and she handed him things before he asked, and for a little while it looked the way it had always looked — Grandfather&#x27;s slow hands and Auntie&#x27;s silent ones, and the wagon coming together under them like a story remembering itself.</p>
+    <p>Pip stood in the doorway. She did not come in. She had not come in since the hill.</p>
+    <p>Grandfather fit the axle to the frame. He tapped it. He set the first slat in. He counted under his breath — <em>one, two, three</em> — and he set in the second, and the third, and on the fourth slat his hands slowed.</p>
+    <p>He held it a moment.</p>
+    <p>He set it down.</p>
+    <p>He picked up another piece — a small curved piece Pip had never paid attention to, a piece the color of dark honey, with two notches carved in one end. He turned it one way. He turned it the other way. He held it up to the lantern.</p>
+    <p>The lantern light shook on the walls.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_03.jpg" alt="Slow Hands" loading="lazy" />
+      <figcaption>Slow Hands · midchapter · tender</figcaption>
+    </figure>
+    <p>Grandfather looked at Auntie Mern. Auntie Mern looked at the piece. She did not roll the wrench. She held it very still.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_06.jpg" alt="Granny Fenn" loading="lazy" />
+      <figcaption>Granny Fenn · midchapter · elegiac</figcaption>
+    </figure>
+    <p>&quot;Mern,&quot; Grandfather said.</p>
+    <p>&quot;Mm,&quot; said Auntie Mern, which was not a yes.</p>
+    <p>He tried it one way. He tried it the other. He set it down. He picked it back up. He laid it against the axle and it did not sit right; he laid it against the frame and it did not sit right there either. He closed one eye and squinted along it the way you squint along a board to see if it&#x27;s true.</p>
+    <p>He set it down a third time.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_04.jpg" alt="Honey Piece" loading="lazy" />
+      <figcaption>Honey Piece · turning · uncertain</figcaption>
+    </figure>
+    <p>&quot;I don&#x27;t remember,&quot; he said, &quot;how this part goes.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_05.jpg" alt="Mern&#x27;s Silence" loading="lazy" />
+      <figcaption>Mern&#x27;s Silence · turning · stricken</figcaption>
+    </figure>
+    <p>He said it the way you&#x27;d say the kettle&#x27;s empty. Soft. Plain. Not louder.</p>
+    <p>Nobody spoke.</p>
+    <p>Granny Fenn, at the back, in her shawl, said into the quiet, &quot;Mara knew that one.&quot;</p>
+    <p>The village turned to her.</p>
+    <p>&quot;She passed in the winter,&quot; Granny Fenn said. &quot;She didn&#x27;t get the chance.&quot;</p>
+    <p>That was all she said. She folded her hands over her cloth — a worn blue one, almost grey — and she said nothing else.</p>
+    <p>Grandfather looked down at the piece in his palm. He looked at Auntie Mern, and Auntie Mern looked back at him, and her mouth opened a little and then closed, because she did not know either, and she had not known she did not know, and she was finding it out in front of everyone at once.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_07.jpg" alt="Eyes Closed" loading="lazy" />
+      <figcaption>Eyes Closed · climax · broken</figcaption>
+    </figure>
+    <p>She shook her head, the smallest shake.</p>
+    <p>Grandfather laid the piece down on the floor with the others.</p>
+    <p>He sat back on his heels. He put his hands on his knees, palms up, the way a person sits when they are done lifting things. And then — Pip saw it from the doorway, she would see it her whole long life — he closed his eyes.</p>
+    <p>He did not open them for a long time.</p>
+    <p>One by one, the villagers took out their cloths. The green one. The red one. The butter-yellow. The almost-grey. They knelt, slow as old trees, around the ring of pieces, and they laid the cloths down beside the bones of the wagon, each in its own place — and Pip understood, watching from the doorway, that the cloths had been mending it all along. Every ride. Every year. Quiet hands and quiet cloths, and nobody had ever said so, because nobody had ever needed to say so.</p>
+    <p>Until now.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch08/beat_08.jpg" alt="Cloths Laid" loading="lazy" />
+      <figcaption>Cloths Laid · closing · reverent</figcaption>
+    </figure>
+    <p>And that, the old woman on the porch said, was the last day there was a wagon.</p>
+  </div>
+</section>
+
+<section id="ch-09" class="chapter">
+  <div class="ch-head"><div class="ch-num">Chapter 9</div><h2 class="ch-title">The Porch, Still</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Chapter 9</div>
+    <audio controls preload="none" src="audio/chapter_09.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>The porch was quiet for a long time.</p>
+    <p>A bee bumbled against the screen door and gave up. Somewhere down the lane a dog barked twice, and then thought better of it. The light had gone the color of honey left out too long.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_01.jpg" alt="Honey Light" loading="lazy" />
+      <figcaption>Honey Light · opening · hushed</figcaption>
+    </figure>
+    <p>Bo had his chin on his knees. Liss was looking at her own hands as if she had never quite seen them before. Cal had stopped humming, which was the loudest thing he had done all afternoon.</p>
+    <p>It was Wren who finally spoke.</p>
+    <p>&quot;Are you still sorry?&quot; she asked.</p>
+    <p>I waited a breath. I always do, for her. The question under the question is usually the one worth answering.</p>
+    <p>&quot;Yes,&quot; I said. &quot;Every day.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_02.jpg" alt="Question Underneath" loading="lazy" />
+      <figcaption>Question Underneath · early · tender</figcaption>
+    </figure>
+    <p>Bo opened his mouth, and closed it. Liss frowned at her thumbs.</p>
+    <p>&quot;But that isn&#x27;t why I tell it,&quot; I said.</p>
+    <p>&quot;Why, then?&quot; said Bo, because Bo cannot help himself, and I love him for it.</p>
+    <p>I looked out past the porch rail. The path was still there in the grass, the way a path stays after the thing that made it has gone. Long. Bent. Gold in the late light. A shape of missing weight.</p>
+    <p>&quot;Because the story is the last piece of the wagon I have,&quot; I said. &quot;And a piece is a thing you can hand to somebody.&quot;</p>
+    <p>I set my hand on the porch rail. The wood was warm. I have sat on this porch for fifty years, and the rail knows me, which is not the same as me knowing it, but it is close.</p>
+    <p>I tapped it. Twice. Light, with two fingers, the way Grandfather did the wheel.</p>
+    <p>At my knee, something moved. I did not look down. I knew.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_03.jpg" alt="Path Of Missing" loading="lazy" />
+      <figcaption>Path Of Missing · midchapter · elegiac</figcaption>
+    </figure>
+    <p>Wren tapped her knee. Twice. Light. With two fingers.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_05.jpg" alt="Counting Four" loading="lazy" />
+      <figcaption>Counting Four · midchapter · ceremonial</figcaption>
+    </figure>
+    <p>I drew my thumb along the rail as if there were a pin there to be oiled, and I hummed — low, the note Grandfather hummed, the note I have hummed under my breath every washing-up for fifty years without quite knowing I was doing it.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_06.jpg" alt="Apron Knot" loading="lazy" />
+      <figcaption>Apron Knot · midchapter · intent</figcaption>
+    </figure>
+    <p>Wren hummed.</p>
+    <p>&quot;One,&quot; I said, looking at Bo. &quot;Two,&quot; Liss. &quot;Three,&quot; Cal. &quot;Four,&quot; Wren. Four children. Eleven would have been the wagon. Four is what I have. Four is enough to count.</p>
+    <p>I leaned forward and breathed, soft, on the porch post where the paint has gone thin. A little cloud, gone before you saw it. The way you breathe on a latch to wake it up.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_04.jpg" alt="Two Fingers" loading="lazy" />
+      <figcaption>Two Fingers · turning · reverent</figcaption>
+    </figure>
+    <p>Wren breathed on her wrist.</p>
+    <p>I took the loose end of my apron string between my fingers. Over. Under. Around. Through. A figure-eight, the way the rope went on the wagon, the way it should have gone on the day I was in a hurry. My knuckles are not what they were. The knot still came.</p>
+    <p>Wren was working at the hem of her yellow shift. Over. Under. Around. Through. Her tongue caught in the corner of her mouth.</p>
+    <p>I watched her fingers. They were getting it right.</p>
+    <p>I sat back. The last one is the hardest, and the easiest, and the one I skipped when I was twelve because I thought I was too old for it. I am not too old for it now. I am exactly old enough.</p>
+    <p>&quot;Thank you,&quot; I said. Out loud. To the porch, and to the path, and to the four children on my steps, and to a red wagon that has not stood at the top of the hill for sixty-three years.</p>
+    <p>Wren&#x27;s lips shaped it. <em>Thank you.</em> No sound. The right shape.</p>
+    <p>Bo was watching her. Liss was watching her. Cal had started to hum again, very softly, and did not know he had.</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_07.jpg" alt="Spoken Thanks" loading="lazy" />
+      <figcaption>Spoken Thanks · climax · luminous</figcaption>
+    </figure>
+    <p>&quot;That&#x27;s it,&quot; I said. &quot;That&#x27;s all of them. Tap. Oil. Hum. Count. Breathe. Tie. Thank.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_08.jpg" alt="Seven Named" loading="lazy" />
+      <figcaption>Seven Named · climax · satisfied</figcaption>
+    </figure>
+    <p>&quot;Seven,&quot; said Liss, who counts.</p>
+    <p>&quot;Seven,&quot; I said.</p>
+    <p>The sun was going. The path in the grass was the color of a thing remembered well. Somewhere up at the top of the hill, where the wagon used to wait, the wind moved through grass that had nothing in it to move around, and made the sound it makes when it is alone.</p>
+    <p>Wren leaned her head against my knee.</p>
+    <p>&quot;Tell me which one is the tap,&quot; she said, very quietly, &quot;so I get it right next time.&quot;</p>
+    <figure class="beat-figure">
+      <img src="illustrations/ch09/beat_09.jpg" alt="Head On Knee" loading="lazy" />
+      <figcaption>Head On Knee · closing · consoled</figcaption>
+    </figure>
+    <p>And I did.</p>
+  </div>
+</section>
+
+  <section class="back-matter">
+    <p>An illustrated fable. Read it. Hear it. Pass it on.</p>
+    <p style="margin-top:12px;font-style:normal;font-size:0.88rem;">
+      <em>An old woman tells the children of her town the story of the last wagon and the day she, as a small girl certain she&#x27;d watched enough, skipped the steps that kept it whole.</em>
+    </p>
+    <p style="margin-top:18px;font-size:0.82rem;">
+      <a href="cant-have-nice-things.html" style="color:var(--accent-rust);">How this book was made →</a>
+    </p>
+  </section>
+</main>
+<script>/* sms-metrics beacon */(function(){try{if(localStorage.smsNoTrack)return;navigator.sendBeacon('https://sms-metrics.sean-firewall.workers.dev/hit',JSON.stringify({p:location.pathname,r:document.referrer,h:location.host}))}catch(e){}})();</script>
+</body>
+</html>

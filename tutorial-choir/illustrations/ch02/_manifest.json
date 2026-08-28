@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Pointing At The Code Block",
+    "position": "opening",
+    "mood": "didactic-warm"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Hover On Return",
+    "position": "early",
+    "mood": "suspended"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Waterfall Of Install",
+    "position": "early",
+    "mood": "cascading"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Password Silence",
+    "position": "midchapter",
+    "mood": "quiet-trust"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Cricket Asleep By Kettle",
+    "position": "midchapter",
+    "mood": "domestic-peace"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Brew Version Returns",
+    "position": "turning",
+    "mood": "small-victory"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Brew Install Jq",
+    "position": "climax",
+    "mood": "industrious"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Two Tools",
+    "position": "closing",
+    "mood": "triumphant-quiet"
+  }
+]

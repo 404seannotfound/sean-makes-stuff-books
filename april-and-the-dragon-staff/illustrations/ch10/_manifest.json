@@ -1,0 +1,145 @@
+{
+  "chapter": 10,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Stitched Words",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Reverent",
+      "annotations": [
+        "the needle in the sun",
+        "THE STEP YOU SKIP IS THE STEP THAT SPEAKS",
+        "sewn where every paw can read it"
+      ],
+      "why_this_beat": "Opens the chapter with the quiet act of making the ritual permanent \u2014 Mango's careful stitches transform Laurel's words from memory into shared object."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "First Call",
+      "page_position": "early",
+      "weight": "high",
+      "mood": "Brave",
+      "annotations": [
+        "Step INTO the circle",
+        "her voice was not loud but it carried the beat",
+        "FERN CALLS FIRST"
+      ],
+      "why_this_beat": "The inversion begins \u2014 Fern, the quietest friend, opens the reversed chorus by calling the first step herself, not echoing April."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Chalk Drawn",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Grounded",
+      "annotations": [
+        "I'll draw it with care",
+        "the circle holds ALL of us",
+        "chalk dust on cream palms"
+      ],
+      "why_this_beat": "Dusty's physical act of drawing the circle embodies the ritual passing from April's hands to the friends' \u2014 the frame is literally being built by new hands."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Towel Close",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Steady",
+      "annotations": [
+        "The WET TOWEL is folded and held to the left",
+        "I'll hold it. I'll fold it.",
+        "LEFT-SIDE ALWAYS"
+      ],
+      "why_this_beat": "The towel transfer \u2014 Fern holding the towel close to her body \u2014 echoes Dusty's chapter-6 breakthrough and shows the ritual living in new hands."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Breath Rings",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "Transcendent",
+      "annotations": [
+        "BREATHE IN for three, breathe OUT for four",
+        "the count floated upward and over the hill",
+        "four golden rings"
+      ],
+      "why_this_beat": "The breath-count beat \u2014 Riddle calling without questioning, the rings rising as visible proof of the ritual's music \u2014 is the chapter's moment of collective stillness."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Mango Grounded",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Transformed",
+      "annotations": [
+        "The BURN-OFF comes last",
+        "each syllable steady, each syllable low",
+        "not a branch, not a rail \u2014 the ground"
+      ],
+      "why_this_beat": "Mango calling the burn-off step \u2014 the step she skipped \u2014 from the ground with deliberate slowness is the chapter's emotional turning point and her character's culmination."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Three Flicks",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "Precise",
+      "annotations": [
+        "one, two, and then three",
+        "each motion deliberate, patient, and free",
+        "THE CIRCLE OF BODIES"
+      ],
+      "why_this_beat": "The dry burn-off practice \u2014 three flicks without fire \u2014 shows the ritual fully embodied by the friends before flame ever touches the wicks."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Dragon Wakes",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Triumphant",
+      "annotations": [
+        "the dragon woke gently, woke steady and slow",
+        "WING-SHAPES IN GOLD",
+        "the frame is now yours"
+      ],
+      "why_this_beat": "The visual keynote \u2014 the full ensemble in motion, the ritual alive in the friends' bodies, April watching from outside the circle she built, the dragon staff spinning clean and earned."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Reversed Call",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Sacred",
+      "annotations": [
+        "fire is not for careless tricks",
+        "I hear you, dear friends",
+        "THE FRAME IS NOW YOURS \u2014 AND THE FIRE IS TOO"
+      ],
+      "why_this_beat": "The inversion is complete \u2014 the friends call to April, April responds, the teaching relationship reverses, and the scorch mark is touched one final time not in guilt but in gratitude."
+    },
+    {
+      "index": 10,
+      "filename": "beat_10.jpeg",
+      "scene_name": "Dragon Rests",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Peace",
+      "annotations": [
+        "the dragon breathed softly",
+        "and found its own place",
+        "\u2014 together \u2014"
+      ],
+      "why_this_beat": "The final image \u2014 the ritual at rest, the circle held by all of them, the dragon staff quiet and the friends together \u2014 closes the book's emotional arc with earned stillness."
+    }
+  ]
+}

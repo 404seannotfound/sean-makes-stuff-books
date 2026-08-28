@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "The Open Lid",
+    "position": "opening",
+    "mood": "warm-still"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Move Back",
+    "position": "early",
+    "mood": "dry-amused"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Dealing The Cards",
+    "position": "early",
+    "mood": "playful-conspirator"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Cricket Votes",
+    "position": "midchapter",
+    "mood": "absurd-grave"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Off The Lid",
+    "position": "midchapter",
+    "mood": "gentle-firm"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Open Terminal",
+    "position": "turning",
+    "mood": "ceremonial-quiet"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "The Cursor",
+    "position": "climax",
+    "mood": "patient-portal"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Vista Of Worlds",
+    "position": "closing",
+    "mood": "wistful-vast"
+  }
+]

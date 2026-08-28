@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Stuck Door",
+    "name_slug": "stuck_door",
+    "file": "beat_01_stuck_door.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Determined"
+  },
+  {
+    "index": 2,
+    "scene_name": "Jasmine Room",
+    "name_slug": "jasmine_room",
+    "file": "beat_02_jasmine_room.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Haunted"
+  },
+  {
+    "index": 3,
+    "scene_name": "Dead Jade",
+    "name_slug": "dead_jade",
+    "file": "beat_03_dead_jade.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Grief"
+  },
+  {
+    "index": 4,
+    "scene_name": "Shoebox Opened",
+    "name_slug": "shoebox_opened",
+    "file": "beat_04_shoebox_opened.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Revelation"
+  },
+  {
+    "index": 5,
+    "scene_name": "Reading Fortunes",
+    "name_slug": "reading_fortunes",
+    "file": "beat_05_reading_fortunes.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Intimacy"
+  },
+  {
+    "index": 6,
+    "scene_name": "Fortune Light",
+    "name_slug": "fortune_light",
+    "file": "beat_06_fortune_light.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Yearning"
+  },
+  {
+    "index": 7,
+    "scene_name": "Notebook Entry",
+    "name_slug": "notebook_entry",
+    "file": "beat_07_notebook_entry.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Resolve"
+  },
+  {
+    "index": 8,
+    "scene_name": "Stairs Down",
+    "name_slug": "stairs_down",
+    "file": "beat_08_stairs_down.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Purposeful"
+  }
+]

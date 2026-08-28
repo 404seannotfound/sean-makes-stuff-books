@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Clone Choir",
+    "position": "opening",
+    "mood": "industrious"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Adding Api Keys",
+    "position": "early",
+    "mood": "tense-careful"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Four Tablets Of Light",
+    "position": "midchapter",
+    "mood": "wide-eyed"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Reading The Four",
+    "position": "midchapter",
+    "mood": "appraising-fun"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Choir Judge",
+    "position": "turning",
+    "mood": "conducted"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Vex Hands In Hair",
+    "position": "climax",
+    "mood": "epiphany"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Wine-Colored Horizon",
+    "position": "closing",
+    "mood": "vista"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Cricket Approves",
+    "position": "closing",
+    "mood": "verdict"
+  }
+]

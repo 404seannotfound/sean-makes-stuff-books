@@ -1,0 +1,119 @@
+{
+  "chapter": 1,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Porch Steps",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "hushed",
+      "annotations": [
+        "THE LAST ONE WHO REMEMBERS",
+        "tap \u00b7 tap",
+        "smallest to tallest"
+      ],
+      "why_this_beat": "This is the visual keynote \u2014 the whole frame established in one image."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Bent Path",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "curious",
+      "annotations": [
+        "WHAT'S THAT FOR?",
+        "a path of bent grass",
+        "leading nowhere now"
+      ],
+      "why_this_beat": "Bo's pointing question opens the chapter's central mystery \u2014 the absence the wagon left behind."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Drawn Wagon",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "conjuring",
+      "annotations": [
+        "FOUR WHEELS",
+        "a long flat bed",
+        "a rope at the front",
+        "ours was RED"
+      ],
+      "why_this_beat": "The wagon takes its first shape in the chapter \u2014 drawn into the air because it cannot be drawn anywhere else."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Gone Where",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "stilled",
+      "annotations": [
+        "WHERE IS IT NOW?",
+        "gone",
+        "(a different kind of word than lost)"
+      ],
+      "why_this_beat": "The chapter's first real weight lands \u2014 the wagon is not lost, it is gone, and the storyteller's hand stops."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "Green Cloth",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "private",
+      "annotations": [
+        "nobody asked about the cloth",
+        "nobody knew to",
+        "fold \u00b7 pocket"
+      ],
+      "why_this_beat": "A silent ritual beat \u2014 a relic the chapter shows but does not explain, planting weight for later."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Tell Us",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "tender",
+      "annotations": [
+        "TELL US",
+        "the first thing the smallest one had said",
+        "soft \u00b7 level"
+      ],
+      "why_this_beat": "The smallest child's first words turn the chapter \u2014 the story is invited, the listener has chosen herself."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Once There Was",
+      "page_position": "closing",
+      "weight": "medium",
+      "mood": "beginning",
+      "annotations": [
+        "ONCE",
+        "there was a girl named Pip",
+        "and she was me",
+        "and she was in a terrible hurry"
+      ],
+      "why_this_beat": "The frame story formally begins \u2014 Old Pip lifts the weight and the book opens its inner door."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "Echoed Tap",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "luminous",
+      "annotations": [
+        "tap",
+        "tap",
+        "SHE IS GETTING IT RIGHT"
+      ],
+      "why_this_beat": "The chapter's final image \u2014 the secret of the whole book in one quiet hand-rhyme between generations."
+    }
+  ]
+}

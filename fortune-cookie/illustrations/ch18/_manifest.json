@@ -1,0 +1,92 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Cracked Open",
+    "name_slug": "cracked_open",
+    "file": "beat_01_cracked_open.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Sacred"
+  },
+  {
+    "index": 2,
+    "scene_name": "Faded Cranes",
+    "name_slug": "faded_cranes",
+    "file": "beat_02_faded_cranes.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Liminal"
+  },
+  {
+    "index": 3,
+    "scene_name": "Closing Ritual",
+    "name_slug": "closing_ritual",
+    "file": "beat_03_closing_ritual.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Tender"
+  },
+  {
+    "index": 4,
+    "scene_name": "Letting Go",
+    "name_slug": "letting_go",
+    "file": "beat_04_letting_go.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Bittersweet"
+  },
+  {
+    "index": 5,
+    "scene_name": "Beautiful Radical",
+    "name_slug": "beautiful_radical",
+    "file": "beat_05_beautiful_radical.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Reverent"
+  },
+  {
+    "index": 6,
+    "scene_name": "Nail And Ladle",
+    "name_slug": "nail_and_ladle",
+    "file": "beat_06_nail_and_ladle.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Resolute"
+  },
+  {
+    "index": 7,
+    "scene_name": "Keeping It",
+    "name_slug": "keeping_it",
+    "file": "beat_07_keeping_it.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Steadfast"
+  },
+  {
+    "index": 8,
+    "scene_name": "Thursday Returned",
+    "name_slug": "thursday_returned",
+    "file": "beat_08_thursday_returned.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Astonished"
+  },
+  {
+    "index": 9,
+    "scene_name": "Sugar Collapse",
+    "name_slug": "sugar_collapse",
+    "file": "beat_09_sugar_collapse.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Joyful"
+  },
+  {
+    "index": 10,
+    "scene_name": "Still Watching",
+    "name_slug": "still_watching",
+    "file": "beat_10_still_watching.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Luminous"
+  }
+]

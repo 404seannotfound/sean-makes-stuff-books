@@ -1,0 +1,72 @@
+{
+  "narrator": {
+    "provider": "elevenlabs",
+    "voice_id": "hpp4J3VqNfWAUOO0d1Us",
+    "name": "Bella",
+    "labels": "middle-aged American female \u00b7 professional bright warm",
+    "why": "American narrator for an American middle-grade book. Warmth without performance \u2014 sounds like a thoughtful adult reading to a child. Carries close-third interiority without leaning too literary."
+  },
+  "maia": {
+    "provider": "elevenlabs",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "name": "Sarah",
+    "labels": "young American female \u00b7 mature reassuring",
+    "why": "Maia is 12 but described as 'old beyond her years' \u2014 short declarative sentences, rarely uses 'I', interior richer than spoken. Sarah's 'mature, reassuring' young-female voice fits exactly."
+  },
+  "theo": {
+    "provider": "elevenlabs",
+    "voice_id": "bIHbv24MWmeRgasZH58o",
+    "name": "Will",
+    "labels": "young American male \u00b7 relaxed chill",
+    "why": "Theo (11, Brazilian-American) is anxious, soft-spoken, self-effacing, builds with straws. Will's 'relaxed optimist' captures the gentle, trailing voice without forcing brashness."
+  },
+  "june": {
+    "provider": "elevenlabs",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "name": "Jessica",
+    "labels": "young American female \u00b7 playful bright warm",
+    "why": "June Achebe (12, Nigerian-American foil) is the more lively counterweight to Maia's quiet. Jessica's 'playful, bright, warm' contrasts cleanly with Sarah-as-Maia."
+  },
+  "uncle_dao": {
+    "provider": "elevenlabs",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "name": "Bill",
+    "labels": "old American male \u00b7 wise mature balanced",
+    "why": "Uncle Dao is 60s Vietnamese-American \u2014 the longtime server who quietly matches N\u01cei Nai's fortunes to customers. Premade library has no Asian-accented voices; Bill's 'wise, mature, balanced' captures the dignity of the role. Reads as a longtime-American elder."
+  },
+  "henry": {
+    "provider": "elevenlabs",
+    "voice_id": "iP95p4xoKVk53GoZ742B",
+    "name": "Chris",
+    "labels": "middle-aged American male \u00b7 charming down-to-earth",
+    "why": "Henry Chen (40s, Maia's father, restaurant owner) is worn down but kind. Chris's 'charming, down-to-earth' is the small-business-owner-dad voice \u2014 doesn't try too hard."
+  },
+  "lucinda": {
+    "provider": "elevenlabs",
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "name": "Matilda",
+    "labels": "middle-aged American female \u00b7 knowledgeable upbeat",
+    "why": "Mrs. Pratt is ~70, white American widow, Thursday regular. Matilda's 'knowledgeable upbeat' American voice reads as the dignified-older-lady-with-her-own-rhythm \u2014 preserves her American-ness over the more elegant British alternatives."
+  },
+  "nai_nai": {
+    "provider": "elevenlabs",
+    "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+    "name": "Alice",
+    "labels": "middle-aged British female \u00b7 professional educator",
+    "why": "Imperfect cast: premade library has no Chinese-accented voices. N\u01cei Nai (Suyin Chen) is the late grandmother \u2014 Mandarin first, English second, dignified, careful with speech. Alice's British 'professional educator' reads as a careful elder ESL speaker with formal cadence. Limitation noted; could be replaced later with an ElevenLabs Voice Library find or a cloned voice."
+  },
+  "mr_pham": {
+    "provider": "elevenlabs",
+    "voice_id": "cjVigY5qzO86Huf0OWal",
+    "name": "Eric",
+    "labels": "middle-aged American male \u00b7 smooth trustworthy",
+    "why": "Mr. Pham is the cook \u2014 usually background but speaks briefly. Eric's 'smooth, trustworthy' middle-aged American male is distinct from Henry (Chris) and Uncle Dao (Bill) so back-of-kitchen voices don't blur."
+  },
+  "adult_chorus": {
+    "provider": "elevenlabs",
+    "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+    "name": "Roger",
+    "labels": "middle-aged American male \u00b7 laid-back casual resonant",
+    "why": "Anonymous adults \u2014 mail carrier, customers in the restaurant, neighbors. Roger's resonant casual American voice is the 'generic adult man' for one-line moments."
+  }
+}

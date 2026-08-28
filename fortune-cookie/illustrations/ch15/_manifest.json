@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Library Aisle",
+    "name_slug": "library_aisle",
+    "file": "beat_01_library_aisle.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Tense"
+  },
+  {
+    "index": 2,
+    "scene_name": "Confession Lands",
+    "name_slug": "confession_lands",
+    "file": "beat_02_confession_lands.jpeg",
+    "position": "early",
+    "weight": "high",
+    "mood": "Raw"
+  },
+  {
+    "index": 3,
+    "scene_name": "Thread Unwound",
+    "name_slug": "thread_unwound",
+    "file": "beat_03_thread_unwound.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Tender"
+  },
+  {
+    "index": 4,
+    "scene_name": "Polished Glass",
+    "name_slug": "polished_glass",
+    "file": "beat_04_polished_glass.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Quiet"
+  },
+  {
+    "index": 5,
+    "scene_name": "Threshold Girl",
+    "name_slug": "threshold_girl",
+    "file": "beat_05_threshold_girl.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Hesitant"
+  },
+  {
+    "index": 6,
+    "scene_name": "Empty Saucer",
+    "name_slug": "empty_saucer",
+    "file": "beat_06_empty_saucer.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Grace"
+  },
+  {
+    "index": 7,
+    "scene_name": "Wobbly Leg",
+    "name_slug": "wobbly_leg",
+    "file": "beat_07_wobbly_leg.jpeg",
+    "position": "closing",
+    "weight": "medium",
+    "mood": "Intimate"
+  },
+  {
+    "index": 8,
+    "scene_name": "Neon Promise",
+    "name_slug": "neon_promise",
+    "file": "beat_08_neon_promise.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Hopeful"
+  }
+]

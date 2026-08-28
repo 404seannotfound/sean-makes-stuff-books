@@ -1,0 +1,56 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Sharp Knife",
+    "position": "opening",
+    "mood": "ready"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "First Slice",
+    "position": "early",
+    "mood": "revelation"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Fanning Slices",
+    "position": "midchapter",
+    "mood": "satisfied"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Mara's Cut",
+    "position": "midchapter",
+    "mood": "decisive"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Twin Cross Sections",
+    "position": "turning",
+    "mood": "wonder"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Finishing Flakes",
+    "position": "turning",
+    "mood": "celebratory"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Pepper Grinds",
+    "position": "turning",
+    "mood": "completing"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Two Plates",
+    "position": "climax",
+    "mood": "warm"
+  },
+  {
+    "file": "beat_09.jpeg",
+    "scene_name": "Glasses Meet",
+    "position": "closing",
+    "mood": "tender"
+  }
+]

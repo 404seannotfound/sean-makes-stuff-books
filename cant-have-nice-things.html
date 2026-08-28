@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This Is Why We Can't Have Nice Things — Sean Makes Stuff</title>
+  <meta name="description" content="A children's fable made end-to-end with LLMs and image/audio models. Story, art, and audiobook auto-generated from a four-sentence brief. Full numbers, costs, and tooling inside.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .book-hero {
+      background: linear-gradient(135deg, #8b2f1d 0%, #c69b3c 100%);
+      color: #fff;
+      padding: 56px 0;
+    }
+    .book-hero h1 {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 2.6rem; line-height: 1.1; margin-bottom: 12px; color: #fff;
+    }
+    .book-hero p { color: rgba(255,255,255,0.92); max-width: 60ch; line-height: 1.6; }
+    .book-hero__kicker { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; color: rgba(255,255,255,0.7); }
+    .book-hero__layout { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: center; }
+    .book-hero__cover { width: 220px; height: 220px; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+    .book-hero__cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .book-hero__cta { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+    .book-hero__cta a {
+      display: inline-block; padding: 10px 18px; border-radius: 8px;
+      background: #fff; color: #8b2f1d; text-decoration: none; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+    .book-hero__cta a:hover { background: #fdf6e6; }
+    .book-hero__cta a.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
+    .book-hero__cta a.ghost:hover { background: rgba(255,255,255,0.12); }
+    @media (max-width: 640px) {
+      .book-hero__layout { grid-template-columns: 1fr; }
+      .book-hero__cover { width: 100%; height: auto; aspect-ratio: 1; }
+    }
+
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px; margin: 24px 0;
+    }
+    .stat {
+      background: #fff; border: 1px solid var(--color-border, #e5e5e7);
+      border-radius: 10px; padding: 18px 16px; text-align: center;
+    }
+    .stat__num {
+      font-family: "Iowan Old Style", serif; font-size: 2rem; font-weight: 600;
+      color: #8b2f1d; line-height: 1.1; margin-bottom: 4px;
+    }
+    .stat__label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6e6e73; }
+
+    table.metrics { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+    table.metrics th, table.metrics td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e5e7; }
+    table.metrics th { background: #f3ede0; font-weight: 600; }
+    table.metrics tr:last-child td { border-bottom: 0; }
+    table.metrics tr.total td { font-weight: 600; background: #fdf6e6; }
+    table.metrics td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    details.process-step { background: #fff; border: 1px solid #e5e5e7; border-radius: 8px; padding: 14px 18px; margin: 8px 0; }
+    details.process-step summary { cursor: pointer; font-weight: 600; }
+    details.process-step .body { margin-top: 10px; font-size: 0.95rem; line-height: 1.6; color: #1d1d1f; }
+    details.process-step .body code { background: #f3ede0; padding: 1px 6px; border-radius: 4px; font-size: 0.88em; }
+
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 16px 0; }
+    .tool { background: #fff; border: 1px solid #e5e5e7; border-radius: 8px; padding: 14px 16px; }
+    .tool h4 { font-family: "Iowan Old Style", serif; font-size: 1.05rem; margin-bottom: 6px; }
+    .tool .role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6e6e73; margin-bottom: 8px; }
+    .tool p { font-size: 0.88rem; line-height: 1.55; color: #1d1d1f; }
+    .tool .price { font-size: 0.8rem; color: #6e6e73; margin-top: 8px; font-style: italic; }
+
+    .cost-bar { display: flex; height: 28px; border-radius: 6px; overflow: hidden; margin: 12px 0 6px; border: 1px solid #c4b489; }
+    .cost-bar > span { display: flex; align-items: center; justify-content: center; font-size: 0.78rem; color: #fff; font-weight: 600; }
+    .cost-bar > .seg-llm { background: #8b2f1d; }
+    .cost-bar > .seg-img { background: #c69b3c; }
+    .cost-bar > .seg-audio { background: #2b3f6a; }
+    .cost-legend { display: flex; gap: 16px; font-size: 0.85rem; color: #6e6e73; flex-wrap: wrap; }
+    .cost-legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="https://sean-makes-stuff.com/" class="site-nav__brand">Sean Makes Stuff</a>
+      <ul class="site-nav__links">
+        <li><a href="https://sean-makes-stuff.com/support.html">Support</a></li>
+        <li><a href="https://sean-makes-stuff.com/privacy.html">Privacy</a></li>
+        <li><a href="https://github.com/404seannotfound" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="book-hero">
+      <div class="container">
+        <div class="book-hero__layout">
+          <div class="book-hero__cover">
+            <img src="cant-have-nice-things/storyboard/cover.jpg" alt="This Is Why We Can't Have Nice Things cover">
+          </div>
+          <div>
+            <div class="book-hero__kicker">Books · Generated end-to-end with LLMs and image/audio models</div>
+            <h1>This Is Why We Can't Have Nice Things</h1>
+            <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+            <p>A children's fable. An old woman tells the children of her town the story of the last wagon &mdash; and the day she, as a small girl certain she'd watched enough, skipped the steps that kept it whole. 9 chapters, 73 illustrations, 38-minute audiobook with 11 narrator voices, all generated from a four-sentence brief.</p>
+            <div class="book-hero__cta">
+              <a href="cant-have-nice-things/novel.html">Read the book →</a>
+              <a class="ghost" href="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/cant-have-nice-things/audio/audiobook.mp3" download>🎧 Download audiobook (35 MB)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">The numbers</h2>
+        <p class="project-description">A four-sentence brief became a 38-minute illustrated audiobook. Here's the count of everything that got generated along the way.</p>
+
+        <div class="stats-grid">
+          <div class="stat"><div class="stat__num">6,707</div><div class="stat__label">words</div></div>
+          <div class="stat"><div class="stat__num">9</div><div class="stat__label">chapters</div></div>
+          <div class="stat"><div class="stat__num">108</div><div class="stat__label">images rendered</div></div>
+          <div class="stat"><div class="stat__num">73</div><div class="stat__label">final illustrations</div></div>
+          <div class="stat"><div class="stat__num">38:22</div><div class="stat__label">audiobook duration</div></div>
+          <div class="stat"><div class="stat__num">11</div><div class="stat__label">distinct voices</div></div>
+          <div class="stat"><div class="stat__num">296</div><div class="stat__label">TTS segments</div></div>
+          <div class="stat"><div class="stat__num">~86</div><div class="stat__label">LLM calls</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#f3ede0;">
+      <div class="container">
+        <h2 class="section__title">Cost breakdown</h2>
+        <p class="project-description">Two ways to read this. <strong>Out-of-pocket</strong> is what actually hit a credit card. <strong>At-full-rates</strong> is what a fresh account with no credits or subscriptions would have paid for the same work.</p>
+
+        <div class="stats-grid" style="margin: 24px 0;">
+          <div class="stat" style="background:#fff;">
+            <div class="stat__num">~$5</div>
+            <div class="stat__label">Out-of-pocket</div>
+          </div>
+          <div class="stat" style="background:#fff;">
+            <div class="stat__num">~$42</div>
+            <div class="stat__label">At full provider rates</div>
+          </div>
+        </div>
+
+        <table class="metrics">
+          <thead>
+            <tr><th>Bucket</th><th>Volume</th><th class="num">Out-of-pocket</th><th class="num">At-full-rates</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>OpenAI image generation</strong> — <code>gpt-image-1</code><br><span style="color:#6e6e73;font-size:0.85rem;">cover + 7 portraits + 8 style swatches + 73 chapter beats + 5 cover candidates</span></td>
+              <td class="num">94 images</td>
+              <td class="num"><strong>$0</strong><br><span style="font-size:0.78rem;color:#6e6e73;">credit grant</span></td>
+              <td class="num">~$8</td>
+            </tr>
+            <tr>
+              <td><strong>Claude Code orchestration</strong> — <code>claude-opus-4-6</code><br><span style="color:#6e6e73;font-size:0.85rem;">the agent loop that runs the pipeline. Heavy prompt caching brings effective rate to ~$3/M.</span></td>
+              <td class="num">7.7M tokens</td>
+              <td class="num"><strong>$0</strong><br><span style="font-size:0.78rem;color:#6e6e73;">Claude Pro/Code subscription</span></td>
+              <td class="num">~$23</td>
+            </tr>
+            <tr>
+              <td><strong>ElevenLabs audiobook</strong> — <code>eleven_multilingual_v2</code><br><span style="color:#6e6e73;font-size:0.85rem;">296 voice-tagged TTS segments across 11 voices</span></td>
+              <td class="num">19k credits</td>
+              <td class="num"><strong>$0</strong><br><span style="font-size:0.78rem;color:#6e6e73;">within monthly 30k credit subscription</span></td>
+              <td class="num">~$3.45</td>
+            </tr>
+            <tr>
+              <td><strong>Choir LLM calls</strong> — <code>claude-opus-4-7</code> + <code>grok-4</code> + <code>gemini-3-pro-preview</code><br><span style="color:#6e6e73;font-size:0.85rem;">arc fan-out, judging, chapter weave, beat ID, audiobook segmentation</span></td>
+              <td class="num">~60 calls · ~400k tokens</td>
+              <td class="num">~$5</td>
+              <td class="num">~$6</td>
+            </tr>
+            <tr>
+              <td><strong>Image generation (other providers)</strong> — <code>grok-imagine</code> + <code>imagen-4</code><br><span style="color:#6e6e73;font-size:0.85rem;">comic, print, and decorative style swatches</span></td>
+              <td class="num">14 images</td>
+              <td class="num">~$1</td>
+              <td class="num">~$1</td>
+            </tr>
+            <tr class="total">
+              <td colspan="2">Total this book</td>
+              <td class="num"><strong>~$5</strong></td>
+              <td class="num"><strong>~$42</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="font-size:0.85rem;color:#6e6e73;margin-top:14px;">
+          <strong>What absorbed the cost.</strong> OpenAI gives new accounts standing credit grants ($30 every year, $50–60 to startup accounts), and image generation is the only place this book leans on them heavily. ElevenLabs Creator-tier subscription includes 30,000 character credits per month; the audiobook used 19k. Claude Code is a flat monthly subscription that covers all the agent's planning, file editing, and tool calls — the 7.7M tokens above never show up as a per-token charge. The only line truly metered against my balance is the <em>choir</em> fan-out / weave / judge work, which split across this book, two other books I made in the same window, and 22 choir-reports comparison studies came to about $30 total across everything.
+        </p>
+        <p style="font-size:0.85rem;color:#6e6e73;">
+          <strong>What a fresh account would pay.</strong> ~$42 is the at-full-rates number — what you'd spend if you opened brand-new accounts at every provider with no credits and no monthly subscriptions, and rebuilt this exact book. That's the technology's real price; the $5 number is just how good a deal credit grants and subscriptions are.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Timing</h2>
+        <p class="project-description">Wall clock time for each stage. Everything that could parallelize did. Total time from "go" to finished audiobook: roughly half an hour.</p>
+
+        <table class="metrics">
+          <thead>
+            <tr><th>Stage</th><th>What runs</th><th class="num">Wall clock</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0 · Interview</td><td>Capture the seed brief</td><td class="num">~10 s</td></tr>
+            <tr><td>1+2 · Arcs + judge</td><td>18 parallel arc generations, then 12 parallel judges</td><td class="num">~4 min</td></tr>
+            <tr><td>3 · Spread</td><td>20 parallel timeline / characters / factors / cover calls + 5 cover renders</td><td class="num">~2 min</td></tr>
+            <tr><td>4 · Style gallery</td><td>22 style swatches across 11 vibrant styles, batched in 12s</td><td class="num">~2 min</td></tr>
+            <tr><td>5 · Preview site</td><td>Static HTML generation (10 pages)</td><td class="num">~30 s</td></tr>
+            <tr><td>6 · Lock-in</td><td>1 final cover + 7 portraits in chosen style, parallel</td><td class="num">~90 s</td></tr>
+            <tr><td>7 · Chapter weave</td><td>9 chapters × 2 models = 18 parallel weaves</td><td class="num">~2 min</td></tr>
+            <tr><td>8 · Beat illustration</td><td>9 parallel beat-ID calls, then 73 illustrations batched in 12s</td><td class="num">~5 min</td></tr>
+            <tr><td>9 · Compile</td><td>novel.html assembly + Chrome-headless PDF</td><td class="num">~3 min</td></tr>
+            <tr><td>10 · Audiobook</td><td>9 segmentations + 296 ElevenLabs TTS calls + ffmpeg stitch</td><td class="num">~3 min</td></tr>
+            <tr class="total"><td colspan="2">Total (everything end to end)</td><td class="num">~25 – 35 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" style="background:#f3ede0;">
+      <div class="container">
+        <h2 class="section__title">The process</h2>
+        <p class="project-description">Ten stages, each a separate slash command. The early ones generate a menu; the late ones commit to picks and bake the cake.</p>
+
+        <details class="process-step">
+          <summary>0 · Capture the seed (<code>/scriptorium-interview</code>)</summary>
+          <div class="body">A short conversation captures the inspirer's intent in <code>brief.md</code>: working title, concept, voice references (Jon Klassen, William Steig, Mo Willems), POV, tone, length, what to avoid, visual aesthetic preferences. Every downstream prompt reads this brief.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>1 + 2 · Wide arc fan-out + judging (<code>/scriptorium-arcs</code>)</summary>
+          <div class="body">Six structural shapes (tragic, comic, mystery, picaresque, ironic, wildcard) × three premium models (Opus, GPT-5, Grok) = up to 18 candidate arcs. Then two independent judges (Opus + Gemini) score each on inventiveness, coherence, stakes, illustrability, and voice match. The judges name each candidate with a two-word evocative name (Porch Rituals, Threadbare Cloth, Silent Axle, Apple Hill, Quiet Porch) and rank them.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>3 · Spread the survivors (<code>/scriptorium-spread</code>)</summary>
+          <div class="body">For each of the top 5 arcs: a chapter-by-chapter timeline, named subplots, named pivotal events, themes / motifs ("factors"), a full character roster with portrait briefs, and a cover-art subject. All five arcs spread in parallel.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>4 · Visual style gallery (<code>/scriptorium-styles</code>)</summary>
+          <div class="body">22 sample illustrations across 11 named styles in 5 families &mdash; comics, kid-book, print, decorative, and project-specific. Each style is rendered twice using the same representative scene so the comparison is purely about style. The catalog is filtered by the brief: here, no watercolor or sketch families.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>5 · Preview website (<code>/scriptorium-preview</code>)</summary>
+          <div class="body">A browsable static site assembles the 5 arcs (with gantt charts of their subplots), the style gallery, and a six-step lock-in wizard with localStorage state. The inspirer reviews and picks.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>6 · Lock-in (<code>/scriptorium-lock</code>)</summary>
+          <div class="body">The inspirer commits to: one spine arc, optional named elements mixed in from other arcs, one visual style, the cover, and final character roster. Final cover and character portraits get re-rendered in the chosen style. For this book: Porch Rituals as the spine, with mix-ins from all four other arcs &mdash; the colored cloths (from Threadbare Cloth), the "scattering its bright bones" image (Apple Hill), the basket-of-pieces resolution (Silent Axle), and the "Mara died last winter" line (Quiet Porch). Style: Wagon Folk (project-specific folk-art on painted wood).</div>
+        </details>
+
+        <details class="process-step">
+          <summary>7 · Weave the chapters (<code>/scriptorium-chapter N</code>)</summary>
+          <div class="body">Each chapter gets fanned out across two models (Opus + Grok), judged for narrative momentum / voice / continuity / prose / scene shape, and the winner promoted. All 9 chapters can be woven in parallel because each chapter prompt embeds the full timeline, cast, arc, and mix-ins.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>8 · Illustrate the beats (<code>/scriptorium-illustrate N</code>)</summary>
+          <div class="body">For each chapter, the illustration director identifies 6+ distinct narrative beats &mdash; opening, early, midchapter, turning, climax, closing &mdash; each with a specific scene subject and hand-lettered annotations. Each beat is rendered once in the locked style. Beats are interleaved with the prose in the chapter page, graphic-novel-meets-prose.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>9 · Compile the novel (<code>/scriptorium-compile</code>)</summary>
+          <div class="body">Cover + table of contents + 9 chapters with beats inline + back matter, all in one parchment-toned HTML. A Chrome-headless print pass produces the PDF.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>10 · Audiobook (this session)</summary>
+          <div class="body">Each chapter is segmented by Claude into voice-tagged dialogue / narration pairs. ElevenLabs <code>multilingual_v2</code> renders 296 audio segments using 11 premade voices (George for the narrator, Bill for grandpa, Jessica for young Pip, etc.). <code>ffmpeg concat</code> stitches segments per chapter with 0.4&nbsp;s pauses, and joins chapters with 1.5&nbsp;s pauses.</div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">The tooling</h2>
+        <p class="project-description">Every step is a shell-out, not a library binding &mdash; the pipeline is a stack of bash scripts and Python helpers. Sibling of <a href="https://sean-makes-stuff.com/projects/choir.html">choir</a>.</p>
+
+        <div class="tool-grid">
+          <div class="tool">
+            <div class="role">Fan-out + judging</div>
+            <h4>choir</h4>
+            <p>Sean's CLI for routing prompts to any model across providers. Single-model: plain text out. Multi-model: JSON. <code>--save</code> persists a comparison run; <code>choir runs compare</code> appends a judge summary later.</p>
+            <p class="price">Anthropic Opus 4.7 · OpenAI GPT-5 · xAI Grok 4 · Google Gemini 3 Pro</p>
+          </div>
+          <div class="tool">
+            <div class="role">Text generation</div>
+            <h4>Claude Opus 4.7</h4>
+            <p>Primary writer. Won every chapter judge pass against Grok 4. Used everywhere story-craft matters &mdash; arcs, spread, chapter weave, beat identification, audiobook segmentation.</p>
+            <p class="price">~$15 / 1M input · $75 / 1M output</p>
+          </div>
+          <div class="tool">
+            <div class="role">Text generation (alt)</div>
+            <h4>Grok 4 · Gemini 3 Pro</h4>
+            <p>Used for diversity in fan-outs (Grok) and as a second judge (Gemini), since GPT-5 was unavailable in this run. Grok arcs scored consistently below Opus's; the judge quality from Gemini matched Opus's.</p>
+            <p class="price">~$3 / 1M (Grok) · ~$1.25 / 1M (Gemini)</p>
+          </div>
+          <div class="tool">
+            <div class="role">Image generation (primary)</div>
+            <h4>OpenAI gpt-image-1</h4>
+            <p>All 73 chapter beats and all 7 character portraits. Cleanest rendering of "folk-art painted wood with stenciled borders" of the three providers. Outputs PNG at 1024×1024.</p>
+            <p class="price">~$0.04 – $0.17 per image depending on quality tier</p>
+          </div>
+          <div class="tool">
+            <div class="role">Image generation (style variety)</div>
+            <h4>xAI grok-imagine · Google Imagen 4</h4>
+            <p>Used for specific style families in the gallery &mdash; Grok for newspaper-comic and crayon-wax; Imagen for stained glass, linocut, and lantern-ink. Picked per provider based on which one renders that tradition best.</p>
+            <p class="price">~$0.07 (Grok) · ~$0.04 (Imagen) per image</p>
+          </div>
+          <div class="tool">
+            <div class="role">Text-to-speech</div>
+            <h4>ElevenLabs multilingual_v2</h4>
+            <p>11 voices from the premade catalog: George (warm British storyteller, tagged for <code>narrative_story</code>) as narrator; Bill, Lily, Jessica, Sarah, Charlie, Laura, Will, Liam, Matilda, Roger for the cast. Voice settings: <code>stability 0.55</code>, <code>similarity_boost 0.78</code>.</p>
+            <p class="price">~$0.18 – $0.30 per 1,000 characters</p>
+          </div>
+          <div class="tool">
+            <div class="role">Stitching</div>
+            <h4>ffmpeg</h4>
+            <p>Per-chapter concat list with mp3 segments and a 0.4&nbsp;s anullsrc silence between segments. Then chapters concat with 1.5&nbsp;s silences. Bitrate normalized to 128 kbps mono.</p>
+            <p class="price">Free</p>
+          </div>
+          <div class="tool">
+            <div class="role">PDF</div>
+            <h4>Chrome --headless --print-to-pdf</h4>
+            <p>Print CSS hides the audio players and PDF nav bar; chapter pages page-break-before, illustrations page-break-inside avoid. Output is 213 MB because the 73 illustrations are full-resolution PNG.</p>
+            <p class="price">Free</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#f3ede0;">
+      <div class="container">
+        <h2 class="section__title">Read it / hear it</h2>
+        <div class="cta-buttons" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="btn btn--primary" href="cant-have-nice-things/novel.html">Read the illustrated novel →</a>
+          <a class="btn" href="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/cant-have-nice-things/audio/audiobook.mp3" download>🎧 Download audiobook (35 MB · 38 min)</a>
+        </div>
+        <p style="font-size:0.88rem;color:#6e6e73;margin-top:18px;">
+          Per-chapter mp3s are inside the novel page &mdash; each chapter has its own <code>&lt;audio&gt;</code> player above the text. The chapter audio files are also in <code>/books/cant-have-nice-things/audio/</code> if you want to drop them into a podcast app or pull them down individually.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Sean Spratt · made with Claude Code, Scriptorium, ElevenLabs, and ffmpeg.</p>
+    </div>
+  </footer>
+
+<script>/* sms-metrics beacon */(function(){try{if(localStorage.smsNoTrack)return;navigator.sendBeacon('https://sms-metrics.sean-firewall.workers.dev/hit',JSON.stringify({p:location.pathname,r:document.referrer,h:location.host}))}catch(e){}})();</script>
+<script src="js/stamps.js" defer></script>
+</body>
+</html>

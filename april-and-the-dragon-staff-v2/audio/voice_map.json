@@ -1,0 +1,50 @@
+{
+  "narrator": {
+    "provider": "elevenlabs",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "name": "George",
+    "why": "Warm British storyteller \u2014 narrative_story tag. Slightly slower for verse."
+  },
+  "april": {
+    "provider": "elevenlabs",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "name": "Sarah",
+    "why": "Mature, reassuring, composed \u2014 April is the teacher, not a child."
+  },
+  "mango": {
+    "provider": "elevenlabs",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "name": "Jessica",
+    "why": "Playful, bright, warm \u2014 Mango is the fastest learner, voice leans forward."
+  },
+  "fern": {
+    "provider": "elevenlabs",
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "name": "Lily",
+    "why": "Velvety British, careful \u2014 Fern is the cautious tree frog, lines land soft and clipped."
+  },
+  "riddle": {
+    "provider": "elevenlabs",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "name": "Laura",
+    "why": "Quirky, sassy \u2014 Riddle is the parrot who asks why after every call."
+  },
+  "dusty": {
+    "provider": "elevenlabs",
+    "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+    "name": "Roger",
+    "why": "Laid-back, resonant \u2014 Dusty is the steady wombat, monosyllables and strong stresses."
+  },
+  "chorus": {
+    "provider": "elevenlabs",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "name": "Sarah",
+    "why": "Same as April \u2014 for moments where all four friends respond together ('We hear you, April!'), we'll use chorus tag and render in April's voice as a neutral group voice; alternative is to render per-character and overlap in ffmpeg, but that adds complexity for limited gain in a children's book."
+  },
+  "cypher": {
+    "provider": "elevenlabs",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "name": "Bill",
+    "why": "Wise, mature, low and unhurried \u2014 April's first teacher, mentioned in April's retelling in chapter 9. Speaks short complete sentences with strong nouns. Slight pause before each instruction."
+  }
+}

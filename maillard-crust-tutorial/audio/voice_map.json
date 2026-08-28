@@ -1,0 +1,23 @@
+{
+  "narrator": {
+    "provider": "elevenlabs",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "name": "George",
+    "labels": "middle-aged British male · warm storyteller",
+    "why": "use_case: narrative_story — warm British storyteller voice. The tutorial register wants an unhurried, cozy narrator that can sell sensory food-writing (foaming butter, mahogany crust). George reads warm without performing."
+  },
+  "mara": {
+    "provider": "elevenlabs",
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "name": "Matilda",
+    "labels": "middle-aged American female · knowledgeable upbeat",
+    "why": "Mara is the meticulous one — temperature numbers, declarative sentences, dry but affectionate. Matilda's 'knowledgeable upbeat American' reads as the precise science-nerd voice without being clinical."
+  },
+  "theo": {
+    "provider": "elevenlabs",
+    "voice_id": "iP95p4xoKVk53GoZ742B",
+    "name": "Chris",
+    "labels": "middle-aged American male · charming down-to-earth",
+    "why": "Theo is the enthusiastic one — big laughs, half-formed declarations, calls things by pet-name. Chris's 'charming, down-to-earth' captures the easy grinning warmth without forcing brashness."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "chapter": 3,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Porch Question",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "expectant",
+      "annotations": [
+        "did she did she did she",
+        "ASKS \u00b7 COUNTS \u00b7 HUMS \u00b7 LISTENS",
+        "(she always waits a breath)"
+      ],
+      "why_this_beat": "Opens the chapter in the frame story \u2014 the four children and the storyteller establishing the ritual of telling."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Tuesday Wagon",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "anticipatory",
+      "annotations": [
+        "TUESDAYS WERE APPLES",
+        "Steady, Piper.",
+        "I'm steady I'm steady"
+      ],
+      "why_this_beat": "Establishes the wagon, the hill, and the apprentice-master pairing before the ritual begins."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Green Cloth",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "reverent",
+      "annotations": [
+        "tap \u00b7 tap \u00b7 tap",
+        "(the wagon hums back)",
+        "THE FIRST OF SEVEN"
+      ],
+      "why_this_beat": "The ritual itself, rendered with full weight \u2014 what Pip is about to skip."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Skipping Past",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "heedless",
+      "annotations": [
+        "tap (skipped)",
+        "a tap is a tap is a tap",
+        "Why would she tap?"
+      ],
+      "why_this_beat": "The chapter's central error \u2014 the visible omission, framed for the reader to see what Pip cannot."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "The Thock",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "lurching",
+      "annotations": [
+        "thock.",
+        "Oh oh oh \u2014",
+        "SEE? I'VE GOT THIS",
+        "(the hand that came from nowhere)"
+      ],
+      "why_this_beat": "The keynote moment \u2014 the wobble caught, the lesson nearly delivered."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Warm Laugh",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "forgiving",
+      "annotations": [
+        "Forgot the tap, did we?",
+        "it's just one tap",
+        "(laughing first kept the laugh on her side)"
+      ],
+      "why_this_beat": "The pivotal mis-teaching \u2014 Grandfather's laugh that lets Pip learn the wrong lesson."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Chin Lifted",
+      "page_position": "climax",
+      "weight": "medium",
+      "mood": "swaggering",
+      "annotations": [
+        "I've got this.",
+        "thock. (nobody heard)",
+        "more of a habit than a step"
+      ],
+      "why_this_beat": "Pip's private verdict \u2014 the moment her wrong conclusion sets, with the unheard cost rendered visible."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "And Then Wednesday",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "foreboding",
+      "annotations": [
+        "Ah. And then there was Wednesday.",
+        "(he hummed without knowing)",
+        "tap \u00b7 oil \u00b7 hum \u00b7 count \u00b7 breathe \u00b7 tie \u00b7 thank"
+      ],
+      "why_this_beat": "Closes the chapter back in the frame, with the hum that links present-Cal to past-Grandfather and signals the next descent."
+    }
+  ]
+}

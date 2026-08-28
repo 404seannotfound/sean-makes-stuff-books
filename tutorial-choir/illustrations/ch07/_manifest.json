@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Knuckles Crack",
+    "position": "opening",
+    "mood": "warm-up"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Writing The Loop",
+    "position": "early",
+    "mood": "collaborative"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Notebook Of Loops",
+    "position": "midchapter",
+    "mood": "thoughtful"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Rolling The Character",
+    "position": "midchapter",
+    "mood": "ceremonial"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Naming Vesper",
+    "position": "turning",
+    "mood": "joyous-decision"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Opening Scene",
+    "position": "climax",
+    "mood": "imagination-opens"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Velvet Pouch",
+    "position": "climax",
+    "mood": "tender-reveal"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Die In Palm",
+    "position": "closing",
+    "mood": "poised"
+  }
+]

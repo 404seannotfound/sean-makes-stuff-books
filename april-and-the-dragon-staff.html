@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>April and the Dragon Staff — Sean Makes Stuff</title>
+  <meta name="description" content="A 10-chapter children's picture book in strict AABB rhymed verse with call-and-response form. 98 Pixar-storybook illustrations, 59-minute audiobook narrated with 7 voices. Story, art, and audio generated end-to-end from a four-sentence brief.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .book-hero {
+      background: linear-gradient(135deg, #e57a5b 0%, #e0a44a 30%, #6fa775 65%, #6e80c4 100%);
+      color: #fff;
+      padding: 56px 0;
+    }
+    .book-hero h1 {
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 2.6rem; line-height: 1.1; margin-bottom: 12px; color: #fff;
+    }
+    .book-hero p { color: rgba(255,255,255,0.95); max-width: 60ch; line-height: 1.6; }
+    .book-hero__kicker { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; color: rgba(255,255,255,0.75); }
+    .book-hero__layout { display: grid; grid-template-columns: 220px 1fr; gap: 32px; align-items: center; }
+    .book-hero__cover { width: 220px; height: 220px; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+    .book-hero__cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .book-hero__cta { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+    .book-hero__cta a {
+      display: inline-block; padding: 10px 18px; border-radius: 8px;
+      background: #fff; color: #e57a5b; text-decoration: none; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.45);
+    }
+    .book-hero__cta a:hover { background: #fff5e6; }
+    .book-hero__cta a.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.55); }
+    .book-hero__cta a.ghost:hover { background: rgba(255,255,255,0.14); }
+    @media (max-width: 640px) {
+      .book-hero__layout { grid-template-columns: 1fr; }
+      .book-hero__cover { width: 100%; height: auto; aspect-ratio: 1; }
+    }
+
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px; margin: 24px 0;
+    }
+    .stat {
+      background: #fff; border: 1px solid var(--color-border, #e5e5e7);
+      border-radius: 10px; padding: 18px 16px; text-align: center;
+    }
+    .stat__num {
+      font-family: "Iowan Old Style", serif; font-size: 2rem; font-weight: 600;
+      color: #e57a5b; line-height: 1.1; margin-bottom: 4px;
+    }
+    .stat__label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6e6e73; }
+
+    table.metrics { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+    table.metrics th, table.metrics td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #e5e5e7; }
+    table.metrics th { background: #fff5e6; font-weight: 600; }
+    table.metrics tr:last-child td { border-bottom: 0; }
+    table.metrics tr.total td { font-weight: 600; background: #fff5e6; }
+    table.metrics td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+    details.process-step { background: #fff; border: 1px solid #e5e5e7; border-radius: 8px; padding: 14px 18px; margin: 8px 0; }
+    details.process-step summary { cursor: pointer; font-weight: 600; }
+    details.process-step .body { margin-top: 10px; font-size: 0.95rem; line-height: 1.6; color: #1d1d1f; }
+    details.process-step .body code { background: #fff5e6; padding: 1px 6px; border-radius: 4px; font-size: 0.88em; }
+    details.process-step .body em.highlight { background: #fff0e6; padding: 0 4px; border-radius: 3px; font-style: normal; color: #e57a5b; font-weight: 600; }
+
+    .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin: 16px 0; }
+    .tool { background: #fff; border: 1px solid #e5e5e7; border-radius: 8px; padding: 14px 16px; }
+    .tool h4 { font-family: "Iowan Old Style", serif; font-size: 1.05rem; margin-bottom: 6px; }
+    .tool .role { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6e6e73; margin-bottom: 8px; }
+    .tool p { font-size: 0.88rem; line-height: 1.55; color: #1d1d1f; }
+    .tool .price { font-size: 0.8rem; color: #6e6e73; margin-top: 8px; font-style: italic; }
+
+    .cast-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 14px; margin: 16px 0 8px; }
+    .cast-strip__card { background: #fff; border: 1px solid #e5e5e7; border-radius: 10px; padding: 10px 8px 12px; text-align: center; }
+    .cast-strip__card img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; display: block; margin-bottom: 8px; }
+    .cast-strip__name { font-family: "Iowan Old Style", serif; font-size: 0.95rem; color: #1d1d1f; }
+    .cast-strip__voice { font-size: 0.75rem; color: #e57a5b; margin-top: 2px; }
+    .cast-strip__line { font-size: 0.75rem; color: #6e6e73; margin-top: 4px; font-style: italic; }
+
+    .form-callout {
+      background: #fff; border: 2px solid #e57a5b; border-radius: 14px;
+      padding: 24px 28px; margin: 28px 0;
+    }
+    .form-callout h3 {
+      font-family: "Iowan Old Style", serif; font-size: 1.3rem; color: #e57a5b; margin-bottom: 12px;
+    }
+    .form-callout pre {
+      background: #fff5e6; padding: 14px 18px; border-radius: 8px;
+      font-family: "Iowan Old Style", serif; font-size: 1rem; line-height: 1.55;
+      color: #1d1d1f; overflow-x: auto; white-space: pre-wrap;
+    }
+    .form-callout .blank-row { color: #c4b489; font-style: italic; }
+
+    /* VERSION TABS — pure CSS toggle between v2 (default, on top) and v1 (original) */
+    input.version-radio { position: absolute; left: -9999px; }
+    .version-tabs {
+      max-width: 760px; margin: 24px auto 8px; padding: 0 16px;
+      display: flex; gap: 8px; align-items: center;
+    }
+    .version-tabs__label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6e6e73; margin-right: 8px; }
+    .version-tabs label {
+      display: inline-block; padding: 9px 18px; cursor: pointer;
+      background: #fff; color: #6e6e73; border: 1.5px solid #e5e5e7; border-radius: 999px;
+      font-size: 0.92rem; font-weight: 500;
+      transition: all 0.15s;
+    }
+    .version-tabs label:hover { border-color: #e57a5b; color: #e57a5b; }
+    .version-tabs label small { display: block; font-size: 0.72rem; opacity: 0.7; margin-top: 2px; font-weight: normal; }
+    .version-content { display: none; }
+    input#ver-v2:checked ~ .version-tabs label[for="ver-v2"],
+    input#ver-v1:checked ~ .version-tabs label[for="ver-v1"] {
+      background: #e57a5b; color: #fff; border-color: #e57a5b;
+    }
+    input#ver-v2:checked ~ .version-content[data-version="v2"],
+    input#ver-v1:checked ~ .version-content[data-version="v1"] {
+      display: block;
+    }
+    .version-banner {
+      max-width: 760px; margin: 8px auto 0; padding: 10px 18px;
+      background: #fff5e6; border: 1px dashed #c69b3c; border-radius: 8px;
+      font-size: 0.85rem; color: #6e6e73; font-style: italic; text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="container">
+      <a href="https://sean-makes-stuff.com/" class="site-nav__brand">Sean Makes Stuff</a>
+      <ul class="site-nav__links">
+        <li><a href="https://sean-makes-stuff.com/support.html">Support</a></li>
+        <li><a href="https://sean-makes-stuff.com/privacy.html">Privacy</a></li>
+        <li><a href="https://github.com/404seannotfound" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <input type="radio" class="version-radio" id="ver-v2" name="version" checked>
+    <input type="radio" class="version-radio" id="ver-v1" name="version">
+
+    <div class="version-tabs">
+      <span class="version-tabs__label">Version</span>
+      <label for="ver-v2">v2<small>natural prose · current</small></label>
+      <label for="ver-v1">v1<small>strict AABB · original</small></label>
+    </div>
+
+    <div class="version-content" data-version="v2">
+
+      <div class="version-banner">You're reading <strong>v2</strong> — natural prose retelling with the inspirer's actual flow-arts safety ritual and Cypher (an older tiger who spins poi) as April's first teacher. Same arc and same 98 illustrations as v1; the prose breathes more, the verse only lands where it earns its keep, and the audiobook is 20 minutes shorter.</div>
+
+      <section class="book-hero">
+        <div class="container">
+          <div class="book-hero__layout">
+            <div class="book-hero__cover">
+              <img src="april-and-the-dragon-staff-v2/storyboard/cover.jpg" alt="April and the Dragon Staff (v2) cover">
+            </div>
+            <div>
+              <div class="book-hero__kicker">Books · v2 retelling · Generated end-to-end with LLMs and image/audio models</div>
+              <h1>April and the Dragon Staff <span style="opacity:0.65; font-size: 0.55em; vertical-align: 0.3em;">v2</span></h1>
+            <div class="made-stamp" data-first="2026-05-17" data-last="2026-07-24">started May 17, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+              <p>A natural-prose retelling of the same story and arc as v1, with the actual flow-arts safety ritual the inspirer practices (perimeter, eye contact with your safety, close the fuel, spin off, call the body part if you catch fire, smother) and Cypher — an older tiger who spins poi — as April's first teacher. Same 98 Pixar-storybook illustrations; the form follows the moment now rather than the meter.</p>
+              <div class="book-hero__cta">
+                <a href="april-and-the-dragon-staff-v2/novel.html">Read the book →</a>
+                <a class="ghost" href="april-and-the-dragon-staff-v2/audio/audiobook.mp3" download>🎧 Download audiobook (19 MB · 38 min)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">The numbers</h2>
+          <p class="project-description">A natural-prose retelling of v1, same arc and same illustrations. 37% shorter in words, 20 minutes shorter in audio. The verse stayed only where it earned its keep — about a third of v1's line count.</p>
+          <div class="stats-grid">
+            <div class="stat"><div class="stat__num">6,209</div><div class="stat__label">words</div></div>
+            <div class="stat"><div class="stat__num">356</div><div class="stat__label">verse lines</div></div>
+            <div class="stat"><div class="stat__num">10</div><div class="stat__label">chapters</div></div>
+            <div class="stat"><div class="stat__num">98</div><div class="stat__label">chapter beats</div></div>
+            <div class="stat"><div class="stat__num">38:46</div><div class="stat__label">audiobook duration</div></div>
+            <div class="stat"><div class="stat__num">7</div><div class="stat__label">distinct voices</div></div>
+            <div class="stat"><div class="stat__num">400</div><div class="stat__label">TTS segments</div></div>
+            <div class="stat"><div class="stat__num">~55</div><div class="stat__label">LLM calls</div></div>
+            <div class="stat"><div class="stat__num">33k</div><div class="stat__label">TTS characters</div></div>
+            <div class="stat" style="background:#fff5e6;"><div class="stat__num" style="font-size:1.4rem;line-height:1.15;padding-top:6px;">37%<br><span style="font-size:0.75rem;font-weight:normal;color:#6e6e73;">shorter than v1</span></div><div class="stat__label">vs v1</div></div>
+          </div>
+
+          <div class="form-callout">
+            <h3>The form follows the moment</h3>
+            <p>v1 was strict AABB throughout — every couplet rhymed. v2 drops the rule and lets the prose breathe. Verse stays only where it earns its keep: April's teaching chants, the friends' echoed responses, the final reversed chorus. The climax in v1 was a blank line where Mango's rhyme should have been. The climax in v2 is Mango's confession the morning after, stripped of every exclamation mark she usually carries.</p>
+            <pre>The friends sat close on the cobblestones — closer than they had sat all week. No one spoke. A lantern across the square guttered and steadied.
+
+Mango's wings were folded so tight they almost disappeared.
+
+She spoke first.
+
+"I didn't close the fuel." Her voice was low, stripped of every exclamation mark. "I knew the step. I've sung it back a hundred times. But my hands were already reaching for the spin, and my mouth said the words and my hands did not do them."</pre>
+          </div>
+
+          <h3 style="font-family: 'Iowan Old Style', serif; font-size: 1.2rem; margin-top: 32px; margin-bottom: 12px;">The cast — and their voices</h3>
+          <div class="cast-strip">
+            <div class="cast-strip__card">
+              <img src="april-and-the-dragon-staff-v2/characters/April.jpg" alt="April">
+              <div class="cast-strip__name">April</div>
+              <div class="cast-strip__voice">Sarah</div>
+              <div class="cast-strip__line">Rainbow koala teacher</div>
+            </div>
+            <div class="cast-strip__card">
+              <img src="april-and-the-dragon-staff-v2/characters/Mango.jpg" alt="Mango">
+              <div class="cast-strip__name">Mango</div>
+              <div class="cast-strip__voice">Jessica</div>
+              <div class="cast-strip__line">Fastest fruit bat</div>
+            </div>
+            <div class="cast-strip__card">
+              <img src="april-and-the-dragon-staff-v2/characters/Fern.jpg" alt="Fern">
+              <div class="cast-strip__name">Fern</div>
+              <div class="cast-strip__voice">Lily</div>
+              <div class="cast-strip__line">Careful tree frog</div>
+            </div>
+            <div class="cast-strip__card">
+              <img src="april-and-the-dragon-staff-v2/characters/Riddle.jpg" alt="Riddle">
+              <div class="cast-strip__name">Riddle</div>
+              <div class="cast-strip__voice">Laura</div>
+              <div class="cast-strip__line">Questioning parrot</div>
+            </div>
+            <div class="cast-strip__card">
+              <img src="april-and-the-dragon-staff-v2/characters/Dusty.jpg" alt="Dusty">
+              <div class="cast-strip__name">Dusty</div>
+              <div class="cast-strip__voice">Roger</div>
+              <div class="cast-strip__line">Steady wombat</div>
+            </div>
+            <div class="cast-strip__card">
+              <img src="april-and-the-dragon-staff-v2/characters/Cypher.jpg" alt="Cypher">
+              <div class="cast-strip__name">Cypher</div>
+              <div class="cast-strip__voice">Bill</div>
+              <div class="cast-strip__line">April's old teacher (Ch. 9) — older tiger, spins poi</div>
+            </div>
+          </div>
+          <p style="font-size: 0.88rem; color: #6e6e73; font-style: italic;">Plus George (Narrator). Cypher replaces Laurel from v1 — he is based on the inspirer's real teacher; he spins poi on chains (not staff), and his voice is Bill — a wise mature register.</p>
+        </div>
+      </section>
+
+      <section class="section" style="background:#fff5e6;">
+        <div class="container">
+          <h2 class="section__title">Cost breakdown</h2>
+          <p class="project-description">v2 reused all 98 v1 illustrations + the cover, so image-gen cost was almost nothing — just one new Cypher portrait (~$0.07) and zero re-renders. TTS dropped from 490 to 400 segments. The big metered cost line stays ElevenLabs.</p>
+
+          <div class="stats-grid" style="margin: 24px 0;">
+            <div class="stat" style="background:#fff;"><div class="stat__num">~$6</div><div class="stat__label">Out-of-pocket</div></div>
+            <div class="stat" style="background:#fff;"><div class="stat__num">~$28</div><div class="stat__label">At full provider rates</div></div>
+          </div>
+
+          <table class="metrics">
+            <thead>
+              <tr><th>Bucket</th><th>Volume</th><th class="num">Out-of-pocket</th><th class="num">At-full-rates</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>xAI grok-imagine</strong> — <code>grok-imagine-image</code><br><span style="color:#6e6e73;font-size:0.85rem;">just 1 new Cypher portrait (older tiger replacing v1's Laurel); all 98 beats + cover + 5 friend portraits reused from v1</span></td>
+                <td class="num">1 image</td>
+                <td class="num"><strong>~$0</strong><br><span style="font-size:0.78rem;color:#6e6e73;">xAI credit grant</span></td>
+                <td class="num">~$0.07</td>
+              </tr>
+              <tr>
+                <td><strong>Claude Code orchestration</strong> — <code>claude-opus-4-6</code><br><span style="color:#6e6e73;font-size:0.85rem;">v2 chapter weave + segmentation; arc/judges/spread reused from v1</span></td>
+                <td class="num">~3M tokens</td>
+                <td class="num"><strong>$0</strong><br><span style="font-size:0.78rem;color:#6e6e73;">Claude Pro/Code subscription</span></td>
+                <td class="num">~$10</td>
+              </tr>
+              <tr>
+                <td><strong>ElevenLabs TTS</strong> — <code>eleven_multilingual_v2</code><br><span style="color:#6e6e73;font-size:0.85rem;">400 voice-tagged segments across 7 voices; zero quota issues this time (took 104 s end to end)</span></td>
+                <td class="num">400 requests · 33k chars</td>
+                <td class="num"><strong>~$6.00</strong><br><span style="font-size:0.78rem;color:#6e6e73;">$0.015/request, Creator subscription</span></td>
+                <td class="num">~$6</td>
+              </tr>
+              <tr>
+                <td><strong>Choir LLM calls</strong> — <code>claude-opus-4-6</code><br><span style="color:#6e6e73;font-size:0.85rem;">v2 chapter weave (10 in parallel) + v2 audio segmentation (10 in parallel)</span></td>
+                <td class="num">~20 calls · ~1.2M tokens</td>
+                <td class="num">~$0</td>
+                <td class="num">~$2</td>
+              </tr>
+              <tr class="total">
+                <td colspan="2">Total this version</td>
+                <td class="num"><strong>~$6</strong></td>
+                <td class="num"><strong>~$28</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="font-size:0.85rem;color:#6e6e73;margin-top:14px;">
+            <strong>The v2 savings.</strong> v2 didn't run arc fan-out, judging, spread, character generation, factor generation, cover render, or 5 of the 6 portrait renders — all of those were inherited from v1. The only fresh model calls were the 10 chapter weaves (with the new style guide + new safety steps), 10 audio segmentations, and 1 new Cypher portrait. ElevenLabs was the only line that scaled with the new prose, and it dropped from 490 to 400 segments — call-and-response chapters used to require a tag-switch per couplet; natural prose lets the narrator carry longer stretches before a voice swaps in.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Timing</h2>
+          <p class="project-description">v2 was fast because most stages were reused from v1. Active runtime for the new work: about 10 minutes.</p>
+
+          <table class="metrics">
+            <thead>
+              <tr><th>Stage</th><th>What runs</th><th class="num">Wall clock</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>0 · v2 brief capture</td><td>Inspirer notes: drop AABB, real safety steps, Cypher (older tiger) replaces Laurel, compress</td><td class="num">~3 min</td></tr>
+              <tr><td>1–5 · Arcs / judges / spread / style / preview</td><td><em>Reused from v1 as-is.</em> Same spine arc (Silent Echo), same mix-ins, same factors, same timeline.</td><td class="num">—</td></tr>
+              <tr><td>3' · Cast tweak</td><td>Replace Laurel with Cypher in <code>characters.json</code>; update style envelope's per-character anchor block</td><td class="num">&lt; 5 s</td></tr>
+              <tr><td>6 · Cypher portrait</td><td>1 new render via Grok-Imagine (other 5 portraits + cover reused)</td><td class="num">~30 s</td></tr>
+              <tr><td>7 · v2 chapter weave</td><td>10 parallel chapters with the new natural-prose style guide + new safety steps</td><td class="num">~90 s</td></tr>
+              <tr><td>8 · Beats</td><td><em>Reused all 98 illustrations from v1.</em> The visual moments map cleanly to the prose retelling.</td><td class="num">—</td></tr>
+              <tr><td>9 · v2 compile</td><td><code>novel.html</code> + Chrome-headless PDF</td><td class="num">~10 s</td></tr>
+              <tr><td>10a · v2 audio segmentation</td><td>10 parallel prose-aware segmentations (Cypher tag swapped in for Laurel)</td><td class="num">~60 s</td></tr>
+              <tr><td>10b · v2 TTS render</td><td>400 ElevenLabs segments, 5 concurrent, zero quota issues</td><td class="num">104 s</td></tr>
+              <tr><td>10c · v2 stitch + tag + inject</td><td>Same chime + stitch + ID3 polish + player injection pipeline as v1</td><td class="num">~30 s</td></tr>
+              <tr><td>11 · v2 publish</td><td><code>scripts/publish-book.sh april-and-the-dragon-staff-v2</code></td><td class="num">~60 s</td></tr>
+              <tr class="total"><td colspan="2">Total v2-only work (excluding inherited stages)</td><td class="num">~10 min</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section" style="background:#fff5e6;">
+        <div class="container">
+          <h2 class="section__title">What changed in v2</h2>
+          <p class="project-description">Same story, same arc, same illustrations. Different prose, different safety steps, different teacher.</p>
+
+          <details class="process-step" open>
+            <summary>Form: AABB → natural prose with selective verse</summary>
+            <div class="body">v1 was anapestic tetrameter with AABB couplets, every page. v2 drops the rule and writes in natural English, letting verse appear only where the moment calls for it — April's teaching chants, the friends' echoed responses, the final reversed chorus in chapter 10. The chapter writer was given an explicit instruction: <em>read your output aloud — if a couplet doesn't sing, write it as prose</em>. Result: 356 verse lines down from 1,083; 6,209 words down from 9,895 (37% shorter); audiobook 38:46 down from 58:41 (20 min shorter).</div>
+          </details>
+
+          <details class="process-step" open>
+            <summary>Safety ritual: invented → real flow-arts steps</summary>
+            <div class="body">v1's ritual was AI-imagined (wet towel, pat-down, breath count, burn-off). v2 uses the inspirer's <strong>actual</strong> flow-arts safety ritual: <strong>perimeter, eye contact with your safety, close the fuel, spin off (or spin slow), call the body part if you catch fire, smother, rotate</strong>. The climax skip is now Mango forgetting to <em>close the fuel can</em> — an open fuel can near fire is the most common preventable disaster in real flow arts. Her safety (Dusty) yells <strong>"ARM!"</strong> — never <em>"left arm"</em>, because every spinner is dyslexic in a panic. Three seconds. Yell again. Mango can't put it out. Mango lies down. Dusty smothers. <em>The fire goes out because we take away the air.</em> SMOTHER is treated with reverence — not metaphor but physics.</div>
+          </details>
+
+          <details class="process-step" open>
+            <summary>Teacher: Laurel → Cypher (older tiger, poi on chains)</summary>
+            <div class="body">v1's Laurel was a silver-grey koala who spun dragon staff like April. v2's Cypher is an <strong>older tiger</strong> who spins <strong>poi</strong> — twin wicks on chains. Cypher is grounded in the inspirer's real first teacher. The ritual translates across props — Cypher taught April on poi, she carried it to the staff she chose. In the chapter 9 reveal, April retells the memory of Cypher in mostly prose with a few verse moments; his voice (when she retells what he said) is low, unhurried, with strong nouns: "Perimeter. Eye contact. Close the fuel." Cypher's voice in the audiobook is Bill (wise mature mentor register), replacing Matilda from v1.</div>
+          </details>
+
+          <details class="process-step" open>
+            <summary>Length: 59 min → 38 min audiobook (37% shorter)</summary>
+            <div class="body">The inspirer asked for ~30 minutes; the model came in at 38:46 because the prose was too tight to cut further without losing language worth keeping. Compression came from two places: (1) prose is denser than verse for the same image — a stanza of four couplets describing Mango landing can be one sentence in prose, (2) call-and-response chapters in v1 required a voice tag-switch per couplet, multiplying the segment count; natural prose lets the narrator carry longer stretches between voice swaps.</div>
+          </details>
+
+          <details class="process-step" open>
+            <summary>What stayed the same</summary>
+            <div class="body">The Silent Echo arc (call-and-response form, missing-response climax, friends catch the mistake together, reversed chorus closing). The 98 chapter beat illustrations — every one of them. The cover, the rainbow-gradient title, the Pixar storybook aesthetic. The chapter-intro chime (warm three-note bell). ID3v2.3 chapter markers, APIC cover, podcast-app-friendly TOC. The cast — April, Mango, Fern, Riddle, Dusty — and their voice signatures.</div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">The tooling</h2>
+          <p class="project-description">Same stack as v1. The only voice swap: Matilda → Bill for Cypher (mature mentor register for the older tiger).</p>
+          <div class="tool-grid">
+            <div class="tool">
+              <div class="role">Fan-out + judging</div>
+              <h4>choir</h4>
+              <p>Sean's CLI for routing prompts to any model. v2 used it for the 10-chapter weave and 10-chapter audio segmentation only — arc fan-out and judging panel were inherited from v1.</p>
+              <p class="price">Anthropic Opus 4.6</p>
+            </div>
+            <div class="tool">
+              <div class="role">Text generation</div>
+              <h4>Claude Opus 4.6</h4>
+              <p>Wrote every chapter, segmented every chapter for TTS, identified beats. v2 used the same model as v1 but with a different per-project style guide (drop AABB; verse only where it serves).</p>
+              <p class="price">~$3 / 1M input · $15 / 1M output</p>
+            </div>
+            <div class="tool">
+              <div class="role">Image generation</div>
+              <h4>xAI grok-imagine</h4>
+              <p>Just 1 new render in v2: Cypher's portrait (older tiger spinning poi). All 98 beats + cover + 5 friend portraits reused from v1's renders.</p>
+              <p class="price">~$0.07 per image</p>
+            </div>
+            <div class="tool">
+              <div class="role">Text-to-speech</div>
+              <h4>ElevenLabs multilingual_v2</h4>
+              <p>7 voices: George (narrator), Sarah (April + chorus), Jessica (Mango), Lily (Fern), Laura (Riddle), Roger (Dusty), <strong>Bill (Cypher)</strong> — swapped in for Matilda from v1 to give Cypher a mature-male-mentor register fitting an older tiger.</p>
+              <p class="price">$0.015 per request on Creator subscription</p>
+            </div>
+            <div class="tool">
+              <div class="role">Audio synth + stitching</div>
+              <h4>ffmpeg</h4>
+              <p>Same three-note bell chime synthesized in v1 (C4 → E4 → G4 with reverb tail). Same per-chapter concat + ID3 metadata sidecar with chapter markers.</p>
+              <p class="price">Free</p>
+            </div>
+            <div class="tool">
+              <div class="role">ID3 tagging</div>
+              <h4>mutagen</h4>
+              <p>Same ID3v2.3 polish pass as v1: APIC cover, TIT2/TALB/TPE1/TCOM/TYER, named CTOC with TOP_LEVEL+ORDERED flags. Per-chapter mp3s tagged TRCK n/10.</p>
+              <p class="price">Free</p>
+            </div>
+            <div class="tool">
+              <div class="role">PDF</div>
+              <h4>Chrome --headless --print-to-pdf</h4>
+              <p>Same setup as v1. v2 PDF is 38 MB at full-resolution beat JPEGs and lives only in the source repo.</p>
+              <p class="price">Free</p>
+            </div>
+            <div class="tool">
+              <div class="role">Publish</div>
+              <h4>scripts/publish-book.sh</h4>
+              <p>The publish pipeline introduced for v1's publish — copies assets jpeg→jpg, re-encodes audio to 64 kbps mono 22050 Hz, re-tags ID3v2.3 + imports CHAP frames, rebuilds web novel.html, inserts the book card. v2 ran it with the slug <code>april-and-the-dragon-staff-v2</code> in ~60 s.</p>
+              <p class="price">Free</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="background:#fff5e6;">
+        <div class="container">
+          <h2 class="section__title">Read it / hear it</h2>
+          <div class="cta-buttons" style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn btn--primary" href="april-and-the-dragon-staff-v2/novel.html">Read v2 →</a>
+            <a class="btn" href="april-and-the-dragon-staff-v2/audio/audiobook.mp3" download>🎧 Download v2 audiobook (19 MB · 38 min)</a>
+          </div>
+          <p style="font-size:0.88rem;color:#6e6e73;margin-top:18px;">
+            Per-chapter mp3s live inside the novel page. Audio files are also in <code>/books/april-and-the-dragon-staff-v2/audio/</code>. The master <code>audiobook.mp3</code> has ID3v2.3 chapter markers + embedded cover artwork — Apple Podcasts, Overcast, and Pocket Casts will show a clickable chapter list.
+          </p>
+          <p style="font-size:0.88rem;color:#6e6e73;margin-top:14px;">
+            Want to see the original? Click <strong>v1</strong> in the tabs above.
+          </p>
+        </div>
+      </section>
+
+    </div><!-- /version-content v2 -->
+
+    <div class="version-content" data-version="v1">
+
+      <div class="version-banner">You're reading <strong>v1</strong> — the original strict-AABB version. <a href="#" onclick="document.getElementById('ver-v2').checked=true;return false;" style="color:#e57a5b;">Switch to v2 (current)</a> for the natural-prose retelling.</div>
+
+      <section class="book-hero">
+        <div class="container">
+          <div class="book-hero__layout">
+            <div class="book-hero__cover">
+              <img src="april-and-the-dragon-staff/storyboard/cover.jpg" alt="April and the Dragon Staff cover">
+            </div>
+            <div>
+              <div class="book-hero__kicker">Books · Generated end-to-end with LLMs and image/audio models</div>
+              <h1>April and the Dragon Staff</h1>
+            <p>A 10-chapter children's picture book in strict AABB rhymed verse — call-and-response between April the rainbow koala and her four friends, with 98 Pixar-storybook illustrations and a 59-minute audiobook narrated with 7 voices. The form does the moral: at the climax, the skipped friend's response couplet becomes a literal silence on the page and in the ear.</p>
+            <div class="book-hero__cta">
+              <a href="april-and-the-dragon-staff/novel.html">Read the book →</a>
+              <a class="ghost" href="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/april-and-the-dragon-staff/audio/audiobook.mp3" download>🎧 Download audiobook (28 MB)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">The numbers</h2>
+        <p class="project-description">A four-sentence brief became a 59-minute illustrated audiobook in strict rhymed verse. Here's the count of everything that got generated along the way.</p>
+
+        <div class="stats-grid">
+          <div class="stat"><div class="stat__num">9,895</div><div class="stat__label">words</div></div>
+          <div class="stat"><div class="stat__num">1,083</div><div class="stat__label">verse lines</div></div>
+          <div class="stat"><div class="stat__num">10</div><div class="stat__label">chapters</div></div>
+          <div class="stat"><div class="stat__num">105</div><div class="stat__label">images rendered</div></div>
+          <div class="stat"><div class="stat__num">98</div><div class="stat__label">chapter beats</div></div>
+          <div class="stat"><div class="stat__num">58:41</div><div class="stat__label">audiobook duration</div></div>
+          <div class="stat"><div class="stat__num">7</div><div class="stat__label">distinct voices</div></div>
+          <div class="stat"><div class="stat__num">490</div><div class="stat__label">TTS segments</div></div>
+          <div class="stat"><div class="stat__num">~55</div><div class="stat__label">LLM calls</div></div>
+          <div class="stat"><div class="stat__num">52k</div><div class="stat__label">TTS characters</div></div>
+        </div>
+
+        <div class="form-callout">
+          <h3>The form does the moral</h3>
+          <p>The book is in <strong>strict AABB rhymed verse</strong> with a <strong>call-and-response</strong> structure: April issues a call couplet, and the friends issue a response couplet. The whole book sings this back and forth — until chapter&nbsp;8, when one friend skips a step in the safety ritual and her response couplet simply doesn't come. The page holds two blank lines where the rhyme should land. The audiobook holds 2.8&nbsp;seconds of silence. Then the troupe catches the mistake together, and from chapter&nbsp;10 the ritual returns — but inverted: the friends call, and April responds. The form earns the closing.</p>
+          <pre>"The dragon staff has three bright wicks,
+and fire is not for careless tricks."
+"We hear you, April, loud and true —
+now teach us what the dragon can do!"
+
+…
+
+"Now shake off the extra before the fire can grow.
+Three flicks from the wrist and the excess falls free —
+the burn-off comes FIRST. Mango — answer me."
+
+<span class="blank-row">                              (silence — two blank lines)</span>
+
+The night holds its breath. Not a bell. Not a sound.
+Mango's wings are already mid-sweep off the ground.</pre>
+        </div>
+
+        <h3 style="font-family: 'Iowan Old Style', serif; font-size: 1.2rem; margin-top: 32px; margin-bottom: 12px;">The cast — and their voices</h3>
+        <div class="cast-strip">
+          <div class="cast-strip__card">
+            <img src="april-and-the-dragon-staff/characters/April.jpg" alt="April">
+            <div class="cast-strip__name">April</div>
+            <div class="cast-strip__voice">Sarah</div>
+            <div class="cast-strip__line">Rainbow koala teacher</div>
+          </div>
+          <div class="cast-strip__card">
+            <img src="april-and-the-dragon-staff/characters/Mango.jpg" alt="Mango">
+            <div class="cast-strip__name">Mango</div>
+            <div class="cast-strip__voice">Jessica</div>
+            <div class="cast-strip__line">Fastest fruit bat</div>
+          </div>
+          <div class="cast-strip__card">
+            <img src="april-and-the-dragon-staff/characters/Fern.jpg" alt="Fern">
+            <div class="cast-strip__name">Fern</div>
+            <div class="cast-strip__voice">Lily</div>
+            <div class="cast-strip__line">Careful tree frog</div>
+          </div>
+          <div class="cast-strip__card">
+            <img src="april-and-the-dragon-staff/characters/Riddle.jpg" alt="Riddle">
+            <div class="cast-strip__name">Riddle</div>
+            <div class="cast-strip__voice">Laura</div>
+            <div class="cast-strip__line">Questioning parrot</div>
+          </div>
+          <div class="cast-strip__card">
+            <img src="april-and-the-dragon-staff/characters/Dusty.jpg" alt="Dusty">
+            <div class="cast-strip__name">Dusty</div>
+            <div class="cast-strip__voice">Roger</div>
+            <div class="cast-strip__line">Steady wombat</div>
+          </div>
+          <div class="cast-strip__card">
+            <img src="april-and-the-dragon-staff/characters/Laurel.jpg" alt="Laurel">
+            <div class="cast-strip__name">Laurel</div>
+            <div class="cast-strip__voice">Matilda</div>
+            <div class="cast-strip__line">April's old teacher (Ch. 9)</div>
+          </div>
+        </div>
+        <p style="font-size: 0.88rem; color: #6e6e73; font-style: italic;">Plus George (Narrator) — warm British storyteller, the constant voice across all 10 chapters.</p>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff5e6;">
+      <div class="container">
+        <h2 class="section__title">Cost breakdown</h2>
+        <p class="project-description">Two ways to read this. <strong>Out-of-pocket</strong> is what actually hit a credit card. <strong>At-full-rates</strong> is what a fresh account with no credits or subscriptions would have paid for the same work.</p>
+
+        <div class="stats-grid" style="margin: 24px 0;">
+          <div class="stat" style="background:#fff;">
+            <div class="stat__num">~$8</div>
+            <div class="stat__label">Out-of-pocket</div>
+          </div>
+          <div class="stat" style="background:#fff;">
+            <div class="stat__num">~$35</div>
+            <div class="stat__label">At full provider rates</div>
+          </div>
+        </div>
+
+        <table class="metrics">
+          <thead>
+            <tr><th>Bucket</th><th>Volume</th><th class="num">Out-of-pocket</th><th class="num">At-full-rates</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>xAI grok-imagine</strong> — <code>grok-imagine-image</code><br><span style="color:#6e6e73;font-size:0.85rem;">cover + 6 character portraits + 98 chapter beats + 1 style verification render</span></td>
+              <td class="num">106 images</td>
+              <td class="num"><strong>~$0</strong><br><span style="font-size:0.78rem;color:#6e6e73;">xAI credit grant</span></td>
+              <td class="num">~$7</td>
+            </tr>
+            <tr>
+              <td><strong>Claude Code orchestration</strong> — <code>claude-opus-4-6</code><br><span style="color:#6e6e73;font-size:0.85rem;">the agent loop running the pipeline; heavy prompt caching brings effective rate to ~$3/M.</span></td>
+              <td class="num">~5M tokens</td>
+              <td class="num"><strong>$0</strong><br><span style="font-size:0.78rem;color:#6e6e73;">Claude Pro/Code subscription</span></td>
+              <td class="num">~$15</td>
+            </tr>
+            <tr>
+              <td><strong>ElevenLabs TTS</strong> — <code>eleven_multilingual_v2</code><br><span style="color:#6e6e73;font-size:0.85rem;">490 voice-tagged segments across 7 voices; 463 rendered before the monthly Creator quota hit, 27 finished after top-up</span></td>
+              <td class="num">490 requests · 52k chars</td>
+              <td class="num"><strong>~$7.35</strong><br><span style="font-size:0.78rem;color:#6e6e73;">$0.015/request, Creator subscription</span></td>
+              <td class="num">~$10</td>
+            </tr>
+            <tr>
+              <td><strong>Choir LLM calls</strong> — <code>claude-opus-4-6</code> + <code>gemini-2.5-pro</code> + <code>gpt-4.1</code><br><span style="color:#6e6e73;font-size:0.85rem;">arc fan-out (6 shapes × 3 models), 2-judge panel, spread, chapter weave, beats ID, audiobook segmentation</span></td>
+              <td class="num">~55 calls · ~2M tokens</td>
+              <td class="num">~$0</td>
+              <td class="num">~$3</td>
+            </tr>
+            <tr class="total">
+              <td colspan="2">Total this book</td>
+              <td class="num"><strong>~$8</strong></td>
+              <td class="num"><strong>~$35</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="font-size:0.85rem;color:#6e6e73;margin-top:14px;">
+          <strong>What absorbed the cost.</strong> xAI's image-gen credit grant covers all 106 renders here (this book is xAI-only on images — Grok-Imagine nails the Pixar Storybook 3D aesthetic on the first try, so OpenAI didn't need to run). ElevenLabs lands at $0.015 per request on Sean's Creator subscription — the real out-of-pocket line on this book. 490 requests came from the call-and-response form: every voice switch is its own segment, so the segmentation count is denser than a prose audiobook. Claude Code is a flat monthly subscription that covers all the agent's planning and tool calls.
+        </p>
+        <p style="font-size:0.85rem;color:#6e6e73;">
+          <strong>What a fresh account would pay.</strong> ~$35 at-full-rates is what you'd spend if you opened brand-new accounts at every provider and rebuilt this exact book. About a third less than <em>Can't Have Nice Things</em> (~$42) — chiefly because this book renders illustrations only with Grok-Imagine ($0.07/image) instead of OpenAI's gpt-image-1 ($0.04–$0.17/image), and because the audiobook is half the length.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Timing</h2>
+        <p class="project-description">Wall-clock time for each stage. Everything that could parallelize did. Total active runtime from "go" to a finished audiobook: roughly 20 minutes (plus a brief pause mid-way through chapter 10 to top up ElevenLabs).</p>
+
+        <table class="metrics">
+          <thead>
+            <tr><th>Stage</th><th>What runs</th><th class="num">Wall clock</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0 · Interview</td><td>Capture the four-sentence seed brief + 4 follow-up choices (rhyme, cast, stakes, setting)</td><td class="num">~3 min</td></tr>
+            <tr><td>1 + 2 · Arcs + judge</td><td>18 parallel arc generations (6 shapes × 3 models), then a 2-judge panel scoring all 18 against the brief</td><td class="num">~2 min</td></tr>
+            <tr><td>3 · Spread</td><td>Timeline + factors + cover subject in parallel, then character profiles (depends on timeline)</td><td class="num">~2 min</td></tr>
+            <tr><td>4 · Style gallery</td><td><em>Skipped.</em> Style pre-locked to Pixar Storybook 3D by a reference image during the interview, then verified with a single test render.</td><td class="num">—</td></tr>
+            <tr><td>5 · Preview site</td><td><em>Skipped.</em> Auto-selected the highest-judged arc (Silent Echo, both judges agreed by a 6-point margin) and grafted the best mix-ins from the other top arcs.</td><td class="num">—</td></tr>
+            <tr><td>6 · Lock-in (cover + portraits)</td><td>1 cover + 6 character portraits in parallel</td><td class="num">~30 s</td></tr>
+            <tr><td>7 · Chapter weave</td><td>10 parallel chapters; each prompt embeds the full arc + timeline + characters + 4 mix-ins + AABB style guide</td><td class="num">~90 s</td></tr>
+            <tr><td>8a · Beat identification</td><td>10 parallel beat-ID calls; output 98 distinct beats (8–11 per chapter)</td><td class="num">~90 s</td></tr>
+            <tr><td>8b · Beat illustration</td><td>98 Grok-Imagine renders, 8 concurrent via Python ThreadPoolExecutor — zero failures</td><td class="num">92 s</td></tr>
+            <tr><td>9 · Compile</td><td><code>novel.html</code> assembly + Chrome-headless print to PDF</td><td class="num">~10 s</td></tr>
+            <tr><td>10a · Audio segmentation</td><td>10 parallel verse-aware segmentations (never split mid-couplet; chapter-8 blank-echo preserved as a 2.8&nbsp;s silence segment)</td><td class="num">~60 s</td></tr>
+            <tr><td>10b · TTS render</td><td>490 ElevenLabs segments via <code>eleven_multilingual_v2</code>, 5 concurrent (Creator tier). 463 in the first pass; quota cap; ~30 s pause to top up; 27 more in 10 s.</td><td class="num">~2:30 + pause</td></tr>
+            <tr><td>10c · Chime + stitch + tag + inject</td><td>Synth 3-note bell chime (ffmpeg sine + reverb), stitch 10 chapter mp3s + master, embed ID3v2.3 chapter markers + cover art, inject audio players into <code>novel.html</code></td><td class="num">~45 s</td></tr>
+            <tr class="total"><td colspan="2">Total (active runtime, end to end)</td><td class="num">~15 – 20 min</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff5e6;">
+      <div class="container">
+        <h2 class="section__title">The process</h2>
+        <p class="project-description">Ten stages, each a separate slash command or script. The early ones generate a menu of options; the late ones commit to picks and bake the cake. Two stages were skippable for this book — the style was pre-locked by a reference image, and the preview wizard was auto-resolved because the judges agreed by a wide margin.</p>
+
+        <details class="process-step">
+          <summary>0 · Capture the seed (<code>/scriptorium-interview</code>)</summary>
+          <div class="body">A short conversation captures the inspirer's intent. The seed for this book was a single message: <em>"April, the rainbow-colored koala, teaches her friends how to spin the dragon staff. She teaches them about fire safety. She teaches them the difference between knowing a thing and remembering a thing."</em> Then four follow-up choices: <em>strict Seuss meter + AABB rhyme</em>, <em>let the writer invent the friends</em>, <em>scary near-miss with no injury</em>, and <em>a flow-arts festival town setting</em>. The brief lands in <code>brief.md</code> and every downstream prompt reads it.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>1 + 2 · Wide arc fan-out + judging (<code>/scriptorium-arcs</code>)</summary>
+          <div class="body">Six structural shapes (tragic, comic, mystery, picaresque, ironic, wildcard) × three premium models (Opus 4.6, GPT-4.1, Gemini 2.5 Pro) = <strong>18 candidate arcs</strong>. Two independent judges (Opus 4.6 + Gemini 2.5 Pro) score each on inventiveness, coherence, stakes, illustrability, and voice match — and name the survivors with two-word evocative names. The judges agreed by a 6-point margin: the wildcard winner was <em class="highlight">Silent Echo</em>, a <strong>call-and-response</strong> arc where every chapter alternates April's call couplet and the friends' response couplet — and where the climax replaces the skipped friend's response couplet with a literal blank line on the page. Both judges flagged this as the single most inventive idea on the slate. Top 5: Silent Echo, Woven Circle, Flame Patch, Five Doors, Dragon's Sentence.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>3 · Spread the survivor + grafts (<code>/scriptorium-spread</code>)</summary>
+          <div class="body">For the chosen spine arc: chapter-by-chapter timeline, named subplots, named pivotal events, recurring motifs ("factors"), full character roster with portrait briefs, and a cover subject — all in parallel. Four <strong>mix-ins</strong> were grafted from the other top-5 arcs (non-negotiable, must show up in target chapters): from <em class="highlight">Flame Patch</em> — April's hidden backstory of her own teacher Laurel, threaded as clues across chapters 1–8 and revealed in chapter 9; from <em class="highlight">Woven Circle</em> — the collective troupe catch at the climax, where all four friends respond in distinct postures; from <em class="highlight">Five Doors</em> — one chapter per friend in Act 2 (Fern→spotter, Riddle→breath count, Dusty→wet towel, Mango→burn-off); from <em class="highlight">Dragon's Sentence</em> — the "fire AND frame" refrain and the "wick kisses the grass" climax image.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>4 · Visual style — <em>skipped</em></summary>
+          <div class="body">The style was pre-locked at Stage 0 by a reference image: <strong>Pixar Storybook 3D</strong> — soft painterly 3D render, big expressive eyes with crisp catchlights, gentle subsurface scattering, warm rim lighting. Verified with a single test render before any chapter art committed (a DeLorean from <em>Back to the Future</em> piloted by a pig next to the Space Needle, just to confirm the renderer hits the target style). The style envelope, per-character anchor descriptions, palette, lighting standards, and guardrails live in <code>styles/chosen.md</code>.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>5 · Preview wizard — <em>auto-resolved</em></summary>
+          <div class="body">The preview/lock-in wizard exists for cases where the judges produce a close call and the inspirer needs to choose between arcs, mix-ins, and cover candidates. Here both judges ranked Silent Echo first by a 6-point margin, and the mix-ins from the other top-5 arcs were unambiguous — so the wizard step was auto-resolved without inspirer review. (Full autonomy was a deliberate choice; the inspirer was offered checkpoints and declined them.)</div>
+        </details>
+
+        <details class="process-step">
+          <summary>6 · Lock-in: cover + portraits (<code>/scriptorium-lock</code>)</summary>
+          <div class="body">The chosen arc and mix-ins were committed: spine → <code>arc.md</code>, mix-ins → <code>arc_mixins.md</code>, characters → <code>characters.json</code>, style envelope → <code>styles/chosen.md</code>. Then the cover (April calling, three friends responding, festival lanterns at blue-hour dusk — locked on the first render) and 6 character portraits (April, Mango, Fern, Riddle, Dusty, Laurel) rendered in parallel via Grok-Imagine.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>7 · Weave the chapters (<code>/scriptorium-chapter N</code>)</summary>
+          <div class="body">All <strong>10 chapters in parallel</strong>. Each prompt embedded the full arc, the locked timeline, the locked character roster (with voice signatures for AABB couplets), the 4 mix-ins, the 6 recurring factors, and the per-project narrative style guide (strict anapestic tetrameter, AABB rhyme, call-and-response structure, no adult lectures, named flow-arts vocabulary). Output: <strong>1,083 verse lines / 9,895 words</strong>. Every named friend speaks in their own voice signature — Mango's lines lean forward fast and bright; Fern's clip short and careful; Riddle leads with <em>why</em>; Dusty is monosyllabic and grounded. Chapter 8's blank-echo trick lands as four blank lines on the page, exactly where Mango's response couplet should have been.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>8 · Illustrate the beats (<code>/scriptorium-illustrate N</code>)</summary>
+          <div class="body">For each chapter, an illustration director identifies <strong>at least 6 distinct narrative beats</strong> — opening, early, midchapter, turning, climax, closing — each with a specific scene subject, mood, palette hint, and hand-lettered annotation list. This book averaged 9.8 beats per chapter (denser than the default 6, because the inspirer wanted a heavily illustrated picture book). Total: <strong>98 chapter beats</strong>. Each beat is rendered once via Grok-Imagine in the locked Pixar Storybook 3D envelope, with the per-character anchor descriptions inserted into the prompt so the cast stays on-model across all 98 frames. 8 concurrent via a Python ThreadPoolExecutor: 92 seconds, zero failures. Beats are interleaved with the verse in the chapter HTML at proportional positions (opening at 4% of stanzas, climax at 78%, closing at 95%).</div>
+        </details>
+
+        <details class="process-step">
+          <summary>9 · Compile the novel (<code>/scriptorium-compile</code>)</summary>
+          <div class="body">Cover + table of contents + cast portrait grid + 10 chapters with beats interleaved + a parent-facing back-matter <strong>safety-ritual cheat sheet</strong> (the 7 steps in plain prose for kids and parents to talk through together), all in one HTML page with a Pixar-storybook palette (warm cream paper, rainbow-gradient title, Marker Felt display font). A Chrome-headless print pass produces the PDF (~38 MB at full-resolution beat JPEGs; the PDF is archive-only and not published to the web).</div>
+        </details>
+
+        <details class="process-step">
+          <summary>10 · Audiobook (<code>/scriptorium-audiobook</code>)</summary>
+          <div class="body">Each chapter is segmented by Opus into voice-tagged JSON, <strong>respecting the AABB couplet boundary</strong> — segments never split mid-rhyme. Chapter 8's blank-echo lands in the audio too, as a 2.8-second silence segment exactly where Mango's response couplet should have been. ElevenLabs <code>multilingual_v2</code> renders 490 segments using <strong>7 voices</strong> (Sarah for April, Jessica for Mango, Lily for Fern, Laura for Riddle, Roger for Dusty, Matilda for Laurel in chapter 9, and George as the constant narrator). Each chapter opens with a synthesized three-note bell chime (ffmpeg <code>sine + aecho</code>, C4 → E4 → G4 with a soft reverb tail) — a small audio sting that gives chapter transitions proper audiobook weight. <code>ffmpeg concat</code> stitches per-chapter mp3s (0.4&nbsp;s between segments, 1.2&nbsp;s + chime + 1.0&nbsp;s between chapters); ID3v2.3 chapter markers + embedded APIC cover artwork are baked in so podcast apps surface a clickable chapter list. Audio players are then injected into <code>novel.html</code> as a hero player after the cover plus a per-chapter player above each chapter.</div>
+        </details>
+
+        <details class="process-step">
+          <summary>11 · Publish (<code>scripts/publish-book.sh &lt;slug&gt;</code>) — new pipeline step</summary>
+          <div class="body">A new <code>scripts/publish-book.sh</code> codifies the 7 publish steps documented in <code>PROCESS.md</code> §6: copy assets (jpeg → jpg), re-encode the audiobook to 64&nbsp;kbps mono 22050&nbsp;Hz for web delivery (54&nbsp;MB → 28&nbsp;MB, under the GitHub Pages 100&nbsp;MB cap), re-tag with ID3v2.3 + import CHAP frames from the source master, rebuild <code>novel.html</code> with retargeted paths and a sean-makes-stuff book-nav, insert a <code>.book-card</code> in <code>books/index.html</code>, and bump the "N books shipped" count on the root page. <code>--minimal</code> (default) is what this book shipped under; <code>--full</code> additionally generates this very detail page.</div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">The tooling</h2>
+        <p class="project-description">Every step is a shell-out, not a library binding — the pipeline is a stack of bash scripts and Python helpers. Sibling of <a href="https://sean-makes-stuff.com/projects/choir.html">choir</a> and <a href="https://sean-makes-stuff.com/projects/scriptorium.html">scriptorium</a>.</p>
+
+        <div class="tool-grid">
+          <div class="tool">
+            <div class="role">Fan-out + judging</div>
+            <h4>choir</h4>
+            <p>Sean's CLI for routing prompts to any model across providers. Single-model: plain text out. Multi-model: JSON. <code>--save</code> persists a comparison run; <code>choir runs compare</code> appends a judge summary later.</p>
+            <p class="price">Anthropic Opus 4.6 · OpenAI GPT-4.1 · Google Gemini 2.5 Pro</p>
+          </div>
+          <div class="tool">
+            <div class="role">Text generation</div>
+            <h4>Claude Opus 4.6</h4>
+            <p>Primary writer. Wrote every chapter, identified every beat, and segmented every chapter for TTS. All 5 top-judged arcs and all 5 chosen mix-ins came from Opus runs; GPT-4.1 and Gemini arcs all collapsed against the Opus equivalents in the judging panel.</p>
+            <p class="price">~$3 / 1M input · $15 / 1M output (with heavy prompt caching across chapter weaves)</p>
+          </div>
+          <div class="tool">
+            <div class="role">Text generation (judge)</div>
+            <h4>Gemini 2.5 Pro</h4>
+            <p>The second judge in the arc panel — different model family for diversity. Both judges ranked Silent Echo #1 by a 6-point margin, and the GPT-4.1 / Gemini arc proposals all collapsed against the Opus ones.</p>
+            <p class="price">~$1.25 / 1M tokens</p>
+          </div>
+          <div class="tool">
+            <div class="role">Image generation</div>
+            <h4>xAI grok-imagine</h4>
+            <p>All 105 images: the cover, 6 character portraits, 98 chapter beats, plus 1 style verification render. Grok-Imagine nailed Pixar Storybook 3D on the first try — rainbow gradient fur, gentle subsurface scattering, warm rim lighting, soft painterly post-processing.</p>
+            <p class="price">~$0.07 per image</p>
+          </div>
+          <div class="tool">
+            <div class="role">Text-to-speech</div>
+            <h4>ElevenLabs multilingual_v2</h4>
+            <p>7 voices from the premade catalog: George (warm British storyteller, <code>narrative_story</code>) as the narrator; Sarah, Jessica, Lily, Laura, Roger, Matilda for April + 4 friends + Laurel. Voice settings: <code>stability 0.55</code>, <code>similarity_boost 0.78</code>, <code>style 0.15</code> (a slight theatrical lift for verse meter).</p>
+            <p class="price">~$0.18 – $0.30 per 1,000 characters</p>
+          </div>
+          <div class="tool">
+            <div class="role">Audio synth + stitching</div>
+            <h4>ffmpeg</h4>
+            <p>Chapter intro chime synthesized from three sine waves (C4 / E4 / G4 with staggered <code>adelay</code>, exponential <code>afade</code> envelopes, soft <code>aecho</code> reverb tail, 4.5&nbsp;kHz <code>lowpass</code> for warmth). Per-chapter concat with <code>anullsrc</code> silence files; ID3 chapter markers from a metadata sidecar.</p>
+            <p class="price">Free</p>
+          </div>
+          <div class="tool">
+            <div class="role">ID3 tagging</div>
+            <h4>mutagen</h4>
+            <p>Re-encode strips ID3, so a polish pass writes ID3v2.3 (some podcast apps drop CHAP markers in v2.4): APIC cover artwork, TIT2/TALB/TPE1/TCOM/TYER, named CTOC with <code>TOP_LEVEL | ORDERED</code> flags. Per-chapter mp3s get <code>TRCK n/10</code> so apps show them as a series.</p>
+            <p class="price">Free (Python lib)</p>
+          </div>
+          <div class="tool">
+            <div class="role">PDF</div>
+            <h4>Chrome --headless --print-to-pdf</h4>
+            <p>Print CSS hides the PDF nav bar and audio players; chapter sections page-break-before, beat figures page-break-inside avoid. The PDF is 38&nbsp;MB at full-resolution beat JPEGs and lives only in the source repo — too big for GitHub Pages.</p>
+            <p class="price">Free</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff5e6;">
+      <div class="container">
+        <h2 class="section__title">Read it / hear it</h2>
+        <div class="cta-buttons" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="btn btn--primary" href="april-and-the-dragon-staff/novel.html">Read the illustrated book →</a>
+          <a class="btn" href="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/april-and-the-dragon-staff/audio/audiobook.mp3" download>🎧 Download audiobook (28 MB · 59 min)</a>
+        </div>
+        <p style="font-size:0.88rem;color:#6e6e73;margin-top:18px;">
+          Per-chapter mp3s live inside the novel page — each chapter has its own <code>&lt;audio&gt;</code> player above the verse. The chapter audio files are also in <code>/books/april-and-the-dragon-staff/audio/</code> if you want to drop them into a podcast app or pull them down individually. The master <code>audiobook.mp3</code> has ID3v2.3 chapter markers + embedded cover artwork, so apps like Apple Podcasts, Overcast, and Pocket Casts will show a clickable chapter list.
+        </p>
+      </div>
+    </section>
+
+    </div><!-- /version-content v1 -->
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Sean Spratt · made with Claude Code, Scriptorium, ElevenLabs, and ffmpeg.</p>
+    </div>
+  </footer>
+
+<script>/* sms-metrics beacon */(function(){try{if(localStorage.smsNoTrack)return;navigator.sendBeacon('https://sms-metrics.sean-firewall.workers.dev/hit',JSON.stringify({p:location.pathname,r:document.referrer,h:location.host}))}catch(e){}})();</script>
+<script src="js/stamps.js" defer></script>
+</body>
+</html>

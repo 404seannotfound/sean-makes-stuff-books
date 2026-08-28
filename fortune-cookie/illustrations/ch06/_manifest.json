@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Thursday Stillness",
+    "name_slug": "thursday_stillness",
+    "file": "beat_01_thursday_stillness.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Aching"
+  },
+  {
+    "index": 2,
+    "scene_name": "Oolong Ritual",
+    "name_slug": "oolong_ritual",
+    "file": "beat_02_oolong_ritual.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Ceremonial"
+  },
+  {
+    "index": 3,
+    "scene_name": "Watchful Stool",
+    "name_slug": "watchful_stool",
+    "file": "beat_03_watchful_stool.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Intent"
+  },
+  {
+    "index": 4,
+    "scene_name": "Pendant Selection",
+    "name_slug": "pendant_selection",
+    "file": "beat_04_pendant_selection.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Sacramental"
+  },
+  {
+    "index": 5,
+    "scene_name": "Apron Pocket",
+    "name_slug": "apron_pocket",
+    "file": "beat_05_apron_pocket.jpeg",
+    "position": "turning",
+    "weight": "medium",
+    "mood": "Secretive"
+  },
+  {
+    "index": 6,
+    "scene_name": "Unfinished Tea",
+    "name_slug": "unfinished_tea",
+    "file": "beat_06_unfinished_tea.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Bereft"
+  },
+  {
+    "index": 7,
+    "scene_name": "Kitchen Retrieval",
+    "name_slug": "kitchen_retrieval",
+    "file": "beat_07_kitchen_retrieval.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Revelatory"
+  },
+  {
+    "index": 8,
+    "scene_name": "How It Works",
+    "name_slug": "how_it_works",
+    "file": "beat_08_how_it_works.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Resolute"
+  }
+]

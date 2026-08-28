@@ -1,0 +1,134 @@
+{
+  "chapter": 7,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Swooping Entrance",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Electric",
+      "annotations": [
+        "IT'S MY TURN NOW!",
+        "the jingle before the landing",
+        "MANGO"
+      ],
+      "why_this_beat": "The chapter's opening image establishes Mango's explosive entrance and her eager claim on the spotlight, setting the tone for her showcase chapter."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Burn-Off Lesson",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Instructive",
+      "annotations": [
+        "three sharp flicks \u2014 wrist, not arm",
+        "the drip you can't see",
+        "STEP SEVEN"
+      ],
+      "why_this_beat": "This beat grounds the chapter's central lesson \u2014 the burn-off technique \u2014 with April demonstrating the precise wrist motion that Mango will soon embellish."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Mango Snatches",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Impulsive",
+      "annotations": [
+        "I've GOT it!",
+        "the grab before the grip",
+        "already three moves ahead"
+      ],
+      "why_this_beat": "Mango's characteristic eagerness \u2014 snatching the staff before the lesson is fully given \u2014 crystallizes her pattern of speed outpacing process."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Dragon Wing Flourish",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "Dazzling",
+      "annotations": [
+        "she made it FLY",
+        "the extra sweep \u2014 was that part of the step?",
+        "four flicks, not three"
+      ],
+      "why_this_beat": "Mango's embellishment of the burn-off \u2014 adding a fourth flick and a dragon-wing sweep \u2014 is the chapter's central tension: brilliance that adds to the form but departs from the safety step."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Dusty Watches",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Watchful",
+      "annotations": [
+        "She's fast.",
+        "CLOSE, NOT FAR",
+        "his paws just stayed"
+      ],
+      "why_this_beat": "Dusty's quiet two-word assessment and his steady towel-hold provide the grounded counterweight to Mango's aerial brilliance \u2014 the spotter reading the spinner."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Full Refrain",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Ceremonial",
+      "annotations": [
+        "SEVEN STEPS ALIVE",
+        "THE COUNT'S THE KEY THAT GUARDS THE DOOR",
+        "WE STEP INSIDE AND LOOK AROUND",
+        "breath rings in the fading light"
+      ],
+      "why_this_beat": "The full seven-step refrain sung in unison is the chapter's ritual heart \u2014 the complete song assembled for the first time, all voices together."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Spotter's Arc",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Precise",
+      "annotations": [
+        "the circle following the circle",
+        "each pad-print pressed",
+        "FERN"
+      ],
+      "why_this_beat": "Fern's active tracking arc \u2014 moving with the spinner rather than freezing \u2014 demonstrates her chapter-four breakthrough in action during the full run."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Mango's Full Run",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Triumphant",
+      "annotations": [
+        "the unlit wicks looked like they could fly",
+        "MANGO'S BRIGHT BOW",
+        "proud \u2014 and watchful",
+        "the dragon staff singing her name"
+      ],
+      "why_this_beat": "This is the visual keynote \u2014 Mango's mastery of the unlit staff at its most radiant, with April's complex watchfulness providing the undertow of foreshadow."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Bright Foreshadow",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Bittersweet",
+      "annotations": [
+        "tomorrow we light it",
+        "the wicks stayed dark",
+        "WHERE THE DRAGON LOOKS FIRST",
+        "a spark rose and vanished like a falling leaf"
+      ],
+      "why_this_beat": "The closing image holds the gap between Mango's blazing confidence and the reality of real fire \u2014 her bow is perfect, the wicks are dark, and April's hand on the scorch mark says everything the night won't."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Oil Skating",
+    "position": "opening",
+    "mood": "anticipatory"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Hovering Steak",
+    "position": "early",
+    "mood": "tense"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Drop And Roar",
+    "position": "early",
+    "mood": "explosive"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Restraining Hand",
+    "position": "midchapter",
+    "mood": "firm"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "First Flip",
+    "position": "midchapter",
+    "mood": "awed"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Theo's Oh",
+    "position": "turning",
+    "mood": "delighted"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Pink Reveal",
+    "position": "turning",
+    "mood": "satisfied"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Probe Reads Pink",
+    "position": "turning",
+    "mood": "precise"
+  },
+  {
+    "file": "beat_09.jpeg",
+    "scene_name": "Second Pan",
+    "position": "climax",
+    "mood": "decisive"
+  },
+  {
+    "file": "beat_10.jpeg",
+    "scene_name": "Side By Side",
+    "position": "closing",
+    "mood": "together"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Brew Install Claude Code",
+    "position": "opening",
+    "mood": "ceremonial"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Claude Session Opens",
+    "position": "early",
+    "mood": "third-presence"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Lor Smiles At Haiku",
+    "position": "midchapter",
+    "mood": "tender-secret"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Vex Sees Lor Smile",
+    "position": "midchapter",
+    "mood": "delight-caught"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Approve The Shell",
+    "position": "turning",
+    "mood": "small-magic"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Folder Did Not Exist",
+    "position": "climax",
+    "mood": "reverent-wonder"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Promise Me",
+    "position": "climax",
+    "mood": "earnest-funny"
+  },
+  {
+    "file": "beat_08.jpeg",
+    "scene_name": "Cricket Falls Off",
+    "position": "closing",
+    "mood": "absurd-tender"
+  }
+]

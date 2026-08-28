@@ -1,0 +1,117 @@
+{
+  "chapter": 5,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Porch Counting",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Hushed",
+      "annotations": [
+        "one \u00b7 two \u00b7 three \u00b7 four",
+        "ELEVEN.",
+        "Pip didn't count."
+      ],
+      "why_this_beat": "Opens the chapter in the present-day frame and seeds the number eleven that will detonate in the past."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Morning Ritual",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Reverent",
+      "annotations": [
+        "1\u00b72\u00b73\u00b74\u00b75\u00b76\u00b77\u00b78\u00b79\u00b710\u00b711",
+        "they nod \u2014 just once",
+        "the silliest of the seven"
+      ],
+      "why_this_beat": "Establishes the counting ritual as it was meant to be done, by the two who still know how."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Skipped Hand",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Cocky",
+      "annotations": [
+        "one, many, eleven. done.",
+        "SEE? I'VE GOT THIS",
+        "(the loose one)"
+      ],
+      "why_this_beat": "The exact moment of the skipped ritual \u2014 the chapter's quiet hinge before disaster."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Bright Descent",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Joyful",
+      "annotations": [
+        "\u266a \u266b \u266a",
+        "bright as a barn fire",
+        "she did not hum on purpose"
+      ],
+      "why_this_beat": "The high-noon sweetness of the run, the last moment before the slat lets go."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "Tooth Falling",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "Quiet-dread",
+      "annotations": [
+        "thump.",
+        "one small wooden tooth",
+        "she did not hear it"
+      ],
+      "why_this_beat": "The turning point \u2014 the fall itself, unwitnessed, the chapter's small terrible pivot."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Apple Wave",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Roaring",
+      "annotations": [
+        "ELEVEN SLATS! WHO KNEW!",
+        "the laugh on her side",
+        "(I did not laugh.)"
+      ],
+      "why_this_beat": "The visual keynote \u2014 the chapter's loudest image and the moment Pip learns to laugh first."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Invisible Mern",
+      "page_position": "closing",
+      "weight": "medium",
+      "mood": "Sober",
+      "annotations": [
+        "Pip didn't see her.",
+        "Pip didn't see her.",
+        "the invisible repair"
+      ],
+      "why_this_beat": "The hidden cost beneath the laughter \u2014 Mern fixing what Pip never noticed needed fixing."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "Counting Still",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Aching",
+      "annotations": [
+        "that I was already counting.",
+        "four skips still to come.",
+        "tap \u00b7 oil \u00b7 hum \u00b7 count \u00b7 breathe \u00b7 tie \u00b7 thank"
+      ],
+      "why_this_beat": "Closes the chapter by returning to the narrator and quietly planting Wren as the one who is getting it right."
+    }
+  ]
+}

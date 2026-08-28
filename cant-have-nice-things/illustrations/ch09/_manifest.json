@@ -1,0 +1,134 @@
+{
+  "chapter": 9,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Honey Light",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "hushed",
+      "annotations": [
+        "THE PORCH, STILL",
+        "a bee gave up",
+        "cal stopped humming"
+      ],
+      "why_this_beat": "Opening tableau \u2014 establishes the four-child chorus and the heavy, listening silence the chapter rests on."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Question Underneath",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "tender",
+      "annotations": [
+        "'are you still sorry?'",
+        "the question under the question",
+        "yes. every day."
+      ],
+      "why_this_beat": "Wren's single question pivots the chapter from silence into ritual \u2014 the small voice that earns the rest."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Path Of Missing",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "elegiac",
+      "annotations": [
+        "a path stays after the thing that made it",
+        "long. bent. gold.",
+        "sixty-three years"
+      ],
+      "why_this_beat": "The chapter's central absence given a frame \u2014 the wagon's path without the wagon, the why of the telling."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Two Fingers",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "reverent",
+      "annotations": [
+        "tap",
+        "thank you. (no sound.)",
+        "THE RIGHT SHAPE",
+        "she is getting it right"
+      ],
+      "why_this_beat": "The visual keynote \u2014 transmission caught in a single mirrored gesture between the last keeper and the first inheritor."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "Counting Four",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "ceremonial",
+      "annotations": [
+        "one. two. three. four.",
+        "eleven would have been the wagon",
+        "four is enough to count"
+      ],
+      "why_this_beat": "The naming-and-counting ritual \u2014 the chapter's emotional accounting, four children weighed against the eleven that were lost."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Apron Knot",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "intent",
+      "annotations": [
+        "over \u00b7 under \u00b7 around \u00b7 through",
+        "tie",
+        "the knot still came"
+      ],
+      "why_this_beat": "Hand-to-hand inheritance rendered as pure craft \u2014 the sixth ritual passed not by word but by mirrored fingers."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Spoken Thanks",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "luminous",
+      "annotations": [
+        "thank you.",
+        "(out loud)",
+        "to a red wagon that has not stood at the top of the hill for sixty-three years",
+        "cal didn't know he was humming"
+      ],
+      "why_this_beat": "The climax \u2014 the seventh ritual, the one twelve-year-old Pip skipped, spoken now and caught by the right witness."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "Seven Named",
+      "page_position": "climax",
+      "weight": "medium",
+      "mood": "satisfied",
+      "annotations": [
+        "TAP \u00b7 OIL \u00b7 HUM \u00b7 COUNT \u00b7 BREATHE \u00b7 TIE \u00b7 THANK",
+        "'seven,' said liss",
+        "seven."
+      ],
+      "why_this_beat": "The naming \u2014 the seven rituals finally spoken aloud as a list, made teachable, made countable."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.png",
+      "scene_name": "Head On Knee",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "consoled",
+      "annotations": [
+        "'tell me which one is the tap'",
+        "so i get it right next time",
+        "and i did.",
+        "THE LAST ONE WHO REMEMBERS / THE FIRST ONE WHO WILL"
+      ],
+      "why_this_beat": "The closing image \u2014 the transmission complete enough to rest on, knee and head, teacher and learner."
+    }
+  ]
+}

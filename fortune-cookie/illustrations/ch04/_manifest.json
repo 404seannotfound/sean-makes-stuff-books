@@ -1,0 +1,65 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Pale Moon",
+    "name_slug": "pale_moon",
+    "file": "beat_01_pale_moon.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Desolate"
+  },
+  {
+    "index": 2,
+    "scene_name": "Empty Stage",
+    "name_slug": "empty_stage",
+    "file": "beat_02_empty_stage.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Liminal"
+  },
+  {
+    "index": 3,
+    "scene_name": "Hands Buffering",
+    "name_slug": "hands_buffering",
+    "file": "beat_03_hands_buffering.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Numb"
+  },
+  {
+    "index": 4,
+    "scene_name": "Sleeping Birds",
+    "name_slug": "sleeping_birds",
+    "file": "beat_04_sleeping_birds.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Investigative"
+  },
+  {
+    "index": 5,
+    "scene_name": "Two Columns",
+    "name_slug": "two_columns",
+    "file": "beat_05_two_columns.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Determined"
+  },
+  {
+    "index": 6,
+    "scene_name": "Flour Streak",
+    "name_slug": "flour_streak",
+    "file": "beat_06_flour_streak.jpeg",
+    "position": "climax",
+    "weight": "medium",
+    "mood": "Tender"
+  },
+  {
+    "index": 7,
+    "scene_name": "Cookie Lamplight",
+    "name_slug": "cookie_lamplight",
+    "file": "beat_07_cookie_lamplight.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Resolute"
+  }
+]

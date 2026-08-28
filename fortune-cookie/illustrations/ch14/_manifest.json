@@ -1,0 +1,65 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Kitchen Farewell",
+    "name_slug": "kitchen_farewell",
+    "file": "beat_01_kitchen_farewell.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Solemn"
+  },
+  {
+    "index": 2,
+    "scene_name": "Sleeping Birds",
+    "name_slug": "sleeping_birds",
+    "file": "beat_02_sleeping_birds.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Reverent"
+  },
+  {
+    "index": 3,
+    "scene_name": "Grandmother's Vantage",
+    "name_slug": "grandmother_s_vantage",
+    "file": "beat_03_grandmother_s_vantage.jpeg",
+    "position": "midchapter",
+    "weight": "high",
+    "mood": "Luminous"
+  },
+  {
+    "index": 4,
+    "scene_name": "Trembling Spoon",
+    "name_slug": "trembling_spoon",
+    "file": "beat_04_trembling_spoon.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Aching"
+  },
+  {
+    "index": 5,
+    "scene_name": "Hidden Ledger",
+    "name_slug": "hidden_ledger",
+    "file": "beat_05_hidden_ledger.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Revelatory"
+  },
+  {
+    "index": 6,
+    "scene_name": "Not Magic",
+    "name_slug": "not_magic",
+    "file": "beat_06_not_magic.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Weighted"
+  },
+  {
+    "index": 7,
+    "scene_name": "Father Daughter",
+    "name_slug": "father_daughter",
+    "file": "beat_07_father_daughter.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Tender"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Tuesday Hunting",
+    "name_slug": "tuesday_hunting",
+    "file": "beat_01_tuesday_hunting.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Conspiratorial"
+  },
+  {
+    "index": 2,
+    "scene_name": "Bridge Reader",
+    "name_slug": "bridge_reader",
+    "file": "beat_02_bridge_reader.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Tentative"
+  },
+  {
+    "index": 3,
+    "scene_name": "Set Table",
+    "name_slug": "set_table",
+    "file": "beat_03_set_table.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Anticipatory"
+  },
+  {
+    "index": 4,
+    "scene_name": "Threshold Crossed",
+    "name_slug": "threshold_crossed",
+    "file": "beat_04_threshold_crossed.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Vigilant"
+  },
+  {
+    "index": 5,
+    "scene_name": "Fortune Cracked",
+    "name_slug": "fortune_cracked",
+    "file": "beat_05_fortune_cracked.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Devastating"
+  },
+  {
+    "index": 6,
+    "scene_name": "Clean Exit",
+    "name_slug": "clean_exit",
+    "file": "beat_06_clean_exit.jpeg",
+    "position": "closing",
+    "weight": "medium",
+    "mood": "Irreversible"
+  },
+  {
+    "index": 7,
+    "scene_name": "Two Accusations",
+    "name_slug": "two_accusations",
+    "file": "beat_07_two_accusations.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Desolate"
+  }
+]

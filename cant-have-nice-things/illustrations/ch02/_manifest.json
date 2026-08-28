@@ -1,0 +1,119 @@
+{
+  "chapter": 2,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.png",
+      "scene_name": "Hill Dawn",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "reverent",
+      "annotations": [
+        "THE HILL SMELLED LIKE APPLES AND ROPE",
+        "morning, old friend",
+        "eleven slats \u00b7 four wheels \u00b7 one rope"
+      ],
+      "why_this_beat": "Establishes the wagon, the hill, and the ritual world before any human action begins."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.png",
+      "scene_name": "Green Cloth",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "tender",
+      "annotations": [
+        "soft as a moth",
+        "the cloth comes first",
+        "Eamon Halloran"
+      ],
+      "why_this_beat": "The small private gesture that opens the ritual \u2014 character study of Grandfather before the seven begin."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.png",
+      "scene_name": "Seven Saints",
+      "page_position": "midchapter",
+      "weight": "high",
+      "mood": "liturgical",
+      "annotations": [
+        "ONE \u00b7 TWO \u00b7 THREE \u00b7 FOUR \u00b7 FIVE \u00b7 SIX \u00b7 SEVEN",
+        "tap \u00b7 oil \u00b7 hum \u00b7 count \u00b7 breathe \u00b7 tie \u00b7 thank",
+        "HE LEARNED BY DOING. SO DID HIS.",
+        "the seven small things"
+      ],
+      "why_this_beat": "The chapter's central image \u2014 the visual keynote that names and shows all seven rituals at once."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.png",
+      "scene_name": "Counting Eleven",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "patient",
+      "annotations": [
+        "one two three four five six seven eight nine ten eleven",
+        "there had always been eleven",
+        "he counted them anyway"
+      ],
+      "why_this_beat": "Isolates one ritual to show its strange tenderness \u2014 counting what cannot have changed."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.png",
+      "scene_name": "Figure Eight",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "precise",
+      "annotations": [
+        "two circles holding hands",
+        "it held",
+        "SIX"
+      ],
+      "why_this_beat": "A tight craft-moment isolating one of the seven \u2014 the knot that will matter later when Pip skips it."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.png",
+      "scene_name": "Thank You",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "grateful",
+      "annotations": [
+        "thank you",
+        "SEVEN",
+        "in a voice you might use for a person"
+      ],
+      "why_this_beat": "The seventh ritual standing alone \u2014 the one Pip will eventually drop, framed here at its fullest weight."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.png",
+      "scene_name": "Watching Grass",
+      "page_position": "climax",
+      "weight": "medium",
+      "mood": "conspiratorial",
+      "annotations": [
+        "I'VE GOT THIS",
+        "she had been up for four minutes",
+        "Pip, age ten"
+      ],
+      "why_this_beat": "Introduces Young Pip as the secret watcher \u2014 the small bright certainty that will become the wound."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.png",
+      "scene_name": "Lamp Lighting",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "ominous-bright",
+      "annotations": [
+        "almost \u2014 almost \u2014 her turn",
+        "remembering and knowing are cousins, not twins",
+        "a small bright certainty",
+        "Pip!"
+      ],
+      "why_this_beat": "The chapter's closing image \u2014 Pip's certainty lit like a lamp, with the narrator's quiet warning lettered beside it."
+    }
+  ]
+}

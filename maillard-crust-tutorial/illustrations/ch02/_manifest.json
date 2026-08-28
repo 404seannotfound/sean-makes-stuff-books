@@ -1,0 +1,44 @@
+[
+  {
+    "file": "beat_01.jpeg",
+    "scene_name": "Twin Steaks",
+    "position": "opening",
+    "mood": "studious"
+  },
+  {
+    "file": "beat_02.jpeg",
+    "scene_name": "Pencil Point",
+    "position": "early",
+    "mood": "warm"
+  },
+  {
+    "file": "beat_03.jpeg",
+    "scene_name": "Measure Mara",
+    "position": "midchapter",
+    "mood": "precise"
+  },
+  {
+    "file": "beat_04.jpeg",
+    "scene_name": "Fat Cap Score",
+    "position": "midchapter",
+    "mood": "instructional"
+  },
+  {
+    "file": "beat_05.jpeg",
+    "scene_name": "Stolen Bite",
+    "position": "turning",
+    "mood": "guilty"
+  },
+  {
+    "file": "beat_06.jpeg",
+    "scene_name": "Notebook Note",
+    "position": "climax",
+    "mood": "deadpan"
+  },
+  {
+    "file": "beat_07.jpeg",
+    "scene_name": "Resting Pair",
+    "position": "closing",
+    "mood": "quiet"
+  }
+]

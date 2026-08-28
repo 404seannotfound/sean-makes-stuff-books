@@ -1,0 +1,160 @@
+{
+  "chapter": 3,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Open Arms",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Tranquil",
+      "annotations": [
+        "shade pooled like water",
+        "the staff lay still and unlit",
+        "four pairs of eyes",
+        "CHAPTER 3: LAUREL'S RIVER"
+      ],
+      "why_this_beat": "The opening tableau establishes the teaching circle under the fig tree, grounding the chapter's setting and the relationship between teacher and students."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Heartbeat Paw",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Intimate",
+      "annotations": [
+        "breathe IN for a three-count",
+        "the stillness you keep",
+        "as easy as sleep"
+      ],
+      "why_this_beat": "This beat isolates the physical teaching moment \u2014 April demonstrating the breath count with her paw on her heart \u2014 anchoring the lesson's emotional core before the breath rings appear."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Golden Rings",
+      "page_position": "early",
+      "weight": "high",
+      "mood": "Magical",
+      "annotations": [
+        "rings of pale gold",
+        "each ring like a promise",
+        "OUT for a four-count"
+      ],
+      "why_this_beat": "The breath rings are a signature visual motif of the book \u2014 this is their first full appearance, establishing the magical-realist element of visible breath as craft."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Four Voices",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Joyful",
+      "annotations": [
+        "We breathe in for three!",
+        "one golden rush",
+        "Mango's spun upward \u2014 Dusty's slow-burn"
+      ],
+      "why_this_beat": "The chorus moment \u2014 four distinct personalities made visible through their unique breath rings \u2014 demonstrates the ensemble dynamic and the joy of collective practice."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Fuel Dip",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Precise",
+      "annotations": [
+        "dip and lift and wait for the line",
+        "not too much, not little",
+        "STEP SIX: THE FUEL-UP"
+      ],
+      "why_this_beat": "The fuel-up demonstration is the chapter's second teaching beat, showing April's physical mastery and precision \u2014 the mime without fire carries its own visual weight."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Riddle Asks",
+      "page_position": "turning",
+      "weight": "medium",
+      "mood": "Curious",
+      "annotations": [
+        "But WHY is it six and the breath count is five?",
+        "Does the order survive?",
+        "\u2014 tap tap tap \u2014"
+      ],
+      "why_this_beat": "Riddle's question is the chapter's intellectual turning point \u2014 it forces April to articulate the relationship between breath and steadiness, frame and fire."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Frame Holds",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Resonant",
+      "annotations": [
+        "The fire AND the frame",
+        "the frame holds the fire",
+        "a plucked, ringing wire"
+      ],
+      "why_this_beat": "April's pause on the word 'fire' is the thematic hinge of the chapter \u2014 the moment the lesson touches something deeper than technique, foreshadowing the frame-and-fire tension of the whole book."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Refrain Ring",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Triumphant",
+      "annotations": [
+        "The circle is drawn and the safety's begun!",
+        "Six steps and we're steady!",
+        "Six steps and we're fine!"
+      ],
+      "why_this_beat": "The full refrain sung together is the chapter's peak of collective joy \u2014 the ritual complete in voice if not yet in fire \u2014 and the emotional high before the quiet fall."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Stopped Couplet",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Aching",
+      "annotations": [
+        "She taught me the dragon, she taught me the \u2014",
+        "a door left ajar",
+        "Her name was Laurel-Jane"
+      ],
+      "why_this_beat": "This is the chapter's emotional climax and the visual keynote \u2014 April's unfinished couplet about Laurel is the wound at the center of the story, and the four friends' distinct reactions map the ensemble's emotional range."
+    },
+    {
+      "index": 10,
+      "filename": "beat_10.jpeg",
+      "scene_name": "Mango Fills",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Bittersweet",
+      "annotations": [
+        "She taught you the EVERYTHING!",
+        "the rhyme wasn't April's",
+        "the line wasn't earned"
+      ],
+      "why_this_beat": "Mango filling April's unfinished couplet with her own bright words is the chapter's sharpest character moment \u2014 generous and wrong at once \u2014 and Fern's silent recognition deepens the emotional complexity."
+    },
+    {
+      "index": 11,
+      "filename": "beat_11.jpeg",
+      "scene_name": "Amber Track",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Longing",
+      "annotations": [
+        "the half-finished couplet hung there",
+        "she had more to learn",
+        "\u2014 and hung \u2014 till the last of the light slipped away"
+      ],
+      "why_this_beat": "The closing image \u2014 April walking away with the story unfinished, the friends watching, the scorch mark glowing \u2014 leaves the reader leaning forward into the gap, exactly as the chapter intends."
+    }
+  ]
+}

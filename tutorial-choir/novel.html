@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Console Conjurers — Sean Makes Stuff</title>
+<meta name="description" content="A short illustrated technical tutorial in 8 steps — Mezieres-watercolor panels, 74 hand-painted beats, a 40-minute audiobook narrated by 3 distinct voices. Lor and Vex set up Claude Code, Choir, skills, the image-gen hack, and PROCESS.md for solo D&D.">
+<style>
+:root {
+  --paper: #f4eddd;
+  --paper-border: #c4b489;
+  --ink: #1d1d1f;
+  --ink-soft: #6e6e73;
+  --accent-rust: #b1593a;
+  --accent-gold: #c69b3c;
+  --slate: #3f6a82;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--paper); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; color: var(--ink); }
+.book-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(244,237,221,0.95); backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--paper-border);
+  padding: 14px 24px;
+  display: flex; align-items: center; gap: 16px;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.book-nav .label { flex: 1; font-style: italic; }
+.book-nav a { color: var(--accent-rust); text-decoration: none; border-bottom: 1px solid transparent; }
+.book-nav a:hover { border-bottom-color: var(--accent-rust); }
+main.book { max-width: 760px; margin: 0 auto; padding: 16px 24px 96px; }
+.cover { margin: 16px 0 32px; }
+.cover__art { width: 100%; aspect-ratio: 1/1; background: var(--paper); border: 1px solid var(--paper-border); border-radius: 14px; overflow: hidden; }
+.cover__art img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.cover__title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 3rem; line-height: 1.1; color: var(--ink); margin: 32px 0 8px; text-align: center; }
+.cover__subtitle { font-family: "Iowan Old Style", serif; font-size: 1.05rem; color: var(--ink-soft); text-align: center; font-style: italic; }
+.cover__author { font-family: "Iowan Old Style", serif; font-size: 1.05rem; color: var(--ink-soft); text-align: center; margin-top: 8px; }
+.meet { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 32px 0 40px; }
+.meet figure { margin: 0; text-align: center; }
+.meet img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 12px; border: 1px solid var(--paper-border); background: var(--paper); }
+.meet figcaption { margin-top: 10px; font-family: "Iowan Old Style", serif; }
+.meet figcaption strong { display: block; font-size: 1rem; color: var(--ink); }
+.meet figcaption em { display: block; color: var(--ink-soft); font-size: 0.86rem; margin-top: 4px; font-style: italic; }
+.audio-hero { margin: 16px 0 32px; padding: 18px 20px; background: #fff; border: 1px solid var(--paper-border); border-radius: 10px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-family: "Iowan Old Style", serif; }
+.audio-hero__label { font-style: italic; color: var(--ink-soft); font-size: 0.95rem; }
+.audio-hero audio { flex: 1; min-width: 260px; }
+.audio-hero__download { font-family: "Iowan Old Style", serif; font-size: 0.9rem; color: var(--accent-rust); text-decoration: none; padding: 8px 14px; border: 1px solid var(--paper-border); border-radius: 8px; background: var(--paper); white-space: nowrap; }
+.audio-hero__download:hover { background: var(--accent-gold); color: var(--ink); border-color: var(--accent-gold); }
+.audio-hero__download small { display: block; font-size: 0.72rem; font-style: italic; color: var(--ink-soft); margin-top: 2px; }
+.audio-hero__download:hover small { color: var(--ink); }
+.toc { margin: 32px 0 56px; padding: 24px 28px; background: #fff; border: 1px solid var(--paper-border); border-radius: 10px; }
+.toc h2 { font-family: "Iowan Old Style", serif; font-size: 1.4rem; margin-bottom: 14px; }
+.toc ol { list-style: none; font-family: "Iowan Old Style", serif; }
+.toc li { padding: 6px 0; border-bottom: 1px dotted var(--paper-border); }
+.toc li:last-child { border-bottom: 0; }
+.toc a { color: var(--ink); text-decoration: none; display: block; }
+.toc a:hover { color: var(--accent-rust); }
+.toc__num { display: inline-block; width: 32px; color: var(--ink-soft); }
+.chapter { margin-top: 64px; }
+.chapter--first { margin-top: 24px; }
+.ch-head { text-align: center; margin-bottom: 32px; }
+.ch-num { font-family: "Iowan Old Style", serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent-rust); margin-bottom: 12px; }
+.ch-title { font-family: "Iowan Old Style", serif; font-size: 2.2rem; color: var(--ink); }
+.audio-chapter { margin: 0 -20px 24px; padding: 12px 16px; background: #fff; border: 1px solid var(--paper-border); border-radius: 8px; display: flex; align-items: center; gap: 14px; font-family: "Iowan Old Style", serif; }
+.audio-chapter__icon { font-size: 1.3rem; }
+.audio-chapter__label { font-style: italic; color: var(--ink-soft); font-size: 0.9rem; min-width: 120px; }
+.audio-chapter audio { flex: 1; min-width: 200px; }
+.narrative { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.08rem; line-height: 1.74; }
+.narrative p { margin: 0 0 1.05em; }
+.narrative p:first-of-type::first-letter { font-family: "Iowan Old Style", serif; font-size: 3.4rem; float: left; line-height: 0.92; padding-right: 10px; padding-top: 4px; color: var(--accent-rust); }
+.narrative code { font-family: "SF Mono", "Menlo", monospace; background: rgba(63,106,130,0.13); padding: 0.05em 0.32em; border-radius: 4px; color: var(--ink); font-size: 0.92em; }
+.narrative pre { background: #1d1814; color: #f6e5c3; padding: 14px 18px; border-radius: 8px; overflow-x: auto; margin: 18px 0; font-family: "SF Mono", "Menlo", monospace; font-size: 0.84rem; line-height: 1.45; border: 1px solid #2b211a; }
+.narrative pre code { background: transparent; padding: 0; color: inherit; font-size: inherit; }
+.beat-figure { margin: 32px -20px; }
+.beat-figure img { width: 100%; border-radius: 10px; border: 1px solid var(--paper-border); background: var(--paper); display: block; }
+.beat-figure figcaption { margin-top: 8px; font-size: 0.85rem; font-style: italic; color: var(--ink-soft); text-align: center; font-family: "Iowan Old Style", serif; }
+.screenshot-figure { margin: 32px -20px; text-align: center; }
+.screenshot-frame { display: block; padding: 26px 4px 4px; background: linear-gradient(#ded2b5, #d4c8a8); border-radius: 12px 12px 8px 8px; border: 1px solid var(--paper-border); position: relative; box-shadow: 0 6px 22px rgba(40,28,18,0.14); }
+.screenshot-frame::before { content: ""; position: absolute; top: 9px; left: 14px; width: 10px; height: 10px; border-radius: 50%; background: #d27d6b; box-shadow: 18px 0 0 #e3b56b, 36px 0 0 #95b67a; }
+.screenshot-frame img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.screenshot-figure figcaption { margin-top: 10px; font-size: 0.88rem; font-style: italic; color: var(--ink-soft); text-align: center; font-family: "Iowan Old Style", serif; line-height: 1.5; padding: 0 18px; }
+.screenshot-figure figcaption strong { color: var(--ink); font-style: normal; }
+.terminal-figure { margin: 32px -20px; text-align: center; }
+.terminal-frame { display: block; padding: 28px 18px 18px; background: #1d1814; border-radius: 12px 12px 8px 8px; border: 1px solid #2b211a; position: relative; text-align: left; box-shadow: 0 6px 22px rgba(40,28,18,0.18); }
+.terminal-dots { position: absolute; top: 11px; left: 14px; display: flex; gap: 6px; }
+.terminal-dots span { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+.terminal-dots span:nth-child(1) { background: #ff5f57; }
+.terminal-dots span:nth-child(2) { background: #febc2e; }
+.terminal-dots span:nth-child(3) { background: #28c840; }
+.terminal-frame pre { background: transparent; color: #f6e5c3; font-family: "SF Mono", "Menlo", monospace; font-size: 0.84rem; line-height: 1.5; margin: 0; padding: 0; border: 0; overflow-x: auto; white-space: pre; }
+.terminal-figure figcaption { margin-top: 10px; font-size: 0.88rem; font-style: italic; color: var(--ink-soft); text-align: center; font-family: "Iowan Old Style", serif; line-height: 1.5; padding: 0 18px; }
+.terminal-figure figcaption strong { color: var(--ink); font-style: normal; }
+.back-matter { margin-top: 96px; padding-top: 32px; border-top: 1px solid var(--paper-border); text-align: center; color: var(--ink-soft); font-family: "Iowan Old Style", serif; font-style: italic; font-size: 0.95rem; }
+@media (max-width: 540px) {
+  .meet { grid-template-columns: 1fr; }
+  .cover__title { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+<nav class="book-nav">
+  <span class="label">The Console Conjurers · 6,571 words · 74 illustrations · 40 min audio</span>
+  <a href="https://sean-makes-stuff.com/">Sean Makes Stuff</a>
+</nav>
+<main class="book">
+  <section class="cover">
+    <div class="cover__art"><img src="storyboard/cover.jpg" alt="Cover" /></div>
+    <h1 class="cover__title">The Console Conjurers</h1>
+    <p class="cover__subtitle">a short illustrated tutorial on setting up the agentic-AI workstation</p>
+    <p class="cover__author">by Sean Spratt</p>
+  </section>
+
+  <div class="audio-hero">
+    <div class="audio-hero__label">🎧 Full audiobook · 40 min · 3 voices · 8 chapter markers</div>
+    <audio controls preload="none" src="audio/audiobook.mp3"></audio>
+    <a class="audio-hero__download" href="audio/audiobook.mp3" download>⬇ Download MP3<small>~20 MB · open in a podcast app to see chapters</small></a>
+  </div>
+
+  <section class="meet">
+    <figure>
+      <img src="characters/lor.jpg" alt="Lor" />
+      <figcaption><strong>Lor</strong><em>the methodical one · reads the docs</em></figcaption>
+    </figure>
+    <figure>
+      <img src="characters/vex.jpg" alt="Vex" />
+      <figcaption><strong>Vex</strong><em>the chaotic enthusiast · types first</em></figcaption>
+    </figure>
+    <figure>
+      <img src="characters/cricket.jpg" alt="Cricket" />
+      <figcaption><strong>Cricket</strong><em>cat · supervisor</em></figcaption>
+    </figure>
+  </section>
+
+  <nav class="toc">
+    <h2>The eight steps</h2>
+    <ol>
+      <li><a href="#ch-01"><span class="toc__num">1.</span> The Empty Console</a></li>
+      <li><a href="#ch-02"><span class="toc__num">2.</span> Homebrew, the Foundation</a></li>
+      <li><a href="#ch-03"><span class="toc__num">3.</span> The Claude in Your Terminal</a></li>
+      <li><a href="#ch-04"><span class="toc__num">4.</span> The Choir Materializes</a></li>
+      <li><a href="#ch-05"><span class="toc__num">5.</span> The Spellbook — Adding a Skill</a></li>
+      <li><a href="#ch-06"><span class="toc__num">6.</span> The Drawing Hack</a></li>
+      <li><a href="#ch-07"><span class="toc__num">7.</span> Cooking the Game — PROCESS.md</a></li>
+      <li><a href="#ch-08"><span class="toc__num">8.</span> Press Play</a></li>
+    </ol>
+  </nav>
+
+<section id="ch-01" class="chapter chapter--first">
+  <div class="ch-head"><div class="ch-num">Step 1</div><h2 class="ch-title">The Empty Console</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 1</div>
+    <audio controls preload="none" src="audio/chapter_01.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>The kitchen is doing its best impression of an ordinary kitchen. Copper pans, a kettle warming on the low gas burner, a brick of butter softening on the counter, a small bowl of tomatoes Lor has been ignoring for two days. The window above the sink is open to the wrong horizon — a sandstone temple half-swallowed by violet-blue vines, a sky the colour of old maps — but neither of them pays it any mind anymore. The horizon is just where they live. The kitchen is where they cook.</p>
+    <p>Lor sets the new laptop on the wooden table between them and opens the lid like she&#x27;s untying a parcel. The screen wakes up; the screen-glow paints a soft warm rectangle onto her cheekbones and onto Vex&#x27;s, who is leaning so far over her shoulder that his hair is almost in her mouth.</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_01.jpg" alt="The Open Lid" loading="lazy" /><figcaption>The Open Lid</figcaption></figure>
+    <p>&quot;Move back,&quot; she says, without looking.</p>
+    <p>&quot;I&#x27;m assisting.&quot;</p>
+    <p>&quot;You&#x27;re respirating on me.&quot;</p>
+    <p>&quot;That&#x27;s an <em>intimate</em> form of assistance.&quot; He drops back into his chair, picks up the mug she put down for him, and inhales the steam like he&#x27;s auditioning for a coffee commercial. &quot;So. Day one. Brand new Mac. Empty as a fresh page.&quot;</p>
+    <p>&quot;Empty as a fresh page is a writer&#x27;s metaphor. This is an OS install with about twelve gigs of pre-loaded fonts.&quot;</p>
+    <p>&quot;You really know how to set a mood, Lor.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_02.jpg" alt="Move Back" loading="lazy" /><figcaption>Move Back</figcaption></figure>
+    <p>She gives him the eyebrow. It is <em>the</em> eyebrow — the one that says <em>I have read three blog posts about this thing while you were learning what a kettle is.</em> He grins at her. She does not grin back, but the dry small smile is in her eyes.</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_03.jpg" alt="Dealing The Cards" loading="lazy" /><figcaption>Dealing The Cards</figcaption></figure>
+    <p>&quot;Okay,&quot; he says, hands flat on the table like he&#x27;s about to deal cards. &quot;The wager.&quot;</p>
+    <p>&quot;The wager.&quot;</p>
+    <p>&quot;By the time we&#x27;re done, this thing—&quot; he points at the laptop &quot;—runs us a game of D&amp;D. Real game. Real dice. Goblins. Lasers. Whatever.&quot;</p>
+    <p>&quot;Lasers aren&#x27;t in D&amp;D.&quot;</p>
+    <p>&quot;Mine has lasers.&quot;</p>
+    <p>She breathes in. &quot;By the time we&#x27;re done,&quot; she repeats, ignoring the lasers, &quot;the laptop has Claude Code installed. The Choir CLI working with at least three model providers. A skill loaded into Claude Code that auto-triggers from a description. An image-generation hack wired up that lets Claude draw by shelling out to somebody else&#x27;s API. And a small PROCESS.md that runs a solo D&amp;D loop end-to-end.&quot;</p>
+    <p>&quot;And the loser?&quot;</p>
+    <p>&quot;Writes the PROCESS.md by hand.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_04.jpg" alt="Cricket Votes" loading="lazy" /><figcaption>Cricket Votes</figcaption></figure>
+    <p>He whistles. &quot;That&#x27;s actually the <em>fun</em> part.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_05.jpg" alt="Off The Lid" loading="lazy" /><figcaption>Off The Lid</figcaption></figure>
+    <p>&quot;That&#x27;s why it&#x27;s the prize.&quot;</p>
+    <p>He leans back, considers her. &quot;You know I&#x27;m going to win.&quot;</p>
+    <p>&quot;You&#x27;re going to <em>type fastest</em>, which is different.&quot;</p>
+    <p>Cricket the cat, smoky blue-grey with white socks and the most unimpressed face in the kingdom, walks across the keyboard from left to right and sits down precisely on the trackpad. The cursor on the screen leaps into the upper-left corner and stays there.</p>
+    <p>&quot;Cricket,&quot; Vex says solemnly, &quot;is voting with her feet.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_06.jpg" alt="Open Terminal" loading="lazy" /><figcaption>Open Terminal</figcaption></figure>
+    <p>&quot;Cricket is <em>closing the lid</em>. With her <em>whole body</em>.&quot;</p>
+    <p>Lor scoops her gently onto the floor and turns the laptop slightly toward Vex. &quot;Open Terminal.&quot;</p>
+    <p>&quot;Open it how?&quot;</p>
+    <p>She points at the keyboard. &quot;Command-Space. Type <em>terminal</em>. Press return. That&#x27;s the whole motion.&quot;</p>
+    <p>He does. The dock animates. A window opens — a dark rectangle, a slow-blinking cursor, a single line that says nothing and waits.</p>
+    <p>&quot;Huh,&quot; he says, flat. &quot;Neat.&quot;</p>
+    <p>&quot;That&#x27;s the whole machine,&quot; Lor says. &quot;That&#x27;s where everything you ever build with it starts. You type a thing. The thing happens. The machine says what happened. You read what it said. You type the next thing.&quot;</p>
+    <p>&quot;It&#x27;s a conversation.&quot;</p>
+    <p>&quot;It&#x27;s a conversation where one of you has to know the vocabulary.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_07.jpg" alt="The Cursor" loading="lazy" /><figcaption>The Cursor</figcaption></figure>
+    <p>&quot;I have a <em>partner</em> with the vocabulary.&quot;</p>
+    <p>&quot;Lucky you.&quot;</p>
+    <p>He looks at her, then at the empty Terminal, then back at her, then at his mug. The cursor blinks. Outside the window, somewhere on the slate-cloud horizon, a flock of something with wings turns in a long lazy arc and slides behind the temple.</p>
+    <p>&quot;What&#x27;s the first thing we type?&quot; he says.</p>
+    <p>She considers him for a long second. Then she takes the laptop and pulls it toward herself.</p>
+    <p>&quot;<code>brew --version</code>,&quot; she says. &quot;But first — we don&#x27;t have brew yet. So we install it. <em>That&#x27;s</em> chapter two.&quot;</p>
+    <p>He raises his mug.</p>
+    <figure class="beat-figure"><img src="illustrations/ch01/beat_08.jpg" alt="Vista Of Worlds" loading="lazy" /><figcaption>Vista Of Worlds</figcaption></figure>
+    <p>&quot;To chapter two.&quot;</p>
+    <p>Cricket, from the floor, narrows her eyes at both of them.</p>
+  </div>
+</section>
+
+<section id="ch-02" class="chapter">
+  <div class="ch-head"><div class="ch-num">Step 2</div><h2 class="ch-title">Homebrew, the Foundation</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 2</div>
+    <audio controls preload="none" src="audio/chapter_02.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>&quot;Foundation,&quot; Lor says, &quot;is the most important word in this whole book.&quot;</p>
+    <p>&quot;Foundation is the most boring word in this whole book.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_01.jpg" alt="Pointing At The Code Block" loading="lazy" /><figcaption>Pointing At The Code Block</figcaption></figure>
+    <p>&quot;Boring is what foundations are <em>for</em>.&quot;</p>
+    <figure class="screenshot-figure"><div class="screenshot-frame"><img src="screenshots/brew-sh.jpg" alt="Homebrew website with the one-line install command" loading="lazy" /></div><figcaption><strong>brew.sh — the install line</strong> — The brew.sh homepage. The exact install line they paste into Terminal is the black-on-cream block in the middle.</figcaption></figure>
+    <p>She pulls up a web browser tab and types <code>brew.sh</code>. The page is a single very long paragraph and one black-on-cream code block in the middle. She points at the code block. Vex squints.</p>
+    <p>&quot;That&#x27;s it?&quot;</p>
+    <p>&quot;That&#x27;s it.&quot;</p>
+    <p>&quot;That&#x27;s one line.&quot;</p>
+    <p>&quot;It&#x27;s one line that downloads ten thousand lines and runs them.&quot;</p>
+    <p>&quot;Are we <em>concerned</em> about that?&quot;</p>
+    <p>&quot;We&#x27;re concerned-but-doing-it-anyway, which is most things.&quot; She clicks the little copy icon. &quot;The thing on the other end is a community-maintained package manager called Homebrew. Half the open-source Mac world has installed it from this exact line for fifteen years. The author signs releases. We&#x27;ve already decided we trust it.&quot;</p>
+    <p>&quot;That&#x27;s a <em>lot</em> of decisions.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_02.jpg" alt="Hover On Return" loading="lazy" /><figcaption>Hover On Return</figcaption></figure>
+    <p>&quot;That&#x27;s <em>one</em> decision: trust this URL. Open Terminal.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_03.jpg" alt="Waterfall Of Install" loading="lazy" /><figcaption>Waterfall Of Install</figcaption></figure>
+    <p>Vex switches windows. The empty Terminal is still waiting, the cursor patient as a cat. He pastes.</p>
+    <p>He hovers his finger over Return.</p>
+    <pre><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/brew/HEAD/install/install.sh)&quot;</code></pre>
+    <p>&quot;Press return.&quot;</p>
+    <p>&quot;What does it do?&quot;</p>
+    <p>&quot;It downloads an install script, runs it in <code>bash</code>, the script asks you for your password to install some files into <code>/opt/homebrew</code>, and ten minutes later you have <code>brew</code> on your <code>PATH</code>.&quot;</p>
+    <p>&quot;<code>PATH</code>?&quot;</p>
+    <p>&quot;The list of folders your shell searches when you type the name of a command. Adding to your PATH is how &#x27;a thing you installed&#x27; becomes &#x27;a thing you can type the name of.&#x27;&quot;</p>
+    <p>&quot;You said <em>ten minutes</em>.&quot;</p>
+    <p>&quot;I said <em>ten minutes</em>. Do you want to press return or do you want to keep poking at the metaphor.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_04.jpg" alt="Password Silence" loading="lazy" /><figcaption>Password Silence</figcaption></figure>
+    <p>He presses return.</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_05.jpg" alt="Cricket Asleep By Kettle" loading="lazy" /><figcaption>Cricket Asleep By Kettle</figcaption></figure>
+    <p>The screen does the thing.</p>
+    <p>Lines of pale output cascade upward — a slow waterfall of installation chatter, none of it readable to him at this speed, all of it perfectly fine. After about three seconds it asks him for his password.</p>
+    <p>&quot;It&#x27;s not showing my keystrokes.&quot;</p>
+    <p>&quot;It&#x27;s not supposed to. The dots-and-asterisks thing is a UI convention. Old Unix doesn&#x27;t even do that — it just goes silent. It&#x27;s not broken. Type. Press return.&quot;</p>
+    <p>He types his Mac password. Nothing happens visibly. He presses return.</p>
+    <p>The waterfall resumes. Lor leans back, picks up her own mug, and watches him watch the screen.</p>
+    <p>&quot;You&#x27;re nervous.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_06.jpg" alt="Brew Version Returns" loading="lazy" /><figcaption>Brew Version Returns</figcaption></figure>
+    <p>&quot;I am thirty-one years old and I have just trusted a website with the keys to my computer.&quot;</p>
+    <figure class="terminal-figure"><div class="terminal-frame"><div class="terminal-dots"><span></span><span></span><span></span></div><pre>$ brew --version
+Homebrew 5.1.6
+
+$ jq --version
+jq-1.7.1-apple</pre></div><figcaption><strong>brew --version</strong> — After the install finishes — the first confirmation that the package manager is live, and the first tool installed on top of it.</figcaption></figure>
+    <p>&quot;You have <em>also</em> installed every single piece of software you&#x27;ve ever owned on this computer the same way, in principle. This is just the part where you watch it.&quot;</p>
+    <p>Cricket reappears on the table. She steps with great care around the laptop, settles into a perfect compact loaf by the kettle, and closes her eyes. The waterfall continues. The kitchen smells of bread crust and brewing tea. The window-horizon has shaded toward a softer amber.</p>
+    <p>Eight minutes later the Terminal prints something short and goes quiet. The prompt comes back. The cursor blinks.</p>
+    <p>Vex types, very carefully:</p>
+    <pre><code>brew --version</code></pre>
+    <p>The Terminal answers with a single line — a name, a number, a date.</p>
+    <p>&quot;There,&quot; Lor says. &quot;You have a package manager.&quot;</p>
+    <p>&quot;I have a — <em>what now?</em>&quot;</p>
+    <p>&quot;A package manager is a catalog plus an installer. You ask it for a thing by name, it knows where to fetch the thing, where to unpack the thing, how to put the thing on your PATH so you can use the thing. Want a new tool? You don&#x27;t go website-hunting. You go to your <em>package manager.</em>&quot;</p>
+    <p>&quot;And ask for what.&quot;</p>
+    <p>&quot;Try this. It&#x27;s good practice.&quot; She points; he types:</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_07.jpg" alt="Brew Install Jq" loading="lazy" /><figcaption>Brew Install Jq</figcaption></figure>
+    <pre><code>brew install jq</code></pre>
+    <p>Thirty seconds of waterfall. The prompt returns. He types <code>jq --version</code>. The Terminal answers.</p>
+    <p>&quot;What does <code>jq</code> do?&quot;</p>
+    <p>&quot;It eats JSON and lets you ask it questions. Everything we&#x27;re going to install for the rest of the book talks JSON. <code>jq</code> is the smallest possible Swiss-army knife. Now you have one.&quot;</p>
+    <p>&quot;Two tools,&quot; he says, holding up two fingers.</p>
+    <p>&quot;Foundation.&quot; She tilts her head toward the screen. &quot;Brew is the foundation. Everything else gets <em>installed by brew</em> or <em>installed by something brew installed.</em> The whole stack lives here now.&quot;</p>
+    <p>&quot;Foundation. Got it. Boring. Important.&quot;</p>
+    <p>Cricket makes a soft chirping sound — a sleeping-cat noise — without opening her eyes. Outside the window, far on the alien horizon, the temple has gone the colour of new pennies in the dropping light.</p>
+    <p>&quot;Next chapter,&quot; Lor says, &quot;we put Claude in your Terminal.&quot;</p>
+    <p>Vex stares at the cursor.</p>
+    <figure class="beat-figure"><img src="illustrations/ch02/beat_08.jpg" alt="Two Tools" loading="lazy" /><figcaption>Two Tools</figcaption></figure>
+    <p>&quot;I am <em>unreasonably</em> excited about this.&quot;</p>
+    <p>&quot;That tracks.&quot;</p>
+  </div>
+</section>
+
+<section id="ch-03" class="chapter">
+  <div class="ch-head"><div class="ch-num">Step 3</div><h2 class="ch-title">The Claude in Your Terminal</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 3</div>
+    <audio controls preload="none" src="audio/chapter_03.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>&quot;Okay,&quot; Vex says, rolling his sleeves up like a man about to wrestle. &quot;Put a Claude in my Terminal.&quot;</p>
+    <p>&quot;That&#x27;s such a weird sentence.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_01.jpg" alt="Brew Install Claude Code" loading="lazy" /><figcaption>Brew Install Claude Code</figcaption></figure>
+    <p>&quot;Two years ago that was a <em>science fiction</em> sentence. Now it&#x27;s a Tuesday.&quot;</p>
+    <figure class="screenshot-figure"><div class="screenshot-frame"><img src="screenshots/claude-code-docs.jpg" alt="Claude Code overview page from the Anthropic docs" loading="lazy" /></div><figcaption><strong>Claude Code docs</strong> — Claude Code lives at code.claude.com/docs. Native install is one line; Homebrew is one line; both land you in the same place.</figcaption></figure>
+    <p>Lor pulls the laptop toward her and types two characters that change Vex&#x27;s life. He doesn&#x27;t realise that yet.</p>
+    <pre><code>brew install claude-code</code></pre>
+    <p>The waterfall returns — shorter this time, brisker; brew is warmed up. Vex watches the install lines tumble past like he&#x27;s seeing the names of horses on a board.</p>
+    <p>&quot;You can also <code>npm i -g @anthropic-ai/claude-code</code> if you want the manual route,&quot; she says. &quot;Two paths up the same mountain. Brew, for us. Brew handles updates.&quot;</p>
+    <p>When the prompt comes back she types one word and presses return.</p>
+    <pre><code>claude</code></pre>
+    <p>The Terminal <em>changes</em>. Not the colours — the <em>shape</em>. The dark rectangle becomes a wider darker rectangle with a faint warm border, and there is now a different cursor. A <em>thinking</em> cursor. A box with rounded corners that pulses very softly. The space at the bottom invites them to type. There is a status line at the top, several friendly utilities at the bottom, and the strong sense that the room has gained a third presence.</p>
+    <p>Vex says, &quot;Hi.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_02.jpg" alt="Claude Session Opens" loading="lazy" /><figcaption>Claude Session Opens</figcaption></figure>
+    <p>The cursor pulses. A response begins to appear — words assembling in real time, the same way the waterfall earlier was lines, but slower, deliberate, the way a person types when they&#x27;re being careful.</p>
+    <p>&quot;It&#x27;s <em>talking back</em>,&quot; Vex says.</p>
+    <p>&quot;That&#x27;s the point.&quot;</p>
+    <p>&quot;No, but, look — it&#x27;s talking back <em>and</em> it can see the folder we&#x27;re in. It can run shells. It can read files. It can write files. This isn&#x27;t a chatbot.&quot;</p>
+    <p>&quot;This is a colleague who lives in your shell. Different thing.&quot;</p>
+    <p>&quot;You said you&#x27;d explain the money.&quot;</p>
+    <p>&quot;Yes.&quot; She holds up two fingers. &quot;Two ways to pay. One: a <em>subscription</em>. Flat monthly fee. You sign in with an account; the subscription gives you a generous-but-soft budget per session. If you push hard, you eventually get told to slow down for a few hours. Most days you&#x27;ll never see the cap.&quot;</p>
+    <p>&quot;And the other?&quot;</p>
+    <p>&quot;API <em>credits</em>. From the Anthropic Console. You pre-load a balance; each token in and out costs a small fraction of a cent depending on the model. There&#x27;s no daily cap; there&#x27;s just the balance going down.&quot;</p>
+    <p>&quot;So which do we use?&quot;</p>
+    <p>&quot;Subscription. You&#x27;re learning. Subscription is <em>all-you-can-eat-but-please-don&#x27;t-be-a-jerk-about-it</em>. Once you start automating things — fan-outs, batched generations, anything where you might run a thousand requests overnight — that&#x27;s when you mix in credits, because credits don&#x27;t get rate-limited the same way.&quot;</p>
+    <p>&quot;And the model under the hood?&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_03.jpg" alt="Lor Smiles At Haiku" loading="lazy" /><figcaption>Lor Smiles At Haiku</figcaption></figure>
+    <p>&quot;You get to pick. Default&#x27;s a strong one. For drafting code, the bigger model. For quick classifications, the smaller cheaper one. For art-direction stuff, you mix.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_04.jpg" alt="Vex Sees Lor Smile" loading="lazy" /><figcaption>Vex Sees Lor Smile</figcaption></figure>
+    <p>Vex turns back to the screen. He types:</p>
+    <figure class="terminal-figure"><div class="terminal-frame"><div class="terminal-dots"><span></span><span></span><span></span></div><pre>$ which claude
+/Users/seansp/.local/bin/claude
+
+$ claude --version
+2.1.86 (Claude Code)</pre></div><figcaption><strong>claude --version</strong> — Confirming Claude Code is on PATH. The version string is the version of the CLI, not of the underlying model — the CLI picks a model per session.</figcaption></figure>
+    <p>&gt; Write me a haiku about cast iron, but it has to make Lor smile.</p>
+    <p>The thinking-cursor pulses. The reply assembles, line by gentle line. Three short lines. Lor reads them silently. Her face does a thing — a small, brief, traitorous thing — and Vex sees it.</p>
+    <p>&quot;Ha! I <em>saw</em> that. You smiled.&quot;</p>
+    <p>&quot;I was <em>appraising</em>.&quot;</p>
+    <p>&quot;Smiled. Confirmed. The Terminal made you smile.&quot;</p>
+    <p>&quot;The Terminal is showing off because you asked it to.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_05.jpg" alt="Approve The Shell" loading="lazy" /><figcaption>Approve The Shell</figcaption></figure>
+    <p>&quot;This is the <em>whole point</em>. You can ask it to <em>do real things</em>.&quot; He types again:</p>
+    <p>&gt; Make a folder called <code>dnd</code> in my home directory. Then create a file inside it called <code>README.md</code> that just says: This is going to be a game.</p>
+    <p>The cursor pulses. A box appears asking him to approve a shell command. He approves. The shell runs. A second box asks to write the file. He approves. The file is written. He opens it. The two of them stare at one short sentence in a brand-new file in a brand-new folder.</p>
+    <p>&quot;That folder did not exist forty seconds ago,&quot; Vex says.</p>
+    <p>&quot;That folder didn&#x27;t exist forty seconds ago,&quot; Lor agrees.</p>
+    <p>&quot;Promise me something.&quot;</p>
+    <p>&quot;What.&quot;</p>
+    <p>&quot;Promise me we will <em>never lose this feeling</em>.&quot;</p>
+    <p>&quot;Press Ctrl-D to end the session.&quot;</p>
+    <p>&quot;Wait, what — <em>Ctrl-D?</em>&quot;</p>
+    <p>&quot;It tells the shell you&#x27;re done. It closes the session cleanly. Hold on — you don&#x27;t have to lose the <em>feeling</em>. You can lose the <em>session</em>. Sessions are cheap.&quot;</p>
+    <p>He presses Ctrl-D. The Terminal returns to its smaller, quieter shape. The cursor blinks again, normal-sized.</p>
+    <p>Cricket reappears, jumps onto his lap from a height that should not have been physically possible, and settles in like she has always lived there.</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_06.jpg" alt="Folder Did Not Exist" loading="lazy" /><figcaption>Folder Did Not Exist</figcaption></figure>
+    <p>&quot;So next time we run <code>claude</code>,&quot; Vex says, &quot;it&#x27;s a <em>new</em> session?&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_07.jpg" alt="Promise Me" loading="lazy" /><figcaption>Promise Me</figcaption></figure>
+    <p>&quot;New session. Fresh head. Same colleague.&quot;</p>
+    <figure class="screenshot-figure"><div class="screenshot-frame"><img src="screenshots/anthropic-console.jpg" alt="The Anthropic Console sign-in page" loading="lazy" /></div><figcaption><strong>console.anthropic.com</strong> — If you go the API-credits route, you create an account at console.anthropic.com, load a small balance, and generate a key. The subscription route does not need this page.</figcaption></figure>
+    <p>&quot;And the colleague — what&#x27;s <em>its</em> name?&quot;</p>
+    <p>&quot;Claude.&quot;</p>
+    <p>&quot;I&#x27;m gonna call him <em>Claudia</em>.&quot;</p>
+    <p>&quot;Claude is a personal name.&quot;</p>
+    <p>&quot;<em>Claudia</em> is more elegant.&quot;</p>
+    <p>&quot;You&#x27;re impossible.&quot;</p>
+    <p>&quot;You said <em>colleague.</em>&quot;</p>
+    <p>She sighs, but her shoulders are loose. Outside the window the temple has gone full umber, like a coal at the end of a fire.</p>
+    <figure class="beat-figure"><img src="illustrations/ch03/beat_08.jpg" alt="Cricket Falls Off" loading="lazy" /><figcaption>Cricket Falls Off</figcaption></figure>
+    <p>&quot;Next chapter,&quot; she says. &quot;We summon the choir.&quot;</p>
+    <p>Vex sits up so fast Cricket falls off.</p>
+  </div>
+</section>
+
+<section id="ch-04" class="chapter">
+  <div class="ch-head"><div class="ch-num">Step 4</div><h2 class="ch-title">The Choir Materializes</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 4</div>
+    <audio controls preload="none" src="audio/chapter_04.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>&quot;Okay,&quot; Vex says. &quot;So we have one Claude. We have one <em>colleague</em>. Why are we installing more?&quot;</p>
+    <p>&quot;Because one colleague has <em>one opinion</em>.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_01.jpg" alt="Clone Choir" loading="lazy" /><figcaption>Clone Choir</figcaption></figure>
+    <p>&quot;That&#x27;s not even slightly fair to Claude.&quot;</p>
+    <figure class="screenshot-figure"><div class="screenshot-frame"><img src="screenshots/choir-projectpage.jpg" alt="The Choir project page on sean-makes-stuff.com" loading="lazy" /></div><figcaption><strong>sean-makes-stuff.com/projects/choir.html</strong> — Choir lives at sean-makes-stuff.com/projects/choir.html. macOS app, CLI, and Claude Code skill in one bundle — routes to OpenAI, Anthropic, Google Gemini, xAI Grok, DeepSeek, Mistral, Groq, Cerebras, Perplexity, OpenRouter, Ollama, or any OpenAI-compatible endpoint. The signed `.dmg` is at github.com/404seannotfound/seanwebsite/blob/main/Choir-1.6.dmg — download, drag to Applications, and the `choir` CLI installs alongside it.</figcaption></figure>
+    <p>&quot;It&#x27;s not about fair. It&#x27;s about <em>fan-out</em>. Watch.&quot;</p>
+    <p>Lor flips the laptop back toward herself. Cricket is still sulking under the table about the falling incident. The window-horizon is doing that thing where two of the smaller crystal spires catch the dropping sun and look briefly like candles. Lor types.</p>
+    <pre><code>git clone https://github.com/404seannotfound/choir.git ~/code/choir
+cd ~/code/choir
+swift build -c release
+sudo cp .build/release/choir /usr/local/bin/</code></pre>
+    <p>&quot;What&#x27;s this?&quot;</p>
+    <p>&quot;This is the <code>choir</code> CLI. It&#x27;s a small command-line tool that takes one prompt and <em>fans it out</em> across several model providers simultaneously, then gives you all their answers back side-by-side.&quot;</p>
+    <p>&quot;All of them at once.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_02.jpg" alt="Adding Api Keys" loading="lazy" /><figcaption>Adding Api Keys</figcaption></figure>
+    <p>&quot;All of them at once. OpenAI&#x27;s models, Anthropic&#x27;s models, Google&#x27;s Gemini, xAI&#x27;s Grok, even local Ollama. One command. N raw answers. You pick the one you like, or you have <em>another</em> model judge them, or you save the run and come back to it later.&quot;</p>
+    <figure class="terminal-figure"><div class="terminal-frame"><div class="terminal-dots"><span></span><span></span><span></span></div><pre>$ which choir
+/Users/seansp/.local/bin/choir
+
+$ choir --help
+OVERVIEW: Route LLM calls across providers, share config with the Choir macOS
+app.
+
+USAGE: choir &lt;subcommand&gt;
+
+OPTIONS:
+  --version               Show the version.
+  -h, --help              Show help information.
+
+SUBCOMMANDS:
+  ask (default)           Send a prompt to one or more configured models.
+  models                  List, add, or modify the configured LLM models.
+  keys                    Manage API keys (stored in the same DB as the GUI).
+  runs                    List, inspect, and re-summarize saved comparison runs
+                          (shared with the Choir GUI history).</pre></div><figcaption><strong>choir --help</strong> — After `swift build` finishes and the binary is on PATH, this is what the CLI looks like. `ask` for one-shot prompts, `models` for the provider catalog, `keys` for credentials, `runs` for saved fan-outs.</figcaption></figure>
+    <p>The build finishes. The Terminal returns to its quiet patient self.</p>
+    <p>&quot;Keys,&quot; she says.</p>
+    <p>&quot;Keys?&quot;</p>
+    <p>&quot;API keys. Each provider needs one. You go to each provider&#x27;s console — OpenAI&#x27;s, Anthropic&#x27;s, Google&#x27;s, xAI&#x27;s — you create an account, you put a small payment method on file, you generate a key. The key is a long string that authenticates you. <em>Treat it like a password.</em> It goes in <code>.env</code>. It does not go in git. It does not go in Slack. It does not go in a screenshot. It does not go on a cocktail napkin.&quot;</p>
+    <p>&quot;It does not go on a cocktail napkin.&quot;</p>
+    <p>&quot;It does not go on a cocktail napkin.&quot;</p>
+    <p>She opens the <code>.env.example</code>, copies it to <code>.env</code>, and the two of them spend a calm five minutes pasting in keys from the consoles she had open in browser tabs. Vex&#x27;s shoulders ratchet up two notches when he pastes; he is suddenly aware that he is handling money.</p>
+    <p>&quot;Now,&quot; Lor says, when the file is saved, &quot;watch.&quot;</p>
+    <pre><code>choir &quot;Write a haiku about cast iron pans&quot; --models gpt-5,opus-4-7,gemini-3,grok-4</code></pre>
+    <p>Four spinners. Four quiet seconds. Then four blocks of output, fanned across the terminal like cards on a table. Four haiku. Each in a slightly different voice.</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_03.jpg" alt="Four Tablets Of Light" loading="lazy" /><figcaption>Four Tablets Of Light</figcaption></figure>
+    <p>&quot;Look at that,&quot; Vex says, reverent.</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_04.jpg" alt="Reading The Four" loading="lazy" /><figcaption>Reading The Four</figcaption></figure>
+    <p>&quot;Each model has a temperament. Opus is the warm theatrical one. GPT-5 is the precise polished one. Gemini is the dryly clean one. Grok will roast you and the cast iron pan.&quot;</p>
+    <figure class="terminal-figure"><div class="terminal-frame"><div class="terminal-dots"><span></span><span></span><span></span></div><pre>$ choir models list
+
+[OpenAI]
+  • GPT-5  —  gpt-5
+  • GPT-5 Mini  —  gpt-5-mini
+  • GPT-4o  —  gpt-4o
+  • GPT-4.1  —  gpt-4.1
+  • o3  —  o3
+  • o4 Mini  —  o4-mini
+
+[Anthropic]
+  • Claude Opus 4.7  —  claude-opus-4-7
+  • Claude Opus 4.6  —  claude-opus-4-6
+  • Claude Sonnet 4.6  —  claude-sonnet-4-6
+  • Claude Haiku 4.5  —  claude-haiku-4-5-20251001
+
+[Google Gemini]
+  • Gemini 3 Pro  —  gemini-3-pro-preview
+  • Gemini 3 Flash  —  gemini-3-flash-preview
+  • Gemini 2.5 Pro  —  gemini-2.5-pro</pre></div><figcaption><strong>choir models list</strong> — The catalog of providers Choir can route to. The names on the right are the IDs you pass to `choir ask --models &lt;id&gt;,&lt;id&gt;,…`. Mix-and-match at will.</figcaption></figure>
+    <p>&quot;Read them out.&quot;</p>
+    <p>She reads. Vex laughs at one. Lor pauses on one. They both quietly admire one. Cricket, from under the table, makes a soft chirp of judgement at a fourth.</p>
+    <p>&quot;Now look at this,&quot; Lor says, and types:</p>
+    <pre><code>choir &quot;Write a haiku about cast iron pans&quot; --models gpt-5,opus-4-7,gemini-3,grok-4 --save</code></pre>
+    <p>&quot;Same thing?&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_05.jpg" alt="Choir Judge" loading="lazy" /><figcaption>Choir Judge</figcaption></figure>
+    <p>&quot;Same thing, but saved. Gets a run ID.&quot;</p>
+    <p>A short string appears.</p>
+    <pre><code>choir runs list</code></pre>
+    <p>The run is in the list. She types:</p>
+    <pre><code>choir runs compare &lt;id&gt; --with claude-opus-4-7</code></pre>
+    <p>Opus reads all four haiku and writes a short judgement on each.</p>
+    <p>Vex sits back. He runs both hands through his hair, which does not help his hair situation. &quot;Wait, wait, wait.&quot;</p>
+    <p>&quot;I&#x27;m waiting.&quot;</p>
+    <p>&quot;This — <em>this</em> — is the point. I don&#x27;t have to pick one model and <em>be loyal</em> to it. I can ask all of them and use a <em>different</em> one as a judge.&quot;</p>
+    <p>&quot;Yes.&quot;</p>
+    <p>&quot;And I can save the <em>result</em> and review it later. I can build a <em>pipeline</em> on top of this.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_06.jpg" alt="Vex Hands In Hair" loading="lazy" /><figcaption>Vex Hands In Hair</figcaption></figure>
+    <p>&quot;Yes.&quot;</p>
+    <p>&quot;This is the whole game.&quot;</p>
+    <p>&quot;This is <em>one part</em> of the whole game. But yes. The way you&#x27;ll actually use it in scripts — you call <code>choir</code> from inside a Claude Code session, you tell Claude to fan out a hard prompt across three models, judge them with a fourth, and feed the winner back into the next step. Claude becomes the <em>conductor</em>. Choir is the <em>orchestra</em>. Each model is an instrument.&quot;</p>
+    <p>He&#x27;s quiet for a moment. Outside, the horizon has gone the colour of wine.</p>
+    <p>&quot;Claudia is <em>gonna love</em> an orchestra,&quot; he says.</p>
+    <p>&quot;I am divorcing you over the name <em>Claudia</em>.&quot;</p>
+    <p>&quot;Did you smile.&quot;</p>
+    <p>&quot;I did not smile.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_07.jpg" alt="Wine-Colored Horizon" loading="lazy" /><figcaption>Wine-Colored Horizon</figcaption></figure>
+    <p>&quot;You smiled.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch04/beat_08.jpg" alt="Cricket Approves" loading="lazy" /><figcaption>Cricket Approves</figcaption></figure>
+    <p>She did not. (She did.)</p>
+  </div>
+</section>
+
+<section id="ch-05" class="chapter">
+  <div class="ch-head"><div class="ch-num">Step 5</div><h2 class="ch-title">The Spellbook — Adding a Skill</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 5</div>
+    <audio controls preload="none" src="audio/chapter_05.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>&quot;Right,&quot; Lor says, &quot;moment of truth. What&#x27;s a <em>skill</em>.&quot;</p>
+    <p>&quot;A spell.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_01.jpg" alt="The Spellbook" loading="lazy" /><figcaption>The Spellbook</figcaption></figure>
+    <p>&quot;Closer than you think.&quot;</p>
+    <figure class="screenshot-figure"><div class="screenshot-frame"><img src="screenshots/claude-code-skills.jpg" alt="Claude Code skills documentation page" loading="lazy" /></div><figcaption><strong>Claude Code Skills docs</strong> — The official skills documentation. A skill is a folder, a SKILL.md, and a description string. Claude reads the description and chooses the skill when the description matches what the user asked for.</figcaption></figure>
+    <p>She pulls up a fresh <code>claude</code> session. The Terminal does its slow expand into the wider rectangle. The thinking-cursor pulses patient.</p>
+    <p>&quot;Here is the thing nobody tells you when they show off Claude Code,&quot; she says. &quot;Claude is not just a chatbot in your shell. Claude is a <em>dispatcher</em>. Inside Claude live a bunch of little capability folders. Each folder is one <em>recipe</em> — a piece of Markdown that says, <em>for this kind of request, do this procedure.</em> Each recipe also has a <em>description</em> at the top — one paragraph that says <em>I am the recipe for X, you should call me when the user wants X.</em> Claude reads the descriptions. When you ask for a thing, Claude looks across all its skills and picks the one whose description matches what you asked for. Then it runs that recipe.&quot;</p>
+    <p>&quot;Description-driven dispatch.&quot;</p>
+    <p>&quot;Description-driven dispatch.&quot;</p>
+    <p>&quot;That&#x27;s <em>cute</em>.&quot;</p>
+    <p>&quot;That&#x27;s <em>powerful</em>. It means the way you teach Claude new behaviour is: you write a folder with a Markdown file in it, you put a really clear <em>description</em> at the top, and the next time the user says something that matches your description, the skill <em>fires automatically</em>.&quot;</p>
+    <p>She opens a Finder window and navigates to <code>~/.claude/skills/</code>. There are a few folders there already. She drags a copy of one in from a spare drive she had on the table — Vex hadn&#x27;t even seen her plug it in — and the folder appears in the skills list.</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_02.jpg" alt="Dragging A Skill" loading="lazy" /><figcaption>Dragging A Skill</figcaption></figure>
+    <p>&quot;<code>scriptorium</code>,&quot; he reads. &quot;What does it do?&quot;</p>
+    <p>&quot;It builds illustrated novels. It&#x27;s the skill that turns a four-sentence brief into a finished book — story arcs, characters, watercolour illustrations, the whole pipeline. Sean wrote it. It&#x27;s <em>generous</em>. We&#x27;re going to <em>trigger it</em>.&quot;</p>
+    <p>She types <code>claude</code> in the Terminal, which she had not yet — <em>wait, no, she had already, the session is up</em> — and she types nothing herself. Instead she swivels the laptop toward Vex.</p>
+    <p>&quot;You drive.&quot;</p>
+    <p>&quot;What do I say?&quot;</p>
+    <p>&quot;Say something that the <em>description</em> of <code>scriptorium</code> would <em>match</em>. Don&#x27;t name the skill. Don&#x27;t even hint at it.&quot;</p>
+    <p>He thinks. He drums his fingers on the laptop case. Cricket, returned from her sulk, climbs onto his shoulder and watches the Terminal too. He types:</p>
+    <p>&gt; I want to write a short illustrated novella about a frog detective named Garbanzo who solves crimes in a noir city of lily pads. Help me build it.</p>
+    <p>He presses return.</p>
+    <p>The cursor pulses. A short pause. Then a single line of soft output appears:</p>
+    <p>&gt; Reaching for the <code>scriptorium</code> skill — your request matches its description.</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_03.jpg" alt="Vex Drives" loading="lazy" /><figcaption>Vex Drives</figcaption></figure>
+    <p>&quot;It <em>picked it up</em>,&quot; Vex says, sitting bolt upright. &quot;I didn&#x27;t tell it. It just <em>knew</em>.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_04.jpg" alt="Skill Reaches" loading="lazy" /><figcaption>Skill Reaches</figcaption></figure>
+    <p>&quot;It read the description. The description says <em>I build illustrated novels by interviewing the inspirer about the story seed, fanning out story arcs, picking visual styles, weaving chapters, illustrating chapters, and compiling the final novel HTML.</em> You asked for an illustrated novella. The description matched. Claude reached.&quot;</p>
+    <figure class="terminal-figure"><div class="terminal-frame"><div class="terminal-dots"><span></span><span></span><span></span></div><pre>$ ls ~/.claude/skills/
+choir
+scriptorium</pre></div><figcaption><strong>Installed skills</strong> — Two skills installed: choir (multi-model fan-out) and scriptorium (illustrated-novel pipeline). Each is a folder under ~/.claude/skills/ with a SKILL.md inside.</figcaption></figure>
+    <p>&quot;And the recipe is — <em>just a Markdown file?</em>&quot;</p>
+    <p>&quot;The recipe is just a Markdown file. With a clear description, some instructions, and pointers to sub-skills if needed. The instructions tell Claude what stages to do, in what order. Claude executes them. Skills are <em>folders of process</em>. You can write your own this afternoon.&quot;</p>
+    <p>Vex looks at her for a long moment, then back at the Terminal, then at his cat.</p>
+    <p>&quot;Cricket,&quot; he says, &quot;I think we should write the <em>Cricket-finds-the-laser-pointer</em> skill.&quot;</p>
+    <p>&quot;Cricket already has a skill. It&#x27;s called <em>being a cat</em>.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_05.jpg" alt="Description Driven Dispatch" loading="lazy" /><figcaption>Description Driven Dispatch</figcaption></figure>
+    <p>&quot;I&#x27;m <em>making her a skill</em>.&quot;</p>
+    <p>&quot;You will <em>teach her bad habits</em>.&quot;</p>
+    <p>He&#x27;s already typing. He stops the scriptorium-skill mid-flow with a polite Ctrl-C and asks instead:</p>
+    <p>&gt; Tell me the absolute simplest possible structure of a skill folder. Pretend I am six years old. Pretend I have a cat named Cricket and I want to make her a skill that helps me find lost objects in our apartment. What&#x27;s the <em>minimum</em>?</p>
+    <p>The cursor pulses. The answer arrives. A skill folder is one directory, one Markdown file, one description string, one short body. Frontmatter at the top with a <code>name</code> and a <code>description</code>. That&#x27;s the whole thing. The description should sound like <em>I am the recipe for situations like X, use me when the user says things like X.</em> Claude does the rest.</p>
+    <p>&quot;That&#x27;s it?&quot;</p>
+    <p>&quot;That&#x27;s it.&quot;</p>
+    <p>&quot;I am going to make <em>many</em> skills.&quot;</p>
+    <p>&quot;You are going to <em>test</em> them before you commit them, because a too-broad description grabs every request and a too-narrow description grabs none.&quot;</p>
+    <p>&quot;Yeah, yeah.&quot; He&#x27;s already in the skills folder. He&#x27;s already named the file <code>find-cricket.md</code>. He&#x27;s writing the description out loud, which she does not stop him from doing.</p>
+    <p>&quot;<em>I am the recipe,</em>&quot; he reads as he types, &quot;<em>for finding any small object in the apartment that has been moved by a cat. Use me when the user says things like</em> — okay, what do they say?&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_06.jpg" alt="Vex Writes A Skill" loading="lazy" /><figcaption>Vex Writes A Skill</figcaption></figure>
+    <p>&quot;<em>Have you seen — ?</em>&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_07.jpg" alt="Cricket On Shoulder" loading="lazy" /><figcaption>Cricket On Shoulder</figcaption></figure>
+    <p>&quot;<em>Have you seen.</em> Yes. <em>Where did I put.</em> Yes. <em>Cricket again</em>.&quot;</p>
+    <p>&quot;<em>Cricket again</em> is going in there?&quot;</p>
+    <p>&quot;It&#x27;s <em>thematically critical.</em>&quot;</p>
+    <p>She lets him. He commits the skill. He restarts the Claude session — Ctrl-D, then <code>claude</code> again. He types, casually:</p>
+    <p>&gt; Have you seen the spare battery for my camera?</p>
+    <p>The cursor pulses.</p>
+    <p>&gt; Reaching for the <code>find-cricket</code> skill — your request matches its description.</p>
+    <p>&quot;NO.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch05/beat_08.jpg" alt="Have You Seen The Battery" loading="lazy" /><figcaption>Have You Seen The Battery</figcaption></figure>
+    <p>&quot;YES.&quot;</p>
+    <p>The kitchen-spaceport, briefly, becomes the loudest room in any of the worlds outside the window.</p>
+  </div>
+</section>
+
+<section id="ch-06" class="chapter">
+  <div class="ch-head"><div class="ch-num">Step 6</div><h2 class="ch-title">The Drawing Hack</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 6</div>
+    <audio controls preload="none" src="audio/chapter_06.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>&quot;So here&#x27;s a thing,&quot; Vex says, pacing now, which is a sign he is thinking hard. &quot;Claude can read files. Claude can write files. Claude can run shells. Claude is <em>very</em> good at writing words.&quot;</p>
+    <p>&quot;Yes.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_01.jpg" alt="Twenty Lines Of Shell" loading="lazy" /><figcaption>Twenty Lines Of Shell</figcaption></figure>
+    <p>&quot;Claude cannot <em>draw</em>.&quot;</p>
+    <p>&quot;Correct.&quot;</p>
+    <p>&quot;That feels like a <em>gap</em>.&quot;</p>
+    <p>&quot;That&#x27;s because you haven&#x27;t seen the hack yet.&quot; Lor pulls the laptop back. &quot;Watch.&quot;</p>
+    <p>She opens a new terminal pane and pastes a single short shell script into a file called <code>genimg.sh</code>. About twenty lines, no more. She makes it executable. Vex reads over her shoulder.</p>
+    <pre><code>#!/usr/bin/env bash
+# genimg.sh — call an image-gen HTTP endpoint, save bytes, print path
+set -euo pipefail
+out=&quot;$1&quot;; prompt=&quot;$2&quot;; provider=&quot;${3:-openai}&quot;
+case &quot;$provider&quot; in
+  openai)
+    curl -s https://api.openai.com/v1/images/generations \
+      -H &quot;Authorization: Bearer $OPENAI_API_KEY&quot; \
+      -H &quot;Content-Type: application/json&quot; \
+      --data &quot;$(jq -nc --arg p &quot;$prompt&quot; &#x27;{model:&quot;gpt-image-1&quot;,prompt:$p,n:1,size:&quot;1024x1024&quot;}&#x27;)&quot; \
+      | jq -r &#x27;.data[0].b64_json&#x27; | base64 -D &gt; &quot;$out&quot; ;;
+  xai)
+    # ... grok-imagine-image endpoint ;;
+  gemini)
+    # ... imagen endpoint ;;
+esac
+echo &quot;$out&quot;</code></pre>
+    <p>&quot;That&#x27;s <em>it?</em>&quot;</p>
+    <p>&quot;That&#x27;s it. Twenty lines. POST the prompt at the image-gen endpoint. Decode the base64. Write the bytes to disk. Print the path.&quot;</p>
+    <p>&quot;And this works because —&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_02.jpg" alt="Reading Over Shoulder" loading="lazy" /><figcaption>Reading Over Shoulder</figcaption></figure>
+    <p>&quot;— because all these image-gen products are <em>just HTTP endpoints</em>. You pay per-image, the API returns the bytes, you save them. The fancy chat-UI image generators you&#x27;ve seen are doing exactly this under the hood. You&#x27;re just doing it yourself.&quot;</p>
+    <p>&quot;So now what?&quot;</p>
+    <p>&quot;Now we <em>tell Claude</em> about the script.&quot; She opens a <code>CLAUDE.md</code> file in her project root and types:</p>
+    <p>&gt; I have a script at <code>./genimg.sh</code>. Usage: <code>./genimg.sh &lt;output_path&gt; &lt;prompt&gt; [openai|xai|gemini]</code>. The script saves a generated image to the output path. When the user asks you to make an image, run this script.</p>
+    <p>She saves the file. She runs <code>claude</code>. She turns to Vex.</p>
+    <p>&quot;You drive again. Ask it to draw something.&quot;</p>
+    <p>He types:</p>
+    <p>&gt; Make me a watercolour image of a frog detective in a trench coat under a lily pad streetlamp at night. Save it to ./frog.png.</p>
+    <p>The thinking-cursor pulses. A box appears asking permission to run the shell script. Vex approves it. The script runs. The Terminal prints a path. Vex opens the file.</p>
+    <p>A frog. In a trench coat. Under a lily pad streetlamp. At night. Watercolour. Beautifully painted.</p>
+    <p>&quot;<em>Claude drew</em>,&quot; Vex says, slowly.</p>
+    <p>&quot;Claude <em>orchestrated</em>. Big distinction. Claude wrote a request, the request went to OpenAI&#x27;s image endpoint, OpenAI&#x27;s image model made the image, the bytes came back, the shell saved them, the file appeared. Claude held the baton. Somebody <em>else</em> played the notes.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_03.jpg" alt="Asking Claude To Draw" loading="lazy" /><figcaption>Asking Claude To Draw</figcaption></figure>
+    <p>&quot;This is the <em>whole</em> pattern.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_04.jpg" alt="Approval Dialog" loading="lazy" /><figcaption>Approval Dialog</figcaption></figure>
+    <p>&quot;This is the <em>whole</em> pattern.&quot;</p>
+    <p>He turns and faces her like he&#x27;s about to give a speech. He doesn&#x27;t give a speech. He just opens both his hands.</p>
+    <p>&quot;Claude can do anything that has an HTTP endpoint.&quot;</p>
+    <p>&quot;Anything.&quot;</p>
+    <p>&quot;Image. Audio. Video. Embeddings. Search. Weather. Stock prices. Sending an email. Posting to a forum. <em>Anything</em>.&quot;</p>
+    <p>&quot;Anything. You write the little script. You teach Claude about it. Claude calls it when it makes sense to call it.&quot;</p>
+    <p>&quot;And the script can call <em>another</em> model too — like Choir does.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_05.jpg" alt="Frog Detective Revealed" loading="lazy" /><figcaption>Frog Detective Revealed</figcaption></figure>
+    <p>&quot;Now you&#x27;re getting it. Skills + shell scripts + model APIs is the whole <em>language</em> for building agentic things. You&#x27;re not stuck inside one model&#x27;s brain anymore. You&#x27;re a <em>director</em>. Each tool you give Claude is an instrument.&quot;</p>
+    <p>&quot;Conductor metaphor again.&quot;</p>
+    <p>&quot;It&#x27;s a <em>good</em> metaphor.&quot;</p>
+    <p>&quot;Fine.&quot;</p>
+    <p>He sits down. Cricket emerges from somewhere — probably the cabinet under the sink, where she sometimes goes for moral reasons — and curls up on the closed lid of his laptop case. Vex stares at the file with the frog detective.</p>
+    <p>&quot;Lor.&quot;</p>
+    <p>&quot;Yeah.&quot;</p>
+    <p>&quot;We have to make a game.&quot;</p>
+    <p>&quot;Yes we do.&quot;</p>
+    <p>&quot;A real one.&quot;</p>
+    <p>&quot;Yes.&quot;</p>
+    <p>&quot;With Claude.&quot;</p>
+    <p>&quot;Yes.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_06.jpg" alt="Claude Orchestrated" loading="lazy" /><figcaption>Claude Orchestrated</figcaption></figure>
+    <p>&quot;And dice.&quot;</p>
+    <p>&quot;Real dice.&quot;</p>
+    <p>&quot;And the <em>PROCESS.md.</em>&quot;</p>
+    <p>She nods, slow. Outside the window, the temple has gone dim and the violet vines have started to <em>bioluminesce</em>, very faintly, the way they sometimes do at evening. Inside the kitchen, the laptop is the warmest light in the room.</p>
+    <p>&quot;Last bits of theory before the build,&quot; she says. &quot;Chapter seven, we <em>write</em> the PROCESS.md. Chapter eight, we play.&quot;</p>
+    <p>&quot;I am going to <em>win</em> the wager.&quot;</p>
+    <p>&quot;You&#x27;re going to <em>type the PROCESS.md</em>, which I have realised is what you wanted to do all along.&quot;</p>
+    <p>&quot;... yes.&quot;</p>
+    <p>&quot;Then we&#x27;re both winning.&quot;</p>
+    <p>&quot;I love this game.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_07.jpg" alt="Cricket On Closed Lid" loading="lazy" /><figcaption>Cricket On Closed Lid</figcaption></figure>
+    <p>&quot;It hasn&#x27;t started yet.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch06/beat_08.jpg" alt="Bioluminescent Vines" loading="lazy" /><figcaption>Bioluminescent Vines</figcaption></figure>
+    <p>He grins, sits back, and lets Cricket sleep.</p>
+  </div>
+</section>
+
+<section id="ch-07" class="chapter">
+  <div class="ch-head"><div class="ch-num">Step 7</div><h2 class="ch-title">Cooking the Game — PROCESS.md</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 7</div>
+    <audio controls preload="none" src="audio/chapter_07.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>&quot;Okay,&quot; Vex says, cracking his knuckles in a way that makes Lor wince. &quot;We&#x27;re doing it.&quot;</p>
+    <p>&quot;We&#x27;re doing it.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_01.jpg" alt="Knuckles Crack" loading="lazy" /><figcaption>Knuckles Crack</figcaption></figure>
+    <p>&quot;D&amp;D.&quot;</p>
+    <p>&quot;Solo D&amp;D. Single-player. You against the world. Claude as the DM.&quot;</p>
+    <p>&quot;Why a <em>PROCESS.md</em>? Why not just say to Claude <em>be my dungeon master</em>?&quot;</p>
+    <p>&quot;You <em>can</em> just say that, and you&#x27;ll get something. But it&#x27;ll be <em>vibes</em>. Every session will be different. Sometimes the DM will roll dice for you in their head and lie about the numbers. Sometimes they&#x27;ll forget you have eight hit points. Sometimes they&#x27;ll narrate for an hour without letting you act. <em>Vibes</em> are great until they aren&#x27;t.&quot;</p>
+    <p>&quot;And a PROCESS.md fixes that how?&quot;</p>
+    <p>&quot;A PROCESS.md is a <em>small written-down loop</em>. You put it in your project folder. You tell Claude <em>read this file. Follow it. Always.</em> And suddenly the same flexible model becomes a <em>reliable subsystem</em>. Because the loop is <em>on paper</em>. Claude doesn&#x27;t have to remember it; Claude has to <em>look at it</em>.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_02.jpg" alt="Writing The Loop" loading="lazy" /><figcaption>Writing The Loop</figcaption></figure>
+    <p>She opens a new file: <code>~/.claude/projects/dnd/PROCESS.md</code>.</p>
+    <p>&quot;Together?&quot;</p>
+    <p>&quot;Together.&quot;</p>
+    <p>They write it in maybe twenty minutes. It is shorter than they expect. Vex types, Lor edits, Cricket walks across the keyboard once and is gently bumped off, and it ends up looking something like this:</p>
+    <pre><code># PROCESS.md — Solo D&amp;D one-shot
+
+This file is the source of truth. Read it every turn. Follow it exactly.
+
+## State (always update; never invent)
+- `character.md`: name, race, class, level (start 1), ability scores
+  (4d6 drop-lowest, six rolls, assigned by player), HP, AC, gear,
+  spells if applicable.
+- `scene.md`: current scene description, present NPCs, exits, any
+  ongoing effects.
+- `log.md`: append-only narrative log. Every turn ends here.
+
+## Turn loop
+1. The player describes an intent (&quot;I sneak around the goblin&quot;).
+2. You restate it briefly. Ask a clarifying question only if the
+   intent is genuinely unclear.
+3. If a roll is required, name the ability + the DC, then pause
+   and wait. The PLAYER rolls a real die and types the number.
+4. On receipt of the number, narrate the outcome (success, partial,
+   failure). One short paragraph. End with: what&#x27;s happening now,
+   what the player perceives.
+5. Append the turn to `log.md`. Update `scene.md` if the scene state
+   changed. Update `character.md` if HP, gear, or status changed.
+6. Hand back to the player.
+
+## Rules of engagement
+- You DO NOT roll for the player. The player rolls real dice. You
+  may roll for NPCs and the environment.
+- You DO NOT lie about state. If the player asks &quot;what&#x27;s my HP?&quot;,
+  answer honestly from `character.md`.
+- Narration is tight: 2–4 sentences per turn unless the scene
+  changes hard.
+- Combat is theater of the mind unless the player asks for a sketch.
+- If the player goes silent or types &quot;menu&quot;, offer: continue, save,
+  rewind one turn, summarise, or quit.
+
+## Starting
+On `claude` start in this folder: roll a fresh 1st-level character
+following the state rules. Generate one opening scene (a small
+location, one clear hook, two clear exits). Hand to the player.</code></pre>
+    <p>&quot;That&#x27;s it?&quot;</p>
+    <p>&quot;That&#x27;s it.&quot;</p>
+    <p>&quot;That&#x27;s a <em>recipe</em>.&quot;</p>
+    <p>&quot;That&#x27;s a <em>recipe</em>. The lesson — and this is the <em>whole</em> lesson of this book — is: <em>process beats prompt</em>. A clever prompt is a moment. A clever process is a <em>machine</em>.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_03.jpg" alt="Notebook Of Loops" loading="lazy" /><figcaption>Notebook Of Loops</figcaption></figure>
+    <p>&quot;A small machine.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_04.jpg" alt="Rolling The Character" loading="lazy" /><figcaption>Rolling The Character</figcaption></figure>
+    <p>&quot;A small machine that you can read end-to-end in three minutes and that produces correct behaviour over and over.&quot;</p>
+    <p>Vex saves the file. He starts a new Claude session in the <code>dnd</code> folder. He types one line:</p>
+    <p>&gt; Read PROCESS.md. Follow it.</p>
+    <p>The cursor pulses. Soft output begins to assemble — a calm acknowledgement, then a brief silence, then:</p>
+    <p>&gt; Rolling your character. Please wait for the results.</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_05.jpg" alt="Naming Vesper" loading="lazy" /><figcaption>Naming Vesper</figcaption></figure>
+    <p>The model rolls — actually rolls; the numbers appear honest, with a tiny note of the seed. A 16, a 14, a 13, a 12, a 10, an 8. A half-elven rogue. Then it stops.</p>
+    <p>&gt; Assign these to STR / DEX / CON / INT / WIS / CHA. Decide your name. Tell me when you&#x27;re ready.</p>
+    <p>Vex looks at the numbers. He looks at Lor. He looks at Cricket. He looks at the numbers.</p>
+    <p>&quot;Vesper,&quot; he announces, &quot;the half-elven <em>cleric</em>.&quot;</p>
+    <p>&quot;Not a rogue?&quot;</p>
+    <p>&quot;Not a rogue. I want to <em>cast spells.</em>&quot;</p>
+    <p>He types Vesper. He assigns the scores — 16 to WIS, of course; 14 to CON, 13 to DEX, the rest down. Claude reshuffles, confirms, asks about a domain. Vex picks Light. Claude updates <code>character.md</code>. The Terminal prints a soft acknowledgement.</p>
+    <p>&gt; Vesper is ready. Generating opening scene.</p>
+    <p>A pause. Then:</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_06.jpg" alt="Opening Scene" loading="lazy" /><figcaption>Opening Scene</figcaption></figure>
+    <p>&gt; You wake in a ruined temple. The pillars are mossed; the windows
+&gt; are gone; one corner of the floor has fallen away into a dark hole.
+&gt; A faint blue light flickers from somewhere below. To the north,
+&gt; a heavy stone door, slightly ajar. To the south, an arched
+&gt; doorway opening on a forest of unfamiliar trees. Roll perception
+&gt; if you&#x27;d like to take a closer look at the hole, the door, or
+&gt; the forest.</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_07.jpg" alt="Velvet Pouch" loading="lazy" /><figcaption>Velvet Pouch</figcaption></figure>
+    <p>Vex closes his hands around an imaginary die. Lor reaches into her belt and produces a real one — a velvet pouch with a single dark d20 in it, the polish a little worn at the edges. She sets it on the table next to the laptop.</p>
+    <p>&quot;You brought <em>dice</em>.&quot;</p>
+    <p>&quot;I read the docs.&quot;</p>
+    <p>He doesn&#x27;t say anything for a moment. Then he picks up the d20, weighs it in his palm, and looks at her across the table.</p>
+    <p>&quot;This is the <em>best</em> thing we have ever done.&quot;</p>
+    <p>&quot;It hasn&#x27;t started yet.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch07/beat_08.jpg" alt="Die In Palm" loading="lazy" /><figcaption>Die In Palm</figcaption></figure>
+    <p>&quot;It has <em>absolutely</em> started.&quot;</p>
+    <p>He rolls.</p>
+  </div>
+</section>
+
+<section id="ch-08" class="chapter">
+  <div class="ch-head"><div class="ch-num">Step 8</div><h2 class="ch-title">Press Play</h2></div>
+  <div class="audio-chapter">
+    <div class="audio-chapter__icon">🎧</div>
+    <div class="audio-chapter__label">Listen · Step 8</div>
+    <audio controls preload="none" src="audio/chapter_08.mp3"></audio>
+  </div>
+  <div class="narrative">
+    <p>The d20 hits the wooden table with a small clean <em>tock</em>. It tumbles. It comes up nineteen.</p>
+    <p>&quot;NINETEEN,&quot; Vex announces.</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_01.jpg" alt="Die On Wood" loading="lazy" /><figcaption>Die On Wood</figcaption></figure>
+    <p>&quot;Type it in.&quot;</p>
+    <p>He types it in. The cursor pulses.</p>
+    <p>&gt; Perception 19 — well above the DC. As Vesper, you crouch by the
+&gt; fallen corner of the floor and listen. The blue light below
+&gt; flickers in a rhythm; not a fire, more like a slow breath. You
+&gt; can hear, very faintly, the sound of something <em>muttering</em>. Not
+&gt; in any language you know. The mutter has a shape, though — three
+&gt; beats, a pause, three beats, a pause. Almost like counting.</p>
+    <p>&quot;Lor. The hole is <em>muttering.</em>&quot;</p>
+    <p>&quot;The hole is muttering.&quot;</p>
+    <p>&quot;What do I do?&quot;</p>
+    <p>&quot;What does <em>Vesper</em> do?&quot;</p>
+    <p>He thinks. Cricket has climbed onto his shoulder, which she does when she likes what he&#x27;s doing. He types:</p>
+    <p>&gt; Vesper draws her holy symbol and whispers a prayer for guidance.
+&gt; She does not approach the hole yet. She moves first to the heavy
+&gt; stone door to the north and listens.</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_02.jpg" alt="Blue Light From Below" loading="lazy" /><figcaption>Blue Light From Below</figcaption></figure>
+    <p>The cursor pulses.</p>
+    <p>&gt; The door is silent. A breath of warmer, drier air comes through
+&gt; the crack. You smell smoke, the kind from a hearth, faint but
+&gt; alive. Whoever or whatever is on the other side of this door is
+&gt; <em>settled</em>. Roll perception again, or push the door open, or
+&gt; retreat.</p>
+    <p>He rolls. A six. He types in the six. Claude continues, kind:</p>
+    <p>&gt; Perception 6 — your ear catches nothing more. You&#x27;ll have to act
+&gt; on what you have.</p>
+    <p>He pushes the door open. The narration arrives: a long stone corridor lit by guttering torches; a small, hunched green figure sitting on the floor, <em>talking to itself</em>, beads laid out in a row, counting them in threes. A goblin. Holding a knife. Cooking a piece of meat over a tiny banked fire.</p>
+    <p>&quot;It&#x27;s making <em>dinner,</em>&quot; Vex whispers.</p>
+    <p>&quot;It is making dinner.&quot;</p>
+    <p>&quot;Should I — <em>kill it?</em>&quot;</p>
+    <p>&quot;That&#x27;s a <em>you</em> question.&quot;</p>
+    <p>Vex looks at the screen. Looks at Cricket. Looks at the d20. Types:</p>
+    <p>&gt; Vesper steps forward into the corridor, one hand raised palm-out,
+&gt; the other on her holy symbol. She says, &quot;Friend, I don&#x27;t want a
+&gt; fight. Will you share your fire?&quot;</p>
+    <p>A pause. The cursor pulses, longer this time, as if Claude is <em>enjoying</em> this.</p>
+    <p>&gt; The goblin freezes. Its knife is still raised. The beads it was
+&gt; counting roll a little. Its eyes, golden in the firelight, find
+&gt; yours. It tilts its head. Roll Charisma. DC 14.</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_03.jpg" alt="Stone Door Ajar" loading="lazy" /><figcaption>Stone Door Ajar</figcaption></figure>
+    <p>Vex picks up the die again. Lor watches, dry-amused. Cricket on Vex&#x27;s shoulder swivels her ears forward. He rolls.</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_04.jpg" alt="Goblin Counting Beads" loading="lazy" /><figcaption>Goblin Counting Beads</figcaption></figure>
+    <p>A <em>twenty</em>.</p>
+    <p>The d20 sits perfect-faced-up on the wood. Vex stares at it. Then at Lor.</p>
+    <p>&quot;That&#x27;s a <em>natural twenty</em>.&quot;</p>
+    <p>&quot;That&#x27;s a natural twenty.&quot;</p>
+    <p>&quot;Type it in.&quot;</p>
+    <p>He types it in. The cursor pulses. The reply, when it comes, is <em>beautiful</em>.</p>
+    <p>&gt; The goblin lowers the knife. Slowly, like he isn&#x27;t sure he is
+&gt; doing it. He scoots a polished bead toward you across the
+&gt; corridor floor. He gestures at the fire — there is a small log
+&gt; next to it that could serve as a stool. He says one word, in
+&gt; a voice creakier than you expected: <em>&quot;Khoss.&quot;</em> You don&#x27;t know
+&gt; the word. But you know the <em>tone</em>.
+&gt;
+&gt; You sit. The two of you eat together. He gives you a strip of
+&gt; meat that is, to your surprise, well-seasoned. You give him a
+&gt; tiny silver coin from your pouch. He weighs it in his palm
+&gt; like a treasure.
+&gt;
+&gt; When you leave, half an hour later, the goblin watches you go
+&gt; from the corridor mouth. He raises a small clawed hand. You
+&gt; raise yours. The blue light in the hole behind you has, you
+&gt; notice, stopped muttering.</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_05.jpg" alt="Friend" loading="lazy" /><figcaption>Friend</figcaption></figure>
+    <p>Lor reads it. Lor reads it again. Lor pushes the laptop a small way toward Vex.</p>
+    <p>&quot;You broke it,&quot; she says, quietly. &quot;In the best way.&quot;</p>
+    <p>&quot;It thought I was going to fight.&quot;</p>
+    <p>&quot;<em>It</em> did. But you didn&#x27;t.&quot;</p>
+    <p>&quot;That&#x27;s <em>what the process was for</em>. Right? It&#x27;s just a <em>loop</em>. Anything can happen <em>inside</em> the loop. The loop holds the <em>shape</em> of the game. You and Claude and the dice fill in the <em>content</em>.&quot;</p>
+    <p>&quot;That&#x27;s exactly what it&#x27;s for.&quot;</p>
+    <p>He sits back. His hair has fallen completely into his face and he doesn&#x27;t bother pushing it back. Cricket purrs against his neck. The kitchen has gone the colour of butter and dark wood. Outside the window, the temple is <em>gone</em> — the horizon has moved on; a new vista is sliding into place: a city of crystal towers rising out of a sea, distant ships, a wide ochre sky reaching for evening.</p>
+    <p>&quot;Lor.&quot;</p>
+    <p>&quot;Hm.&quot;</p>
+    <p>&quot;The wager.&quot;</p>
+    <p>&quot;I know.&quot;</p>
+    <p>&quot;I wrote the PROCESS.md.&quot;</p>
+    <p>&quot;You did.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_06.jpg" alt="Natural Twenty" loading="lazy" /><figcaption>Natural Twenty</figcaption></figure>
+    <p>&quot;So I lose.&quot;</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_07.jpg" alt="Sharing The Fire" loading="lazy" /><figcaption>Sharing The Fire</figcaption></figure>
+    <p>&quot;You wrote a thing that <em>works</em>. That&#x27;s the <em>only</em> thing in this house worth more than dishes. You <em>win</em>.&quot;</p>
+    <p>&quot;I do the dishes anyway.&quot;</p>
+    <p>&quot;You do the dishes anyway.&quot;</p>
+    <p>&quot;It&#x27;s a tie.&quot;</p>
+    <p>&quot;It&#x27;s a tie.&quot;</p>
+    <p>He closes the laptop. The screen-glow fades. The kitchen is suddenly only what the kitchen always is: copper pans, terracotta pots, a small grey cat, a warm window onto a vast unfamiliar horizon.</p>
+    <p>&quot;Lor.&quot;</p>
+    <p>&quot;Yeah.&quot;</p>
+    <p>&quot;What do we build next?&quot;</p>
+    <p>She picks up the d20 and rolls it on the wood. It comes up nineteen. She looks at the number. She looks at him. She looks at the window.</p>
+    <figure class="beat-figure"><img src="illustrations/ch08/beat_08.jpg" alt="Many Worlds Beyond" loading="lazy" /><figcaption>Many Worlds Beyond</figcaption></figure>
+    <p>&quot;Whatever you can write a small loop for,&quot; she says. &quot;Which is <em>everything</em>.&quot;</p>
+    <p>Outside, far in the haze, the crystal towers catch the last of the light.</p>
+  </div>
+</section>
+
+  <section class="back-matter">
+    <p>Process beats prompt. Anything with an HTTP endpoint can be a tool. Now go press play on something of your own.</p>
+  </section>
+</main>
+<script>/* sms-metrics beacon */(function(){try{if(localStorage.smsNoTrack)return;navigator.sendBeacon('https://sms-metrics.sean-firewall.workers.dev/hit',JSON.stringify({p:location.pathname,r:document.referrer,h:location.host}))}catch(e){}})();</script>
+</body>
+</html>

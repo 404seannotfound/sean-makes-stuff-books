@@ -1,0 +1,2666 @@
+[
+  {
+    "chapter": 1,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The porch boards were warm. The afternoon was the slow gold kind, the kind that makes bees forget where they were going.\n\nFour children sat on the steps in a row, smallest to tallest, the way children do without being told.\n\nThe old woman in the faded blue dress did not say anything for a while. She was watching the grass.\n\nThere was a path in it. Not a path of stones, or a path of dirt. A path of bent grass \u2014 long and straight, leading from the bottom of her porch all the way out past the orchard fence and over the lip of the hill, where it disappeared.\n\nBo noticed it first, because Bo noticed everything first and loudly.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 2,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "What's that for?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg002_bo.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "he said. He pointed with his whole arm.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 4,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "That line in the grass \u2014 that goes all the way \u2014 what's that for?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg004_bo.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The old woman took a breath in, and out, and tapped two fingers on the porch rail beside her. Tap, tap. As if she were checking it was still there.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 6,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "That,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg006_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 7,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg007_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 8,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "is for a wagon.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg008_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 9,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Liss tilted her head.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg009_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 10,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "For a what?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg010_liss.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 11,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "A wagon.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg011_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 12,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Cal hummed a small confused hum.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg012_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 13,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "What's a wagon?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg013_bo.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 14,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Bo.\n\nThe old woman's mouth did something then \u2014 not quite a smile, not quite the other thing. She looked at the four of them: Bo with his scabbed knees and his big question, Liss already counting the porch slats under her breath, Cal humming, and the small one at the bottom in the yellow shift with her hands folded neat in her lap.\n\nThat one \u2014 Wren \u2014 was watching her fingers on the rail.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg014_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 15,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "A wagon,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg015_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 16,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "the old woman said, slowly,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg016_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 17,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "was a thing with wheels. Four wheels. And a long flat bed for carrying. And a rope at the front for pulling.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg017_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 18,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She drew the shape of it in the air with one knobbled finger.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg018_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 19,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Ours was red. Bright red. It lived at the top of the hill.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg019_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 20,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "Whose was it?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg020_bo.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 21,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Bo.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg021_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 22,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The village's.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg022_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 23,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "Ours?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg023_bo.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 24,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Yours. Mine. Everybody's.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg024_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 25,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Liss frowned.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg025_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 26,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Where is it now?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg026_liss.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 27,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The old woman did not answer that one right away. She looked out at the path again \u2014 the long flattened ghost of where wheels used to go \u2014 and her hand on the porch rail went very still.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg027_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 28,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Gone,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg028_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 29,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg029_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 30,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "Gone where?",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg030_bo.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 31,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Bo.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg031_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 32,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Just gone.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg032_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 33,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Cal stopped humming. Even Cal could feel that gone was a different kind of word than lost.\n\nThe old woman pulled a small worn square of cloth out of her apron pocket \u2014 green, so faded it was nearly grey \u2014 and folded it once, and put it back. Nobody asked about the cloth. Nobody knew to.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg033_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 34,
+    "voice_key": "wren",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "text": "Tell us,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg034_wren.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 35,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Wren.\n\nIt was the first thing the smallest one had said. Her voice was soft and level, the way you might ask a cat to come down off a roof.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg035_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 36,
+    "voice_key": "wren",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "text": "Tell us about the wagon.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg036_wren.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 37,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The old woman looked at her for a long moment.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg037_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 38,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "All right,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg038_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 39,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.\n\nShe shifted on the porch step. She straightened her back, the way you do before lifting something heavy. She set both hands flat on her knees.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg039_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 40,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Once,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg040_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 41,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg041_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 42,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "there was a girl named Pip.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg042_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 43,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Bo opened his mouth to ask something and Liss elbowed him quiet.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg043_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 44,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And she was me,",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg044_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 45,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "the old woman said.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg045_narrator.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 46,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And she was in a terrible hurry.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg046_old_pip.mp3"
+  },
+  {
+    "chapter": 1,
+    "idx": 47,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The bees went on forgetting where they had been going. The path of bent grass lay there gold and empty in the late sun, leading nowhere now, leading only into the story.\n\nWren, at the bottom of the steps, watched the old woman's fingers.\n\nThe old woman's fingers tapped, very lightly, on her own knee.\n\nTap. Tap.\n\nWren's fingers tapped on hers.",
+    "output": "cant-have-nice-things/audio/segments/ch01_seg047_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The hill smelled like apples and rope.\n\nThat is the first thing Pip remembered, every time \u2014 the way the top of the hill smelled in the morning, before anyone else was awake, when it was just her and Grandfather and the wagon.\n\nOh, the wagon.\n\nIt was red the way a barn is red, and yellow the way a yolk is yellow, and along its sides somebody's great-great-grandmother had painted small white flowers that nobody had ever bothered to repaint because they had not yet faded. It had a bench at the front shiny from a hundred years of trousers. It had four tall wheels. It had eleven wooden slats along each side, and a long rope that lay coiled at the front like a sleeping cat.\n\nIt was how the apples got down to the village. It was how the medicine got up. It was how Old Sero's letters came, and how the new babies were carried to be shown off, and how, once, a goat had ridden two miles sitting up like a king. It was, Pip thought, the most important thing in the world.\n\nGrandfather knelt beside it.\n\nHe knelt the way he always knelt \u2014 slowly, with one hand on his knee. From the pocket of his shirt he took out a small square of cloth, faded green, soft as a moth. He set it on the grass beside him.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 2,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Morning, old friend,",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg002_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "he said to the wagon.\n\nPip mouthed it along with him.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 4,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "Morning, old friend.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg004_young_pip.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Then Grandfather began.\n\n*One. He made a fist and tapped the front wheel \u2014 tock, tock* \u2014 twice, like knocking on a door. He listened. The wheel answered with a sound only Grandfather could hear. He nodded.\n\n*Two.* He uncorked a tiny brown bottle and let one drop of oil fall on the pin that held the axle. Just one. The drop sat there a moment, fat and shining, before it sank in.\n\n*Three.* He hummed. It was not a tune exactly. It was lower than a tune. He laid his hand flat on the axle and hummed into it, and the wood hummed back, and Grandfather smiled the way he only smiled at the wagon.\n\n*Four.* He pointed at the slats and counted them.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 6,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "One, two, three, four, five, six, seven, eight, nine, ten, eleven.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg006_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 7,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Then he walked around to the other side and counted those too. There were always eleven. There had always been eleven. He counted them anyway.\n\n*Five. He leaned close to the latch at the back and breathed on it, huuuh*, the way you breathe on a cold window. Then he polished it with the green cloth until it caught the sun.\n\n*Six.* He took the rope. He looped it once, twice, and made a knot like two circles holding hands \u2014 a figure-eight. He tugged it. It held.\n\n*Seven.* He stood up, slowly, with his hand on his knee. He looked at the wagon. He said, in a voice you might use for a person:",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg007_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 8,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Thank you.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg008_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 9,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Pip's lips moved.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg009_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 10,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "Thank you.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg010_young_pip.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 11,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Grandfather folded the green cloth and tucked it back into his pocket. He turned and saw Pip watching from the long grass, and his beard did the thing it did when he was trying not to grin.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg011_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 12,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "You're up early,",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg012_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 13,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "he said.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg013_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 14,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I've been up,",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg014_young_pip.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 15,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Pip. She had not been up. She had been up for four minutes.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg015_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 16,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Did you see?",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg016_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 17,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I saw.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg017_young_pip.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 18,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "All of it?",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg018_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 19,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "All of it.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg019_young_pip.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 20,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "He looked at her a long moment. Down in the village a rooster was making its opinion known. Somewhere a door opened. Somewhere else, a baby.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg020_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 21,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "It's a lot to remember,",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg021_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 22,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Grandfather said.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg022_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 23,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I remember,",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg023_young_pip.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 24,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Pip.\n\nAnd here is the thing the old woman on the porch wanted the children to understand. Pip did remember. She remembered every single one. She could have told you the order. She could have told you the count. She could have hummed the hum.\n\nRemembering a thing and knowing a thing are cousins, but they are not twins.\n\nPip did not know this yet. Pip was ten, and the wagon was red, and the morning smelled like apples and rope, and somewhere in her chest a small bright certainty was lighting up like a lamp.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg024_narrator.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 25,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I've got this,",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg025_young_pip.mp3"
+  },
+  {
+    "chapter": 2,
+    "idx": 26,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "thought Pip.\n\nAnd somewhere down in the village, a voice was calling her name, because the apples were ready, and it was almost \u2014 almost \u2014 her turn.",
+    "output": "cant-have-nice-things/audio/segments/ch02_seg026_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Bo bounced on his heels so hard the porch boards complained.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 2,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "But did she did she did she ever get to pull it?",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg002_bo.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "he said.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 4,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "Pip. You. Did you?",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg004_bo.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The old woman waited a breath. She always waited a breath.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 6,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I did,",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg006_old_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 7,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg007_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 8,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "On a Tuesday. I remember because Tuesdays were apples, and apples were the easy load.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg008_old_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 9,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She folded her knobbled hands in her lap and let the story come.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg009_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 10,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "***",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg010_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 11,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The wagon stood at the top of the hill the way it always stood \u2014 red as a poppy, patient as a cow. Pip's hands were already on the rope before Grandfather had finished saying her name.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg011_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 12,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Steady,",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg012_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 13,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Grandfather said. Slow, woodgrain-rough.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg013_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 14,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Steady, Piper.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg014_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 15,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I'm steady, I'm steady.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg015_young_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 16,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "He knelt beside the front wheel. From his shirt pocket he pulled a small square of cloth, faded green, soft at the edges from a great many Tuesdays. He laid it flat on his palm. Then, with two knuckles, he tapped the wheel \u2014 once, twice, three times \u2014 and listened.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg016_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 17,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The wagon hummed back at him the way a bell hums when you breathe on it.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg017_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 18,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "There,",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg018_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 19,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "he said.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg019_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 20,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "That'll do.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg020_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 21,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "He folded the green cloth and tucked it away.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg021_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 22,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Pip watched, mouthing along. She had watched a hundred Tuesdays. She knew the tap the way she knew her own name.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg022_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 23,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "All right,",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg023_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 24,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Grandfather.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg024_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 25,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Off you go. Slow down the slope. Mind the curve.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg025_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 26,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And here is where Pip should have knelt down by the wheel herself, and tapped, and listened. She did not kneel. She did not tap. She was already three steps ahead with the rope in both fists and the wind in her smock and the village laid out below her like a small bright map.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg026_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 27,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Why would she tap? Grandfather had just tapped. The tap was done. The tap was a tap was a tap.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg027_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 28,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Down the hill she went.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg028_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 29,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The wagon followed her in the way wagons do when they have been loved properly \u2014 easy at first, almost cheerful. The apples shifted and settled. Pip grinned.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg029_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 30,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Then the front wheel went thock.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg030_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 31,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Not a loud sound. The sort of sound you would miss if you were humming. The wheel tilted, just a little \u2014 a finger's width, no more \u2014 and the whole wagon leaned with it, like a person stepping wrong off a curb.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg031_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 32,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Pip's grin slipped sideways.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg032_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 33,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "Oh,",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg033_young_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 34,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said. Then, faster:",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg034_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 35,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "Oh oh oh \u2014",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg035_young_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 36,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "A hand came out of nowhere.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg036_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 37,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "It was a brown weathered hand with sawdust still in the cuff, and it caught the wagon's rail the way you'd catch a child by the back of the shirt. The wagon swayed once. Settled. Stopped leaning. Grandfather had come down the slope behind her without her hearing him at all, the way he always did, on feet that had been doing this for sixty years.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg037_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 38,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "He knelt. He tapped the wheel. Once. Twice. Three times. He listened.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg038_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 39,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Then he laughed.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg039_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 40,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "It was a warm laugh, low in his chest, and it rolled out across the grass and met the village coming up to greet them.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg040_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 41,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Forgot the tap, did we, Piper?",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg041_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 42,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I \u2014",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg042_young_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 43,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Pip's face went hot. She laughed too, because laughing first kept the laugh on her side.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg043_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 44,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I just forgot the tap. It's just one tap.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg044_young_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 45,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "It's just one tap,",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg045_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 46,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Grandfather agreed. He stood, slow, with one hand on his knee. He ruffled her hair.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg046_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 47,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Off you go. Slow down the slope.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg047_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 48,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And off she went.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg048_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 49,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The wagon rolled clean the rest of the way. The apples didn't even shift. By the time Pip reached the village she had already decided several useful things.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg049_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 50,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She had decided that the tap was not really a step, more of a habit.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg050_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 51,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She had decided that Grandfather had laughed because the tap did not matter very much.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg051_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 52,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She had decided \u2014 privately, fiercely, the way ten-year-olds decide things \u2014 that she had this. All of it. The whole bright wagon and the whole green hill and the whole long Tuesday of her life.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg052_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 53,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "See?",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg053_young_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 54,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she thought, lifting her chin against the wind.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg054_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 55,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I've got this.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg055_young_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 56,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Behind her, the front wheel made one small thock nobody heard, and kept turning.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg056_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 57,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "***",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg057_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 58,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "On the porch, Cal hummed. He did it without knowing. A drifty little tune through the gap in his teeth.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg058_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 59,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The old woman heard it. She closed her eyes for just a moment, the way Grandfather used to.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg059_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 60,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Ah,",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg060_old_pip.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 61,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg061_narrator.mp3"
+  },
+  {
+    "chapter": 3,
+    "idx": 62,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And then there was Wednesday.",
+    "output": "cant-have-nice-things/audio/segments/ch03_seg062_old_pip.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Cal was humming.\n\nHe didn't know he was humming. He was picking at a splinter on the porch step and his mouth was making a small warm sound, somewhere between a bee and a kettle, and it had been going on for a while.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 2,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Cal.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg002_liss.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Liss.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 4,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "You're humming.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg004_liss.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Cal stopped. Then started again. Then looked up.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 6,
+    "voice_key": "cal",
+    "voice_id": "bIHbv24MWmeRgasZH58o",
+    "voice_name": "Will",
+    "text": "Why?",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg006_cal.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 7,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "I don't know,",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg007_liss.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 8,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Liss.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg008_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 9,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "You just are.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg009_liss.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 10,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The old woman on the porch smiled at her hands.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg010_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 11,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "There's a hum in this story too,",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg011_old_pip.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 12,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg012_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 13,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Or \u2014 there should have been.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg013_old_pip.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 14,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She tapped the rail. Two fingers. Soft.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg014_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 15,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Listen.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg015_old_pip.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 16,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "***\n\nThe second time Pip pulled the wagon, she was sure of herself. The first time had only been a wobble. A wobble was nothing. A wobble was funny.\n\nThis time was the orchard run. Apples down, empty baskets up. Grandfather walked beside her with his hand resting light on the side-rail, and Auntie Mern walked behind, the way Auntie Mern always walked \u2014 quiet, with a wrench rolling between her palms like a small silver fish.\n\nAt the top of the hill Grandfather knelt to the wheel. Tap. He looked at Pip. Pip tapped. Good. He oiled the pin. Pip watched. Good.\n\nThen he leaned his ear to the axle and began to hum.\n\nIt was not a song. It was barely a tune. It was the kind of sound a person makes when they are thinking, low in the throat, the way bees think. He pulled a square of faded green cloth from his pocket and laid it flat on the axle wood while he hummed, the way you might lay a hand on a sleeping animal.\n\nPip's turn.\n\nAnd here Pip looked, very quickly, down the hill.\n\nThere were people down the hill. The baker's boys were carrying flour. Old Mrs. Aleby was shaking out a rug. A dog she did not know was watching her with great interest.\n\nPip thought: I am not going to hum at a piece of wood with people watching.\n\nShe leaned down. She moved her lips. She made no sound at all.\n\nGrandfather, who was a kind man and an easy one, did not check. He stood up slow with one hand on his knee.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg016_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 17,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "There now,",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg017_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 18,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "he said.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg018_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 19,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "That'll do.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg019_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 20,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "It did not do.\n\nThey set off down the lane and at the third step the wheel began to squeak.\n\nIt was a small squeak. The kind of squeak you could explain away. Dust, Pip thought. A pebble. She walked a little faster, as if she could leave the squeak behind, but the squeak was attached to the wagon and the wagon was attached to her, and so the squeak came too.\n\nSqueak.\n\nSqueak.\n\nSqueak.\n\nAll the way past the well. All the way past the chicken yard. All the way down the dusty orchard lane where the trees made a roof of leaves and the apples hung red as lanterns.\n\nPip pretended she did not hear it. Grandfather hummed under his breath as he walked, which helped a little, the way a grown-up's humming sometimes does, though Pip did not understand why.\n\nAt the orchard, while Pip was reaching up after a low apple and being very busy and very capable, Auntie Mern knelt down behind the wagon.\n\nShe was half-hidden by a stack of baskets. She slid her small wrench onto something underneath. She turned it once. Twice. Three small careful turns. She listened. She turned it back a quarter. She nodded, to no one, the way she did.\n\nThen she stood up, brushed her apron, and was already walking away by the time Pip turned around.\n\nFrom her apron pocket, just for a moment, a corner of red linen showed. Then it was tucked back in.\n\nOn the way home the wagon did not squeak.\n\nPip noticed this with quiet pride. See, she thought. It worked itself out. They make a fuss about the hum and it doesn't even matter.\n\nAnd here is the thing the story wants you to know.\n\nPip did not see Auntie Mern kneel.\n\nPip did not see the wrench.\n\nPip did not see the red cloth.\n\nAnd because Pip did not see those things, Pip did not know they had happened \u2014 which is a different thing, the narrator would like to point out, from them not happening.\n\nPip walked home humming, finally, a little, under her breath. Not to the axle. Just to herself. She thought it was her own tune.\n\nIt was Grandfather's.\n\n***\n\nOn the porch, Cal had started humming again.\n\nThe old woman did not stop him.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg020_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 21,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Now,",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg021_old_pip.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 22,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg022_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 23,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The third thing Pip skipped was counting.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg023_old_pip.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 24,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Liss, without meaning to, looked down at the porch slats.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg024_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 25,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "One,",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg025_liss.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 26,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg026_narrator.mp3"
+  },
+  {
+    "chapter": 4,
+    "idx": 27,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Two \u2014",
+    "output": "cant-have-nice-things/audio/segments/ch04_seg027_liss.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 1,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "One,",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg001_liss.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 2,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Liss.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg002_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 3,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Two. Three. Four.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg003_liss.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 4,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She was poking the porch slats with one bare toe, counting them under her breath the way some children breathe.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg004_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 5,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Five. Six. Seven\u2014 Granny, how many slats has this porch?",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg005_liss.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 6,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Old Pip didn't look down. Her fingers were resting light on the rail, the way a bird rests before it decides.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg006_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 7,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Eleven,",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg007_old_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 8,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg008_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 9,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Eleven,",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg009_liss.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 10,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Liss, satisfied, and counted them anyway to be sure.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg010_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 11,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Old Pip smiled at that. A small, crooked smile.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg011_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 12,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Pip didn't,",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg012_old_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 13,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg013_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 14,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Didn't what?",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg014_liss.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 15,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Count.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg015_old_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 16,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "***",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg016_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 17,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The wagon had eleven slats along its long red belly. It had always had eleven. Grandfather counted them every morning before a run, one finger tapping, his lips moving without sound. Sometimes Auntie Mern counted too, from the other side, with a faded green cloth folded in her palm. When their counts met in the middle they would nod at each other, just once, and that was that.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg017_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 18,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Pip thought this was the silliest of the seven.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg018_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 19,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Eleven was eleven. Eleven yesterday. Eleven this morning. Eleven at suppertime. Slats did not, in Pip's experience, wander off.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg019_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 20,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "Counting's for babies,",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg020_young_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 21,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she told the wagon, very quietly, the morning of the apple run. She climbed up and ran her hand along the slats without looking. One, many, eleven. Done.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg021_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 22,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She did not see the slat near the back. The one that had been loose for a week. The one Auntie Mern would have found, if Auntie Mern had been the one to count that morning, because Auntie Mern's hands knew things her mouth didn't.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg022_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 23,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "But Auntie Mern was elbow-deep in dough at the bakery, and Grandfather was up the hill with a sick goat, and Pip had the rope in her fists and the village was waiting for apples.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg023_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 24,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I've got it,",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg024_young_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 25,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Pip said. To no one.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg025_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 26,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I've just got it.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg026_young_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 27,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She tapped the wheel. (She remembered the tap now. Mostly.) She did not hum. She did not count. She tied the rope \u2014 a proper figure-eight, see, she wasn't stupid \u2014 and she breathed on the latch and she said thank you under her breath where nobody could hear it and feel pleased with her.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg027_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 28,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Down the hill the wagon went, full of apples, bright as a barn fire.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg028_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 29,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "It was a beautiful morning. The road shone. The apples shone. Pip shone, because she was ten years old and trusted with a wagon and the sun was on her hair.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg029_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 30,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The slat fell out somewhere between the second bend and the bridge.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg030_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 31,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "It fell out the way a tooth falls out \u2014 quietly, and then all at once. One small wooden thump on the road behind her. Pip didn't hear it over her own humming. (She hummed when she was happy. She did not hum when she was supposed to hum. That was different, she would have told you.)",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg031_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 32,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "For a few yards the apples held. Eleven slats had been doing the work of ten. Now ten slats were doing the work of eleven.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg032_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 33,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Then the wagon went over a stone.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg033_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 34,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And the apples \u2014 oh, the apples.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg034_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 35,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "They came out in a great red wave. They bounced. They rolled. They went under the legs of Mr. Aleby's donkey and around the wheels of the cheese-cart and into Mrs. Brask's open doorway, where her cat looked up with deep personal offense. One apple made it all the way to the well and sat down beside it like it had been invited.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg035_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 36,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The village laughed.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg036_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 37,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "It was funny. I have to tell you that. It was very, very funny. A small girl with her mouth wide open, one hand on the empty rib of the wagon, apples everywhere, a single grey slat lying in the road like a dropped spoon. The baker laughed so hard he had to sit down. Old Mr. Tovey laughed without making any sound, which was how he always laughed. Even the donkey looked amused.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg037_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 38,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And Pip \u2014 Pip laughed too. Of course she did. She laughed first and loudest, because if you laugh first the laugh is on your side.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg038_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 39,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "Eleven slats!",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg039_young_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 40,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she called, holding up the runaway one.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg040_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 41,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "Who knew!",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg041_young_pip.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 42,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The village roared.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg042_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 43,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I did not laugh.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg043_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 44,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I mean \u2014 I did, then. Pip did. Pip laughed till her ribs hurt and helped chase apples till sundown and went home pink-cheeked and pleased.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg044_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 45,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "But the I telling you now. The I on this porch. That I did not laugh.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg045_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 46,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "That I was already counting.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg046_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 47,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "One slat. One small wooden tooth, lying in the dust.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg047_narrator.mp3"
+  },
+  {
+    "chapter": 5,
+    "idx": 48,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And four skips still to come.",
+    "output": "cant-have-nice-things/audio/segments/ch05_seg048_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "On the porch, Cal lifted his cup of lemonade and said, without thinking about it at all,",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 2,
+    "voice_key": "cal",
+    "voice_id": "bIHbv24MWmeRgasZH58o",
+    "voice_name": "Will",
+    "text": "Thank you.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg002_cal.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Old Pip's hands went still in her lap.\n\nShe looked at him for a long breath. Then she smiled, a small crooked smile, the kind that hurts a little at the corner.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 4,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "You're welcome,",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg004_old_pip.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 6,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Oh, you're very welcome.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg006_old_pip.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 7,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Bo squinted.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg007_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 8,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "Why'd you go quiet?",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg008_bo.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 9,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Because, that is the next part of the story. And I would rather skip it.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg009_old_pip.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 10,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "Then skip it,",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg010_bo.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 11,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Bo.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg011_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 12,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "No, that is exactly what I did before.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg012_old_pip.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 13,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "***\n\nPip was twelve now.\n\nTwelve is a tall age. Twelve has elbows. Twelve has opinions. Twelve has small ones watching from the fence, and twelve knows they are watching, and twelve walks a little straighter because of it.\n\nThe red wagon stood at the top of the hill in the morning light. Grandfather had tapped the wheel. Auntie Mern had oiled the pin, her green cloth folded into her apron pocket. Old Henna had hummed to the axle with her hand flat on the wood, and the little square of red linen she kept tied at her wrist had brushed the rim. Pip had counted the slats. Eleven. She had breathed on the latch. She had tied the rope in a figure-eight, slow, neat, because the little ones were watching and the little ones must see it done right.\n\nSix.\n\nOne to go.\n\nThe thank-you.\n\nPip opened her mouth.\n\nAnd here is where Pip should have spoken. She did not speak.\n\nBecause Tully Brask was standing at the fence. Tully, all of five, sleeves shoved up to his elbows, watching her the way you watch a comet. And behind him two other small ones, Lin and baby Ros, with their faces pressed between the rails.\n\nAnd Pip thought \u2014 quickly, the way twelve thinks \u2014 they will hear me thank a wagon. They will hear me say thank you to a thing made of wood. And they will giggle, and Tully will tell, and tomorrow I will be the girl who talks to wagons.\n\nSo Pip pressed her lips together.\n\nShe crossed her arms. She lifted her chin the way she had seen the older boys do. She looked at the wagon, and she thought the thank-you very loudly inside her head, which she decided was the same thing.\n\nIt was not the same thing.\n\nThe wagon did not creak. The wheel did not wobble. No apple rolled. No slat fell. The morning went on being a perfectly ordinary morning, and Pip pulled the wagon down the hill, and the little ones watched her go.\n\nThis is the quietest part of the story. Listen carefully. I will only say it once.\n\nThe wagon did not need the thanks.\n\nPip did.\n\nAnd Tully, at the fence, watched a tall girl with crossed arms not say thank you. And he tucked that away inside himself, very neat, the way small ones tuck things. That is how you do it, his face said, without knowing it said anything. You stand tall. You cross your arms. You do not say the soft word.\n\nLin tucked it away too.\n\nBaby Ros tucked it away, though she could not yet say thank you nor wagon nor her own full name.\n\nThree small ones, learning.\n\nThe wrong thing.\n\nThe painted flowers on the wagon's side were red and yellow and blue. That morning, if you had been looking \u2014 and nobody was looking \u2014 you might have said they seemed a shade duller. Just a shade. Nothing you could prove.\n\nNothing anyone would notice for years.\n\n***\n\nOn the porch, Old Pip was quiet a long time.\n\nCal, worried, held out his lemonade.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg013_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 14,
+    "voice_key": "cal",
+    "voice_id": "bIHbv24MWmeRgasZH58o",
+    "voice_name": "Will",
+    "text": "Do you want some?",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg014_cal.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 15,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "No, sweet thing,",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg015_old_pip.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 16,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Old Pip.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg016_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 17,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I want you to keep saying it. The thank-you. Every time. Even when you feel silly. Especially when you feel silly.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg017_old_pip.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 18,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Why especially?",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg018_liss.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 19,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "asked Liss.\n\nOld Pip looked out at the long path in the grass.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg019_narrator.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 20,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Because, the ones who feel silly are usually the ones being watched.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg020_old_pip.mp3"
+  },
+  {
+    "chapter": 6,
+    "idx": 21,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "At her feet, Wren \u2014 who had not said a word the whole chapter \u2014 pressed her small palm flat against the porch board, and mouthed, silently, thank you.\n\nBo did not see her do it.\n\nBut I did.",
+    "output": "cant-have-nice-things/audio/segments/ch06_seg021_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Liss bent over her shoe. The lace went under, around, through \u2014 and flopped open like a tired worm.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 2,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Again,",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg002_liss.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said, frowning. She tried it twice. Twice it slipped.\n\nThe old woman watched her small fingers fumble and her own hands went very still in her lap.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 4,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "There is,",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg004_old_pip.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said,",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 6,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "a knot. And there is the knot. They are not the same knot.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg006_old_pip.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 7,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "She closed her eyes a moment. The porch boards were warm under her heels. Somewhere a bee was busy in the honeysuckle. She let the bee finish its sentence before she started hers.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg007_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 8,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Now. Listen. Pip was alone.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg008_old_pip.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 9,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "It was the first time. Grandfather was in bed with a cough that rattled his chest like loose slats, and Auntie Mern was down-valley, and the medicine had to go up the hill to old Mrs. Aleby before sundown, and there was no one else.\n\nNo one else.\n\nPip stood at the top of the green hill with the bright red wagon and the brown glass bottle and her own two hands. Her heart was doing a drum-thing. Her grin was doing a grin-thing. She was ten years old and she was trusted.\n\nShe did the tap. (She remembered the tap now. Mostly.)\n\nShe did the oil \u2014 a little crooked, but done.\n\nShe did not hum. Humming was for babies and for Grandfather and she was in a hurry.\n\nShe did not count. Eleven was eleven.\n\nShe did not breathe on the latch. She was already breathing, wasn't she? That counted.\n\nShe picked up the rope.\n\nNow. The rope. The rope went around the post and then around itself in a careful curving shape like a lazy number eight lying down to nap. Grandfather's hands had made that shape a thousand times. Pip had watched them a thousand and one.\n\nThe bottle was waiting. The sun was sliding. Mrs. Aleby was coughing somewhere down the long bent path.\n\nPip tied a regular knot.\n\nJust one loop. Just one tug. Just quick.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg009_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 10,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I've got it,",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg010_young_pip.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 11,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said, to nobody, to the wagon, to herself.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg011_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 12,
+    "voice_key": "young_pip",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica",
+    "text": "I've got it.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg012_young_pip.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 13,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And here is where Pip should have stopped. She did not stop.\n\nShe did not say thank you.\n\nShe pushed off.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg013_narrator.mp3"
+  },
+  {
+    "chapter": 7,
+    "idx": 14,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Oh, but the hill.\n\nThe hill was green and the wagon was fast and the wind got into Pip's hair and her smock and her open laughing mouth all at once. The wheels sang. The slats hummed. The bottle in its straw nest knocked a little tune against the side. Faster than any wagon had ever gone. Faster than Grandfather. Faster than Auntie. Faster than the swallows that lifted off the fence as she flew past.\n\nFor three whole seconds it was the best thing Pip had ever done.\n\nThen the wheel remembered it had not been tapped.\n\nThen the axle remembered it had not been hummed to.\n\nThen the eleventh slat \u2014 loose for a week, loose for a month, loose since before Pip was born, maybe \u2014 remembered it had not been counted.\n\nThen the latch remembered no breath had warmed it.\n\nThen the pin, the brave little pin, remembered nobody had thanked anybody for anything.\n\nAnd then the rope, the plain-knot rope, the lazy-eight-that-wasn't, gave up trying to be something it was not.\n\nThe wagon let go of itself.\n\nIt scattered its bright bones into the long grass.\n\nA wheel went up \u2014 up, like a coin tossed for luck \u2014 spinning against the blue. The slats fanned out in the air like a deck of cards being shuffled by no one. The pull-rope unraveled in three long lazy curls. The painted bench-back floated, almost gentle, almost shy, and laid itself down in the clover. The brown glass bottle rose, turning, catching the sun, catching the sun, catching the sun.\n\nIn the middle of all of it stood Pip, with her two empty fists and her mouth a small round O.\n\nShe did not make a sound.\n\nThe wagon did not make a sound.\n\nThe grass made the only sound, and it was the soft tick of bright wooden pieces coming to rest one by one by one in the green.\n\nThen the bottle came down.\n\nIt did not break. (The narrator will give you that one small mercy. Only that one.)\n\nIt rolled, slow, slow, slow, and stopped against Pip's bare foot.\n\nAnd Pip stood alone at the top \u2014 no. At the middle. At the middle of the hill, surrounded by every piece of a wagon that had been one wagon a minute ago and was now a hundred small pieces of wood pretending to be flowers in the grass.\n\nShe did not move.\n\nShe did not move for a long time.\n\nDown in the village, somebody had heard.",
+    "output": "cant-have-nice-things/audio/segments/ch07_seg014_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The workshop smelled like sawdust and old oil and rain on cold stone.\n\nThe whole village came. They came quiet. They came with their hats in their hands and their cloths folded in their pockets \u2014 a green one, a red one, a yellow one the color of butter going soft. Pip had never noticed the cloths before. She noticed them now.\n\nThe pieces of the wagon were laid out on the workshop floor in a wide ring, the way you lay out bones. A wheel here. A slat there. The pin. The latch. The rope, in two soft pieces. The painted bench-back with one yellow flower still bright on it.\n\nGrandfather knelt in the middle.\n\nHe rolled up his sleeves. He laid his hands flat on his knees. He breathed out, long and slow, the way he breathed at the wagon before he began.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 2,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Now then,",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg002_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "he said.\n\nThe village leaned forward.\n\nHe picked up the pin. He turned it in his fingers. He set it down. He picked up the axle and laid it across two blocks. He hummed, low, almost not a hum. Auntie Mern stepped close with her wrench rolling between her palms, and she handed him things before he asked, and for a little while it looked the way it had always looked \u2014 Grandfather's slow hands and Auntie's silent ones, and the wagon coming together under them like a story remembering itself.\n\nPip stood in the doorway. She did not come in. She had not come in since the hill.\n\nGrandfather fit the axle to the frame. He tapped it. He set the first slat in. He counted under his breath \u2014 one, two, three \u2014 and he set in the second, and the third, and on the fourth slat his hands slowed.\n\nHe held it a moment.\n\nHe set it down.\n\nHe picked up another piece \u2014 a small curved piece Pip had never paid attention to, a piece the color of dark honey, with two notches carved in one end. He turned it one way. He turned it the other way. He held it up to the lantern.\n\nThe lantern light shook on the walls.\n\nGrandfather looked at Auntie Mern. Auntie Mern looked at the piece. She did not roll the wrench. She held it very still.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 4,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "Mern,",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg004_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Grandfather said.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 6,
+    "voice_key": "auntie_mern",
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "voice_name": "Matilda",
+    "text": "Mm,",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg006_auntie_mern.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 7,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Auntie Mern, which was not a yes.\n\nHe tried it one way. He tried it the other. He set it down. He picked it back up. He laid it against the axle and it did not sit right; he laid it against the frame and it did not sit right there either. He closed one eye and squinted along it the way you squint along a board to see if it's true.\n\nHe set it down a third time.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg007_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 8,
+    "voice_key": "grandfather_eamon",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill",
+    "text": "I don't remember, how this part goes.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg008_grandfather_eamon.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 9,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "He said it the way you'd say the kettle's empty. Soft. Plain. Not louder.\n\nNobody spoke.\n\nGranny Fenn, at the back, in her shawl, said into the quiet,",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg009_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 10,
+    "voice_key": "granny_fenn",
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "voice_name": "Lily",
+    "text": "Mara knew that one.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg010_granny_fenn.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 11,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The village turned to her.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg011_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 12,
+    "voice_key": "granny_fenn",
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "voice_name": "Lily",
+    "text": "She passed in the winter,",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg012_granny_fenn.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 13,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Granny Fenn said.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg013_narrator.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 14,
+    "voice_key": "granny_fenn",
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "voice_name": "Lily",
+    "text": "She didn't get the chance.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg014_granny_fenn.mp3"
+  },
+  {
+    "chapter": 8,
+    "idx": 15,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "That was all she said. She folded her hands over her cloth \u2014 a worn blue one, almost grey \u2014 and she said nothing else.\n\nGrandfather looked down at the piece in his palm. He looked at Auntie Mern, and Auntie Mern looked back at him, and her mouth opened a little and then closed, because she did not know either, and she had not known she did not know, and she was finding it out in front of everyone at once.\n\nShe shook her head, the smallest shake.\n\nGrandfather laid the piece down on the floor with the others.\n\nHe sat back on his heels. He put his hands on his knees, palms up, the way a person sits when they are done lifting things. And then \u2014 Pip saw it from the doorway, she would see it her whole long life \u2014 he closed his eyes.\n\nHe did not open them for a long time.\n\nOne by one, the villagers took out their cloths. The green one. The red one. The butter-yellow. The almost-grey. They knelt, slow as old trees, around the ring of pieces, and they laid the cloths down beside the bones of the wagon, each in its own place \u2014 and Pip understood, watching from the doorway, that the cloths had been mending it all along. Every ride. Every year. Quiet hands and quiet cloths, and nobody had ever said so, because nobody had ever needed to say so.\n\nUntil now.\n\nAnd that, the old woman on the porch said, was the last day there was a wagon.",
+    "output": "cant-have-nice-things/audio/segments/ch08_seg015_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 1,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "The porch was quiet for a long time.\n\nA bee bumbled against the screen door and gave up. Somewhere down the lane a dog barked twice, and then thought better of it. The light had gone the color of honey left out too long.\n\nBo had his chin on his knees. Liss was looking at her own hands as if she had never quite seen them before. Cal had stopped humming, which was the loudest thing he had done all afternoon.\n\nIt was Wren who finally spoke.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg001_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 2,
+    "voice_key": "wren",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "text": "Are you still sorry?",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg002_wren.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 3,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she asked.\n\nI waited a breath. I always do, for her. The question under the question is usually the one worth answering.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg003_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 4,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Yes,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg004_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 5,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I said.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg005_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 6,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Every day.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg006_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 7,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Bo opened his mouth, and closed it. Liss frowned at her thumbs.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg007_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 8,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "But that isn't why I tell it,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg008_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 9,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I said.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg009_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 10,
+    "voice_key": "bo",
+    "voice_id": "IKne3meq5aSn9XLyUdCD",
+    "voice_name": "Charlie",
+    "text": "Why, then?",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg010_bo.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 11,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Bo, because Bo cannot help himself, and I love him for it.\n\nI looked out past the porch rail. The path was still there in the grass, the way a path stays after the thing that made it has gone. Long. Bent. Gold in the late light. A shape of missing weight.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg011_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 12,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Because the story is the last piece of the wagon I have,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg012_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 13,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I said.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg013_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 14,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And a piece is a thing you can hand to somebody.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg014_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 15,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I set my hand on the porch rail. The wood was warm. I have sat on this porch for fifty years, and the rail knows me, which is not the same as me knowing it, but it is close.\n\nI tapped it. Twice. Light, with two fingers, the way Grandfather did the wheel.\n\nAt my knee, something moved. I did not look down. I knew.\n\nWren tapped her knee. Twice. Light. With two fingers.\n\nI drew my thumb along the rail as if there were a pin there to be oiled, and I hummed \u2014 low, the note Grandfather hummed, the note I have hummed under my breath every washing-up for fifty years without quite knowing I was doing it.\n\nWren hummed.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg015_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 16,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "One,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg016_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 17,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I said, looking at Bo.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg017_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 18,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Two,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg018_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 19,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Liss.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg019_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 20,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Three,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg020_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 21,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Cal.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg021_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 22,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Four,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg022_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 23,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Wren. Four children. Eleven would have been the wagon. Four is what I have. Four is enough to count.\n\nI leaned forward and breathed, soft, on the porch post where the paint has gone thin. A little cloud, gone before you saw it. The way you breathe on a latch to wake it up.\n\nWren breathed on her wrist.\n\nI took the loose end of my apron string between my fingers. Over. Under. Around. Through. A figure-eight, the way the rope went on the wagon, the way it should have gone on the day I was in a hurry. My knuckles are not what they were. The knot still came.\n\nWren was working at the hem of her yellow shift. Over. Under. Around. Through. Her tongue caught in the corner of her mouth.\n\nI watched her fingers. They were getting it right.\n\nI sat back. The last one is the hardest, and the easiest, and the one I skipped when I was twelve because I thought I was too old for it. I am not too old for it now. I am exactly old enough.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg023_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 24,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Thank you,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg024_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 25,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I said. Out loud. To the porch, and to the path, and to the four children on my steps, and to a red wagon that has not stood at the top of the hill for sixty-three years.\n\nWren's lips shaped it. Thank you. No sound. The right shape.\n\nBo was watching her. Liss was watching her. Cal had started to hum again, very softly, and did not know he had.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg025_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 26,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "That's it,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg026_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 27,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I said.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg027_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 28,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "That's all of them. Tap. Oil. Hum. Count. Breathe. Tie. Thank.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg028_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 29,
+    "voice_key": "liss",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura",
+    "text": "Seven,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg029_liss.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 30,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "said Liss, who counts.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg030_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 31,
+    "voice_key": "old_pip",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "Seven,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg031_old_pip.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 32,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "I said.\n\nThe sun was going. The path in the grass was the color of a thing remembered well. Somewhere up at the top of the hill, where the wagon used to wait, the wind moved through grass that had nothing in it to move around, and made the sound it makes when it is alone.\n\nWren leaned her head against my knee.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg032_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 33,
+    "voice_key": "wren",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "text": "Tell me which one is the tap,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg033_wren.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 34,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "she said, very quietly,",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg034_narrator.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 35,
+    "voice_key": "wren",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah",
+    "text": "so I get it right next time.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg035_wren.mp3"
+  },
+  {
+    "chapter": 9,
+    "idx": 36,
+    "voice_key": "narrator",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George",
+    "text": "And I did.",
+    "output": "cant-have-nice-things/audio/segments/ch09_seg036_narrator.mp3"
+  }
+]

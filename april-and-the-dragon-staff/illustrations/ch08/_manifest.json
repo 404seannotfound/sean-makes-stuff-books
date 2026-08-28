@@ -1,0 +1,134 @@
+{
+  "chapter": 8,
+  "beats": [
+    {
+      "index": 1,
+      "filename": "beat_01.jpeg",
+      "scene_name": "Festival Glow",
+      "page_position": "opening",
+      "weight": "high",
+      "mood": "Anticipation",
+      "annotations": [
+        "THE LANTERNS ARE LIT AND THE FIRE-TOWN GLOWS",
+        "the chalk circle gleams",
+        "three dark wicks"
+      ],
+      "why_this_beat": "Establishes the festival setting and the troupe gathering at the circle before any fire is introduced \u2014 the opening image of warmth and excitement."
+    },
+    {
+      "index": 2,
+      "filename": "beat_02.jpeg",
+      "scene_name": "Scorch Touch",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Solemn",
+      "annotations": [
+        "she touches it once",
+        "SCORCH MEMORY",
+        "her voice has no flaw"
+      ],
+      "why_this_beat": "April's private moment with her scar before she begins the call \u2014 anchoring her backstory and the weight she carries into this night."
+    },
+    {
+      "index": 3,
+      "filename": "beat_03.jpeg",
+      "scene_name": "Circle Call",
+      "page_position": "early",
+      "weight": "medium",
+      "mood": "Unity",
+      "annotations": [
+        "STEP INTO THE CIRCLE AND KNOW WHERE YOU STAND",
+        "here is my hand!",
+        "the friends answer true"
+      ],
+      "why_this_beat": "The call-and-response ritual in full swing \u2014 all five characters visible, the circle complete, the community of safety made visible before it breaks."
+    },
+    {
+      "index": 4,
+      "filename": "beat_04.jpeg",
+      "scene_name": "Towel Ready",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Vigilance",
+      "annotations": [
+        "I hold it. I'm close.",
+        "TWO SPIN-WIDTHS AWAY",
+        "I will track every light"
+      ],
+      "why_this_beat": "Shows the safety infrastructure in place \u2014 the towel held close (not at arm's length) and the spotter positioned \u2014 before the moment that tests them."
+    },
+    {
+      "index": 5,
+      "filename": "beat_05.jpeg",
+      "scene_name": "Breath Count",
+      "page_position": "midchapter",
+      "weight": "medium",
+      "mood": "Reverent",
+      "annotations": [
+        "breathe in for three",
+        "breathe out for four",
+        "BREATH RINGS",
+        "gold through a door"
+      ],
+      "why_this_beat": "The breath count is the ritual's centering moment \u2014 the last beat of collective calm before the final step that will break."
+    },
+    {
+      "index": 6,
+      "filename": "beat_06.jpeg",
+      "scene_name": "Blank Echo",
+      "page_position": "turning",
+      "weight": "high",
+      "mood": "Dread",
+      "annotations": [
+        "MANGO \u2014 ANSWER ME.",
+        "                              ",
+        "                              ",
+        "the refrain is broken"
+      ],
+      "why_this_beat": "The Blank Echo \u2014 the chapter's title moment. Mango's silence where the response should be, the unlit staff showing the skip BEFORE fire makes it dangerous, the safety circle visibly cracking."
+    },
+    {
+      "index": 7,
+      "filename": "beat_07.jpeg",
+      "scene_name": "Flame Catch",
+      "page_position": "climax",
+      "weight": "high",
+      "mood": "Urgent",
+      "annotations": [
+        "THE CIRCLE HAS FRIENDS",
+        "breathe in for three \u2014 breathe out for four!",
+        "the count is the answer",
+        "a pattern her paws learned long ago"
+      ],
+      "why_this_beat": "The climax \u2014 the collective catch in action, all four friends plus April forming the safety diamond, the fire contained because the circle holds even when the refrain broke."
+    },
+    {
+      "index": 8,
+      "filename": "beat_08.jpeg",
+      "scene_name": "Diamond Whole",
+      "page_position": "climax",
+      "weight": "medium",
+      "mood": "Relief",
+      "annotations": [
+        "THE CIRCLE IS WHOLE",
+        "four bodies, drawn tight",
+        "a diamond of friends"
+      ],
+      "why_this_beat": "The moment after the catch \u2014 the safety diamond visible as a geometric shape, the fire contained, the circle restored. Relief before the emotional reckoning."
+    },
+    {
+      "index": 9,
+      "filename": "beat_09.jpeg",
+      "scene_name": "Folded Small",
+      "page_position": "closing",
+      "weight": "high",
+      "mood": "Devastation",
+      "annotations": [
+        "she does not sing",
+        "small as a stone",
+        "the smoke drifts alone"
+      ],
+      "why_this_beat": "The closing image \u2014 Mango folded small, the staff extinguished, the silence where the echo should have been now filling the entire frame. No one can speak what just broke."
+    }
+  ]
+}

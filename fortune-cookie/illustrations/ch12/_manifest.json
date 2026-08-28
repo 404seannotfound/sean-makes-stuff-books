@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "scene_name": "Crane Ambush",
+    "name_slug": "crane_ambush",
+    "file": "beat_01_crane_ambush.jpeg",
+    "position": "opening",
+    "weight": "high",
+    "mood": "Confrontation"
+  },
+  {
+    "index": 2,
+    "scene_name": "Hairline Fracture",
+    "name_slug": "hairline_fracture",
+    "file": "beat_02_hairline_fracture.jpeg",
+    "position": "early",
+    "weight": "medium",
+    "mood": "Wounded"
+  },
+  {
+    "index": 3,
+    "scene_name": "Tiny Chair",
+    "name_slug": "tiny_chair",
+    "file": "beat_03_tiny_chair.jpeg",
+    "position": "early",
+    "weight": "high",
+    "mood": "Tender"
+  },
+  {
+    "index": 4,
+    "scene_name": "Rounded Shoulders",
+    "name_slug": "rounded_shoulders",
+    "file": "beat_04_rounded_shoulders.jpeg",
+    "position": "midchapter",
+    "weight": "medium",
+    "mood": "Ache"
+  },
+  {
+    "index": 5,
+    "scene_name": "Empty Drawer",
+    "name_slug": "empty_drawer",
+    "file": "beat_05_empty_drawer.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Panic"
+  },
+  {
+    "index": 6,
+    "scene_name": "Clean Counter",
+    "name_slug": "clean_counter",
+    "file": "beat_06_clean_counter.jpeg",
+    "position": "turning",
+    "weight": "high",
+    "mood": "Judgment"
+  },
+  {
+    "index": 7,
+    "scene_name": "Winter Forest",
+    "name_slug": "winter_forest",
+    "file": "beat_07_winter_forest.jpeg",
+    "position": "climax",
+    "weight": "high",
+    "mood": "Reckoning"
+  },
+  {
+    "index": 8,
+    "scene_name": "Closed Fist",
+    "name_slug": "closed_fist",
+    "file": "beat_08_closed_fist.jpeg",
+    "position": "closing",
+    "weight": "high",
+    "mood": "Surrender"
+  }
+]
