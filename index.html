@@ -7,21 +7,148 @@
   <meta name="description" content="Books made end-to-end with LLMs, image models, and TTS — story, art, and audio all generated from short briefs.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .books-hero { padding: 56px 0 24px; }
-    .books-hero h1 { font-size: 2.4rem; line-height: 1.1; margin-bottom: 12px; }
-    .books-hero p { color: #6e6e73; max-width: 60ch; line-height: 1.6; }
-    .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin: 32px 0; }
-    .book-card { background: #fff; border: 1px solid #e5e5e7; border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
-    .book-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-2px); }
-    .book-card__art { width: 100%; aspect-ratio: 1; background: #f3ede0; }
-    .book-card__art img { width: 100%; height: 100%; object-fit: contain; }
-    .book-card__body { padding: 18px 20px; }
-    .book-card__kicker { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6e6e73; margin-bottom: 8px; }
-    .book-card__title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.4rem; margin-bottom: 8px; }
-    .book-card__desc { color: #6e6e73; font-size: 0.92rem; line-height: 1.5; }
-    .book-card__meta { margin-top: 12px; font-size: 0.78rem; color: #6e6e73; display: flex; gap: 10px; flex-wrap: wrap; }
-    .book-card__meta span::before { content: "·"; padding-right: 10px; color: #c4b489; }
-    .book-card__meta span:first-child::before { content: ""; padding: 0; }
+    body { background: #f6efdf; }
+    .books-hero { padding: 48px 0 8px; }
+    .books-hero h1 { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 2.6rem; line-height: 1.1; margin-bottom: 12px; }
+    .books-hero p { color: #6e6e73; max-width: 62ch; line-height: 1.6; }
+
+    /* ---------- the bookcase ---------- */
+    .bookcase {
+      margin: 36px 0 56px;
+      padding: 18px 18px 6px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #6b4a2f, #59391f);
+      box-shadow: 0 12px 32px rgba(60,35,10,0.35), inset 0 2px 0 rgba(255,255,255,0.12);
+      border: 1px solid #4a2f18;
+    }
+    .bookcase__inner {
+      background:
+        repeating-linear-gradient(90deg, rgba(0,0,0,0.05) 0 2px, transparent 2px 90px),
+        linear-gradient(180deg, #8a6a48, #7a5a3a);
+      border-radius: 6px;
+      box-shadow: inset 0 6px 18px rgba(40,20,5,0.45);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      padding: 8px 10px 0;
+    }
+    .shelf-slot {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 34px 14px 0;
+    }
+    .shelf-slot::after {           /* the plank — segments join into continuous shelves */
+      content: "";
+      position: absolute; left: -10px; right: -10px; bottom: 0; height: 15px;
+      background:
+        repeating-linear-gradient(90deg, rgba(0,0,0,0.06) 0 3px, transparent 3px 70px),
+        linear-gradient(180deg, #a9865e, #8a6a44 60%, #6d4e2e);
+      box-shadow: 0 3px 6px rgba(40,20,5,0.5);
+    }
+
+    /* ---------- a book ---------- */
+    .book {
+      position: relative;
+      display: block;
+      width: 100%; max-width: 205px;
+      margin-bottom: 15px;          /* sits on the plank */
+      padding: 0; border: none; background: none; cursor: pointer;
+      transform-origin: bottom center;
+      transition: transform 0.22s ease;
+      z-index: 1;
+    }
+    .book:hover, .book:focus-visible { transform: translateY(-10px) rotate(-1.2deg); z-index: 2; }
+    .book:focus-visible { outline: 3px solid #b5762a; outline-offset: 4px; border-radius: 4px; }
+    .book__cover {
+      position: relative;
+      aspect-ratio: 1 / 1.08;
+      border-radius: 2px 6px 6px 2px;
+      overflow: hidden;
+      background: #f3ede0;
+      /* page stack on the right + under, spine crease on the left */
+      box-shadow:
+        3px 0 0 #fdfaf1, 5px 1px 0 #efe8d6, 7px 2px 0 #fdfaf1, 9px 3px 0 #e6ddc6,
+        10px 8px 18px rgba(50,30,10,0.45);
+    }
+    .book__cover::before {          /* spine shading */
+      content: ""; position: absolute; inset: 0 auto 0 0; width: 12px;
+      background: linear-gradient(90deg, rgba(0,0,0,0.28), rgba(0,0,0,0.05) 60%, rgba(255,255,255,0.18));
+      z-index: 1; pointer-events: none;
+    }
+    .book__cover::after {           /* soft gloss */
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.14), transparent 35%);
+      pointer-events: none;
+    }
+    .book__cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .book__label {
+      margin: 10px auto 0; max-width: 92%;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-size: 0.86rem; line-height: 1.25; text-align: center;
+      color: #f6ead2; text-shadow: 0 1px 2px rgba(40,20,5,0.6);
+    }
+    .book__hint {
+      display: block; text-align: center; font-size: 0.68rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #d9c39a; opacity: 0; transition: opacity 0.2s; margin-top: 3px;
+    }
+    .book:hover .book__hint, .book:focus-visible .book__hint { opacity: 1; }
+
+    /* ---------- examine view ---------- */
+    .examine {
+      position: fixed; inset: 0; z-index: 50;
+      display: none; align-items: center; justify-content: center;
+      padding: 24px;
+      background: rgba(30, 20, 8, 0.62);
+      backdrop-filter: blur(2px);
+    }
+    .examine.open { display: flex; }
+    .examine__panel {
+      display: flex; gap: 28px;
+      max-width: 880px; max-height: min(88vh, 720px); width: 100%;
+      overflow: auto;
+      background: #fbf6ea;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 24px 64px rgba(20,10,0,0.5);
+      animation: pullout 0.28s ease;
+    }
+    @keyframes pullout {
+      from { transform: translateY(26px) scale(0.94); opacity: 0; }
+      to   { transform: none; opacity: 1; }
+    }
+    .examine__coverwrap { flex: 0 0 42%; align-self: flex-start; }
+    .examine__cover {
+      border-radius: 2px 6px 6px 2px; overflow: hidden;
+      box-shadow: 4px 0 0 #fdfaf1, 7px 2px 0 #efe8d6, 10px 4px 0 #fdfaf1, 12px 12px 26px rgba(50,30,10,0.4);
+    }
+    .examine__cover img { width: 100%; display: block; }
+    .examine__body { flex: 1; min-width: 0; }
+    .examine__kicker { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8a7a5c; margin-bottom: 8px; }
+    .examine__title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.7rem; line-height: 1.15; margin-bottom: 6px; }
+    .examine__desc { color: #55534d; font-size: 0.95rem; line-height: 1.6; margin: 12px 0; }
+    .examine__meta { font-size: 0.8rem; color: #8a7a5c; display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+    .examine__meta span::before { content: "·"; padding-right: 10px; color: #c4b489; }
+    .examine__meta span:first-child::before { content: ""; padding: 0; }
+    .examine__read {
+      display: inline-block; padding: 11px 22px; border-radius: 8px;
+      background: #7a5a3a; color: #fbf6ea; text-decoration: none; font-weight: 600;
+      box-shadow: 0 3px 0 #59391f;
+    }
+    .examine__read:hover { background: #8a6a48; }
+    .examine__close {
+      position: absolute; top: 14px; right: 16px;
+      border: none; background: none; cursor: pointer;
+      font-size: 1.6rem; line-height: 1; color: #8a7a5c; padding: 6px;
+    }
+    .examine__close:hover { color: #3a3126; }
+    .examine__panelwrap { position: relative; max-width: 880px; width: 100%; }
+    .made-stamp { font-size: 0.8rem; color: #8a7a5c; font-style: italic; }
+
+    @media (max-width: 640px) {
+      .examine__panel { flex-direction: column; gap: 18px; }
+      .examine__coverwrap { flex: none; max-width: 260px; margin: 0 auto; }
+    }
   </style>
 </head>
 <body>
@@ -41,130 +168,174 @@
 
     <section class="books-hero">
       <div class="container">
-        <h1>Books</h1>
-        <p>Illustrated books made end-to-end with LLMs, image models, and text-to-speech. Each one starts as a short brief and exits as a readable novel, a printable PDF, and a narrated audiobook — typically in under an hour of wall-clock time. Every project lists its prompts, tokens, cost, and timing so you can see the seams.</p>
+        <h1>The Bookshelf</h1>
+        <p>Illustrated books made end-to-end with LLMs, image models, and text-to-speech. Each one starts as a short brief and exits as a readable novel, a printable PDF, and a narrated audiobook — typically in under an hour of wall-clock time. Every project lists its prompts, tokens, cost, and timing so you can see the seams. Take one down and have a look.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div class="books-grid">
+        <div class="bookcase" role="list">
+          <div class="bookcase__inner">
 
-          <a class="book-card" href="fools-cycle/novel.html">
-            <div class="book-card__art">
-              <img src="fools-cycle/storyboard/cover.jpg" alt="Fool&#x27;s Cycle — cover" loading="lazy">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="fools-cycle" aria-haspopup="dialog">
+                <span class="book__cover"><img src="fools-cycle/storyboard/cover.jpg" alt="Fool's Cycle — cover" loading="lazy"></span>
+                <span class="book__label">Fool&#x27;s Cycle</span>
+                <span class="book__hint">examine</span>
+              </button>
             </div>
-            <div class="book-card__body">
-              <div class="book-card__kicker">Illustrated YA novel · 2026</div>
-              <h2 class="book-card__title">Fool&#x27;s Cycle</h2>
-            <div class="made-stamp" data-first="2026-06-08" data-last="2026-07-24">started Jun 8, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
-              <p class="book-card__desc">A grieving seventeen-year-old walks the twenty-two Major Arcana three times — and each turn she understands the Tower&#x27;s fall, the Death card&#x27;s ending, and the Fool&#x27;s leap a little differently. The Tarot read as a <em>cycle</em>, and the five stages of grief revealed as what you get when you take a transition and demand it have a finish line. The road does not end; she learns to love that it doesn&#x27;t.</p>
-              <div class="book-card__meta">
-                <span>22 arcana</span>
-                <span>161 watercolor illustrations</span>
-                <span>3h 3m audiobook</span>
-                <span>9 voices</span>
-              </div>
-            </div>
-          </a>
 
-          <a class="book-card" href="april-and-the-dragon-staff.html">
-            <div class="book-card__art">
-              <img src="april-and-the-dragon-staff-v2/storyboard/cover.jpg" alt="April and the Dragon Staff — cover" loading="lazy">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="april" aria-haspopup="dialog">
+                <span class="book__cover"><img src="april-and-the-dragon-staff-v2/storyboard/cover.jpg" alt="April and the Dragon Staff — cover" loading="lazy"></span>
+                <span class="book__label">April and the Dragon Staff</span>
+                <span class="book__hint">examine</span>
+              </button>
             </div>
-            <div class="book-card__body">
-              <div class="book-card__kicker">Children&#x27;s picture book · v1 + v2 · 2026</div>
-              <h2 class="book-card__title">April and the Dragon Staff</h2>
-            <div class="made-stamp" data-first="2026-05-17" data-last="2026-07-24">started May 17, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
-              <p class="book-card__desc">April the rainbow koala teaches her friends to spin the dragon staff — and when one friend forgets to close the fuel on the night of the lit spin, the silence teaches what April&#x27;s voice alone could not. Written in two versions: <strong>v2</strong> (current) is natural prose with the inspirer&#x27;s actual flow-arts safety ritual and Cypher (older tiger) as April&#x27;s teacher. <strong>v1</strong> is strict AABB rhymed verse with the original call-and-response form. Tab between them on the detail page.</p>
-              <div class="book-card__meta">
-                <span>10 chapters</span>
-                <span>98 illustrations</span>
-                <span>v2: 38 min · v1: 59 min</span>
-                <span>7 voices</span>
-              </div>
-            </div>
-          </a>
 
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="conjurers" aria-haspopup="dialog">
+                <span class="book__cover"><img src="tutorial-choir/storyboard/cover.jpg" alt="The Console Conjurers — cover" loading="lazy"></span>
+                <span class="book__label">The Console Conjurers</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
 
-          <a class="book-card" href="tutorial-choir/novel.html">
-            <div class="book-card__art">
-              <img src="tutorial-choir/storyboard/cover.jpg" alt="The Console Conjurers — cover" loading="lazy">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="maillard" aria-haspopup="dialog">
+                <span class="book__cover"><img src="maillard-crust-tutorial/storyboard/cover.jpg" alt="The Maillard Affair — cover" loading="lazy"></span>
+                <span class="book__label">The Maillard Affair</span>
+                <span class="book__hint">examine</span>
+              </button>
             </div>
-            <div class="book-card__body">
-              <div class="book-card__kicker">Illustrated technical tutorial · 2026</div>
-              <h2 class="book-card__title">The Console Conjurers</h2>
-            <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
-              <p class="book-card__desc">A short illustrated tutorial that walks a brand-new user through setting up the agentic-AI workstation — Claude Code, the Choir multi-model CLI, skills, the image-gen drawing hack, and a small PROCESS.md that runs a solo D&amp;D game. Two characters, one kitchen-spaceport, eight tight chapters, painterly Mézières-style watercolor panels.</p>
-              <div class="book-card__meta">
-                <span>8 steps</span>
-                <span>64 watercolor beats</span>
-                <span>5 real screenshots</span>
-                <span>5 terminal captures</span>
-                <span>40 min audiobook</span>
-              </div>
-            </div>
-          </a>
 
-          <a class="book-card" href="maillard-crust-tutorial/novel.html">
-            <div class="book-card__art">
-              <img src="maillard-crust-tutorial/storyboard/cover.jpg" alt="The Maillard Affair — cover" loading="lazy">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="empty-jar" aria-haspopup="dialog">
+                <span class="book__cover"><img src="fortune-cookie/storyboard/cover.jpg" alt="The Empty Jar — cover" loading="lazy"></span>
+                <span class="book__label">The Empty Jar</span>
+                <span class="book__hint">examine</span>
+              </button>
             </div>
-            <div class="book-card__body">
-              <div class="book-card__kicker">Illustrated cooking tutorial · 2026</div>
-              <h2 class="book-card__title">The Maillard Affair</h2>
-            <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
-              <p class="book-card__desc">A short tutorial about cooking the perfect New York strip steak — Mara (the meticulous one, reverse sear) and Theo (the enthusiastic one, forward sear) bicker affectionately through every step, with the Maillard reaction explained over a screaming-hot cast iron pan.</p>
-              <div class="book-card__meta">
-                <span>8 steps</span>
-                <span>66 illustrations</span>
-                <span>33 min audiobook</span>
-                <span>3 voices</span>
-              </div>
-            </div>
-          </a>
 
-          <a class="book-card" href="fortune-cookie/novel.html">
-            <div class="book-card__art">
-              <img src="fortune-cookie/storyboard/cover.jpg" alt="The Empty Jar — cover" loading="lazy">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="nice-things" aria-haspopup="dialog">
+                <span class="book__cover"><img src="cant-have-nice-things/storyboard/cover.jpg" alt="This Is Why We Can't Have Nice Things — cover" loading="lazy"></span>
+                <span class="book__label">This Is Why We Can&#x27;t Have Nice Things</span>
+                <span class="book__hint">examine</span>
+              </button>
             </div>
-            <div class="book-card__body">
-              <div class="book-card__kicker">Middle-grade contemporary fantasy · 2026</div>
-              <h2 class="book-card__title">The Empty Jar</h2>
-            <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
-              <p class="book-card__desc">A grieving twelve-year-old discovers that the fortune cookies at her late grandmother's Chinatown restaurant seem to predict the future — but the quieter, more devastating truth is that her grandmother spent her dying year writing hundreds of personalized fortunes for specific people she'd watched for decades.</p>
-              <div class="book-card__meta">
-                <span>18 chapters</span>
-                <span>143 illustrations</span>
-                <span>3h 22m audiobook</span>
-                <span>10 voices</span>
-              </div>
-            </div>
-          </a>
 
-          <a class="book-card" href="cant-have-nice-things.html">
-            <div class="book-card__art">
-              <img src="cant-have-nice-things/storyboard/cover.jpg" alt="This Is Why We Can't Have Nice Things — cover" loading="lazy">
-            </div>
-            <div class="book-card__body">
-              <div class="book-card__kicker">Children's fable · 2026</div>
-              <h2 class="book-card__title">This Is Why We Can't Have Nice Things</h2>
-            <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
-              <p class="book-card__desc">An old woman tells the children of her town the story of the last wagon — and the day she, as a small girl certain she'd watched enough, skipped the steps that kept it whole.</p>
-              <div class="book-card__meta">
-                <span>9 chapters</span>
-                <span>73 illustrations</span>
-                <span>38 min audiobook</span>
-                <span>11 voices</span>
-              </div>
-            </div>
-          </a>
-
+          </div>
         </div>
       </div>
     </section>
 
   </main>
+
+  <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-fools-cycle" role="dialog" aria-modal="true" aria-label="Fool's Cycle">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="fools-cycle/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Illustrated YA novel · 2026</div>
+          <h2 class="examine__title book-card__title">Fool&#x27;s Cycle</h2>
+          <div class="made-stamp" data-first="2026-06-08" data-last="2026-07-24">started Jun 8, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">A grieving seventeen-year-old walks the twenty-two Major Arcana three times — and each turn she understands the Tower&#x27;s fall, the Death card&#x27;s ending, and the Fool&#x27;s leap a little differently. The Tarot read as a <em>cycle</em>, and the five stages of grief revealed as what you get when you take a transition and demand it have a finish line. The road does not end; she learns to love that it doesn&#x27;t.</p>
+          <div class="examine__meta"><span>22 arcana</span><span>161 watercolor illustrations</span><span>3h 3m audiobook</span><span>9 voices</span></div>
+          <a class="examine__read" href="fools-cycle/novel.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-april" role="dialog" aria-modal="true" aria-label="April and the Dragon Staff">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="april-and-the-dragon-staff-v2/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Children&#x27;s picture book · v1 + v2 · 2026</div>
+          <h2 class="examine__title book-card__title">April and the Dragon Staff</h2>
+          <div class="made-stamp" data-first="2026-05-17" data-last="2026-07-24">started May 17, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">April the rainbow koala teaches her friends to spin the dragon staff — and when one friend forgets to close the fuel on the night of the lit spin, the silence teaches what April&#x27;s voice alone could not. Written in two versions: <strong>v2</strong> (current) is natural prose with the inspirer&#x27;s actual flow-arts safety ritual and Cypher (older tiger) as April&#x27;s teacher. <strong>v1</strong> is strict AABB rhymed verse with the original call-and-response form. Tab between them on the detail page.</p>
+          <div class="examine__meta"><span>10 chapters</span><span>98 illustrations</span><span>v2: 38 min · v1: 59 min</span><span>7 voices</span></div>
+          <a class="examine__read" href="april-and-the-dragon-staff.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-conjurers" role="dialog" aria-modal="true" aria-label="The Console Conjurers">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="tutorial-choir/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Illustrated technical tutorial · 2026</div>
+          <h2 class="examine__title book-card__title">The Console Conjurers</h2>
+          <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">A short illustrated tutorial that walks a brand-new user through setting up the agentic-AI workstation — Claude Code, the Choir multi-model CLI, skills, the image-gen drawing hack, and a small PROCESS.md that runs a solo D&amp;D game. Two characters, one kitchen-spaceport, eight tight chapters, painterly Mézières-style watercolor panels.</p>
+          <div class="examine__meta"><span>8 steps</span><span>64 watercolor beats</span><span>5 real screenshots</span><span>5 terminal captures</span><span>40 min audiobook</span></div>
+          <a class="examine__read" href="tutorial-choir/novel.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-maillard" role="dialog" aria-modal="true" aria-label="The Maillard Affair">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="maillard-crust-tutorial/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Illustrated cooking tutorial · 2026</div>
+          <h2 class="examine__title book-card__title">The Maillard Affair</h2>
+          <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">A short tutorial about cooking the perfect New York strip steak — Mara (the meticulous one, reverse sear) and Theo (the enthusiastic one, forward sear) bicker affectionately through every step, with the Maillard reaction explained over a screaming-hot cast iron pan.</p>
+          <div class="examine__meta"><span>8 steps</span><span>66 illustrations</span><span>33 min audiobook</span><span>3 voices</span></div>
+          <a class="examine__read" href="maillard-crust-tutorial/novel.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-empty-jar" role="dialog" aria-modal="true" aria-label="The Empty Jar">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="fortune-cookie/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Middle-grade contemporary fantasy · 2026</div>
+          <h2 class="examine__title book-card__title">The Empty Jar</h2>
+          <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">A grieving twelve-year-old discovers that the fortune cookies at her late grandmother's Chinatown restaurant seem to predict the future — but the quieter, more devastating truth is that her grandmother spent her dying year writing hundreds of personalized fortunes for specific people she'd watched for decades.</p>
+          <div class="examine__meta"><span>18 chapters</span><span>143 illustrations</span><span>3h 22m audiobook</span><span>10 voices</span></div>
+          <a class="examine__read" href="fortune-cookie/novel.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-nice-things" role="dialog" aria-modal="true" aria-label="This Is Why We Can't Have Nice Things">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="cant-have-nice-things/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Children's fable · 2026</div>
+          <h2 class="examine__title book-card__title">This Is Why We Can't Have Nice Things</h2>
+          <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">An old woman tells the children of her town the story of the last wagon — and the day she, as a small girl certain she'd watched enough, skipped the steps that kept it whole.</p>
+          <div class="examine__meta"><span>9 chapters</span><span>73 illustrations</span><span>38 min audiobook</span><span>11 voices</span></div>
+          <a class="examine__read" href="cant-have-nice-things.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -172,6 +343,36 @@
     </div>
   </footer>
 
+<script>
+(function () {
+  var open = null, lastFocus = null;
+  function show(id) {
+    var ex = document.getElementById("ex-" + id);
+    if (!ex) return;
+    lastFocus = document.activeElement;
+    ex.classList.add("open");
+    open = ex;
+    document.body.style.overflow = "hidden";
+    var r = ex.querySelector(".examine__read");
+    if (r) r.focus();
+  }
+  function hide() {
+    if (!open) return;
+    open.classList.remove("open");
+    open = null;
+    document.body.style.overflow = "";
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll(".book").forEach(function (b) {
+    b.addEventListener("click", function () { show(b.getAttribute("data-book")); });
+  });
+  document.querySelectorAll(".examine").forEach(function (ex) {
+    ex.addEventListener("click", function (e) { if (e.target === ex) hide(); });
+    ex.querySelector(".examine__close").addEventListener("click", hide);
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hide(); });
+})();
+</script>
 <script>/* sms-metrics beacon */(function(){try{if(localStorage.smsNoTrack)return;navigator.sendBeacon('https://sms-metrics.sean-firewall.workers.dev/hit',JSON.stringify({p:location.pathname,r:document.referrer,h:location.host}))}catch(e){}})();</script>
 <script src="js/stamps.js" defer></script>
 </body>
