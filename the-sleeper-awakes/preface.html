@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Sleeper Awakes — Preface to the New Edition</title><meta name="description" content="H. G. Wells&#x27;s 1910 preface to The Sleeper Awakes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet"><style>
+:root{--paper:#f4ecdc;--paper-2:#fbf6ea;--edge:#dccdb0;--ink:#2a241d;--ink-soft:#6f6454;--accent:#3f6f6a;--gold:#a8813a;--rule:#cbb994}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#1c1a17;--paper-2:#24211d;--edge:#3a342b;--ink:#e9e1d1;--ink-soft:#a99d88;--accent:#7fb1a9;--gold:#d0a95a;--rule:#4a4234}}
+:root[data-theme="dark"]{--paper:#1c1a17;--paper-2:#24211d;--edge:#3a342b;--ink:#e9e1d1;--ink-soft:#a99d88;--accent:#7fb1a9;--gold:#d0a95a;--rule:#4a4234}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:20px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+main{max-width:980px;margin:0 auto;padding:0 16px 96px}
+.topbar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--edge);font-family:"Cormorant SC",Georgia,serif;font-size:15px;letter-spacing:.06em}
+.topbar div{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;gap:18px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.topbar a{text-decoration:none;color:var(--ink-soft)}.topbar a:hover{color:var(--accent)}
+.cover{margin:28px 0 8px;text-align:center}
+.cover img{width:auto;max-width:100%;height:auto;max-height:86vh;border-radius:6px;border:1px solid var(--edge);box-shadow:0 18px 50px -30px rgba(0,0,0,.6)}
+h1{font-family:"Cormorant SC",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;margin:28px 0 6px;text-align:center;letter-spacing:.02em}
+.byline{text-align:center;font-style:italic;color:var(--ink-soft);font-size:1.15rem}
+.edition{text-align:center;color:var(--ink-soft);font-size:.95rem;margin:4px 0 24px}
+.panel{background:var(--paper-2);border:1px solid var(--edge);border-radius:8px;padding:20px 22px;margin:28px 0}
+.panel h2{font-family:"Cormorant SC",Georgia,serif;font-weight:600;margin:0 0 10px;font-size:1.5rem}
+.audio-hero audio,.audio-ch audio{width:100%;margin-top:8px}
+.audio-hero .label,.audio-ch .label{font-family:"Cormorant SC",Georgia,serif;letter-spacing:.05em;color:var(--ink-soft)}
+.toc ol{list-style:none;padding:0;margin:0;columns:2;column-gap:32px}
+@media (max-width:640px){.toc ol{columns:1}}
+.toc li{break-inside:avoid;padding:3px 0;border-bottom:1px dotted var(--rule)}
+.toc a{text-decoration:none;color:var(--ink)}.toc a:hover{color:var(--accent)}
+.toc .num{display:inline-block;min-width:2.6em;color:var(--gold);font-family:"Cormorant SC",Georgia,serif}
+.toc .soon{color:var(--ink-soft);font-style:italic;font-size:.85em}
+.notice{font-size:.85rem;color:var(--ink-soft);line-height:1.5}
+.chapter{margin-top:88px}
+.ch-head{text-align:center;margin-bottom:28px}
+.ch-num{font-family:"Cormorant SC",Georgia,serif;color:var(--gold);letter-spacing:.2em;font-size:1rem}
+.ch-title{font-family:"Cormorant SC",Georgia,serif;font-weight:600;font-size:clamp(1.9rem,5vw,2.8rem);margin:4px 0 0;line-height:1.1}
+.prose{max-width:700px;margin:0 auto}
+.prose p{margin:0 0 1em;text-align:justify;hyphens:auto}
+.prose p.first::first-letter{float:left;font-family:"Cormorant SC",Georgia,serif;font-size:3.6em;line-height:.82;padding:6px 8px 0 0;color:var(--accent)}
+figure.beat{margin:34px auto;max-width:980px}
+figure.beat img{display:block;width:100%;height:auto;border-radius:4px;border:1px solid var(--edge);box-shadow:0 14px 40px -28px rgba(0,0,0,.65);background:var(--paper-2)}
+figure.beat figcaption{font-size:.85rem;color:var(--ink-soft);text-align:center;font-style:italic;margin-top:8px}
+.cast{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.cast figure{margin:0;text-align:center}
+.cast img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--edge)}
+.cast figcaption{font-family:"Cormorant SC",Georgia,serif;font-size:1rem;margin-top:4px}
+.cast small{display:block;font-family:"EB Garamond",Georgia,serif;color:var(--ink-soft);font-size:.8rem;line-height:1.3}
+footer{margin-top:90px;border-top:1px solid var(--edge);padding-top:20px}
+/* read-along */
+[hidden]{display:none!important}
+body{--ra-scale:1}
+.prose{font-size:calc(1em * var(--ra-scale))}
+body[data-ra-font="lexend"] .prose{font-family:"Lexend",system-ui,sans-serif;font-weight:300;letter-spacing:.01em}
+body[data-ra-font="dyslexic"] .prose{font-family:"OpenDyslexic",system-ui,sans-serif;font-size:calc(.9em * var(--ra-scale))}
+body[data-ra-font="lexend"] .prose p,body[data-ra-font="dyslexic"] .prose p{text-align:left;hyphens:manual}
+body[data-ra-spacing="relaxed"] .prose{line-height:2;word-spacing:.16em;letter-spacing:.03em}
+body[data-ra-spacing="relaxed"] .prose p{text-align:left;hyphens:manual;margin-bottom:1.4em}
+body{--hl-word:#ffd54a;--hl-sent:rgba(255,213,74,.28)}
+body[data-ra-color="mint"]{--hl-word:#7be0b8;--hl-sent:rgba(123,224,184,.28)}
+body[data-ra-color="sky"]{--hl-word:#8cc8ff;--hl-sent:rgba(140,200,255,.28)}
+body[data-ra-color="rose"]{--hl-word:#ffa3bf;--hl-sent:rgba(255,163,191,.28)}
+::highlight(ra-sent){background-color:var(--hl-sent)}
+::highlight(ra-word){background-color:var(--hl-word);color:#1a1510}
+.prose p.ra-active{box-shadow:-10px 0 0 -6px var(--accent)}
+.prose p[data-p]{cursor:text}
+.audio-ch{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;margin:0 0 28px}
+.ra-pill{font:inherit;font-family:"Cormorant SC",Georgia,serif;font-size:1.05rem;letter-spacing:.04em;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:8px 18px;cursor:pointer;margin:4px 0}
+.ra-pill--ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+#ra-resume{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-bottom:6px}
+#ra-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:12px;z-index:20;width:min(760px,calc(100vw - 16px));background:var(--paper-2);border:1px solid var(--edge);border-radius:14px;box-shadow:0 12px 40px -12px rgba(0,0,0,.45);padding:8px 10px;font-family:system-ui,sans-serif;font-size:14px;color:var(--ink)}
+#ra-bar .ra-row{display:flex;align-items:center;gap:8px}
+.ra-btn{font:inherit;background:transparent;border:1px solid var(--edge);color:var(--ink);border-radius:999px;min-width:40px;height:36px;padding:0 10px;cursor:pointer}
+.ra-pp{background:var(--accent);color:#fff;border-color:var(--accent);min-width:46px;font-size:15px}
+.ra-mid{flex:1;min-width:0;display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:8px}
+.ra-title{font-family:"Cormorant SC",Georgia,serif;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ra-time{font-variant-numeric:tabular-nums;color:var(--ink-soft);font-size:12px;grid-column:2;grid-row:1}
+.ra-seek{grid-column:1/3;width:100%;accent-color:var(--accent)}
+.ra-rate,.ra-opts select{font:inherit;background:var(--paper);color:var(--ink);border:1px solid var(--edge);border-radius:8px;height:32px}
+.ra-opts{display:flex;flex-wrap:wrap;gap:8px 14px;padding:10px 4px 2px;border-top:1px solid var(--edge);margin-top:8px}
+.ra-opts label{display:flex;gap:6px;align-items:center;color:var(--ink-soft)}
+body.ra-has-bar main{padding-bottom:180px}
+@media (max-width:640px){#ra-bar .ra-btn[data-a="back"],#ra-bar .ra-btn[data-a="fwd"]{display:none}.ra-rate{width:62px}}
+@media print{#ra-bar,.audio-ch{display:none!important}}
+@media (max-width:640px){.topbar{font-size:13px}.topbar div{gap:14px}body{font-size:18px}.prose p{text-align:left}}
+@media print{.topbar,.audio-hero,.audio-ch{display:none!important}.chapter{break-before:page}figure.beat{break-inside:avoid}body{background:#fff}}
+</style></head><body>
+<nav class="topbar"><div><a href="novel.html">The Sleeper Awakes</a><a href="novel.html#contents">Contents</a><a href="preface.html">Wells’s Preface</a><a href="about-this-edition.html">About this edition &amp; license</a></div></nav>
+<main><div class="chapter" style="margin-top:40px"><div class="ch-head"><div class="ch-num">1910</div><h2 class="ch-title">Preface to the New Edition</h2><div class="byline">by H. G. Wells</div></div><div class="prose"><p>When the Sleeper Wakes, whose title I have now altered to The Sleeper Awakes, was first published as a book in 1899 after a serial appearance in the Graphic and one or two American and colonial periodicals. It is one of the most ambitious and least satisfactory of my books, and I have taken the opportunity afforded by this reprinting to make a number of excisions and alterations. Like most of my earlier work, it was written under considerable pressure; there are marks of haste not only in the writing of the latter part, but in the very construction of the story. Except for certain streaks of a slovenliness which seems to be an almost unavoidable defect in me, there is little to be ashamed of in the writing of the opening portion; but it will be fairly manifest to the critic that instead of being put aside and thought over through a leisurely interlude, the ill-conceived latter part was pushed to its end. I was at that time overworked, and badly in need of a holiday. In addition to various necessary journalistic tasks, I had in hand another book, Love and Mr. Lewisham, which had taken a very much stronger hold upon my affections than this present story. My circumstances demanded that one or other should be finished before I took any rest, and so I wound up the Sleeper sufficiently to make it a marketable work, hoping to be able to revise it before the book printers at any rate got hold of it. But fortune was against me. I came back to England from Italy only to fall dangerously ill, and I still remember the impotent rage and strain of my attempt to put some sort of finish to my story of Mr. Lewisham, with my temperature at a hundred and two. I couldn’t endure the thought of leaving that book a fragment. I did afterwards contrive to save it from the consequences of that febrile spurt—Love and Mr. Lewisham is indeed one of my most carefully balanced books—but the Sleeper escaped me.</p><p>It is twelve years now since the Sleeper was written, and that young man of thirty-one is already too remote for me to attempt any very drastic reconstruction of his work. I have played now merely the part of an editorial elder brother: cut out relentlessly a number of long tiresome passages that showed all too plainly the fagged, toiling brain, the heavy sluggish driven pen, and straightened out certain indecisions at the end. Except for that, I have done no more than hack here and there at clumsy phrases and repetitions. The worst thing in the earlier version, and the thing that rankled most in my mind, was the treatment of the relations of Helen Wotton and Graham. Haste in art is almost always vulgarisation, and I slipped into the obvious vulgarity of making what the newspaper syndicates call a “love interest” out of Helen. There was even a clumsy intimation that instead of going up in the flying-machine to fight, Graham might have given in to Ostrog, and married Helen. I have now removed the suggestion of these uncanny connubialities. Not the slightest intimation of any sexual interest could in truth have arisen between these two. They loved and kissed one another, but as a girl and her heroic grandfather might love, and in a crisis kiss. I have found it possible, without any very serious disarrangement, to clear all that objectionable stuff out of the story, and so a little ease my conscience on the score of this ungainly lapse. I have also, with a few strokes of the pen, eliminated certain dishonest and regrettable suggestions that the People beat Ostrog. My Graham dies, as all his kind must die, with no certainty of either victory or defeat.</p><p>Who will win—Ostrog or the People? A thousand years hence that will still be just the open question we leave to-day.</p><p>H.G. WELLS.</p></div></div><p class="notice" style="text-align:center">This preface is part of the public-domain text and is not narrated in the audiobook. <a href="novel.html">Return to the book →</a></p><footer class="notice">
+<p><strong>Text:</strong> <em>The Sleeper Awakes</em> by H. G. Wells (1910 revised edition of <em>When the Sleeper Wakes</em>, 1899). The text is in the public domain.
+Transcription from <a href="https://www.gutenberg.org/ebooks/12163">Project Gutenberg eBook #12163</a>, produced by Paul Murray, Mary Meehan and the Online Distributed Proofreading Team; reproduced verbatim.</p>
+<p>This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.org. If you are not located in the United States, you will have to check the laws of the country where you are located before using this eBook. The full license is reproduced on <a href="about-this-edition.html#pg-license">About this edition</a> and is online at <a href="https://www.gutenberg.org/license">www.gutenberg.org/license</a>.</p>
+<p><strong>Illustrations and narration</strong> are new to this edition (2026) and are not part of, or endorsed by, Project Gutenberg, the Project Gutenberg Literary Archive Foundation, or the estate of H. G. Wells. See <a href="about-this-edition.html">About this edition</a> for credits.</p>
+</footer></main></body></html>

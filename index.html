@@ -180,6 +180,14 @@
           <div class="bookcase__inner">
 
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="sleeper" aria-haspopup="dialog">
+                <span class="book__cover"><img src="the-sleeper-awakes/storyboard/cover.jpg" alt="The Sleeper Awakes — cover" loading="lazy"></span>
+                <span class="book__label">The Sleeper Awakes</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="fools-cycle" aria-haspopup="dialog">
                 <span class="book__cover"><img src="fools-cycle/storyboard/cover.jpg" alt="Fool's Cycle — cover" loading="lazy"></span>
                 <span class="book__label">Fool&#x27;s Cycle</span>
@@ -235,6 +243,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-sleeper" role="dialog" aria-modal="true" aria-label="The Sleeper Awakes">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="the-sleeper-awakes/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Classic science fiction · H. G. Wells, 1910 · illustrated &amp; narrated edition · 2026</div>
+          <h2 class="examine__title book-card__title">The Sleeper Awakes</h2>
+          <div class="made-stamp" data-first="2026-09-25" data-last="2026-09-25">made in a day &mdash; Sep 25, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">A Victorian insomniac falls into a trance in 1897 and wakes in 2100 to find that his untouched fortune has grown until he owns half the world — and that he has become a legend to a city of moving roads, flying machines and a vast blue-clad labouring class. The first shelf book that isn&#x27;t ours: Wells&#x27;s public-domain text, read verbatim, with every chapter illustrated as a Franco-Belgian comic album and narrated by a fourteen-voice cast rendered locally. Press play and every word lights up as it&#x27;s spoken.</p>
+          <div class="examine__meta"><span>25 chapters</span><span>783 illustrations</span><span>8h 11m audiobook</span><span>14 voices</span><span>word-by-word read-along</span></div>
+          <a class="examine__read" href="the-sleeper-awakes/novel.html">Open the book &rarr;</a>
+          <a class="examine__read" style="margin-left:8px;background:transparent;color:inherit;border:1px solid currentColor" href="https://www.youtube.com/playlist?list=PLeYfeZIHPOro">Watch on YouTube &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-fools-cycle" role="dialog" aria-modal="true" aria-label="Fool's Cycle">
     <div class="examine__panelwrap">

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Sleeper Awakes — About this edition</title><meta name="description" content="Sources, public-domain status, credits and the full Project Gutenberg license for this illustrated edition.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet"><style>
+:root{--paper:#f4ecdc;--paper-2:#fbf6ea;--edge:#dccdb0;--ink:#2a241d;--ink-soft:#6f6454;--accent:#3f6f6a;--gold:#a8813a;--rule:#cbb994}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#1c1a17;--paper-2:#24211d;--edge:#3a342b;--ink:#e9e1d1;--ink-soft:#a99d88;--accent:#7fb1a9;--gold:#d0a95a;--rule:#4a4234}}
+:root[data-theme="dark"]{--paper:#1c1a17;--paper-2:#24211d;--edge:#3a342b;--ink:#e9e1d1;--ink-soft:#a99d88;--accent:#7fb1a9;--gold:#d0a95a;--rule:#4a4234}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-size:20px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+main{max-width:980px;margin:0 auto;padding:0 16px 96px}
+.topbar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--edge);font-family:"Cormorant SC",Georgia,serif;font-size:15px;letter-spacing:.06em}
+.topbar div{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;gap:18px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.topbar a{text-decoration:none;color:var(--ink-soft)}.topbar a:hover{color:var(--accent)}
+.cover{margin:28px 0 8px;text-align:center}
+.cover img{width:auto;max-width:100%;height:auto;max-height:86vh;border-radius:6px;border:1px solid var(--edge);box-shadow:0 18px 50px -30px rgba(0,0,0,.6)}
+h1{font-family:"Cormorant SC",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;margin:28px 0 6px;text-align:center;letter-spacing:.02em}
+.byline{text-align:center;font-style:italic;color:var(--ink-soft);font-size:1.15rem}
+.edition{text-align:center;color:var(--ink-soft);font-size:.95rem;margin:4px 0 24px}
+.panel{background:var(--paper-2);border:1px solid var(--edge);border-radius:8px;padding:20px 22px;margin:28px 0}
+.panel h2{font-family:"Cormorant SC",Georgia,serif;font-weight:600;margin:0 0 10px;font-size:1.5rem}
+.audio-hero audio,.audio-ch audio{width:100%;margin-top:8px}
+.audio-hero .label,.audio-ch .label{font-family:"Cormorant SC",Georgia,serif;letter-spacing:.05em;color:var(--ink-soft)}
+.toc ol{list-style:none;padding:0;margin:0;columns:2;column-gap:32px}
+@media (max-width:640px){.toc ol{columns:1}}
+.toc li{break-inside:avoid;padding:3px 0;border-bottom:1px dotted var(--rule)}
+.toc a{text-decoration:none;color:var(--ink)}.toc a:hover{color:var(--accent)}
+.toc .num{display:inline-block;min-width:2.6em;color:var(--gold);font-family:"Cormorant SC",Georgia,serif}
+.toc .soon{color:var(--ink-soft);font-style:italic;font-size:.85em}
+.notice{font-size:.85rem;color:var(--ink-soft);line-height:1.5}
+.chapter{margin-top:88px}
+.ch-head{text-align:center;margin-bottom:28px}
+.ch-num{font-family:"Cormorant SC",Georgia,serif;color:var(--gold);letter-spacing:.2em;font-size:1rem}
+.ch-title{font-family:"Cormorant SC",Georgia,serif;font-weight:600;font-size:clamp(1.9rem,5vw,2.8rem);margin:4px 0 0;line-height:1.1}
+.prose{max-width:700px;margin:0 auto}
+.prose p{margin:0 0 1em;text-align:justify;hyphens:auto}
+.prose p.first::first-letter{float:left;font-family:"Cormorant SC",Georgia,serif;font-size:3.6em;line-height:.82;padding:6px 8px 0 0;color:var(--accent)}
+figure.beat{margin:34px auto;max-width:980px}
+figure.beat img{display:block;width:100%;height:auto;border-radius:4px;border:1px solid var(--edge);box-shadow:0 14px 40px -28px rgba(0,0,0,.65);background:var(--paper-2)}
+figure.beat figcaption{font-size:.85rem;color:var(--ink-soft);text-align:center;font-style:italic;margin-top:8px}
+.cast{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.cast figure{margin:0;text-align:center}
+.cast img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;border:1px solid var(--edge)}
+.cast figcaption{font-family:"Cormorant SC",Georgia,serif;font-size:1rem;margin-top:4px}
+.cast small{display:block;font-family:"EB Garamond",Georgia,serif;color:var(--ink-soft);font-size:.8rem;line-height:1.3}
+footer{margin-top:90px;border-top:1px solid var(--edge);padding-top:20px}
+/* read-along */
+[hidden]{display:none!important}
+body{--ra-scale:1}
+.prose{font-size:calc(1em * var(--ra-scale))}
+body[data-ra-font="lexend"] .prose{font-family:"Lexend",system-ui,sans-serif;font-weight:300;letter-spacing:.01em}
+body[data-ra-font="dyslexic"] .prose{font-family:"OpenDyslexic",system-ui,sans-serif;font-size:calc(.9em * var(--ra-scale))}
+body[data-ra-font="lexend"] .prose p,body[data-ra-font="dyslexic"] .prose p{text-align:left;hyphens:manual}
+body[data-ra-spacing="relaxed"] .prose{line-height:2;word-spacing:.16em;letter-spacing:.03em}
+body[data-ra-spacing="relaxed"] .prose p{text-align:left;hyphens:manual;margin-bottom:1.4em}
+body{--hl-word:#ffd54a;--hl-sent:rgba(255,213,74,.28)}
+body[data-ra-color="mint"]{--hl-word:#7be0b8;--hl-sent:rgba(123,224,184,.28)}
+body[data-ra-color="sky"]{--hl-word:#8cc8ff;--hl-sent:rgba(140,200,255,.28)}
+body[data-ra-color="rose"]{--hl-word:#ffa3bf;--hl-sent:rgba(255,163,191,.28)}
+::highlight(ra-sent){background-color:var(--hl-sent)}
+::highlight(ra-word){background-color:var(--hl-word);color:#1a1510}
+.prose p.ra-active{box-shadow:-10px 0 0 -6px var(--accent)}
+.prose p[data-p]{cursor:text}
+.audio-ch{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;margin:0 0 28px}
+.ra-pill{font:inherit;font-family:"Cormorant SC",Georgia,serif;font-size:1.05rem;letter-spacing:.04em;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:8px 18px;cursor:pointer;margin:4px 0}
+.ra-pill--ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+#ra-resume{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-bottom:6px}
+#ra-bar{position:fixed;left:50%;transform:translateX(-50%);bottom:12px;z-index:20;width:min(760px,calc(100vw - 16px));background:var(--paper-2);border:1px solid var(--edge);border-radius:14px;box-shadow:0 12px 40px -12px rgba(0,0,0,.45);padding:8px 10px;font-family:system-ui,sans-serif;font-size:14px;color:var(--ink)}
+#ra-bar .ra-row{display:flex;align-items:center;gap:8px}
+.ra-btn{font:inherit;background:transparent;border:1px solid var(--edge);color:var(--ink);border-radius:999px;min-width:40px;height:36px;padding:0 10px;cursor:pointer}
+.ra-pp{background:var(--accent);color:#fff;border-color:var(--accent);min-width:46px;font-size:15px}
+.ra-mid{flex:1;min-width:0;display:grid;grid-template-columns:1fr auto;align-items:center;column-gap:8px}
+.ra-title{font-family:"Cormorant SC",Georgia,serif;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ra-time{font-variant-numeric:tabular-nums;color:var(--ink-soft);font-size:12px;grid-column:2;grid-row:1}
+.ra-seek{grid-column:1/3;width:100%;accent-color:var(--accent)}
+.ra-rate,.ra-opts select{font:inherit;background:var(--paper);color:var(--ink);border:1px solid var(--edge);border-radius:8px;height:32px}
+.ra-opts{display:flex;flex-wrap:wrap;gap:8px 14px;padding:10px 4px 2px;border-top:1px solid var(--edge);margin-top:8px}
+.ra-opts label{display:flex;gap:6px;align-items:center;color:var(--ink-soft)}
+body.ra-has-bar main{padding-bottom:180px}
+@media (max-width:640px){#ra-bar .ra-btn[data-a="back"],#ra-bar .ra-btn[data-a="fwd"]{display:none}.ra-rate{width:62px}}
+@media print{#ra-bar,.audio-ch{display:none!important}}
+@media (max-width:640px){.topbar{font-size:13px}.topbar div{gap:14px}body{font-size:18px}.prose p{text-align:left}}
+@media print{.topbar,.audio-hero,.audio-ch{display:none!important}.chapter{break-before:page}figure.beat{break-inside:avoid}body{background:#fff}}
+</style></head><body>
+<nav class="topbar"><div><a href="novel.html">The Sleeper Awakes</a><a href="novel.html#contents">Contents</a><a href="preface.html">Wells’s Preface</a><a href="about-this-edition.html">About this edition &amp; license</a></div></nav>
+<main><div class="chapter" style="margin-top:40px"><div class="ch-head"><h2 class="ch-title">About this edition</h2></div>
+<div class="prose">
+<h3>The text</h3>
+<p><em>The Sleeper Awakes</em> by H. G. Wells (1866–1946) is the author’s 1910 revision of <em>When the Sleeper Wakes</em>, first serialised in <em>The Graphic</em> and published as a book in 1899. The work is in the <strong>public domain</strong> in the United States (published before 1930) and in countries where copyright lasts for the author’s life plus 70 years or less (Wells died in 1946).</p>
+<p>The text of this edition is reproduced verbatim from <a href="https://www.gutenberg.org/ebooks/12163">Project Gutenberg eBook #12163</a> (release date April 1, 2004; most recently updated October 28, 2024), produced by Paul Murray, Mary Meehan and the Online Distributed Proofreading Team. Typography has been normalised; no words have been changed, added or removed. Wells’s <a href="preface.html">Preface to the New Edition</a> is presented on its own page.</p>
+<p>This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License included with this eBook or online at www.gutenberg.org. If you are not located in the United States, you will have to check the laws of the country where you are located before using this eBook.</p>
+<p>This edition is distributed free of charge. It is not affiliated with or endorsed by Project Gutenberg, the Project Gutenberg Literary Archive Foundation, or the estate of H. G. Wells.</p>
+<h3>Illustrations</h3>
+<p>The illustrations are new to this edition (2026). They were generated with an AI image model (xAI Grok Imagine) from scene descriptions drawn from Wells’s text, in a Franco-Belgian comic-album style of ink linework with watercolour. They are original images and do not reproduce the work of any other illustrator.</p>
+<h3>Narration</h3>
+<p>The audiobook is new to this edition (2026). It is a multi-voice performance generated on our own hardware with the open-weight <a href="https://huggingface.co/hexgrad/Kokoro-82M">Kokoro-82M</a> text-to-speech model (Apache 2.0 licence), using its built-in voices: am_adam, am_echo, am_eric, am_fenrir, am_michael, am_onyx, am_puck, am_santa, bf_emma, bf_isabella, bm_daniel, bm_fable, bm_george, bm_lewis. The narration reads Wells’s chapters verbatim. It does not narrate the preface, the table of contents, or any Project Gutenberg material. Word-by-word read-along timing comes from the model’s own timestamps.</p>
+<h3>Made by</h3>
+<p>Edited and produced by Sean Spratt with Claude (Anthropic), using the Scriptorium pipeline.</p>
+</div></div>
+<div class="panel" id="pg-license"><h2>The Project Gutenberg License</h2>
+<p class="notice">Reproduced in full, as included with Project Gutenberg eBook #12163.</p>
+<div class="notice" style="white-space:pre-wrap">*** END OF THE PROJECT GUTENBERG EBOOK THE SLEEPER AWAKES ***
+
+Updated editions will replace the previous one—the old editions will be renamed.
+
+Creating the works from print editions not protected by U.S. copyright law means that no one owns a United States copyright in these works, so the Foundation (and you!) can copy and distribute it in the United States without permission and without paying copyright royalties. Special rules, set forth in the General Terms of Use part of this license, apply to copying and distributing Project Gutenberg™ electronic works to protect the PROJECT GUTENBERG™ concept and trademark. Project Gutenberg is a registered trademark, and may not be used if you charge for an eBook, except by following the terms of the trademark license, including paying royalties for use of the Project Gutenberg trademark. If you do not charge anything for copies of this eBook, complying with the trademark license is very easy. You may use this eBook for nearly any purpose such as creation of derivative works, reports, performances and research. Project Gutenberg eBooks may be modified and printed and given away—you may do practically ANYTHING in the United States with eBooks not protected by U.S. copyright law. Redistribution is subject to the trademark license, especially commercial redistribution.
+
+START: FULL LICENSE
+
+THE FULL PROJECT GUTENBERG™ LICENSE
+
+PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK
+
+To protect the Project Gutenberg™ mission of promoting the free distribution of electronic works, by using or distributing this work (or any other work associated in any way with the phrase “Project Gutenberg”), you agree to comply with all the terms of the Full Project Gutenberg License available with this file or online at www.gutenberg.org/license.
+
+Section 1. General Terms of Use and Redistributing Project Gutenberg electronic works
+
+1.A. By reading or using any part of this Project Gutenberg electronic work, you indicate that you have read, understand, agree to and accept all the terms of this license and intellectual property (trademark/copyright) agreement. If you do not agree to abide by all the terms of this agreement, you must cease using and return or destroy all copies of Project Gutenberg electronic works in your possession. If you paid a fee for obtaining a copy of or access to a Project Gutenberg electronic work and you do not agree to be bound by the terms of this agreement, you may obtain a refund from the person or entity to whom you paid the fee as set forth in paragraph 1.E.8.
+
+1.B. “Project Gutenberg” is a registered trademark. It may only be used on or associated in any way with an electronic work by people who agree to be bound by the terms of this agreement. There are a few things that you can do with most Project Gutenberg electronic works even without complying with the full terms of this agreement. See paragraph 1.C below. There are a lot of things you can do with Project Gutenberg electronic works if you follow the terms of this agreement and help preserve free future access to Project Gutenberg electronic works. See paragraph 1.E below.
+
+1.C. The Project Gutenberg Literary Archive Foundation (“the Foundation” or PGLAF), owns a compilation copyright in the collection of Project Gutenberg electronic works. Nearly all the individual works in the collection are in the public domain in the United States. If an individual work is unprotected by copyright law in the United States and you are located in the United States, we do not claim a right to prevent you from copying, distributing, performing, displaying or creating derivative works based on the work as long as all references to Project Gutenberg are removed. Of course, we hope that you will support the Project Gutenberg mission of promoting free access to electronic works by freely sharing Project Gutenberg works in compliance with the terms of this agreement for keeping the Project Gutenberg name associated with the work. You can easily comply with the terms of this agreement by keeping this work in the same format with its attached full Project Gutenberg License when you share it without charge with others.
+
+1.D. The copyright laws of the place where you are located also govern what you can do with this work. Copyright laws in most countries are in a constant state of change. If you are outside the United States, check the laws of your country in addition to the terms of this agreement before downloading, copying, displaying, performing, distributing or creating derivative works based on this work or any other Project Gutenberg work. The Foundation makes no representations concerning the copyright status of any work in any country other than the United States.
+
+1.E. Unless you have removed all references to Project Gutenberg:
+
+1.E.1. The following sentence, with active links to, or other immediate access to, the full Project Gutenberg License must appear prominently whenever any copy of a Project Gutenberg work (any work on which the phrase “Project Gutenberg” appears, or with which the phrase “Project Gutenberg” is associated) is accessed, displayed, performed, viewed, copied or distributed:
+
+This eBook is for the use of anyone anywhere in the United States and most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg™ License included with this eBook or online at www.gutenberg.org. If you are not located in the United States, you will have to check the laws of the country where you are located before using this eBook.
+
+1.E.2. If an individual Project Gutenberg electronic work is derived from texts not protected by U.S. copyright law (does not contain a notice indicating that it is posted with permission of the copyright holder), the work can be copied and distributed to anyone in the United States without paying any fees or charges. If you are redistributing or providing access to a work with the phrase “Project Gutenberg” associated with or appearing on the work, you must comply either with the requirements of paragraphs 1.E.1 through 1.E.7 or obtain permission for the use of the work and the Project Gutenberg trademark as set forth in paragraphs 1.E.8 or 1.E.9.
+
+1.E.3. If an individual Project Gutenberg electronic work is posted with the permission of the copyright holder, your use and distribution must comply with both paragraphs 1.E.1 through 1.E.7 and any additional terms imposed by the copyright holder. Additional terms will be linked to the Project Gutenberg License for all works posted with the permission of the copyright holder found at the beginning of this work.
+
+1.E.4. Do not unlink or detach or remove the full Project Gutenberg License terms from this work, or any files containing a part of this work or any other work associated with Project Gutenberg.
+
+1.E.5. Do not copy, display, perform, distribute or redistribute this electronic work, or any part of this electronic work, without prominently displaying the sentence set forth in paragraph 1.E.1 with active links or immediate access to the full terms of the Project Gutenberg License.
+
+1.E.6. You may convert to and distribute this work in any binary, compressed, marked up, nonproprietary or proprietary form, including any word processing or hypertext form. However, if you provide access to or distribute copies of a Project Gutenberg work in a format other than “Plain Vanilla ASCII” or other format used in the official version posted on the official Project Gutenberg website (www.gutenberg.org), you must, at no additional cost, fee or expense to the user, provide a copy, a means of exporting a copy, or a means of obtaining a copy upon request, of the work in its original “Plain Vanilla ASCII” or other form. Any alternate format must include the full Project Gutenberg License as specified in paragraph 1.E.1.
+
+1.E.7. Do not charge a fee for access to, viewing, displaying, performing, copying or distributing any Project Gutenberg works unless you comply with paragraph 1.E.8 or 1.E.9.
+
+1.E.8. You may charge a reasonable fee for copies of or providing access to or distributing Project Gutenberg electronic works provided that:
+
+• You pay a royalty fee of 20% of the gross profits you derive from the use of Project Gutenberg works calculated using the method you already use to calculate your applicable taxes. The fee is owed to the owner of the Project Gutenberg trademark, but he has agreed to donate royalties under this paragraph to the Project Gutenberg Literary Archive Foundation. Royalty payments must be paid within 60 days following each date on which you prepare (or are legally required to prepare) your periodic tax returns. Royalty payments should be clearly marked as such and sent to the Project Gutenberg Literary Archive Foundation at the address specified in Section 4, “Information about donations to the Project Gutenberg Literary Archive Foundation.”
+
+• You provide a full refund of any money paid by a user who notifies you in writing (or by e-mail) within 30 days of receipt that s/he does not agree to the terms of the full Project Gutenberg™ License. You must require such a user to return or destroy all copies of the works possessed in a physical medium and discontinue all use of and all access to other copies of Project Gutenberg™ works.
+
+• You provide, in accordance with paragraph 1.F.3, a full refund of any money paid for a work or a replacement copy, if a defect in the electronic work is discovered and reported to you within 90 days of receipt of the work.
+
+• You comply with all other terms of this agreement for free distribution of Project Gutenberg™ works.
+
+1.E.9. If you wish to charge a fee or distribute a Project Gutenberg™ electronic work or group of works on different terms than are set forth in this agreement, you must obtain permission in writing from the Project Gutenberg Literary Archive Foundation, the manager of the Project Gutenberg™ trademark. Contact the Foundation as set forth in Section 3 below.
+
+1.F.
+
+1.F.1. Project Gutenberg volunteers and employees expend considerable effort to identify, do copyright research on, transcribe and proofread works not protected by U.S. copyright law in creating the Project Gutenberg™ collection. Despite these efforts, Project Gutenberg™ electronic works, and the medium on which they may be stored, may contain “Defects,” such as, but not limited to, incomplete, inaccurate or corrupt data, transcription errors, a copyright or other intellectual property infringement, a defective or damaged disk or other medium, a computer virus, or computer codes that damage or cannot be read by your equipment.
+
+1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the “Right of Replacement or Refund” described in paragraph 1.F.3, the Project Gutenberg Literary Archive Foundation, the owner of the Project Gutenberg™ trademark, and any other party distributing a Project Gutenberg™ electronic work under this agreement, disclaim all liability to you for damages, costs and expenses, including legal fees. YOU AGREE THAT YOU HAVE NO REMEDIES FOR NEGLIGENCE, STRICT LIABILITY, BREACH OF WARRANTY OR BREACH OF CONTRACT EXCEPT THOSE PROVIDED IN PARAGRAPH 1.F.3. YOU AGREE THAT THE FOUNDATION, THE TRADEMARK OWNER, AND ANY DISTRIBUTOR UNDER THIS AGREEMENT WILL NOT BE LIABLE TO YOU FOR ACTUAL, DIRECT, INDIRECT, CONSEQUENTIAL, PUNITIVE OR INCIDENTAL DAMAGES EVEN IF YOU GIVE NOTICE OF THE POSSIBILITY OF SUCH DAMAGE.
+
+1.F.3. LIMITED RIGHT OF REPLACEMENT OR REFUND - If you discover a defect in this electronic work within 90 days of receiving it, you can receive a refund of the money (if any) you paid for it by sending a written explanation to the person you received the work from. If you received the work on a physical medium, you must return the medium with your written explanation. The person or entity that provided you with the defective work may elect to provide a replacement copy in lieu of a refund. If you received the work electronically, the person or entity providing it to you may choose to give you a second opportunity to receive the work electronically in lieu of a refund. If the second copy is also defective, you may demand a refund in writing without further opportunities to fix the problem.
+
+1.F.4. Except for the limited right of replacement or refund set forth in paragraph 1.F.3, this work is provided to you ‘AS-IS’, WITH NO OTHER WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PURPOSE.
+
+1.F.5. Some states do not allow disclaimers of certain implied warranties or the exclusion or limitation of certain types of damages. If any disclaimer or limitation set forth in this agreement violates the law of the state applicable to this agreement, the agreement shall be interpreted to make the maximum disclaimer or limitation permitted by the applicable state law. The invalidity or unenforceability of any provision of this agreement shall not void the remaining provisions.
+
+1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the trademark owner, any agent or employee of the Foundation, anyone providing copies of Project Gutenberg™ electronic works in accordance with this agreement, and any volunteers associated with the production, promotion and distribution of Project Gutenberg™ electronic works, harmless from all liability, costs and expenses, including legal fees, that arise directly or indirectly from any of the following which you do or cause to occur: (a) distribution of this or any Project Gutenberg work, (b) alteration, modification, or additions or deletions to any Project Gutenberg work, and (c) any Defect you cause.
+
+Section 2. Information about the Mission of Project Gutenberg
+
+Project Gutenberg is synonymous with the free distribution of electronic works in formats readable by the widest variety of computers including obsolete, old, middle-aged and new computers. It exists because of the efforts of hundreds of volunteers and donations from people in all walks of life.
+
+Volunteers and financial support to provide volunteers with the assistance they need are critical to reaching Project Gutenberg’s goals and ensuring that the Project Gutenberg collection will remain freely available for generations to come. In 2001, the Project Gutenberg Literary Archive Foundation was created to provide a secure and permanent future for Project Gutenberg and future generations. To learn more about the Project Gutenberg Literary Archive Foundation and how your efforts and donations can help, see Sections 3 and 4 and the Foundation information page at www.gutenberg.org.
+
+Section 3. Information about the Project Gutenberg Literary Archive Foundation
+
+The Project Gutenberg Literary Archive Foundation is a non-profit 501(c)(3) educational corporation organized under the laws of the state of Mississippi and granted tax exempt status by the Internal Revenue Service. The Foundation’s EIN or federal tax identification number is 64-6221541. Contributions to the Project Gutenberg Literary Archive Foundation are tax deductible to the full extent permitted by U.S. federal laws and your state’s laws.
+
+The Foundation’s business office is located at 41 Watchung Plaza #516, Montclair NJ 07042, USA, +1 (862) 621-9288. Email contact links and up to date contact information can be found at the Foundation’s website and official page at www.gutenberg.org/contact
+
+Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation
+
+Project Gutenberg™ depends upon and cannot survive without widespread public support and donations to carry out its mission of increasing the number of public domain and licensed works that can be freely distributed in machine-readable form accessible by the widest array of equipment including outdated equipment. Many small donations ($1 to $5,000) are particularly important to maintaining tax exempt status with the IRS.
+
+The Foundation is committed to complying with the laws regulating charities and charitable donations in all 50 states of the United States. Compliance requirements are not uniform and it takes a considerable effort, much paperwork and many fees to meet and keep up with these requirements. We do not solicit donations in locations where we have not received written confirmation of compliance. To SEND DONATIONS or determine the status of compliance for any particular state visit www.gutenberg.org/donate.
+
+While we cannot and do not solicit contributions from states where we have not met the solicitation requirements, we know of no prohibition against accepting unsolicited donations from donors in such states who approach us with offers to donate.
+
+International donations are gratefully accepted, but we cannot make any statements concerning tax treatment of donations received from outside the United States. U.S. laws alone swamp our small staff.
+
+Please check the Project Gutenberg web pages for current donation methods and addresses. Donations are accepted in a number of other ways including checks, online payments and credit card donations. To donate, please visit: www.gutenberg.org/donate.
+
+Section 5. General Information About Project Gutenberg electronic works
+
+Professor Michael S. Hart was the originator of the Project Gutenberg concept of a library of electronic works that could be freely shared with anyone. For forty years, he produced and distributed Project Gutenberg eBooks with only a loose network of volunteer support.
+
+Project Gutenberg eBooks are often created from several printed editions, all of which are confirmed as not protected by copyright in the U.S. unless a copyright notice is included. Thus, we do not necessarily keep eBooks in compliance with any particular paper edition.
+
+Most people start at our website which has the main PG search facility: www.gutenberg.org.
+
+This website includes information about Project Gutenberg, including how to make donations to the Project Gutenberg Literary Archive Foundation, how to help produce our new eBooks, and how to subscribe to our email newsletter to hear about new eBooks.
+</div></div>
+<p class="notice" style="text-align:center"><a href="novel.html">Return to the book →</a></p></main></body></html>
