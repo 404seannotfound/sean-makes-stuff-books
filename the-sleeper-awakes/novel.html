@@ -11,8 +11,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:"EB Garamond"
 a{color:var(--accent)}
 main{max-width:980px;margin:0 auto;padding:0 16px 96px}
 .topbar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--edge);font-family:"Cormorant SC",Georgia,serif;font-size:15px;letter-spacing:.06em}
-.topbar div{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;gap:18px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
-.topbar a{text-decoration:none;color:var(--ink-soft)}.topbar a:hover{color:var(--accent)}
+.topbar div{max-width:980px;margin:0 auto;padding:10px 16px;display:flex;gap:18px;align-items:center;white-space:nowrap}.topbar__links{display:flex;gap:18px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.topbar a{text-decoration:none;color:var(--ink-soft)}.topbar a.topbar__home{flex:none;color:var(--accent)}.topbar a:hover{color:var(--accent)}
 .cover{margin:28px 0 8px;text-align:center}
 .cover img{width:auto;max-width:100%;height:auto;max-height:86vh;border-radius:6px;border:1px solid var(--edge);box-shadow:0 18px 50px -30px rgba(0,0,0,.6)}
 h1{font-family:"Cormorant SC",Georgia,serif;font-weight:600;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1;margin:28px 0 6px;text-align:center;letter-spacing:.02em}
@@ -80,10 +80,10 @@ body[data-ra-color="rose"]{--hl-word:#ffa3bf;--hl-sent:rgba(255,163,191,.28)}
 body.ra-has-bar main{padding-bottom:180px}
 @media (max-width:640px){#ra-bar .ra-btn[data-a="back"],#ra-bar .ra-btn[data-a="fwd"]{display:none}.ra-rate{width:62px}}
 @media print{#ra-bar,.audio-ch{display:none!important}}
-@media (max-width:640px){.topbar{font-size:13px}.topbar div{gap:14px}body{font-size:18px}.prose p{text-align:left}}
+@media (max-width:640px){.topbar{font-size:13px}.topbar div,.topbar__links{gap:14px}body{font-size:18px}.prose p{text-align:left}}
 @media print{.topbar,.audio-hero,.audio-ch{display:none!important}.chapter{break-before:page}figure.beat{break-inside:avoid}body{background:#fff}}
 </style></head><body>
-<nav class="topbar"><div><a href="novel.html">The Sleeper Awakes</a><a href="novel.html#contents">Contents</a><a href="preface.html">Wells’s Preface</a><a href="about-this-edition.html">About this edition &amp; license</a></div></nav>
+<nav class="topbar"><div><span class="topbar__links"><a href="novel.html">The Sleeper Awakes</a><a href="novel.html#contents">Contents</a><a href="preface.html">Wells’s Preface</a><a href="about-this-edition.html">About this edition &amp; license</a></span><a class="topbar__home" href="https://sean-makes-stuff.com">Sean Makes Stuff ↗</a></div></nav>
 <main><div class="cover"><img src="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/the-sleeper-awakes/storyboard/chosen/cover.jpeg" width="832" height="1248" alt="Cover illustration: the Sleeper beneath the glass-roofed city"></div>
 <h1>The Sleeper Awakes</h1><div class="byline">by H. G. Wells</div><div class="edition">An illustrated &amp; narrated edition · 783 illustrations · 25 of 25 chapters</div>
 <div class="panel audio-hero"><div class="label">🎧 Read along with the audiobook · multi-voice narration</div><p class="notice" style="margin:.4em 0 .8em">Press play and each word lights up as it is spoken. Tap any word to listen from there. <b>Aa</b> in the player changes the font (including OpenDyslexic and Lexend), size, spacing and highlight colour. Your place is remembered on this device.</p><div id="ra-resume" hidden></div><button class="ra-pill" data-ra-play="1">▶ Start from Chapter I</button> <a class="notice" href="https://pub-f4c32e9450aa4dc1b036912294c914b6.r2.dev/books/the-sleeper-awakes/audiobook.mp3" download>download the whole audiobook (mp3)</a><p class="notice" style="margin:.6em 0 0">📺 Prefer to watch? Every chapter is also a read-along video — <a href="https://www.youtube.com/playlist?list=PLeYfeZIHPOro">the full playlist on YouTube</a>.</p></div>
