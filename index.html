@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books — Sean Makes Stuff</title>
-  <meta name="description" content="Books made end-to-end with LLMs, image models, and TTS — story, art, and audio all generated from short briefs.">
+  <meta name="description" content="The Sean Makes Stuff bookshelf: AI-authored illustrated novels, series walks, comics, picture books and field guides, each labeled with what AI made.">
   <link rel="stylesheet" href="css/style.css">
   <style>
     body { background: #f6efdf; }
@@ -30,6 +30,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
       padding: 8px 10px 0;
+      overflow: hidden;
     }
     .shelf-slot {
       position: relative;
@@ -40,7 +41,7 @@
     }
     .shelf-slot::after {           /* the plank — segments join into continuous shelves */
       content: "";
-      position: absolute; left: -10px; right: -10px; bottom: 0; height: 15px;
+      position: absolute; left: -100vw; right: -100vw; bottom: 0; height: 15px;
       background:
         repeating-linear-gradient(90deg, rgba(0,0,0,0.06) 0 3px, transparent 3px 70px),
         linear-gradient(180deg, #a9865e, #8a6a44 60%, #6d4e2e);
@@ -146,6 +147,51 @@
     .examine__panelwrap { position: relative; max-width: 880px; width: 100%; }
     .made-stamp { font-size: 0.8rem; color: #8a7a5c; font-style: italic; }
 
+
+    /* ---------- sections ---------- */
+    .case { scroll-margin-top: 72px; }
+    .case__head {
+      display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap;
+      gap: 6px 24px; margin-top: 40px;
+    }
+    .case__title { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; font-size: 1.7rem; line-height: 1.15; color: #3a2a18; }
+    .case__blurb { color: #6e6450; max-width: 62ch; line-height: 1.5; margin-top: 4px; }
+    .case__more { font-size: 0.95rem; font-weight: 600; color: #8a5a2a; white-space: nowrap; }
+    .case .bookcase { margin: 16px 0 8px; }
+    .case-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .case-links a {
+      padding: 7px 14px; border-radius: 100px; font-size: 0.9rem; font-weight: 500;
+      background: #fbf6ea; border: 1px solid #e2d4b4; color: #4a3a24;
+    }
+    .case-links a:hover { background: #fff; text-decoration: none; }
+
+    /* ---------- AI labels ---------- */
+    .ai-note {
+      display: flex; gap: 12px; align-items: flex-start;
+      margin-top: 20px; padding: 14px 16px; max-width: 68ch;
+      background: #fbf6ea; border: 1px solid #e2d4b4; border-radius: 10px;
+    }
+    .ai-note p { color: #55534d; font-size: 0.95rem; line-height: 1.55; }
+    .ai-note__tag, .book__ai {
+      flex-shrink: 0;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: #fff; background: #b4532a; border-radius: 4px; padding: 3px 7px;
+    }
+    .book__ai {
+      position: absolute; top: 8px; right: 8px; z-index: 2;
+      box-shadow: 0 1px 3px rgba(40,20,5,0.45);
+      transform: rotate(2deg);
+    }
+    .credits {
+      margin: 0 0 18px; padding: 12px 14px;
+      border: 1px dashed #c9a87a; border-radius: 8px; background: #fff8ec;
+    }
+    .credits__head { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #b4532a; margin-bottom: 6px; }
+    .credits dl { display: grid; gap: 4px; margin: 0; }
+    .credits dl > div { display: grid; grid-template-columns: 4.2em 1fr; gap: 8px; font-size: 0.85rem; line-height: 1.45; }
+    .credits dt { color: #8a7a5c; font-weight: 600; }
+    .credits dd { margin: 0; color: #55534d; }
+
     @media (max-width: 640px) {
       .examine__panel { flex-direction: column; gap: 18px; }
       .examine__coverwrap { flex: none; max-width: 260px; margin: 0 auto; }
@@ -170,71 +216,190 @@
     <section class="books-hero">
       <div class="container">
         <h1>The Bookshelf</h1>
-        <p>Illustrated books made end-to-end with LLMs, image models, and text-to-speech. Each one starts as a short brief and exits as a readable novel, a printable PDF, and a narrated audiobook — typically in under an hour of wall-clock time. Every project lists its prompts, tokens, cost, and timing so you can see the seams. Take one down and have a look.</p>
+        <p>Illustrated novels, series walks, comics, picture books and field guides &mdash; every reading thing on Sean Makes Stuff, in one bookcase. The Scriptorium books start as a short brief and come out as a readable novel, a printable PDF and a narrated audiobook, and each lists its prompts, tokens, cost and timing so you can see the seams. Take one down and have a look.</p>
+        <div class="ai-note">
+          <span class="ai-note__tag">AI-authored</span>
+          <p>Everything on these shelves was written by AI models, and the pictures and voices are AI too. Each book carries a sticker and lists who made what. The one exception to the writing is <em>The Sleeper Awakes</em>: that&rsquo;s H.&nbsp;G. Wells&rsquo;s own text, and AI only illustrated and narrated it.</p>
+        </div>
+        <nav class="case-links" aria-label="Jump to a shelf">
+          <a href="#novels">Novels &amp; read-alongs</a>
+          <a href="#walks">Series walks</a>
+          <a href="#comics">Comics</a>
+          <a href="#picture-books">Picture books &amp; fables</a>
+          <a href="#guides">Tutorials &amp; field guides</a>
+        </nav>
       </div>
     </section>
 
-    <section>
+    <section class="case" id="novels" aria-labelledby="novels-h">
       <div class="container">
+        <header class="case__head">
+          <div>
+            <h2 class="case__title" id="novels-h">Novels &amp; read-alongs</h2>
+            <p class="case__blurb">Full-length illustrated books, each with a narrated audiobook.</p>
+          </div>
+        </header>
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
-
             <div class="shelf-slot" role="listitem">
               <button class="book" data-book="sleeper" aria-haspopup="dialog">
-                <span class="book__cover"><img src="the-sleeper-awakes/storyboard/cover.jpg" alt="The Sleeper Awakes — cover" loading="lazy"></span>
+                <span class="book__cover"><img src="the-sleeper-awakes/storyboard/cover.jpg" alt="The Sleeper Awakes &mdash; cover" loading="lazy"><span class="book__ai">AI art &amp; voices</span></span>
                 <span class="book__label">The Sleeper Awakes</span>
                 <span class="book__hint">examine</span>
               </button>
             </div>
-
             <div class="shelf-slot" role="listitem">
               <button class="book" data-book="fools-cycle" aria-haspopup="dialog">
-                <span class="book__cover"><img src="fools-cycle/storyboard/cover.jpg" alt="Fool's Cycle — cover" loading="lazy"></span>
+                <span class="book__cover"><img src="fools-cycle/storyboard/cover.jpg" alt="Fool&#x27;s Cycle &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">Fool&#x27;s Cycle</span>
                 <span class="book__hint">examine</span>
               </button>
             </div>
-
-            <div class="shelf-slot" role="listitem">
-              <button class="book" data-book="april" aria-haspopup="dialog">
-                <span class="book__cover"><img src="april-and-the-dragon-staff-v2/storyboard/cover.jpg" alt="April and the Dragon Staff — cover" loading="lazy"></span>
-                <span class="book__label">April and the Dragon Staff</span>
-                <span class="book__hint">examine</span>
-              </button>
-            </div>
-
-            <div class="shelf-slot" role="listitem">
-              <button class="book" data-book="conjurers" aria-haspopup="dialog">
-                <span class="book__cover"><img src="tutorial-choir/storyboard/cover.jpg" alt="The Console Conjurers — cover" loading="lazy"></span>
-                <span class="book__label">The Console Conjurers</span>
-                <span class="book__hint">examine</span>
-              </button>
-            </div>
-
-            <div class="shelf-slot" role="listitem">
-              <button class="book" data-book="maillard" aria-haspopup="dialog">
-                <span class="book__cover"><img src="maillard-crust-tutorial/storyboard/cover.jpg" alt="The Maillard Affair — cover" loading="lazy"></span>
-                <span class="book__label">The Maillard Affair</span>
-                <span class="book__hint">examine</span>
-              </button>
-            </div>
-
             <div class="shelf-slot" role="listitem">
               <button class="book" data-book="empty-jar" aria-haspopup="dialog">
-                <span class="book__cover"><img src="fortune-cookie/storyboard/cover.jpg" alt="The Empty Jar — cover" loading="lazy"></span>
+                <span class="book__cover"><img src="fortune-cookie/storyboard/cover.jpg" alt="The Empty Jar &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">The Empty Jar</span>
                 <span class="book__hint">examine</span>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="case" id="walks" aria-labelledby="walks-h">
+      <div class="container">
+        <header class="case__head">
+          <div>
+            <h2 class="case__title" id="walks-h">Series walks</h2>
+            <p class="case__blurb">Whole book series: every novel summarized in detail, painted frame by frame, and set beside its films where there are any.</p>
+          </div>
+            <a class="case__more" href="https://sean-makes-stuff.com/projects/series-notes/">How a walk is made &rarr;</a>
+        </header>
+        <div class="bookcase" role="list">
+          <div class="bookcase__inner">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="play-to-live" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/play-to-live.jpg" alt="Play to Live, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Play to Live, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="elemental-blessings" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/elemental-blessings.jpg" alt="Elemental Blessings, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Elemental Blessings, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="dark-tower-saga" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/dark-tower-saga.jpg" alt="The Dark Tower, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Dark Tower, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case" id="comics" aria-labelledby="comics-h">
+      <div class="container">
+        <header class="case__head">
+          <div>
+            <h2 class="case__title" id="comics-h">Comics</h2>
+            <p class="case__blurb">Books and TV episodes retold in panels, in a margin-doodle cartoon style. The drawings are the hook; the captions carry the story.</p>
+          </div>
+        </header>
+        <div class="bookcase" role="list">
+          <div class="bookcase__inner">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="duck" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/godin-duck.jpg" alt="Whatcha Gonna Do with That Duck? &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Whatcha Gonna Do with That Duck?</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="into-the-fire" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/into-the-fire.jpg" alt="Into the Fire &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Into the Fire</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="minutes" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/a-matter-of-minutes.jpg" alt="A Matter of Minutes &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">A Matter of Minutes</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case" id="picture-books" aria-labelledby="picture-books-h">
+      <div class="container">
+        <header class="case__head">
+          <div>
+            <h2 class="case__title" id="picture-books-h">Picture books &amp; fables</h2>
+            <p class="case__blurb">Short illustrated stories, made for reading aloud.</p>
+          </div>
+        </header>
+        <div class="bookcase" role="list">
+          <div class="bookcase__inner">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="april" aria-haspopup="dialog">
+                <span class="book__cover"><img src="april-and-the-dragon-staff-v2/storyboard/cover.jpg" alt="April and the Dragon Staff &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">April and the Dragon Staff</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
             <div class="shelf-slot" role="listitem">
               <button class="book" data-book="nice-things" aria-haspopup="dialog">
-                <span class="book__cover"><img src="cant-have-nice-things/storyboard/cover.jpg" alt="This Is Why We Can't Have Nice Things — cover" loading="lazy"></span>
+                <span class="book__cover"><img src="cant-have-nice-things/storyboard/cover.jpg" alt="This Is Why We Can&#x27;t Have Nice Things &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">This Is Why We Can&#x27;t Have Nice Things</span>
                 <span class="book__hint">examine</span>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="case" id="guides" aria-labelledby="guides-h">
+      <div class="container">
+        <header class="case__head">
+          <div>
+            <h2 class="case__title" id="guides-h">Tutorials &amp; field guides</h2>
+            <p class="case__blurb">How-tos and guides, with characters doing the explaining.</p>
+          </div>
+        </header>
+        <div class="bookcase" role="list">
+          <div class="bookcase__inner">
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="conjurers" aria-haspopup="dialog">
+                <span class="book__cover"><img src="tutorial-choir/storyboard/cover.jpg" alt="The Console Conjurers &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Console Conjurers</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="maillard" aria-haspopup="dialog">
+                <span class="book__cover"><img src="maillard-crust-tutorial/storyboard/cover.jpg" alt="The Maillard Affair &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Maillard Affair</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="ppf" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/ppf.jpg" alt="Purring, Popping, Flashing &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Purring, Popping, Flashing</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -243,6 +408,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-play-to-live" role="dialog" aria-modal="true" aria-label="Play to Live, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/play-to-live.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; D. Rus &middot; 9 novels, 2013–2021 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Play to Live, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-07" data-last="2026-10-07">made in a day &mdash; Oct 7, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">D. Rus&#x27;s LitRPG saga set in AlterWorld, one of the founding titles of Eksmo&#x27;s LitRPG series: a dying Moscow gamer goes perma in a virtual world as Laith, a high elf sworn to a fallen god, and climbs from clan leader to god. All nine novels summarized and walked in painted frames, every page adversarially fact-checked, with a world page where screen notes would go.</p>
+          <div class="examine__meta"><span>~257 frames</span><span>painted like a 1980s adventure module</span><span>no screen adaptations</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from D. Rus&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), about 257 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://play-to-live.pages.dev">Step into AlterWorld &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-sleeper" role="dialog" aria-modal="true" aria-label="The Sleeper Awakes">
     <div class="examine__panelwrap">
@@ -254,6 +437,7 @@
           <div class="made-stamp" data-first="2026-09-25" data-last="2026-09-25">made in a day &mdash; Sep 25, 2026<span class="made-stamp__ago"></span></div>
           <p class="examine__desc">A Victorian insomniac falls into a trance in 1897 and wakes in 2100 to find that his untouched fortune has grown until he owns half the world — and that he has become a legend to a city of moving roads, flying machines and a vast blue-clad labouring class. The first shelf book that isn&#x27;t ours: Wells&#x27;s public-domain text, read verbatim, with every chapter illustrated as a Franco-Belgian comic album and narrated by a fourteen-voice cast rendered locally. Press play and every word lights up as it&#x27;s spoken.</p>
           <div class="examine__meta"><span>25 chapters</span><span>783 illustrations</span><span>8h 11m audiobook</span><span>14 voices</span><span>word-by-word read-along</span></div>
+          <div class="credits"><div class="credits__head">Illustrated &amp; voiced with AI</div><dl><div><dt>Words</dt><dd>H.&nbsp;G. Wells &mdash; his public-domain text, read verbatim. Not AI-written.</dd></div><div><dt>Art</dt><dd>AI-illustrated, 783 frames.</dd></div><div><dt>Voices</dt><dd>AI text-to-speech (Kokoro), fourteen voices rendered on a home GPU.</dd></div></dl></div>
           <a class="examine__read" href="the-sleeper-awakes/novel.html">Open the book &rarr;</a>
           <a class="examine__read" style="margin-left:8px;background:transparent;color:inherit;border:1px solid currentColor" href="https://www.youtube.com/playlist?list=PLeYfeZIHPOro">Watch on YouTube &rarr;</a>
         </div>
@@ -272,7 +456,116 @@
           <div class="made-stamp" data-first="2026-06-08" data-last="2026-07-24">started Jun 8, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
           <p class="examine__desc">A grieving seventeen-year-old walks the twenty-two Major Arcana three times — and each turn she understands the Tower&#x27;s fall, the Death card&#x27;s ending, and the Fool&#x27;s leap a little differently. The Tarot read as a <em>cycle</em>, and the five stages of grief revealed as what you get when you take a transition and demand it have a finish line. The road does not end; she learns to love that it doesn&#x27;t.</p>
           <div class="examine__meta"><span>22 arcana</span><span>161 watercolor illustrations</span><span>3h 3m audiobook</span><span>9 voices</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored by the Scriptorium pipeline (Claude, with Grok and Gemini) from a short brief.</dd></div><div><dt>Art</dt><dd>AI image models.</dd></div><div><dt>Voices</dt><dd>AI text-to-speech.</dd></div></dl></div>
           <a class="examine__read" href="fools-cycle/novel.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-empty-jar" role="dialog" aria-modal="true" aria-label="The Empty Jar">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="fortune-cookie/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Middle-grade contemporary fantasy · 2026</div>
+          <h2 class="examine__title book-card__title">The Empty Jar</h2>
+          <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">A grieving twelve-year-old discovers that the fortune cookies at her late grandmother's Chinatown restaurant seem to predict the future — but the quieter, more devastating truth is that her grandmother spent her dying year writing hundreds of personalized fortunes for specific people she'd watched for decades.</p>
+          <div class="examine__meta"><span>18 chapters</span><span>143 illustrations</span><span>3h 22m audiobook</span><span>10 voices</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored by the Scriptorium pipeline (Claude, with Grok and Gemini) from a short brief.</dd></div><div><dt>Art</dt><dd>AI image models.</dd></div><div><dt>Voices</dt><dd>AI text-to-speech.</dd></div></dl></div>
+          <a class="examine__read" href="fortune-cookie/novel.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-elemental-blessings" role="dialog" aria-modal="true" aria-label="Elemental Blessings, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/elemental-blessings.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Sharon Shinn &middot; 5 novels, 2010&ndash;2023 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Elemental Blessings, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-06" data-last="2026-10-06">made in a day &mdash; Oct 6, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Five novels, one heroine to each of Welce&rsquo;s five elements, walked in Art Nouveau frames whose ornamental borders carry each scene&rsquo;s element. With no film or series to compare, a world page takes the adaptations&rsquo; place, and a temple barrel lets you draw your own blessings.</p>
+          <div class="examine__meta"><span>5 novels</span><span>about 180 frames</span><span>Art Nouveau</span><span>no screen adaptations</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Sharon Shinn&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), about 180 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://elemental-blessings.pages.dev">Take the walk &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-dark-tower-saga" role="dialog" aria-modal="true" aria-label="The Dark Tower, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/dark-tower-saga.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Stephen King &middot; 8 novels, 1982&ndash;2012 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Dark Tower, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-06" data-last="2026-10-06">made in a day &mdash; Oct 6, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">All eight Dark Tower novels, from the man in black fleeing across the desert to the field of roses and back again, plus a scene-by-scene walk of the 2017 film, a table of what the film took from which book and what it changed, and the record of every adaptation that never got made.</p>
+          <div class="examine__meta"><span>8 novels</span><span>about 340 frames</span><span>epic painted</span><span>the 2017 film</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Stephen King&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), about 340 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://dark-tower-saga.pages.dev">Take the walk &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-duck" role="dialog" aria-modal="true" aria-label="Whatcha Gonna Do with That Duck?">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/godin-duck.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Comic field guide &middot; after Seth Godin &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Whatcha Gonna Do with That Duck?</h2>
+          <div class="made-stamp" data-first="2026-10-05" data-last="2026-10-05">made in a day &mdash; Oct 5, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Seth Godin&rsquo;s six years of daily blog posts (2006&ndash;2012) retold in thirty-three panels &mdash; ducks in a row, pick yourself, first ten, the lizard brain that gets louder the closer you get to shipping &mdash; filed under the book&rsquo;s own eight sections. Then a hand-drawn-style map of everything else he&rsquo;s written, with a loose framework for reading him without getting lost.</p>
+          <div class="examine__meta"><span>33 panels</span><span>a map of Godin-land</span><span>about 20 minutes</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: scripted and fact-checked by Claude, retelling Seth Godin&rsquo;s book. Not affiliated with Seth Godin.</dd></div><div><dt>Art</dt><dd>Panels drawn by Grok (AI); the banner and map are coded SVG.</dd></div></dl></div>
+          <a class="examine__read" href="https://sean-makes-stuff.com/projects/godin-duck/">Read the comic &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-into-the-fire" role="dialog" aria-modal="true" aria-label="Into the Fire">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/into-the-fire.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">TV comic &middot; <em>Babylon 5</em>, season 4, episode 6 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Into the Fire</h2>
+          <div class="made-stamp" data-first="2026-08-20" data-last="2026-08-20">made in a day &mdash; Aug 20, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">The end of the Shadow War. The Vorlons ask <em>who are you?</em>, the Shadows ask <em>what do you want?</em>, and Sheridan&rsquo;s alliance of younger races decides the answer to both is <em>no</em> &mdash; while on Centauri Prime, Londo has one day to scrub his homeworld of the Shadows before a Vorlon planet-killer arrives.</p>
+          <div class="examine__meta"><span>19 panels</span><span>first aired Feb 3, 1997</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: scripted and fact-checked by Claude, retelling the episode written by J. Michael Straczynski.</dd></div><div><dt>Art</dt><dd>Panels drawn by Grok (AI).</dd></div></dl></div>
+          <a class="examine__read" href="https://sean-makes-stuff.com/projects/into-the-fire/">Read the comic &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-minutes" role="dialog" aria-modal="true" aria-label="A Matter of Minutes">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/a-matter-of-minutes.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">TV comic &middot; <em>The Twilight Zone</em> (1985), season 1, episode 38 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">A Matter of Minutes</h2>
+          <div class="made-stamp" data-first="2026-08-20" data-last="2026-08-20">made in a day &mdash; Aug 20, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">From Theodore Sturgeon&rsquo;s 1941 story &ldquo;Yesterday Was Monday&rdquo;: a couple wake up one Tuesday to find that time isn&rsquo;t something that happens. It gets built, by hand, one minute at a time &mdash; and they&rsquo;re standing in a minute that isn&rsquo;t finished yet.</p>
+          <div class="examine__meta"><span>14 panels</span><span>first aired Jan 24, 1986</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: scripted and fact-checked by Claude, retelling the episode (story by Theodore Sturgeon, teleplay by Rockne S. O&rsquo;Bannon).</dd></div><div><dt>Art</dt><dd>Panels drawn by Grok (AI).</dd></div></dl></div>
+          <a class="examine__read" href="https://sean-makes-stuff.com/projects/a-matter-of-minutes/">Read the comic &rarr;</a>
         </div>
       </div>
       <button class="examine__close" aria-label="Put the book back">&times;</button>
@@ -289,7 +582,26 @@
           <div class="made-stamp" data-first="2026-05-17" data-last="2026-07-24">started May 17, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
           <p class="examine__desc">April the rainbow koala teaches her friends to spin the dragon staff — and when one friend forgets to close the fuel on the night of the lit spin, the silence teaches what April&#x27;s voice alone could not. Written in two versions: <strong>v2</strong> (current) is natural prose with the inspirer&#x27;s actual flow-arts safety ritual and Cypher (older tiger) as April&#x27;s teacher. <strong>v1</strong> is strict AABB rhymed verse with the original call-and-response form. Tab between them on the detail page.</p>
           <div class="examine__meta"><span>10 chapters</span><span>98 illustrations</span><span>v2: 38 min · v1: 59 min</span><span>7 voices</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored by the Scriptorium pipeline (Claude, with Grok and Gemini) from a short brief.</dd></div><div><dt>Art</dt><dd>AI image models.</dd></div><div><dt>Voices</dt><dd>AI text-to-speech.</dd></div></dl></div>
           <a class="examine__read" href="april-and-the-dragon-staff.html">Open the book &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
+  <div class="examine" id="ex-nice-things" role="dialog" aria-modal="true" aria-label="This Is Why We Can't Have Nice Things">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="cant-have-nice-things/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Children's fable · 2026</div>
+          <h2 class="examine__title book-card__title">This Is Why We Can't Have Nice Things</h2>
+          <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">An old woman tells the children of her town the story of the last wagon — and the day she, as a small girl certain she'd watched enough, skipped the steps that kept it whole.</p>
+          <div class="examine__meta"><span>9 chapters</span><span>73 illustrations</span><span>38 min audiobook</span><span>11 voices</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored by the Scriptorium pipeline (Claude, with Grok and Gemini) from a short brief.</dd></div><div><dt>Art</dt><dd>AI image models.</dd></div><div><dt>Voices</dt><dd>AI text-to-speech.</dd></div></dl></div>
+          <a class="examine__read" href="cant-have-nice-things.html">Open the book &rarr;</a>
         </div>
       </div>
       <button class="examine__close" aria-label="Put the book back">&times;</button>
@@ -306,6 +618,7 @@
           <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
           <p class="examine__desc">A short illustrated tutorial that walks a brand-new user through setting up the agentic-AI workstation — Claude Code, the Choir multi-model CLI, skills, the image-gen drawing hack, and a small PROCESS.md that runs a solo D&amp;D game. Two characters, one kitchen-spaceport, eight tight chapters, painterly Mézières-style watercolor panels.</p>
           <div class="examine__meta"><span>8 steps</span><span>64 watercolor beats</span><span>5 real screenshots</span><span>5 terminal captures</span><span>40 min audiobook</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored by the Scriptorium pipeline (Claude, with Grok and Gemini) from a short brief.</dd></div><div><dt>Art</dt><dd>AI image models, plus real screenshots and terminal captures.</dd></div><div><dt>Voices</dt><dd>AI text-to-speech.</dd></div></dl></div>
           <a class="examine__read" href="tutorial-choir/novel.html">Open the book &rarr;</a>
         </div>
       </div>
@@ -323,6 +636,7 @@
           <div class="made-stamp" data-first="2026-05-11" data-last="2026-05-11">made in a day &mdash; May 11, 2026<span class="made-stamp__ago"></span></div>
           <p class="examine__desc">A short tutorial about cooking the perfect New York strip steak — Mara (the meticulous one, reverse sear) and Theo (the enthusiastic one, forward sear) bicker affectionately through every step, with the Maillard reaction explained over a screaming-hot cast iron pan.</p>
           <div class="examine__meta"><span>8 steps</span><span>66 illustrations</span><span>33 min audiobook</span><span>3 voices</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored by the Scriptorium pipeline (Claude, with Grok and Gemini) from a short brief.</dd></div><div><dt>Art</dt><dd>AI image models.</dd></div><div><dt>Voices</dt><dd>AI text-to-speech.</dd></div></dl></div>
           <a class="examine__read" href="maillard-crust-tutorial/novel.html">Open the book &rarr;</a>
         </div>
       </div>
@@ -330,34 +644,18 @@
     </div>
   </div>
 
-  <div class="examine" id="ex-empty-jar" role="dialog" aria-modal="true" aria-label="The Empty Jar">
+  <div class="examine" id="ex-ppf" role="dialog" aria-modal="true" aria-label="Purring, Popping, Flashing">
     <div class="examine__panelwrap">
       <div class="examine__panel">
-        <div class="examine__coverwrap"><span class="examine__cover"><img src="fortune-cookie/storyboard/cover.jpg" alt=""></span></div>
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/ppf.jpg" alt=""></span></div>
         <div class="examine__body">
-          <div class="examine__kicker">Middle-grade contemporary fantasy · 2026</div>
-          <h2 class="examine__title book-card__title">The Empty Jar</h2>
-          <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
-          <p class="examine__desc">A grieving twelve-year-old discovers that the fortune cookies at her late grandmother's Chinatown restaurant seem to predict the future — but the quieter, more devastating truth is that her grandmother spent her dying year writing hundreds of personalized fortunes for specific people she'd watched for decades.</p>
-          <div class="examine__meta"><span>18 chapters</span><span>143 illustrations</span><span>3h 22m audiobook</span><span>10 voices</span></div>
-          <a class="examine__read" href="fortune-cookie/novel.html">Open the book &rarr;</a>
-        </div>
-      </div>
-      <button class="examine__close" aria-label="Put the book back">&times;</button>
-    </div>
-  </div>
-
-  <div class="examine" id="ex-nice-things" role="dialog" aria-modal="true" aria-label="This Is Why We Can't Have Nice Things">
-    <div class="examine__panelwrap">
-      <div class="examine__panel">
-        <div class="examine__coverwrap"><span class="examine__cover"><img src="cant-have-nice-things/storyboard/cover.jpg" alt=""></span></div>
-        <div class="examine__body">
-          <div class="examine__kicker">Children's fable · 2026</div>
-          <h2 class="examine__title book-card__title">This Is Why We Can't Have Nice Things</h2>
-          <div class="made-stamp" data-first="2026-05-11" data-last="2026-07-24">started May 11, 2026 &middot; last update Jul 24, 2026<span class="made-stamp__ago"></span></div>
-          <p class="examine__desc">An old woman tells the children of her town the story of the last wagon — and the day she, as a small girl certain she'd watched enough, skipped the steps that kept it whole.</p>
-          <div class="examine__meta"><span>9 chapters</span><span>73 illustrations</span><span>38 min audiobook</span><span>11 voices</span></div>
-          <a class="examine__read" href="cant-have-nice-things.html">Open the book &rarr;</a>
+          <div class="examine__kicker">Illustrated field guide &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Purring, Popping, Flashing</h2>
+          <div class="made-stamp" data-first="2026-07-16" data-last="2026-07-16">made in a day &mdash; Jul 16, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">A kawaii field guide to the silent protocol every conversation runs. Three little friends &mdash; Purr-chan, Pop-chan, and Flash-chan &mdash; walk you through the elevator hello, the meeting you got talked over in, and the argument that died ten minutes before anyone stopped yelling.</p>
+          <div class="examine__meta"><span>7 min read</span><span>three friends</span><span>a repairs playbook</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored by Claude: the PPF framework rewritten as a kawaii field guide.</dd></div><div><dt>Art</dt><dd>SVG mascots drawn in code by AI.</dd></div></dl></div>
+          <a class="examine__read" href="https://sean-makes-stuff.com/projects/ppf/">Meet the friends &rarr;</a>
         </div>
       </div>
       <button class="examine__close" aria-label="Put the book back">&times;</button>
