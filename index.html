@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="saga-of-seven-suns" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/saga-of-seven-suns.jpg" alt="The Saga of Seven Suns, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Saga of Seven Suns, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="play-to-live" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/play-to-live.jpg" alt="Play to Live, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">Play to Live, Walked</span>
@@ -408,6 +415,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-saga-of-seven-suns" role="dialog" aria-modal="true" aria-label="The Saga of Seven Suns, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/saga-of-seven-suns.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Kevin J. Anderson &middot; 7 novels, 2002–2008 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Saga of Seven Suns, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-07" data-last="2026-10-08">made in 2 days &mdash; Oct 7&ndash;8, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Kevin J. Anderson&#x27;s seven-book space opera, walked book by book: the Klikiss Torch that wakes the hydrogues, the Ildiran Empire&#x27;s hidden secret, the Roamers&#x27; skymines, and the ancient war of four elemental races. Every summary and caption adversarially fact-checked; 247 frames painted in the manner of a late-1970s science-fiction paperback cover.</p>
+          <div class="examine__meta"><span>247 frames</span><span>1970s–80s SF paperback-cover painting</span><span>no film or TV; a 2015 app pilot of the prequel</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Kevin J. Anderson&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI): 239 paintings (247 frames on the pages; the index reuses eight).</dd></div></dl></div>
+          <a class="examine__read" href="https://saga-of-seven-suns.pages.dev">Walk the Seven Suns &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-play-to-live" role="dialog" aria-modal="true" aria-label="Play to Live, Walked">
     <div class="examine__panelwrap">
