@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="wool-saga" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/wool-saga.jpg" alt="The Silo Saga, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Silo Saga, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="solo-leveling-novels" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/solo-leveling-novels.jpg" alt="Solo Leveling, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">Solo Leveling, Walked</span>
@@ -422,6 +429,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-wool-saga" role="dialog" aria-modal="true" aria-label="The Silo Saga, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/wool-saga.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Hugh Howey &middot; 3 novels, 2011–2013 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Silo Saga, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-09" data-last="2026-10-09">made in a day &mdash; Oct 9, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Wool, Shift and Dust summarized novella by novella and walked in charcoal-and-pastel frames, with a cross-section of the 144-level silo. Season-by-season notes set the books beside Apple&#x27;s Silo, from George Wilkins to Daniel Keene, ahead of the final season.</p>
+          <div class="examine__meta"><span>221 frames</span><span>charcoal and pastel</span><span>vs. Apple&#x27;s Silo, seasons 1–3</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Hugh Howey&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 221 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://wool-saga.pages.dev">Go down the stairs &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-solo-leveling-novels" role="dialog" aria-modal="true" aria-label="Solo Leveling, Walked">
     <div class="examine__panelwrap">
