@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="alteredcarbon" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/alteredcarbon.jpg" alt="Altered Carbon, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Altered Carbon, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="riftwar" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/riftwar.jpg" alt="The Riftwar Cycle, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">The Riftwar Cycle, Walked</span>
@@ -436,6 +443,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-alteredcarbon" role="dialog" aria-modal="true" aria-label="Altered Carbon, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/alteredcarbon.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Richard K. Morgan &middot; 3 novels, 2002–2005 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Altered Carbon, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-16" data-last="2026-10-17">made in 2 days &mdash; Oct 16&ndash;17, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Altered Carbon, Broken Angels and Woken Furies summarized movement by movement and walked in neon-noir woodblock prints, every page adversarially fact-checked. One mind on a stack, a new body in every book: Bay City noir, a war for a Martian gate, a revolution on Harlan&#x27;s World. Season-by-season notes set the novels beside Netflix&#x27;s two seasons and the anime film Resleeved.</p>
+          <div class="examine__meta"><span>215 frames</span><span>neon-noir shin-hanga woodblock</span><span>vs. Netflix&#x27;s Altered Carbon, seasons 1–2, and the anime Resleeved</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Richard K. Morgan&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 215 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://altered-carbon.pages.dev">Wake up in a new body &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-riftwar" role="dialog" aria-modal="true" aria-label="The Riftwar Cycle, Walked">
     <div class="examine__panelwrap">
