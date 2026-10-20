@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="mistborn-saga" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/mistborn-saga.jpg" alt="The Mistborn Saga, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Mistborn Saga, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="alteredcarbon" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/alteredcarbon.jpg?v=2" alt="Altered Carbon, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">Altered Carbon, Walked</span>
@@ -443,6 +450,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-mistborn-saga" role="dialog" aria-modal="true" aria-label="The Mistborn Saga, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/mistborn-saga.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Brandon Sanderson &middot; 7 novels and a novella, 2006–2022 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Mistborn Saga, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-07" data-last="2026-10-19">made in 13 days &mdash; Oct 7&ndash;19, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Both eras of Sanderson&#x27;s Mistborn — Vin and Kelsier&#x27;s heist against a god-emperor, then Wax and Wayne three hundred years on — summarized book by book, with Secret History where Sanderson says to read it. About 259 painted frames in an ink-and-wash style where the mist is bare paper and the ash is ink, every caption fact-checked, plus the metals in one table and every attempt to adapt it.</p>
+          <div class="examine__meta"><span>~259 frames</span><span>ash-and-mist ink wash</span><span>Apple film in development</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Brandon Sanderson&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), about 259 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://mistborn-saga.pages.dev">Walk into the mists &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-alteredcarbon" role="dialog" aria-modal="true" aria-label="Altered Carbon, Walked">
     <div class="examine__panelwrap">
