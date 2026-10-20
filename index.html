@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="chronicles-of-amber" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/chronicles-of-amber.jpg" alt="The Chronicles of Amber, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Chronicles of Amber, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="wheel-of-time" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/wheel-of-time.jpg" alt="The Wheel of Time, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">The Wheel of Time, Walked</span>
@@ -457,6 +464,25 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-chronicles-of-amber" role="dialog" aria-modal="true" aria-label="The Chronicles of Amber, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/chronicles-of-amber.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Roger Zelazny &middot; 10 novels, 1970–1991 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Chronicles of Amber, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-20" data-last="2026-10-20">made in a day &mdash; Oct 20, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Both cycles walked: Corwin&#x27;s five books and Merlin&#x27;s five, plus the short stories Zelazny left at his death. Every page fact-checked against the text, with a world page, a family tree, and every attempt to film the series, from 1998 to the TV project still stalled in 2026.</p>
+          <div class="examine__meta"><span>~269 frames</span><span>Symbolist oil in a Trump-card border</span><span>never filmed</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Roger Zelazny&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), about 269 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://chronicles-of-amber.pages.dev">Walk through Shadow &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
+
 
   <div class="examine" id="ex-wheel-of-time" role="dialog" aria-modal="true" aria-label="The Wheel of Time, Walked">
     <div class="examine__panelwrap">
