@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="golden-oecumene" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/golden-oecumene.jpg" alt="The Golden Oecumene, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Golden Oecumene, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="chronicles-of-amber" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/chronicles-of-amber.jpg" alt="The Chronicles of Amber, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">The Chronicles of Amber, Walked</span>
@@ -464,6 +471,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-golden-oecumene" role="dialog" aria-modal="true" aria-label="The Golden Oecumene, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/golden-oecumene.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; John C. Wright &middot; 3 novels and a coda story, 2002–2009 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Golden Oecumene, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-25" data-last="2026-10-25">made in a day &mdash; Oct 25, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">The Golden Age, The Phoenix Exultant and The Golden Transcendence summarized movement by movement, with the 2009 coda story, walked in Art Deco gold leaf and lacquer and adversarially fact-checked against the text Wright posts on his own site. At a millennial masquerade an immortal learns he agreed to forget the only starship ever built, and goes into exile to fly it anyway. A world page maps the Oecumene&#x27;s Solar System, from Helion&#x27;s Solar Array to the Cold Dukes of Neptune.</p>
+          <div class="examine__meta"><span>143 frames</span><span>Art Deco gouache, gold leaf and lacquer</span><span>never filmed</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from John C. Wright&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 143 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://golden-oecumene.pages.dev">Join the masquerade &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-chronicles-of-amber" role="dialog" aria-modal="true" aria-label="The Chronicles of Amber, Walked">
     <div class="examine__panelwrap">
