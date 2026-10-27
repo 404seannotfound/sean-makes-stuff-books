@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="dark-herbalist" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/dark-herbalist.jpg" alt="The Dark Herbalist, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Dark Herbalist, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="children-of-time" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/children-of-time.jpg" alt="Children of Time, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">Children of Time, Walked</span>
@@ -492,6 +499,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-dark-herbalist" role="dialog" aria-modal="true" aria-label="The Dark Herbalist, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/dark-herbalist.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Michael Atamanov &middot; 4 novels, 2017–2018 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Dark Herbalist, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-27" data-last="2026-10-27">made in a day &mdash; Oct 27, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Video Game Plotline Tester, Stay on the Wing, A Trap for the Potentate and Finding a Body, summarized movement by movement and painted as a hand-coloured herbal: a broke young tester dealt the race nobody plays, a goblin herbalist who is secretly a vampire, a flying serpent, a pack of wolves, three hundred orc pirates and, at the last, a throne built for a titan. Every summary and caption was adversarially fact-checked against the publisher&#x27;s English excerpts and the licensed translations, real-world scenes get a riveted steel border, and a world page gathers the Boundless Realm and its editions.</p>
+          <div class="examine__meta"><span>147 frames</span><span>hand-coloured sixteenth-century herbal woodcut</span><span>nothing on screen (a Russian audio drama of book 1)</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Michael Atamanov&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 147 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://dark-herbalist.pages.dev">Walk the Boundless Realm &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-children-of-time" role="dialog" aria-modal="true" aria-label="Children of Time, Walked">
     <div class="examine__panelwrap">
