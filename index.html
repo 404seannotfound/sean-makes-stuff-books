@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="history-of-the-galaxy" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/history-of-the-galaxy.jpg" alt="Expansion: The History of the Galaxy, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Expansion: The History of the Galaxy, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="the-locked-tomb" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/the-locked-tomb.jpg" alt="The Locked Tomb, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">The Locked Tomb, Walked</span>
@@ -478,6 +485,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-history-of-the-galaxy" role="dialog" aria-modal="true" aria-label="Expansion: The History of the Galaxy, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/history-of-the-galaxy.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Andrei Livadny &middot; 3 novels in English, 2017–2018 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Expansion: The History of the Galaxy, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-26" data-last="2026-10-27">made in 2 days &mdash; Oct 26&ndash;27, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Three novels from three centuries of Livadny&#x27;s sixty-book Russian future history: a young man who has lived since childhood in a capsule on fog-drowned Earth in 2197, a colony farm machine that fights an Earth invasion fleet in 2607, and teenage pilots sent into a war of thinking machines in 2624. Every book summarized from first page to last, fact-checked against the publisher&#x27;s English chapters, and walked in painted frames.</p>
+          <div class="examine__meta"><span>123 frames</span><span>European ligne-claire comic-album style</span><span>nothing on screen</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Andrei Livadny&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 123 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://history-of-the-galaxy.pages.dev">Walk the three eras &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-the-locked-tomb" role="dialog" aria-modal="true" aria-label="The Locked Tomb, Walked">
     <div class="examine__panelwrap">
