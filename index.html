@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="the-locked-tomb" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/the-locked-tomb.jpg" alt="The Locked Tomb, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Locked Tomb, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="golden-oecumene" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/golden-oecumene.jpg" alt="The Golden Oecumene, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">The Golden Oecumene, Walked</span>
@@ -471,6 +478,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-the-locked-tomb" role="dialog" aria-modal="true" aria-label="The Locked Tomb, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/the-locked-tomb.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Tamsyn Muir &middot; 3 novels and 4 short works, 2019–2023 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Locked Tomb, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-26" data-last="2026-10-26">made in a day &mdash; Oct 26, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Gideon, Harrow and Nona, every novel summarized in detail with the short fiction gathered on one page, and a world page for the Nine Houses since nothing has reached the screen. Every summary and caption was adversarially fact-checked; Alecto the Ninth is still to come.</p>
+          <div class="examine__meta"><span>141 frames</span><span>1980s science-fantasy gouache</span><span>no screen adaptation yet</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Tamsyn Muir&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 141 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://the-locked-tomb.pages.dev">Walk the Locked Tomb &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-golden-oecumene" role="dialog" aria-modal="true" aria-label="The Golden Oecumene, Walked">
     <div class="examine__panelwrap">
