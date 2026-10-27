@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="children-of-time" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/children-of-time.jpg" alt="Children of Time, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Children of Time, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="history-of-the-galaxy" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/history-of-the-galaxy.jpg" alt="Expansion: The History of the Galaxy, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">Expansion: The History of the Galaxy, Walked</span>
@@ -485,6 +492,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-children-of-time" role="dialog" aria-modal="true" aria-label="Children of Time, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/children-of-time.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Adrian Tchaikovsky &middot; 4 novels, 2015–2026 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Children of Time, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-26" data-last="2026-10-27">made in 2 days &mdash; Oct 26&ndash;27, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Children of Time, Ruin, Memory and Strife summarized movement by movement and painted as a naturalist&#x27;s plates: jumping spiders who inherit a terraformer&#x27;s virus, octopuses who think with their arms, crows who deny they think at all, a mantis-shrimp captain. Every summary and caption was adversarially fact-checked against the text, and a world page gathers the Old Empire, the uplifted species and the series&#x27; screen history.</p>
+          <div class="examine__meta"><span>159 frames</span><span>hand-coloured Victorian natural-history plates</span><span>never filmed (a 2017 option; a tabletop RPG due 2027)</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Adrian Tchaikovsky&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 159 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://children-of-time.pages.dev">Walk the uplifted &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-history-of-the-galaxy" role="dialog" aria-modal="true" aria-label="Expansion: The History of the Galaxy, Walked">
     <div class="examine__panelwrap">
