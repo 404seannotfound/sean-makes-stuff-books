@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="calamitous-bob" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/calamitous-bob.jpg" alt="The Calamitous Bob, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">The Calamitous Bob, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="discount-dans-backroom-bargains" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/discount-dans-backroom-bargains.jpg" alt="Discount Dan&#x27;s Backroom Bargains, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">Discount Dan&#x27;s Backroom Bargains, Walked</span>
@@ -506,6 +513,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-calamitous-bob" role="dialog" aria-modal="true" aria-label="The Calamitous Bob, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/calamitous-bob.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Alex Gilbert &middot; 10 novels, 2021–2025 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">The Calamitous Bob, Walked</h2>
+          <div class="made-stamp" data-first="2026-10-31" data-last="2026-10-31">made in a day &mdash; Oct 31, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">All ten books of the Calamitous Bob, summarized movement by movement and painted as a French fantasy comic album: a French army medic dropped bald and alone into the undead wasteland of a fallen empire, a golem who can&#x27;t say her name, a white dragonling, and a witch who becomes an empress, a black elemental and, at the last, something more. Every summary and caption was adversarially fact-checked against the full text of the books, the cast was matched to the covers wherever the text allows, and a world page maps Nyil, its gods and its System.</p>
+          <div class="examine__meta"><span>321 frames</span><span>1990s French fantasy comic album in direct colour</span><span>nothing on screen (full-cast audiobooks of books 1–4)</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Alex Gilbert&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 321 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://calamitous-bob.pages.dev">Walk into the deadlands &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-discount-dans-backroom-bargains" role="dialog" aria-modal="true" aria-label="Discount Dan&#x27;s Backroom Bargains, Walked">
     <div class="examine__panelwrap">
