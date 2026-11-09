@@ -279,6 +279,13 @@
         <div class="bookcase" role="list">
           <div class="bookcase__inner">
             <div class="shelf-slot" role="listitem">
+              <button class="book" data-book="cradle-saga" aria-haspopup="dialog">
+                <span class="book__cover"><img src="covers/cradle-saga.jpg" alt="Cradle, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
+                <span class="book__label">Cradle, Walked</span>
+                <span class="book__hint">examine</span>
+              </button>
+            </div>
+            <div class="shelf-slot" role="listitem">
               <button class="book" data-book="calamitous-bob" aria-haspopup="dialog">
                 <span class="book__cover"><img src="covers/calamitous-bob.jpg" alt="The Calamitous Bob, Walked &mdash; cover" loading="lazy"><span class="book__ai">AI-authored</span></span>
                 <span class="book__label">The Calamitous Bob, Walked</span>
@@ -513,6 +520,24 @@
   </main>
 
   <!-- ---------- examine dialogs, one per book ---------- -->
+
+  <div class="examine" id="ex-cradle-saga" role="dialog" aria-modal="true" aria-label="Cradle, Walked">
+    <div class="examine__panelwrap">
+      <div class="examine__panel">
+        <div class="examine__coverwrap"><span class="examine__cover"><img src="covers/cradle-saga.jpg" alt=""></span></div>
+        <div class="examine__body">
+          <div class="examine__kicker">Series walk &middot; Will Wight &middot; 12 novels + Threshold, 2016–2025 &middot; 2026</div>
+          <h2 class="examine__title book-card__title">Cradle, Walked</h2>
+          <div class="made-stamp" data-first="2026-11-08" data-last="2026-11-09">made in 2 days &mdash; Nov 8&ndash;9, 2026<span class="made-stamp__ago"></span></div>
+          <p class="examine__desc">Will Wight&#x27;s twelve-book climb from Unsouled to Waybound, every book summarized in detail and fact-checked against the text, walked in gold-leaf paintings. With the ladder of ranks, the Threshold stories, and the 2025 animatic of books one and two set beside the books.</p>
+          <div class="examine__meta"><span>412 frames</span><span>nihonga in mineral pigments and gold leaf</span><span>the 2025 animatic compared</span></div>
+          <div class="credits"><div class="credits__head">Made with AI</div><dl><div><dt>Words</dt><dd>AI-authored: summaries written by Claude from Will Wight&rsquo;s novels, every page checked by a separate AI fact-checker.</dd></div><div><dt>Art</dt><dd>Painted by Grok (AI), 412 frames.</dd></div></dl></div>
+          <a class="examine__read" href="https://cradle-saga.pages.dev">Climb the ladder &rarr;</a>
+        </div>
+      </div>
+      <button class="examine__close" aria-label="Put the book back">&times;</button>
+    </div>
+  </div>
 
   <div class="examine" id="ex-calamitous-bob" role="dialog" aria-modal="true" aria-label="The Calamitous Bob, Walked">
     <div class="examine__panelwrap">
